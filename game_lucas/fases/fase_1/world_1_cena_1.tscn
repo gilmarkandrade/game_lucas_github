@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://fases/world.gd" type="Script" id=1]
+[ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://player/player_plataforma.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/player_plataforma.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 244, 10 )

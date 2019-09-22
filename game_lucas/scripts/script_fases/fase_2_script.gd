@@ -22,4 +22,4 @@ func _physics_process(delta):
 	if entrou_na_area2 == true:
 		if Input.is_action_pressed("ui_accept"):
 			singletonfase.setar_posicao(entrou_na_area2)
-			get_tree().change_scene("res://fases/world.tscn")
+			get_tree().change_scene("res://fases/fase_1/world_1_cena_1.tscn")

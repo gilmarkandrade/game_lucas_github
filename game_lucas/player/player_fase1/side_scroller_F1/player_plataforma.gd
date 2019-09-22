@@ -17,6 +17,7 @@ func _physics_process(delta):
 		$CollisionShape2D/icon2.flip_h= true
 	elif Input.is_action_pressed("ui_left"):
 		move.x -= speed
+		
 		$CollisionShape2D/icon2.flip_h= false
 	else:
 		move.x = 0
@@ -24,3 +25,4 @@ func _physics_process(delta):
 			if Input. is_action_just_pressed("ui_up"):
 				move.y = jump_force
 	move = move_and_slide(move,UP)
+	

@@ -15,13 +15,13 @@ _global_script_class_icons={
 
 [application]
 
-config/name="teste_mecanica_jogo_lucas"
-run/main_scene="res://fases/world.tscn"
+config/name="jogo_lucas"
+run/main_scene="res://fases/fase_1/world_1_cena_1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-singletonfase="*res://fases/singletonfase.gd"
+singletonfase="*res://scripts/script_GAME_SINGLETON/singletonfase.gd"
 
 [input]
 
