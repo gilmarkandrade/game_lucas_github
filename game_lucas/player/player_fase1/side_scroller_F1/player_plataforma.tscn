@@ -18,15 +18,10 @@ position = Vector2( -5, 11 )
 scale = Vector2( 0.76, 1 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="CollisionShape2D"]
+[node name="sprite_player" type="Sprite" parent="CollisionShape2D"]
 modulate = Color( 0.12549, 0.0117647, 0.0117647, 1 )
 position = Vector2( 0.500003, 6.88318 )
 scale = Vector2( 0.444901, 0.765625 )
-texture = ExtResource( 2 )
-
-[node name="icon2" type="Sprite" parent="CollisionShape2D"]
-position = Vector2( 0.5, -33.1168 )
-scale = Vector2( 0.67352, 0.515625 )
 texture = ExtResource( 2 )
 
 [node name="animation_Player" type="AnimationPlayer" parent="."]

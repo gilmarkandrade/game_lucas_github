@@ -14,19 +14,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 one_way_collision = true
 
-[node name="icon" type="Sprite" parent="CollisionShape2D"]
+[node name="sprite_player" type="Sprite" parent="CollisionShape2D"]
 position = Vector2( 0.1875, -3.5 )
 scale = Vector2( 1.79102, 1.63281 )
 texture = ExtResource( 2 )
 
-[node name="icon2" type="Sprite" parent="CollisionShape2D"]
-modulate = Color( 0.105882, 0.0117647, 0.0117647, 1 )
-position = Vector2( -63.9375, 72.4375 )
-scale = Vector2( 0.419922, 1.79102 )
-texture = ExtResource( 2 )
-
-[node name="icon3" type="Sprite" parent="CollisionShape2D"]
-modulate = Color( 0.105882, 0.0117647, 0.0117647, 1 )
-position = Vector2( 54.1875, 72.4375 )
-scale = Vector2( 0.419922, 1.79102 )
-texture = ExtResource( 2 )
+[node name="animation_player" type="AnimationPlayer" parent="."]
