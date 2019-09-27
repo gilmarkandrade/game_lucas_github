@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 var move = Vector2()
 var speed = 30
+var life = atributos_player_singleton.life_player
 const jump_force = -300
 
 const gravity = 9

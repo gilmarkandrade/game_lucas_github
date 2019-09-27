@@ -21,7 +21,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-singletonfase="*res://scripts/script_GAME_SINGLETON/singletonfase.gd"
+singletonfase="*res://scripts/script_GAME_SINGLETON/atributos_fase_singleton.gd"
+atributos_player_singleton="*res://scripts/script_GAME_SINGLETON/atributos_player_singleton.gd"
 
 [input]
 

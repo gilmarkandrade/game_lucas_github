@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/script_H_C/homen_das_cavernas(s_d).gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -17,6 +17,18 @@ resource_name = "idlle_animation"
 [sub_resource type="Animation" id=5]
 resource_name = "walk_animaton"
 
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 197.177, 28 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 241.174, 28 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 33.1744, 38 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 35.1744, 41 )
+
 [node name="homen_das_cavernas(s_d)" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -31,3 +43,43 @@ anims/atack_animation = SubResource( 2 )
 anims/death_animation = SubResource( 3 )
 anims/idlle_animation = SubResource( 4 )
 anims/walk_animaton = SubResource( 5 )
+
+[node name="area_lado_esquerdo_move" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -321, -7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_lado_esquerdo_move"]
+shape = SubResource( 6 )
+
+[node name="area_lado_direito_move" type="Area2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_lado_direito_move"]
+position = Vector2( 371, -2 )
+shape = SubResource( 7 )
+
+[node name="area_esquerda_ataque" type="Area2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_esquerda_ataque"]
+position = Vector2( -69, -5 )
+shape = SubResource( 8 )
+
+[node name="area_direita_ataque" type="Area2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_direita_ataque"]
+position = Vector2( 77, -4 )
+shape = SubResource( 9 )
