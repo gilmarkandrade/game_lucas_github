@@ -1,4 +1,6 @@
 extends KinematicBody2D
+
+
 var death = false 
 var walking = false 
 var atacking = false
@@ -8,8 +10,14 @@ var life = 100
 var damage = 5 
 var move = Vector2()
 var velocity = 8
+const gravity = 9
 
-
+#em desenvolvimento
+func _physics_process(delta):
+	move.y += gravity
+	
+	if death == false:
+		walk_left_right_side()
 
 func walk_left_right_side():
 	if left_side == true and atacking == false and walking == true:
@@ -24,10 +32,98 @@ func walk_left_right_side():
 		move.x
 		if atacking == false:
 			$animation_H_C.current_animation = "idlle_animation"
+	move = move_and_slide(move)
 
+
+#==============================================================
+#                        functions
+#==============================================================
+
+
+#função que chama animaçao de ataque e passa o valor de dano 
+# para o player atraves do singleton atributos player singleton
 func atack():
-	if left_side == true and atacking == true:
-		move.x == 0
-		atributos_player_singleton.player_
-		$animation_H_C.play("atack_animation")
+	if left_side == true and atacking == true and death == false:
+		move.x = 0
+		atributos_player_singleton.player_life_update(damage)
+		$animation_H_C.play("atack_left_animation")
 
+
+func damage_death():
+	
+	if life <= 0 :
+		death = true
+		$animation_H_C.play("death_animation")
+	
+#===========================================================
+#            AREA\BODY ENTERED
+#===========================================================
+
+
+
+#  quando player entra na area de colisao do lado esquerdo 
+#ele defini estas variaveis que permitira que ação seja feita  
+
+func _on_area_lado_esquerdo_move_body_entered(body):
+		if body.is_in_group("player") and death == false:
+			left_side = true
+			right_side = false 
+			walking = true
+
+
+func _on_area_lado_direito_move_body_entered(body) :
+	if body.is_in_group("player") and death == false:
+			left_side = false
+			right_side = true 
+			walking = true
+
+#======================== area atacking =======================
+  
+#area proxima o player que permite ele atacar se o player chegar muito perto 
+func _on_area_esquerda_ataque_body_entered(body):
+	if body.is_in_group("player") and death == false:
+		atacking = true
+		left_side = true
+		right_side = false 
+		walking = false
+		$delay_atack.start()
+	
+
+
+func _on_area_direita_ataque_body_entered(body):
+	if body.is_in_group("player") and death == false:
+		atacking = true
+		left_side = false
+		right_side = true 
+		walking = false
+		$delay_atack.start()
+
+
+# ===================== area corpo =====================
+
+# corpo do player onde ele recebe e puxa a 
+#referencia do valor que foi passado para ogame singleton
+func _on_area_corpo_H_C_area_entered(area):
+	
+	if area.is_in_group("arma_player") and death == false:
+		life -= atributos_player_singleton.life_enemie_update
+		damage_death()
+	
+	
+	
+#==============================================================
+#                         DELAY
+#==============================================================
+
+func _on_delay_atack_timeout():
+	
+	atack()
+	
+	
+#===============================================================
+#               ANIMATION FINISHED
+#===============================================================
+
+func _on_animation_H_C_animation_finished(anim_name):
+	if anim_name == "death_animation":
+		queue_free()
