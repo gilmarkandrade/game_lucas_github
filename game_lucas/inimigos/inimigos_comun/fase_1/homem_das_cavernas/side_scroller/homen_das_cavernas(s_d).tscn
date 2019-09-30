@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/script_H_C/homen_das_cavernas(s_d).gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle2.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -17,6 +18,31 @@ resource_name = "damage_animation"
 [sub_resource type="Animation" id=5]
 
 [sub_resource type="Animation" id=6]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_H_C:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animation_H_C:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.5 ]
+}
 
 [sub_resource type="Animation" id=7]
 
@@ -48,6 +74,7 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="animation_H_C" type="AnimationPlayer" parent="."]
+playback_speed = 0.5
 anims/atack_left_animation = SubResource( 2 )
 anims/atack_rigth_animation = SubResource( 3 )
 anims/damage_animation = SubResource( 4 )
@@ -111,5 +138,5 @@ one_shot = true
 [connection signal="body_entered" from="area_esquerda_ataque" to="." method="_on_area_esquerda_ataque_body_entered"]
 [connection signal="body_entered" from="area_direita_ataque" to="." method="_on_area_direita_ataque_body_entered"]
 [connection signal="area_entered" from="area_corpo_H_C" to="." method="_on_area_corpo_H_C_area_entered"]
-[connection signal="timeout" from="delay_atack" to="." method="_on_delay_atack__timeout"]
 [connection signal="timeout" from="delay_atack" to="." method="_on_delay_atack_timeout"]
+[connection signal="timeout" from="delay_atack" to="." method="_on_delay_atack__timeout"]
