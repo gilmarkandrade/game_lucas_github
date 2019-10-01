@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/player_plataforma.tscn" type="PackedScene" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/homen_das_cavernas(s_d).tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets_game/background/fase_1/cena_1/background_fase_1_cena_1.jpg" type="Texture" id=5]
+[ext_resource path="res://assets_game/background/fase_1/cena_1/Background_arvores_cena1.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 244, 10 )
@@ -112,5 +114,25 @@ position = Vector2( 414, -81 )
 
 [node name="homen_das_cavernas(s_d)" parent="." instance=ExtResource( 4 )]
 position = Vector2( 525, -101.5 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -1, 70 )
+motion_offset = Vector2( 1, 0 )
+
+[node name="background_fase_1_cena_1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -24.8872, -659.644 )
+scale = Vector2( 1.2, 1 )
+texture = ExtResource( 5 )
+centered = false
+offset = Vector2( 1, 1 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Background_arvores_cena1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 477.508, -142.055 )
+scale = Vector2( 1.30458, 0.952066 )
+texture = ExtResource( 6 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
