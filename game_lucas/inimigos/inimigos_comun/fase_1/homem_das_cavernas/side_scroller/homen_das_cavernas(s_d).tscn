@@ -1,21 +1,24 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/script_H_C/homen_das_cavernas(s_d).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/damage_animation/damage.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle1.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle2.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk1.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk2.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk2.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/damage_animation/damage.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle1.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle2.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk1.png" type="Texture" id=6]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk3.png" type="Texture" id=7]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk4.png" type="Texture" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
+height = 101.554
 
 [sub_resource type="Animation" id=2]
 resource_name = "atack_left_animation"
+length = 0.5
 
 [sub_resource type="Animation" id=3]
 resource_name = "atack_rigth_animation"
+length = 0.5
 
 [sub_resource type="Animation" id=4]
 resource_name = "damage_animation"
@@ -30,7 +33,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -48,7 +51,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 4 ), ExtResource( 5 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -76,7 +79,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.00390165, 0.5, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -85,10 +88,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1.5, 1.5942, 1.59533, 1.59704, 1.6 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 1.5, 1.5, 0.01, 0.05, 0.05, 0.5 ]
+"values": [ 2.0 ]
 }
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -104,7 +107,7 @@ extents = Vector2( 33.1744, 38 )
 extents = Vector2( 35.1744, 41 )
 
 [sub_resource type="CapsuleShape2D" id=12]
-radius = 27.841
+radius = 19.841
 height = 77.554
 
 [node name="homen_das_cavernas(s_d)" type="KinematicBody2D" groups=[
@@ -115,11 +118,14 @@ script = ExtResource( 1 )
 [node name="sprite_H_C" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"enemie",
+]]
+position = Vector2( 0, 5 )
 shape = SubResource( 1 )
 
 [node name="animation_H_C" type="AnimationPlayer" parent="."]
-playback_speed = 1.5
+playback_speed = 2.0
 anims/atack_left_animation = SubResource( 2 )
 anims/atack_rigth_animation = SubResource( 3 )
 anims/damage_animation = SubResource( 4 )
@@ -129,7 +135,7 @@ anims/walk_animaton = SubResource( 7 )
 
 [node name="area_lado_esquerdo_move" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( -321, -7 )
+position = Vector2( -312, -5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -139,6 +145,7 @@ shape = SubResource( 8 )
 
 [node name="area_lado_direito_move" type="Area2D" parent="."]
 editor/display_folded = true
+position = Vector2( -6, -1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -167,19 +174,23 @@ __meta__ = {
 position = Vector2( 77, -4 )
 shape = SubResource( 11 )
 
-[node name="area_corpo_H_C" type="Area2D" parent="."]
-editor/display_folded = true
+[node name="area_corpo_H_C" type="Area2D" parent="." groups=[
+"enemie",
+]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_H_C"]
-position = Vector2( -1, -2 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_H_C" groups=[
+"enemie",
+]]
+position = Vector2( -1, 5 )
 shape = SubResource( 12 )
 
 [node name="delay_atack" type="Timer" parent="."]
 wait_time = 0.5
-one_shot = true
 [connection signal="animation_finished" from="animation_H_C" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="body_entered" from="area_lado_esquerdo_move" to="." method="_on_area_lado_esquerdo_move_body_entered"]
+[connection signal="body_exited" from="area_lado_esquerdo_move" to="." method="_on_area_lado_esquerdo_move_body_exited"]
 [connection signal="body_entered" from="area_lado_direito_move" to="." method="_on_area_lado_direito_move_body_entered"]
+[connection signal="body_exited" from="area_lado_direito_move" to="." method="_on_area_lado_direito_move_body_exited"]
 [connection signal="body_entered" from="area_esquerda_ataque" to="." method="_on_area_esquerda_ataque_body_entered"]
 [connection signal="body_entered" from="area_direita_ataque" to="." method="_on_area_direita_ataque_body_entered"]
 [connection signal="area_entered" from="area_corpo_H_C" to="." method="_on_area_corpo_H_C_area_entered"]

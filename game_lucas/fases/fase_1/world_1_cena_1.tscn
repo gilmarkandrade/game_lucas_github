@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/player_plataforma.tscn" type="PackedScene" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/homen_das_cavernas(s_d).tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 244, 10 )
@@ -108,5 +109,8 @@ text = "voce deverira olhar em outra perpsctiva
 
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 414, -81 )
+
+[node name="homen_das_cavernas(s_d)" parent="." instance=ExtResource( 4 )]
+position = Vector2( 525, -101.5 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

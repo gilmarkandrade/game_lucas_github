@@ -71,9 +71,12 @@ func _on_area_corpo_player_area_entered(area):
 		death_player()
 
 
-func _on_area_arma_player_body_entered(body):
-	if body.is_in_group("enemie"):
+
+func _on_area_arma_player_area_entered(area):
+	
+	if area.is_in_group("enemie"):
 		atributos_player_singleton.damage_life_enimie_update(damage_hit)
+		
 
 #==========================================================
 #               animation finished
@@ -84,3 +87,4 @@ func _on_animation_Player_animation_finished(anim_name):
 	if anim_name == "death_animation":
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
+
