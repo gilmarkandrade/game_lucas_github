@@ -1,24 +1,103 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/script_H_C/homen_das_cavernas(s_d).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk2.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/damage_animation/damage.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle1.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle2.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk1.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk3.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk4.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack2.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/damage_animation/damage.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death1.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death2.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death3.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death4.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle1.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/idle_animation/idle2.png" type="Texture" id=12]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk2.png" type="Texture" id=13]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk3.png" type="Texture" id=14]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk4.png" type="Texture" id=15]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 101.554
 
 [sub_resource type="Animation" id=2]
 resource_name = "atack_left_animation"
-length = 0.5
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_H_C:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animation_H_C:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2.0, 2.5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite_H_C:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "atack_rigth_animation"
-length = 0.5
+length = 1.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_H_C:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animation_H_C:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2.0, 2.5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite_H_C:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "damage_animation"
@@ -33,10 +112,35 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 6 ) ]
 }
 
 [sub_resource type="Animation" id=5]
+length = 1.6
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_H_C:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animation_H_C:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2.5 ]
+}
 
 [sub_resource type="Animation" id=6]
 length = 0.6
@@ -51,7 +155,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 4 ), ExtResource( 5 ) ]
+"values": [ ExtResource( 11 ), ExtResource( 12 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -60,10 +164,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
-"update": 0,
-"values": [ 1.0, 1.0, 0.1 ]
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 1.0, 0.3 ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -76,10 +180,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.00390165, 0.5, 1, 1.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.00390165, 0.5, 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 2 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -88,10 +192,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 2.0 ]
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2.3, 0.5 ]
 }
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -125,7 +229,7 @@ position = Vector2( 0, 5 )
 shape = SubResource( 1 )
 
 [node name="animation_H_C" type="AnimationPlayer" parent="."]
-playback_speed = 2.0
+playback_speed = 2.3
 anims/atack_left_animation = SubResource( 2 )
 anims/atack_rigth_animation = SubResource( 3 )
 anims/damage_animation = SubResource( 4 )
