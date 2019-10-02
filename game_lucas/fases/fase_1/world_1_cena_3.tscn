@@ -1,3 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets_game/background/fase_1/cena_3/background_topdow2.jpg" type="Texture" id=1]
 
 [node name="world_1_cena_3" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Layerchão" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background_topdow2" type="Sprite" parent="ParallaxBackground/Layerchão"]
+position = Vector2( 284.124, -168.253 )
+texture = ExtResource( 1 )

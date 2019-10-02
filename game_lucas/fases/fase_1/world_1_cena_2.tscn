@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase1/top_down_F1/player_top_down.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/background_topdow1.jpg" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 231, 10 )
@@ -48,7 +49,6 @@ scale = Vector2( 7.60511, 0.34375 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -192.75, -216.75 )
 rotation = 1.56051
 __meta__ = {
@@ -67,7 +67,7 @@ texture = ExtResource( 2 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( -412.125, -216.75 )
+position = Vector2( -415.379, -216.75 )
 rotation = 1.56051
 __meta__ = {
 "_edit_group_": true
@@ -142,5 +142,13 @@ margin_right = 43.0
 margin_bottom = -114.667
 custom_colors/font_color = Color( 0.756863, 0.054902, 0.054902, 1 )
 text = "mude a perspectiva que vc olha"
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Layerchão" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="background_topdow1" type="Sprite" parent="ParallaxBackground/Layerchão"]
+position = Vector2( 190.224, -206.256 )
+texture = ExtResource( 4 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
