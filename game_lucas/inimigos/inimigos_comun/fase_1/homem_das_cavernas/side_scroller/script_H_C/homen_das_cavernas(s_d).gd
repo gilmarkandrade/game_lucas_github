@@ -6,6 +6,7 @@ var walking = false
 var atacking = false
 var right_side = false
 var left_side= false
+var idlle_status = true
 var life = 100
 var damage = 5 
 var move = Vector2()
@@ -20,43 +21,46 @@ func _physics_process(delta):
 	if death == false:
 		walk_left_right_side()
 
-func walk_left_right_side():
-	if left_side == true and atacking == false and walking == true:
-		move.x =- velocity
-	
-			
-		$animation_H_C.current_animation = "walk_animaton"
-		$sprite_H_C.flip_h = true
-	elif right_side == true and atacking == false and walking == true :
-		move.x =+ velocity
-		$sprite_H_C.flip_h = false
-		$animation_H_C.current_animation = "walk_animaton"
-		
-	else :
-		move.x
-		if atacking == false:
-			$animation_H_C.current_animation = "idlle_animation"
-	move = move_and_slide(move)
+
 
 
 #==============================================================
 #                        functions
 #==============================================================
 
-
-#função que chama animaçao de ataque e passa o valor de dano 
-# para o player atraves do singleton atributos player singleton
-func atack():
-	if left_side == true and atacking == true and death == false:
-		move.x = 0
-		atributos_player_singleton.player_life_update(damage)
-		$animation_H_C.play("atack_left_animation")
-	if right_side == true and atacking == true and death == false:
-		move.x = 0
-		atributos_player_singleton.player_life_update(damage)
-		$animation_H_C.play("atack_rigth_animation")
+# função de movimento IA
+func walk_left_right_side():
+	if left_side == true and atacking == false and walking == true:
+		move.x =- velocity
+		$delay_atack.stop()
+		$animation_H_C.current_animation = "walk_animaton"
+		$sprite_H_C.flip_h = true
+	elif right_side == true and atacking == false and walking == true :
+		move.x =+ velocity
+		$delay_atack.stop()
+		$sprite_H_C.flip_h = false
+		$animation_H_C.current_animation = "walk_animaton"
 		
+	else :
+		move.x = 0
+		if atacking == false and walking == false and idlle_status == true:
+			$animation_H_C.play("idlle_animation")
 
+	move = move_and_slide(move)
+
+
+#função que chama animaçao de ataque 
+
+func atack():
+	move.x = 0
+	if left_side == true and atacking == true and death == false:
+		atributos_player_singleton.player_life_update(damage)
+		$animation_H_C.current_animation ="atack_left_animation"
+	elif right_side == true and atacking == true and death == false:
+		atributos_player_singleton.player_life_update(damage)
+		$animation_H_C.current_animation = "atack_rigth_animation"
+		
+#função de morte
 
 func damage_death():
 	
@@ -77,52 +81,70 @@ func _on_area_lado_esquerdo_move_body_entered(body):
 		if body.is_in_group("player") and death == false:
 			left_side = true
 			right_side = false
-			atacking = false 
 			walking = true
+			if walking == true:
+				$delay_atack.stop()
+			
 
-
+# area de indicação de movimento da ia 
 func _on_area_lado_direito_move_body_entered(body) :
 	if body.is_in_group("player") and death == false:
 			left_side = false
 			right_side = true 
-			atacking = false
 			walking = true
-			
+			if walking == true:
+				$delay_atack.stop()
 #======================== area atacking =======================
   
 #area proxima o player que permite ele atacar se o player chegar muito perto 
 func _on_area_esquerda_ataque_body_entered(body):
 	if body.is_in_group("player") and death == false:
 		atacking = true
+		idlle_status = false
+		walking = false
 		left_side = true
-		right_side = false 
-		$delay_atack.start()
+		right_side = false
+		if walking == false: 
+			$delay_atack.start()
+		
 	
-
+#colisor lado direito de acordo com estas variaveis o inimigo fara uma ação
+#ex: se walking == true e atacking ==false e de acordo com o lado que o player esta
+# ele ira andar se walking false e atacking == true então ele fara animação de ataque
+# de acordo com o lado que ele esta,a variavel que seta o lado é asvariaveis
+# left_side e right_side atenão a isso para que não haja conflito sempre quando setar 
+#uma como verdadeiro a outra deve ser definida como false 
 
 func _on_area_direita_ataque_body_entered(body):
 	if body.is_in_group("player") and death == false:
 		atacking = true
+		idlle_status = false
+		walking = false
 		left_side = false
 		right_side = true 
-		
-		$delay_atack.start()
+		if walking == false: 
+			$delay_atack.start()
 #====================================================
 #                    BODY EXITED
 #====================================================
-func _on_area_lado_direito_move_body_exited(body):
+# quando sair da area de ataque lado esquerdo
+func _on_area_esquerda_ataque_body_exited(body):
 	if body.is_in_group("player") and death == false:
 		$delay_atack.stop()
 		atacking = false
+		idlle_status = true
+		walking = true
+		
 
 	
-	
-	
-func _on_area_lado_esquerdo_move_body_exited(body):
+	# quando sair da area de ataque lado direito
+func _on_area_direita_ataque_body_exited(body):
 	if body.is_in_group("player") and death == false:
-		$delay_atack.stop()
 		atacking = false
-
+		idlle_status = true
+		walking = true
+		$delay_atack.stop()
+	
 	
 # ===================== area corpo =====================
 
@@ -133,14 +155,20 @@ func _on_area_corpo_H_C_area_entered(area):
 	if area.is_in_group("arma_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
-		print(life)
-	
+
+
+#============ area arma inimigo =======================
+
+# passa o valor de dano para game singleton que  o player ira receber
+func _on_area_arma_inimigo_body_entered(body):
+	if body.is_in_group("player") and death == false:
+		atributos_player_singleton.player_life_update(damage)
 	
 	
 #==============================================================
 #                         DELAY
 #==============================================================
-
+# delay que inicia o ataque
 func _on_delay_atack_timeout():
 	
 	atack()
@@ -151,13 +179,11 @@ func _on_delay_atack_timeout():
 #               ANIMATION FINISHED
 #===============================================================
 
+# quando animação acaba 
 func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
 		queue_free()
-	#if anim_name =="atack_rigth_animation":
-	#	atacking = false
-	#if anim_name =="atack_left_animation":
-	#	atacking = false
+
 
 
 

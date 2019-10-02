@@ -24,6 +24,10 @@ config/icon="res://icon.png"
 singletonfase="*res://scripts/script_GAME_SINGLETON/atributos_fase_singleton.gd"
 atributos_player_singleton="*res://scripts/script_GAME_SINGLETON/atributos_player_singleton.gd"
 
+[display]
+
+window/size/width=840
+
 [input]
 
 ui_left={

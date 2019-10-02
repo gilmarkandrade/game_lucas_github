@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 30
+var speed = 180
 var life = 100
 var damage_hit = 10
 var side_current = false
@@ -11,7 +11,7 @@ const gravity = 9
 const UP = Vector2(0,-1)
 
 #========================================================
-#                MOVIMENTAÇÃO
+#                MOtion player
 #========================================================
 
 func _physics_process(delta):
@@ -22,12 +22,12 @@ func _physics_process(delta):
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
 		
 		if Input.is_action_pressed("ui_right"):
-			move.x += speed
+			move.x =+ speed
 			$animation_Player.current_animation = "walk_animation"
 			$sprite_player.flip_h = false
 			
 		elif Input.is_action_pressed("ui_left"):
-			move.x -= speed
+			move.x =- speed
 			$animation_Player.current_animation = "walk_animation"
 			$sprite_player.flip_h = true
 		
@@ -42,7 +42,7 @@ func _physics_process(delta):
 #=================================================================
 #                   FUNCTIONS
 #=================================================================
-
+# esta função é para o ataque de armas de mão de curto alcance 
 func atack_proximity():
 	if side_current == false:
 		$animation_Player.play("atack_1_animation_left")
@@ -55,6 +55,7 @@ func death_player():
 	if life <= 0:
 		life = 0 
 		death = true
+		$animation_Player.play("death_animation")
 		
 		
 	
@@ -69,11 +70,13 @@ func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enimie"):
 		life =  atributos_player_singleton.life_player
 		death_player()
+		print(life)
 
 
 
 func _on_area_arma_player_area_entered(area):
-	
+	#envia o valor de dano toda vez que a colisão da arma do player 
+	#entrar no corpo de inimigos este valor vai para o game singleto atributos_player_singleton
 	if area.is_in_group("enemie"):
 		atributos_player_singleton.damage_life_enimie_update(damage_hit)
 		

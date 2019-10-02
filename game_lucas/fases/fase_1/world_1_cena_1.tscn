@@ -41,12 +41,39 @@ scale = Vector2( 7.57812, 0.28125 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( -32.9999, 0.750015 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2( 317.25, -60.75 )
 shape = SubResource( 2 )
 
 [node name="icon" type="Sprite" parent="StaticBody2D2/CollisionShape2D"]
+modulate = Color( 0.0666667, 0.00784314, 0.00784314, 1 )
+position = Vector2( 5.23447, -1.88464 )
+scale = Vector2( 1.38672, 1.28125 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2( 178.5, -186 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( 317.25, -60.75 )
+shape = SubResource( 2 )
+
+[node name="icon" type="Sprite" parent="StaticBody2D6/CollisionShape2D"]
+modulate = Color( 0.0666667, 0.00784314, 0.00784314, 1 )
+position = Vector2( 5.23447, -1.88464 )
+scale = Vector2( 1.38672, 1.28125 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 66, -90.75 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2( 317.25, -60.75 )
+shape = SubResource( 2 )
+
+[node name="icon" type="Sprite" parent="StaticBody2D4/CollisionShape2D"]
 modulate = Color( 0.0666667, 0.00784314, 0.00784314, 1 )
 position = Vector2( 5.23447, -1.88464 )
 scale = Vector2( 1.38672, 1.28125 )
@@ -71,7 +98,7 @@ texture = ExtResource( 2 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 976.5, 499.5 )
+position = Vector2( 1180.5, 481.5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -87,6 +114,7 @@ scale = Vector2( 0.648438, 14.7813 )
 texture = ExtResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 208.5, 4.49999 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 812.25, -191.25 )
@@ -98,6 +126,10 @@ scale = Vector2( 1.92, 1.76 )
 
 [node name="Camera2D" type="Camera2D" parent="player_plataforma"]
 current = true
+zoom = Vector2( 0.8, 0.8 )
+limit_left = 0
+limit_top = -620
+limit_right = 1230
 limit_bottom = 0
 
 [node name="Label" type="Label" parent="."]
@@ -113,25 +145,32 @@ text = "voce deverira olhar em outra perpsctiva
 position = Vector2( 414, -81 )
 
 [node name="homen_das_cavernas(s_d)" parent="." instance=ExtResource( 4 )]
-position = Vector2( 525, -101.5 )
+position = Vector2( 943.5, -80.5 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -1, 70 )
+motion_scale = Vector2( 1, 0.5 )
 motion_offset = Vector2( 1, 0 )
 
-[node name="background_fase_1_cena_1" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -24.8872, -659.644 )
-scale = Vector2( 1.2, 1 )
+[node name="background_fase_1_cena_1" type="Sprite" parent="ParallaxBackground/layer_montanhas"]
+position = Vector2( -39.8872, -589.144 )
+scale = Vector2( 1.5, 1.1 )
 texture = ExtResource( 5 )
 centered = false
 offset = Vector2( 1, 1 )
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="layer_arvore" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.7, 0.8 )
 
-[node name="Background_arvores_cena1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 477.508, -142.055 )
+[node name="Background_arvores_cena2" type="Sprite" parent="ParallaxBackground/layer_arvore"]
+position = Vector2( -67.7417, -80.555 )
+scale = Vector2( 1.30458, 0.952066 )
+texture = ExtResource( 6 )
+
+[node name="Background_arvores_cena1" type="Sprite" parent="ParallaxBackground/layer_arvore"]
+position = Vector2( 902.758, -89.555 )
 scale = Vector2( 1.30458, 0.952066 )
 texture = ExtResource( 6 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

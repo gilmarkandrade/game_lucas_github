@@ -28,8 +28,8 @@ resource_name = "jump_up "
 [sub_resource type="Animation" id=8]
 
 [sub_resource type="CapsuleShape2D" id=9]
-radius = 17.177
-height = 33.646
+radius = 16.177
+height = 21.646
 
 [sub_resource type="CapsuleShape2D" id=10]
 
@@ -59,7 +59,6 @@ anims/jump_down = SubResource( 6 )
 anims/walk_animation = SubResource( 8 )
 
 [node name="area_corpo_player" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
 shape = SubResource( 9 )

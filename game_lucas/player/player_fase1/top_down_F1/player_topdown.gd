@@ -5,6 +5,10 @@ var speed = 30
 
 
 func _physics_process(delta):
+	# olhar na direção do mouse
+	look_at(get_global_mouse_position())
+	
+	
 	if Input.is_action_pressed("ui_left"):
 		move.x -= speed
 	elif Input.is_action_pressed("ui_right"):
