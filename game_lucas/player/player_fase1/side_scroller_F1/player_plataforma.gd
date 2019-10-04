@@ -3,6 +3,7 @@ extends KinematicBody2D
 var move = Vector2()
 var speed = 180
 var life = 100
+var attacking= false
 var damage_hit = 10
 var side_current = false
 var death = false
@@ -20,22 +21,36 @@ func _physics_process(delta):
 	if death == false:
 		
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
-		
+		if Input.is_action_just_pressed("ui_atack"):
+			attacking = true
+			atack_proximity()
 		if Input.is_action_pressed("ui_right"):
 			move.x =+ speed
-			$animation_Player.current_animation = "walk_animation"
+			side_current = false
+			if is_on_floor():
+				$animation_Player .current_animation = "walk_animation"
 			$sprite_player.flip_h = false
 			
 		elif Input.is_action_pressed("ui_left"):
 			move.x =- speed
-			$animation_Player.current_animation = "walk_animation"
+			side_current = true
+			if is_on_floor():
+				$animation_Player .current_animation = "walk_animation"
 			$sprite_player.flip_h = true
 		
 		else:
 			move.x = 0
-			if is_on_floor():
-				if Input. is_action_just_pressed("ui_up"):
-					move.y = jump_force
+			if is_on_floor() and attacking == false:
+				$animation_Player.current_animation = "idlle_animation"
+		if is_on_floor():
+			if Input. is_action_just_pressed("ui_up"):
+				move.y = jump_force
+					
+		else:
+			if move.y <- 0.1 and attacking == false:
+				$animation_Player.current_animation = "jump_up"
+			elif move.y > 0.1 and attacking == false :
+				$animation_Player.current_animation ="jump_down"
 		move = move_and_slide(move,UP)
 	
 	
@@ -44,10 +59,11 @@ func _physics_process(delta):
 #=================================================================
 # esta função é para o ataque de armas de mão de curto alcance 
 func atack_proximity():
-	if side_current == false:
-		$animation_Player.play("atack_1_animation_left")
-	elif side_current ==true:
-		$animation_Player.play("atack_1_animation_right")
+	move.x = 0
+	if side_current == true:
+		$animation_Player.current_animation = "atack_1_animation_left"
+	elif side_current ==false:
+		$animation_Player.current_animation = "atack_1_animation_right"
 
 # função responsavel por travar o codigo do game e chamar 
 #a cena game over caso avida chegue a zero
@@ -90,4 +106,8 @@ func _on_animation_Player_animation_finished(anim_name):
 	if anim_name == "death_animation":
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
+	elif anim_name == "atack_1_animation_left":
+		attacking = false
+	elif anim_name == "atack_1_animation_right":
+		attacking = false
 

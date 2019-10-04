@@ -94,7 +94,7 @@ shape = SubResource( 4 )
 [node name="player_plataforma" parent="." instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 178.561, -68.1105 )
-scale = Vector2( 1.92, 1.76 )
+scale = Vector2( 1.2, 1.2 )
 
 [node name="Camera2D" type="Camera2D" parent="player_plataforma"]
 position = Vector2( -0.745827, 0.813614 )

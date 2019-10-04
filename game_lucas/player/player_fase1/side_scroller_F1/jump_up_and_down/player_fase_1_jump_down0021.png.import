@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_fase_1_jump_up0020.png-d17142ed5f56299fd998770b714bdcc8.stex"
+path="res://.import/player_fase_1_jump_down0021.png-47e0e238c50563fccb397908d6c3266b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_up0020.png"
-dest_files=[ "res://.import/player_fase_1_jump_up0020.png-d17142ed5f56299fd998770b714bdcc8.stex" ]
+source_file="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0021.png"
+dest_files=[ "res://.import/player_fase_1_jump_down0021.png-47e0e238c50563fccb397908d6c3266b.stex" ]
 
 [params]
 
