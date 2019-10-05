@@ -6,7 +6,7 @@
 [ext_resource path="res://assets_game/background/fase_1/cena_2/background_topdow1.jpg" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 282.721, 11.1625 )
+extents = Vector2( 231, 9.08473 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 39, 377.756 )
@@ -44,8 +44,8 @@ shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="StaticBody2D2/CollisionShape2D"]
 modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( 93.1768, -5.96046e-008 )
-scale = Vector2( 10.9557, 0.34375 )
+position = Vector2( -14.0422, -5.96046e-008 )
+scale = Vector2( 7.60511, 0.34375 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -103,20 +103,20 @@ position = Vector2( -14.0422, -5.96046e-008 )
 scale = Vector2( 7.60511, 0.34375 )
 texture = ExtResource( 2 )
 
-[node name="Arvore" type="StaticBody2D" parent="."]
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 398.4, -76.4222 )
+position = Vector2( 388.833, -76.4222 )
 rotation = 1.56051
 scale = Vector2( 0.041697, 1.87954 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arvore"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="Arvore/CollisionShape2D"]
+[node name="icon" type="Sprite" parent="StaticBody2D5/CollisionShape2D"]
 modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
 position = Vector2( -14.0422, -5.96046e-008 )
 scale = Vector2( 7.60511, 0.34375 )
