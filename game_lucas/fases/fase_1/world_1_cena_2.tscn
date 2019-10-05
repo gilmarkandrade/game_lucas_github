@@ -129,6 +129,7 @@ scale = Vector2( 0.440059, 0.480055 )
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
 position = Vector2( 20.9855, 60.8932 )
 current = true
+zoom = Vector2( 0.6, 0.6 )
 
 [node name="Area2D" type="Area2D" parent="."]
 editor/display_folded = true

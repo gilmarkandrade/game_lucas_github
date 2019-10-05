@@ -25,23 +25,27 @@ func _physics_process(delta):
 			attacking = true
 			atack_proximity()
 		if Input.is_action_pressed("ui_right"):
-			move.x =+ speed
+			if attacking == false :
+				move.x =+ speed
 			side_current = false
-			if is_on_floor():
+			if is_on_floor() and attacking == false:
 				$animation_Player .current_animation = "walk_animation"
 			$sprite_player.flip_h = false
 			
 		elif Input.is_action_pressed("ui_left"):
-			move.x =- speed
+			if attacking == false :
+				move.x =- speed
 			side_current = true
-			if is_on_floor():
+			if is_on_floor() and attacking == false:
 				$animation_Player .current_animation = "walk_animation"
 			$sprite_player.flip_h = true
 		
 		else:
 			move.x = 0
+			
 			if is_on_floor() and attacking == false:
 				$animation_Player.current_animation = "idlle_animation"
+				
 		if is_on_floor():
 			if Input. is_action_just_pressed("ui_up"):
 				move.y = jump_force
@@ -59,12 +63,13 @@ func _physics_process(delta):
 #=================================================================
 # esta função é para o ataque de armas de mão de curto alcance 
 func atack_proximity():
-	move.x = 0
+	
 	if side_current == true:
 		$animation_Player.current_animation = "atack_1_animation_left"
+		move.x =0
 	elif side_current ==false:
 		$animation_Player.current_animation = "atack_1_animation_right"
-
+		move.x =0
 # função responsavel por travar o codigo do game e chamar 
 #a cena game over caso avida chegue a zero
 func death_player():

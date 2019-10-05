@@ -365,6 +365,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 44.5556, 4.44444 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("animation_Player:playback_speed")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="CapsuleShape2D" id=9]
 radius = 12.7778
@@ -391,7 +403,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="animation_Player" type="AnimationPlayer" parent="."]
-playback_speed = 1.2
 anims/atack_1_animation_left = SubResource( 2 )
 anims/atack_1_animation_right = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
