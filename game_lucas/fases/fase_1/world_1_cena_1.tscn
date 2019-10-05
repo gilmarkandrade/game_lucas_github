@@ -42,7 +42,6 @@ scale = Vector2( 0.769708, 0.927833 )
 texture = ExtResource( 2 )
 
 [node name="Pedra" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -32.9999, 0.750015 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pedra"]
@@ -50,6 +49,7 @@ position = Vector2( 317.25, -60.75 )
 shape = SubResource( 2 )
 
 [node name="icon" type="Sprite" parent="Pedra/CollisionShape2D"]
+modulate = Color( 0.796078, 0.796078, 0.796078, 1 )
 position = Vector2( 0.74942, -1.0741 )
 scale = Vector2( 1.4604, 2.0433 )
 texture = ExtResource( 3 )
