@@ -25,37 +25,32 @@ extents = Vector2( 59.3942, 170.25 )
 [node name="world" type="Node"]
 script = ExtResource( 1 )
 
-[node name="Chão" type="StaticBody2D" parent="."]
-editor/display_folded = true
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 45, 7 )
 scale = Vector2( 3.16, 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 208, -19 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="Chão/CollisionShape2D"]
-position = Vector2( 5.30022, 28.815 )
-scale = Vector2( 0.825135, 0.927833 )
+[node name="icon" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2( -11.3279, 28.815 )
+scale = Vector2( 0.769708, 0.927833 )
 texture = ExtResource( 2 )
 
 [node name="Pedra" type="StaticBody2D" parent="."]
 position = Vector2( -32.9999, 0.750015 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pedra"]
-position = Vector2( 728.226, -63.614 )
+position = Vector2( 317.25, -60.75 )
 shape = SubResource( 2 )
 
 [node name="icon" type="Sprite" parent="Pedra/CollisionShape2D"]
-<<<<<<< HEAD
 modulate = Color( 0.796078, 0.796078, 0.796078, 1 )
 position = Vector2( 0.74942, -1.0741 )
-=======
-position = Vector2( 4.55457, -1.47446 )
->>>>>>> 5dd5c8e16c2478a16dfd6b7ba4fd10549157e157
 scale = Vector2( 1.4604, 2.0433 )
 texture = ExtResource( 3 )
 
@@ -77,11 +72,10 @@ scale = Vector2( 0.648438, 14.7813 )
 texture = ExtResource( 4 )
 
 [node name="arvore" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1138.87, 451.108 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arvore"]
-position = Vector2( 148.664, -410.608 )
+position = Vector2( -74.25, -405 )
 shape = SubResource( 3 )
 
 [node name="icon" type="Sprite" parent="arvore/CollisionShape2D"]
@@ -94,7 +88,7 @@ editor/display_folded = true
 position = Vector2( 208.5, 4.49999 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 1000.79, -194.341 )
+position = Vector2( 812.25, -191.25 )
 shape = SubResource( 4 )
 
 [node name="player_plataforma" parent="." instance=ExtResource( 6 )]
@@ -112,10 +106,10 @@ limit_right = 1230
 limit_bottom = 0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 925.196
-margin_top = -298.206
-margin_right = 1179.2
-margin_bottom = -265.206
+margin_left = 576.5
+margin_top = -256.5
+margin_right = 830.5
+margin_bottom = -223.5
 custom_colors/font_color = Color( 0.501961, 0.0196078, 0.0196078, 1 )
 text = "voce deverira olhar em outra perpsctiva
  press enter "
@@ -124,10 +118,9 @@ text = "voce deverira olhar em outra perpsctiva
 position = Vector2( 414, -81 )
 
 [node name="homen_das_cavernas(s_d)" parent="." instance=ExtResource( 7 )]
-position = Vector2( 952.773, -83.5909 )
+position = Vector2( 943.5, -80.5 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -1, 70 )
