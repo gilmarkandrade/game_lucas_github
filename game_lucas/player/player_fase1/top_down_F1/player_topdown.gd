@@ -3,11 +3,14 @@ extends KinematicBody2D
 var move = Vector2()
 var speed = 150
 
+
 var life = atributos_player_singleton.life_player
 var attacking = false
 
 
 func _physics_process(delta):
+	var pos = $".".global_position
+	atributos_player_singleton.update_position_player(pos)
 	# olhar na direção do mouse
 	look_at(get_global_mouse_position())
 	

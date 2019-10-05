@@ -11,11 +11,14 @@ const jump_force = -300
 const gravity = 9
 const UP = Vector2(0,-1)
 
+
 #========================================================
 #                MOtion player
 #========================================================
 
 func _physics_process(delta):
+	var pos = $".".global_position
+	atributos_player_singleton.update_position_player(pos)
 	move.y += gravity
 	
 	if death == false:

@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase1/top_down_F1/player_top_down.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets_game/background/fase_1/cena_2/background_topdow1.jpg" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/homen_das_cavernas(T_D).tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 282.721, 11.1625 )
@@ -153,5 +154,8 @@ text = "mude a perspectiva que vc olha"
 [node name="background_topdow1" type="Sprite" parent="ParallaxBackground/Layerchão"]
 position = Vector2( 190.224, -206.256 )
 texture = ExtResource( 4 )
+
+[node name="homen_das_cavernas(T_D)" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8.66667, -42 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
