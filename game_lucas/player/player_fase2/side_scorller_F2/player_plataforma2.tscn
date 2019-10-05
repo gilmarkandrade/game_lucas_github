@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://player/player_fase2/side_scorller_F2/player_plataforma2.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 9.66667
+height = 54.0
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 12.7778
+height = 48.6667
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 5.88889
+height = 36.9261
+
+[node name="player_plataforma_F2" type="KinematicBody2D" groups=[
+"player",
+]]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"player",
+]]
+position = Vector2( 1.33333, 11.1111 )
+shape = SubResource( 1 )
+
+[node name="sprite_player" type="Sprite" parent="."]
+position = Vector2( 3.74108, -0.660191 )
+scale = Vector2( 0.511735, 1.02063 )
+texture = ExtResource( 2 )
+
+[node name="animation_Player" type="AnimationPlayer" parent="."]
+
+[node name="area_corpo_player" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
+visible = false
+position = Vector2( 1.77778, 8.88889 )
+shape = SubResource( 2 )
+
+[node name="area_arma_player" type="Area2D" parent="." groups=[
+"arma_player",
+]]
+position = Vector2( -43, -6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_player"]
+modulate = Color( 0.490196, 0.87451, 0.141176, 1 )
+position = Vector2( 45.8889, 19.5556 )
+shape = SubResource( 3 )
+[connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]
+[connection signal="area_entered" from="area_arma_player" to="." method="_on_area_arma_player_area_entered"]
+[connection signal="body_entered" from="area_arma_player" to="." method="_on_area_arma_player_body_entered"]
