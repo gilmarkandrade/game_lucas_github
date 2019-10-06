@@ -335,6 +335,7 @@ position = Vector2( 371, -2 )
 shape = SubResource( 9 )
 
 [node name="area_esquerda_ataque" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 31, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -345,6 +346,7 @@ position = Vector2( -69, -5 )
 shape = SubResource( 10 )
 
 [node name="area_direita_ataque" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( -40, 0 )
 __meta__ = {
 "_edit_group_": true
@@ -369,12 +371,13 @@ shape = SubResource( 12 )
 wait_time = 0.5
 
 [node name="area_arma_inimigo" type="Area2D" parent="." groups=[
-"weapom_enimie",
+"weapom_enemie",
 ]]
+editor/display_folded = true
 position = Vector2( -89, 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_inimigo" groups=[
-"weapom_enimie",
+"weapom_enemie",
 ]]
 modulate = Color( 0.168627, 0.937255, 0.2, 1 )
 position = Vector2( 89.3079, -9.08333 )
