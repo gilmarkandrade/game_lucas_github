@@ -51,7 +51,7 @@ texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( -192.75, -216.75 )
+position = Vector2( -106.412, -206.976 )
 rotation = 1.56051
 __meta__ = {
 "_edit_group_": true
@@ -104,36 +104,19 @@ position = Vector2( -14.0422, -5.96046e-008 )
 scale = Vector2( 7.60511, 0.34375 )
 texture = ExtResource( 2 )
 
-[node name="Arvore" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 398.4, -76.4222 )
-rotation = 1.56051
-scale = Vector2( 0.041697, 1.87954 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Arvore"]
-scale = Vector2( 1.76, 1 )
-shape = SubResource( 1 )
-
-[node name="icon" type="Sprite" parent="Arvore/CollisionShape2D"]
-modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( -14.0422, -5.96046e-008 )
-scale = Vector2( 7.60511, 0.34375 )
-texture = ExtResource( 2 )
-
 [node name="player_top_down" parent="." instance=ExtResource( 3 )]
-position = Vector2( 269.972, -84.9835 )
+position = Vector2( 211.186, -56.344 )
 scale = Vector2( 0.440059, 0.480055 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
 position = Vector2( 20.9855, 60.8932 )
 current = true
 zoom = Vector2( 0.6, 0.6 )
+limit_bottom = 170
 
 [node name="Area2D" type="Area2D" parent="."]
 editor/display_folded = true
+position = Vector2( 103.749, -8.10541 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -148.5, -246.375 )
@@ -152,10 +135,15 @@ text = "mude a perspectiva que vc olha"
 [node name="Layerchão" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="background_topdow1" type="Sprite" parent="ParallaxBackground/Layerchão"]
-position = Vector2( 190.224, -206.256 )
+position = Vector2( 186.982, -204.635 )
 texture = ExtResource( 4 )
 
 [node name="homen_das_cavernas(T_D)" parent="." instance=ExtResource( 5 )]
-position = Vector2( 8.66667, -42 )
+position = Vector2( -32.0314, -42 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
+polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 401.968, 81.3167, 409.505, 97.8975, 465.276, 109.956, 519.541, 84.3314, 545.165, 13.4865, 534.614, -49.8218, 534.614, -102.579, 495.423, -168.902, 427.593, -171.916, 374.836, -199.048, 305.498, -200.556, 275.352, -186.99, 246.712, -170.409, 258.771, -129.711, 245.205, -75.4466, 246.712, -34.7484, 246.712, 5.94977 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
