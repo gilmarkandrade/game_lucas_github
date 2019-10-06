@@ -3,5 +3,5 @@
 [node name="fase_teste_2" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( -4.08112, -57.1357 )
+position = Vector2( -9.34427, -123.451 )
 current = true
