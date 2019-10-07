@@ -1,16 +1,29 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase1/top_down_F1/player_top_down.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets_game/background/fase_1/cena_2/background_topdow1.jpg" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/homen_das_cavernas(T_D).tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/layer_topodaarvore.png" type="Texture" id=2]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/layer_arvores_top_down.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/background_topdow1 ajustado.png" type="Texture" id=4]
+[ext_resource path="res://player/player_fase1/top_down_F1/player_top_down.tscn" type="PackedScene" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/homen_das_cavernas(T_D).tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/river_motion_animation/river_motion_animation0000.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/river_motion_animation/river_motion_animation0001.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/river_motion_animation/river_motion_animation0002.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_1/cena_2/river_motion_animation/river_motion_animation0003.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 282.721, 11.1625 )
+extents = Vector2( 447.926, 11.1625 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 39, 377.756 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "river_motion",
+"speed": 5.0
+} ]
 
 [node name="world2 " type="Node"]
 script = ExtResource( 1 )
@@ -26,12 +39,6 @@ __meta__ = {
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="StaticBody2D/CollisionShape2D"]
-modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( 94.4016, -5.96046e-008 )
-scale = Vector2( 10.994, 0.34375 )
-texture = ExtResource( 2 )
-
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 10.5, -604.5 )
@@ -42,12 +49,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
-
-[node name="icon" type="Sprite" parent="StaticBody2D2/CollisionShape2D"]
-modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( 93.1768, -5.96046e-008 )
-scale = Vector2( 10.9557, 0.34375 )
-texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -61,13 +62,6 @@ __meta__ = {
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="StaticBody2D3/CollisionShape2D"]
-visible = false
-modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( 122.739, -5.96046e-008 )
-scale = Vector2( 3.33068, 0.34375 )
-texture = ExtResource( 2 )
-
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( -415.379, -216.75 )
@@ -80,12 +74,6 @@ __meta__ = {
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
-[node name="icon" type="Sprite" parent="StaticBody2D6/CollisionShape2D"]
-modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( -14.0422, -5.96046e-008 )
-scale = Vector2( 7.60511, 0.34375 )
-texture = ExtResource( 2 )
-
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 787.777, -213.255 )
@@ -97,22 +85,6 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
-
-[node name="icon" type="Sprite" parent="StaticBody2D4/CollisionShape2D"]
-modulate = Color( 0.0666667, 0.0117647, 0.0117647, 1 )
-position = Vector2( -14.0422, -5.96046e-008 )
-scale = Vector2( 7.60511, 0.34375 )
-texture = ExtResource( 2 )
-
-[node name="player_top_down" parent="." instance=ExtResource( 3 )]
-position = Vector2( 211.186, -56.344 )
-scale = Vector2( 0.440059, 0.480055 )
-
-[node name="Camera2D" type="Camera2D" parent="player_top_down"]
-position = Vector2( 20.9855, 60.8932 )
-current = true
-zoom = Vector2( 0.6, 0.6 )
-limit_bottom = 170
 
 [node name="Area2D" type="Area2D" parent="."]
 editor/display_folded = true
@@ -130,20 +102,69 @@ margin_bottom = -114.667
 custom_colors/font_color = Color( 0.756863, 0.054902, 0.054902, 1 )
 text = "mude a perspectiva que vc olha"
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+[node name="Paralax_main_arvore" type="ParallaxBackground" parent="."]
+layer = 0
 
-[node name="Layerchão" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Layerarvoretopo" type="ParallaxLayer" parent="Paralax_main_arvore"]
+z_index = 16
+z_as_relative = false
+motion_scale = Vector2( 0.9, 0.9 )
 
-[node name="background_topdow1" type="Sprite" parent="ParallaxBackground/Layerchão"]
-position = Vector2( 186.982, -204.635 )
+[node name="layer_topodaarvore" type="Sprite" parent="Paralax_main_arvore/Layerarvoretopo"]
+position = Vector2( 587.477, 18.8907 )
+z_index = 5
+texture = ExtResource( 2 )
+
+[node name="layer_arvores_top_down" type="Sprite" parent="Paralax_main_arvore/Layerarvoretopo"]
+position = Vector2( 193.904, -444.868 )
+scale = Vector2( 1.04875, 1.21862 )
+texture = ExtResource( 3 )
+
+[node name="paralax_main_chão" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="paralax_main_chão"]
+editor/display_folded = true
+z_as_relative = false
+
+[node name="background_topdow1" type="Sprite" parent="paralax_main_chão/ParallaxLayer"]
+position = Vector2( 188.315, -204.635 )
+scale = Vector2( 1.00222, 1 )
 texture = ExtResource( 4 )
 
-[node name="homen_das_cavernas(T_D)" parent="." instance=ExtResource( 5 )]
+[node name="player_top_down" parent="." instance=ExtResource( 5 )]
+position = Vector2( 487.853, 41.656 )
+scale = Vector2( 0.440059, 0.480055 )
+z_as_relative = false
+
+[node name="Camera2D" type="Camera2D" parent="player_top_down"]
+position = Vector2( 20.9855, 60.8932 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+limit_left = -400
+limit_top = -600
+limit_right = 775
+limit_bottom = 170
+
+[node name="homen_das_cavernas(T_D)" parent="." instance=ExtResource( 6 )]
 position = Vector2( -32.0314, -42 )
 
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+[node name="colisaõ_arvore" type="StaticBody2D" parent="."]
+editor/display_folded = true
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
-polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 401.968, 81.3167, 409.505, 97.8975, 465.276, 109.956, 519.541, 84.3314, 545.165, 13.4865, 534.614, -49.8218, 534.614, -102.579, 495.423, -168.902, 427.593, -171.916, 374.836, -199.048, 305.498, -200.556, 275.352, -186.99, 246.712, -170.409, 258.771, -129.711, 245.205, -75.4466, 246.712, -34.7484, 246.712, 5.94977 )
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="colisaõ_arvore"]
+position = Vector2( 372.459, 80.9034 )
+scale = Vector2( 0.772196, 0.738898 )
+polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 382.81, 56.224, 402.143, 57.5573, 428.81, 54.8907, 466.143, 44.224, 482.143, 12.8907, 480.81, -37.776, 468.81, -88.4427, 436.81, -121.109, 400.143, -134.443, 367.477, -141.776, 346.143, -145.109, 325.477, -140.443, 308.81, -134.443, 284.81, -121.776, 268.143, -69.776, 274.143, -40.4427, 277.477, -15.1093 )
+
+[node name="animation_river" type="AnimatedSprite" parent="."]
+position = Vector2( 189, -303.75 )
+frames = SubResource( 3 )
+animation = "river_motion"
+frame = 2
+playing = true
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

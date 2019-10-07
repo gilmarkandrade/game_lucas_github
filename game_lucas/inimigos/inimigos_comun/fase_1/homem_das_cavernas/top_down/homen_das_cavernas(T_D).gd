@@ -10,7 +10,9 @@ var life = 100
 var move = Vector2(0,0)
 var target = atributos_player_singleton.pos_player_update
 
-
+func _ready():
+	seguir = true
+	death = false
 	
 	
 func _physics_process(delta):
@@ -18,6 +20,8 @@ func _physics_process(delta):
 	if seguir == true and death == false :
 		perseguir(delta)
 	
+	elif seguir == false and attacking == false and death == false:
+		$animation_H_C.current_animation = "idlle_animation" 
 	
 func init(pos):
 	position = pos
@@ -32,16 +36,18 @@ func perseguir(delta):
 		$animation_H_C.current_animation = "walk_animation"
 
 func _on_area_ataque_body_entered(body):
-	seguir = false
-	$delay_atack.start()
+	if body.is_in_group("player") and death == false:
+		seguir = false
+		$delay_atack.start()
 	
 func _on_area_ataque_body_exited(body):
-	seguir = true 
+	if body.is_in_group("player") and death == false:
+		seguir = true 
 	
 			
 
 func damage_death():
-	print(life)
+	
 	if life <= 0:
 		death = true 
 		$animation_H_C. play("death_animation")
@@ -58,6 +64,8 @@ func _on_arma_inimigo_body_entered(body):
 func _on_AI_perception_body_exited(body):
 	if body.is_in_group("player") and death == false:
 		seguir = true
+		attacking = false
+		$delay_atack.stop()
 	
 		
 func atack():

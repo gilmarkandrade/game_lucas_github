@@ -1,16 +1,16 @@
 [gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/homen_das_cavernas(T_D).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death3.png" type="Texture" id=2]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack1.png" type="Texture" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack2.png" type="Texture" id=4]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack3.png" type="Texture" id=5]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/damage_animation/damage1.png" type="Texture" id=6]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death1.png" type="Texture" id=7]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death2.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death3.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle1.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle2.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle1.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle2.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk1.png" type="Texture" id=11]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk2.png" type="Texture" id=12]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk3.png" type="Texture" id=13]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk4.png" type="Texture" id=14]
@@ -78,7 +78,7 @@ tracks/3/keys = {
 "values": [ Vector2( 25, 56 ), Vector2( 39, 47 ), Vector2( 55, 6 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=3]
 resource_name = "damage_animation"
 length = 0.4
 tracks/0/type = "value"
@@ -118,9 +118,8 @@ tracks/2/keys = {
 "values": [ Vector2( 16.177, -3 ) ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "death_animation"
-length = 1.1
+[sub_resource type="Animation" id=4]
+length = 2.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("spriter _H_C:texture")
 tracks/0/interp = 1
@@ -131,7 +130,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _H_C:position")
@@ -170,8 +169,7 @@ tracks/3/keys = {
 "values": [ Vector2( 4, -1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
-resource_name = "idlle_animation"
+[sub_resource type="Animation" id=5]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -184,7 +182,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _H_C:position")
@@ -223,8 +221,7 @@ tracks/3/keys = {
 "values": [ 1.0, 0.3, 0.2 ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "walk_animation"
+[sub_resource type="Animation" id=6]
 length = 2.3
 loop = true
 tracks/0/type = "value"
@@ -237,7 +234,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 16 ) ]
+"values": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 16 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -251,18 +248,30 @@ tracks/1/keys = {
 "update": 1,
 "values": [ 2.0 ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("arma_inimigo/CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
 
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=7]
 radius = 36.2275
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=8]
 radius = 13.177
 height = 41.826
 
-[sub_resource type="CircleShape2D" id=8]
+[sub_resource type="CircleShape2D" id=9]
 radius = 21.1471
 
-[sub_resource type="CircleShape2D" id=9]
+[sub_resource type="CircleShape2D" id=10]
 radius = 113.177
 
 [node name="homen_das_cavernas(T_D)" type="KinematicBody2D" groups=[
@@ -276,17 +285,16 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="spriter _H_C" type="Sprite" parent="."]
-position = Vector2( 16.177, -3 )
+position = Vector2( 0.177002, 0 )
 rotation = -1.5708
 texture = ExtResource( 2 )
 
 [node name="animation_H_C" type="AnimationPlayer" parent="."]
-playback_speed = 2.0
 anims/atack_animation = SubResource( 2 )
-anims/damage_animation = SubResource( 10 )
-anims/death_animation = SubResource( 3 )
-anims/idlle_animation = SubResource( 4 )
-anims/walk_animation = SubResource( 5 )
+anims/damage_animation = SubResource( 3 )
+anims/death_animation = SubResource( 4 )
+anims/idlle_animation = SubResource( 5 )
+anims/walk_animation = SubResource( 6 )
 
 [node name="corpo_h_c" type="Area2D" parent="." groups=[
 "enemie",
@@ -296,14 +304,14 @@ position = Vector2( 1, -3 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corpo_h_c" groups=[
 "enemie",
 ]]
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="area_ataque" type="Area2D" parent="."]
 position = Vector2( 12, 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_ataque"]
 position = Vector2( 36, -5 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="arma_inimigo" type="Area2D" parent="." groups=[
 "weapom_enemie",
@@ -313,15 +321,17 @@ shape = SubResource( 7 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-shape = SubResource( 8 )
+position = Vector2( 4, -1 )
+shape = SubResource( 9 )
 
 [node name="delay_atack" type="Timer" parent="."]
+wait_time = 0.8
 
 [node name="AI_perception" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI_perception"]
 position = Vector2( 7, 0 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 [connection signal="animation_finished" from="animation_H_C" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_h_c" to="." method="_on_corpo_h_c_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]
