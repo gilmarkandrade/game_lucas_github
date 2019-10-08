@@ -53,7 +53,7 @@ __meta__ = {
 scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+[node name="Pedra" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( -106.412, -206.976 )
 rotation = 1.56051
@@ -61,9 +61,9 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Pedra"]
 scale = Vector2( 1.76, 1 )
-shape = SubResource( 1 )
+polygon = PoolVector2Array( 13.1833, 27.9582, 26.3027, 105.156, 57.4439, 130.268, 86.1327, 123.489, 120.199, 99.5584, 167.163, 61.9282, 180.537, 30.988, 176.569, 0.397217, 209.248, -44.1261, 224.892, -76.3521, 228.424, -100.173, 210.533, -134.996, 178.079, -128.949, 142.268, -64.5789, 107.371, -27.3938, 78.2156, -5.36417, 43.1851, -9.97911, 28.6441, -37.4441, 5.28259, -39.194, -7.24892, -23.4979 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -110,6 +110,7 @@ editor/display_folded = true
 layer = 0
 
 [node name="Layerarvoretopo" type="ParallaxLayer" parent="Paralax_main_arvore"]
+editor/display_folded = true
 z_index = 16
 z_as_relative = false
 motion_scale = Vector2( 0.9, 0.9 )
@@ -128,7 +129,6 @@ texture = ExtResource( 3 )
 editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="paralax_main_chão"]
-editor/display_folded = true
 z_as_relative = false
 
 [node name="background_topdow1" type="Sprite" parent="paralax_main_chão/ParallaxLayer"]
@@ -152,10 +152,9 @@ limit_right = 775
 limit_bottom = 170
 
 [node name="homen_das_cavernas(T_D)" parent="." instance=ExtResource( 6 )]
-position = Vector2( -32.0314, -42 )
+position = Vector2( 6.05902, -48.8018 )
 
 [node name="colisaõ_arvore" type="StaticBody2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_group_": true
 }
@@ -169,10 +168,11 @@ polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 382.81, 56.224
 position = Vector2( 189, -303.75 )
 frames = SubResource( 3 )
 animation = "river_motion"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Area2D2_Rio" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 291.677, -350.118 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2_Rio"]
