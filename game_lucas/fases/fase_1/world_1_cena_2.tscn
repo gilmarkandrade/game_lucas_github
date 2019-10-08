@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_1/cena_2/layer_topodaarvore.png" type="Texture" id=2]
@@ -24,6 +24,9 @@ animations = [ {
 "name": "river_motion",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 522.355, 52.8584 )
 
 [node name="world2 " type="Node"]
 script = ExtResource( 1 )
@@ -103,6 +106,7 @@ custom_colors/font_color = Color( 0.756863, 0.054902, 0.054902, 1 )
 text = "mude a perspectiva que vc olha"
 
 [node name="Paralax_main_arvore" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 layer = 0
 
 [node name="Layerarvoretopo" type="ParallaxLayer" parent="Paralax_main_arvore"]
@@ -133,6 +137,7 @@ scale = Vector2( 1.00222, 1 )
 texture = ExtResource( 4 )
 
 [node name="player_top_down" parent="." instance=ExtResource( 5 )]
+editor/display_folded = true
 position = Vector2( 487.853, 41.656 )
 scale = Vector2( 0.440059, 0.480055 )
 z_as_relative = false
@@ -166,5 +171,12 @@ frames = SubResource( 3 )
 animation = "river_motion"
 frame = 2
 playing = true
+
+[node name="Area2D2_Rio" type="Area2D" parent="."]
+position = Vector2( 291.677, -350.118 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2_Rio"]
+position = Vector2( -5.71808, -3.54681 )
+shape = SubResource( 4 )
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
