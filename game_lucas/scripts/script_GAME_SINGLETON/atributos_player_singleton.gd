@@ -3,6 +3,7 @@ extends Node
 var life_player = 100
 var life_enemie_update = 0
 var pos_player_update 
+
 func player_life_update(life):
 	life_player -=  life
 

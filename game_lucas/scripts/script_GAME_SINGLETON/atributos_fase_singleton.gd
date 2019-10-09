@@ -1,5 +1,6 @@
 extends Node
-var mudarposicao= false
+var mudarposicao
+
 
 
 func setar_posicao(posicao):
