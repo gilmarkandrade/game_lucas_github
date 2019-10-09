@@ -110,20 +110,26 @@ texture = ExtResource( 5 )
 position = Vector2( 284.36, -215.179 )
 frames = SubResource( 6 )
 animation = "Animação Rio"
-frame = 1
 playing = true
 
 [node name="player_top_down" parent="." instance=ExtResource( 10 )]
 position = Vector2( -118, 70 )
-scale = Vector2( 0.6, 0.6 )
+scale = Vector2( 0.4, 0.4 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
 current = true
+zoom = Vector2( 0.6, 0.6 )
+limit_left = -150
+limit_top = -390
+limit_right = 740
+limit_bottom = 200
 
 [node name="position_inicio_cena3" type="Position2D" parent="."]
 position = Vector2( -119, 55 )
 
 [node name="area_inicio_cena3" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( -15, 0 )
 __meta__ = {
 "_edit_group_": true
 }

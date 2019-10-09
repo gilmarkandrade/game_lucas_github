@@ -170,7 +170,7 @@ polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 382.81, 56.224
 position = Vector2( 189, -303.75 )
 frames = SubResource( 3 )
 animation = "river_motion"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Area2D2_Rio" type="Area2D" parent="."]

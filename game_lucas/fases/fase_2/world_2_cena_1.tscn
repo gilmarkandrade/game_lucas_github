@@ -31,15 +31,13 @@ animations = [ {
 [node name="world_2_cena_1" type="Node"]
 
 [node name="Parallax_dentro_cela" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax_dentro_cela"]
-editor/display_folded = true
 motion_scale = Vector2( 0.9, 0.9 )
 
 [node name="Background_fundo_da_cela" type="Sprite" parent="Parallax_dentro_cela/ParallaxLayer"]
-position = Vector2( 258.949, -10.9416 )
-scale = Vector2( 1.00317, 1 )
+position = Vector2( 220.199, -10.9416 )
+scale = Vector2( 1.10234, 1 )
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -74,10 +72,18 @@ shape = SubResource( 4 )
 position = Vector2( 9.04407, 28.6395 )
 
 [node name="Camera2D" type="Camera2D" parent="player_plataforma"]
+position = Vector2( 21.9259, 0.59259 )
 current = true
+zoom = Vector2( 0.4, 0.4 )
+limit_left = 10
+limit_top = -225
+limit_right = 550
+limit_bottom = 125
+editor_draw_limits = true
 
 [node name="Background_medieval2" type="Sprite" parent="."]
-position = Vector2( 259.851, -29.5997 )
+position = Vector2( 234.851, -29.5997 )
+scale = Vector2( 1.08333, 1 )
 texture = ExtResource( 3 )
 
 [node name="Tocha" type="AnimatedSprite" parent="."]
