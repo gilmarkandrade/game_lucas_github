@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets_game/hud_player/hud_life_player.gd" type="Script" id=1]
+[ext_resource path="res://assets_game/hud_player/hud_temporario_fundo.png" type="Texture" id=2]
+[ext_resource path="res://assets_game/hud_player/hud_temporario_frente.png" type="Texture" id=3]
+
+[node name="hud_life" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="hud_temporario_fundo" type="Sprite" parent="."]
+position = Vector2( 121.961, 44.407 )
+scale = Vector2( 0.998125, 0.975309 )
+texture = ExtResource( 2 )
+
+[node name="bar_life_progress" type="TextureProgress" parent="."]
+margin_left = 42.9629
+margin_top = 32.5925
+margin_right = 200.963
+margin_bottom = 56.5925
+value = 98.0
+texture_progress = ExtResource( 3 )
