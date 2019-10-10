@@ -7,6 +7,8 @@ var attacking= false
 var damage_hit = 10
 var side_current = false
 var death = false
+var camera_shake_emitter= false
+var camera_zoom_emitter = 1
 const jump_force = -300
 const gravity = 9
 const UP = Vector2(0,-1)
@@ -93,11 +95,10 @@ func death_player():
 func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enemie"):
 		life =  atributos_player_singleton.life_player
-		#camera_shake_singleton.init_shake = true;
-		#camera_shake_singleton._shake_camera(true);
 		death_player()
-		
-
+		camera_shake_emitter = true
+		atributos_player_singleton.aply_camera_shake(camera_shake_emitter)
+		$delay_camera_shake.start()
 
 
 func _on_area_arma_player_area_entered(area):
@@ -105,7 +106,20 @@ func _on_area_arma_player_area_entered(area):
 	#entrar no corpo de inimigos este valor vai para o game singleto atributos_player_singleton
 	if area.is_in_group("enemie"):
 		atributos_player_singleton.damage_life_enimie_update(damage_hit)
+		camera_zoom_emitter = 1
+		atributos_player_singleton.aply_camera_zoom(camera_zoom_emitter)
+		$delay_camera_zoom.start()
 		
+#=====================================================
+#                    DELAY
+#=====================================================
+func _on_delay_camera_shake_timeout():
+	camera_shake_emitter = false
+	atributos_player_singleton.aply_camera_shake(camera_shake_emitter)
+	
+func _on_delay_camera_zoom_timeout():
+		camera_zoom_emitter = 4
+		atributos_player_singleton.aply_camera_zoom(camera_zoom_emitter)
 
 #==========================================================
 #               animation finished
@@ -120,4 +134,9 @@ func _on_animation_Player_animation_finished(anim_name):
 		attacking = false
 	elif anim_name == "atack_1_animation_right":
 		attacking = false
+
+
+
+
+
 
