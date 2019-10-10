@@ -93,6 +93,8 @@ func death_player():
 func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enemie"):
 		life =  atributos_player_singleton.life_player
+		#camera_shake_singleton.init_shake = true;
+		#camera_shake_singleton._shake_camera(true);
 		death_player()
 		
 

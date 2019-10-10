@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 singletonfase="*res://scripts/script_GAME_SINGLETON/atributos_fase_singleton.gd"
 atributos_player_singleton="*res://scripts/script_GAME_SINGLETON/atributos_player_singleton.gd"
+camera_shake_singleton="*res://scripts/script_GAME_SINGLETON/camera_shake_singleton.gd"
 
 [display]
 
