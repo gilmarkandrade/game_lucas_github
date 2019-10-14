@@ -7,10 +7,11 @@
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://assets_game/background/fase_1/cena_1/Arvore.png" type="Texture" id=6]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/player_plataforma.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scripts/script_camera/TesteCamera.gd" type="Script" id=8]
+[ext_resource path="res://scripts/script_camera/Camera_motion.gd" type="Script" id=8]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/homen_das_cavernas(s_d).tscn" type="PackedScene" id=9]
 [ext_resource path="res://assets_game/background/fase_1/cena_1/background_fase_1_cena_1.jpg" type="Texture" id=10]
 [ext_resource path="res://assets_game/background/fase_1/cena_1/Background_arvores_cena1.png" type="Texture" id=11]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 244, 10 )

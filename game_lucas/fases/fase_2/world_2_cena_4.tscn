@@ -9,7 +9,8 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_2.png" type="Texture" id=7]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_1.png" type="Texture" id=8]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_3.png" type="Texture" id=9]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/player_plataforma2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=10]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 101.216, 70.115 )

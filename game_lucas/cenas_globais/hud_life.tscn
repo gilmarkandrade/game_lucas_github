@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets_game/hud_player/hud_life_player.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/hud_player/hud_temporario_fundo.png" type="Texture" id=2]
 [ext_resource path="res://assets_game/hud_player/hud_temporario_frente.png" type="Texture" id=3]
+[ext_resource path="res://cenas_globais/hud_mana.tscn" type="PackedScene" id=4]
 
 [node name="hud_life" type="Control"]
 margin_right = 40.0
@@ -21,3 +22,9 @@ margin_right = 200.963
 margin_bottom = 56.5925
 value = 98.0
 texture_progress = ExtResource( 3 )
+
+[node name="hud_mana" parent="." instance=ExtResource( 4 )]
+margin_left = 44.7407
+margin_top = 58.6667
+margin_right = 138.741
+margin_bottom = 67.6667
