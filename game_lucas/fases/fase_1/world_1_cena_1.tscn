@@ -12,7 +12,6 @@
 [ext_resource path="res://assets_game/background/fase_1/cena_1/background_fase_1_cena_1.jpg" type="Texture" id=10]
 [ext_resource path="res://assets_game/background/fase_1/cena_1/Background_arvores_cena1.png" type="Texture" id=11]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 244, 10 )
 
