@@ -110,6 +110,7 @@ limit_left = 0
 limit_top = -620
 limit_right = 1500
 limit_bottom = 0
+editor_draw_screen = false
 script = ExtResource( 8 )
 
 [node name="Label" type="Label" parent="."]
@@ -130,6 +131,7 @@ position = Vector2( 952.773, -83.5909 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 position = Vector2( -1, 70 )
 motion_scale = Vector2( 0.8, 0.5 )
 motion_offset = Vector2( 1, 0 )
@@ -142,6 +144,7 @@ centered = false
 offset = Vector2( 1, 1 )
 
 [node name="layer_arvore" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 motion_scale = Vector2( 0.7, 0.8 )
 
 [node name="Background_arvores_cena2" type="Sprite" parent="ParallaxBackground/layer_arvore"]

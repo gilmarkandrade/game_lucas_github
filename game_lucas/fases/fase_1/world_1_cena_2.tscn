@@ -195,7 +195,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_mudar_cena3"]
 shape = SubResource( 5 )
 
-[node name="position_fimcena3" type="Position2D" parent="."]
+[node name="position_fimcena2" type="Position2D" parent="."]
 position = Vector2( 741, -111 )
 
 [node name="position_arvore" type="Position2D" parent="."]

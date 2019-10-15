@@ -26,7 +26,11 @@ atributos_fase_singleton="*res://scripts/script_GAME_SINGLETON/atributos_fase_si
 
 [display]
 
-window/size/width=840
+window/size/width=860
+window/size/always_on_top=true
+window/dpi/allow_hidpi=true
+window/per_pixel_transparency/allowed=true
+window/per_pixel_transparency/enabled=true
 
 [input]
 
