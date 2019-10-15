@@ -50,15 +50,14 @@ extents = Vector2( 21.1823, 456.658 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 483.04 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 35.8661, 160.893 )
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 36.9994
 height = 171.267
 
-[sub_resource type="Animation" id=6]
-resource_name = "damage_tree"
+[sub_resource type="Animation" id=8]
 length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("Arvore:texture")
@@ -85,8 +84,7 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=7]
-resource_name = "falling_down_tree"
+[sub_resource type="Animation" id=9]
 length = 1.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Arvore:texture")
@@ -262,7 +260,7 @@ script = ExtResource( 10 )
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="arvore"]
 position = Vector2( 324.121, -266.784 )
 scale = Vector2( 0.994759, 0.969952 )
-shape = SubResource( 8 )
+shape = SubResource( 6 )
 
 [node name="Arvore" type="Sprite" parent="arvore"]
 position = Vector2( 535.59, -293.607 )
@@ -279,11 +277,11 @@ position = Vector2( 20.2499, -2.25 )
 "enemie",
 ]]
 position = Vector2( 317.25, -249.75 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="animaton_tree" type="AnimationPlayer" parent="arvore"]
-anims/damage_tree = SubResource( 6 )
-anims/falling_down_tree = SubResource( 7 )
+anims/damage_tree = SubResource( 8 )
+anims/falling_down_tree = SubResource( 9 )
 
 [node name="delay_camera_shake" type="Timer" parent="arvore"]
 

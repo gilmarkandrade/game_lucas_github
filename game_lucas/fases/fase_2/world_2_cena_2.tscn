@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets_game/background/fase_2/cena_2/background_topdow1.jpeg" type="Texture" id=1]
+[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down2.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 278.623 )
@@ -87,7 +88,15 @@ position = Vector2( 201.608, -47.8172 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 542.79, -47.8172 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
 shape = SubResource( 8 )
+
+[node name="player_top_down" parent="." instance=ExtResource( 2 )]
+position = Vector2( 112.888, -111.037 )
+scale = Vector2( 0.599999, 0.6 )
+
+[node name="Camera2D" type="Camera2D" parent="player_top_down"]
+current = true

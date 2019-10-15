@@ -11,7 +11,6 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_3.png" type="Texture" id=9]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=10]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 101.216, 70.115 )
 
@@ -140,23 +139,21 @@ position = Vector2( 345.106, -292.839 )
 scale = Vector2( 0.446303, 0.40931 )
 frames = SubResource( 9 )
 animation = "Tocha"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Tocha2" type="AnimatedSprite" parent="Tocha"]
 position = Vector2( -539.033, 171.427 )
-scale = Vector2( 1, 1 )
 frames = SubResource( 9 )
 animation = "Tocha"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Tocha3" type="AnimatedSprite" parent="Tocha/Tocha2"]
 position = Vector2( 988.227, -290.376 )
-scale = Vector2( 1, 1 )
 frames = SubResource( 9 )
 animation = "Tocha"
-frame = 1
+frame = 2
 playing = true
 
 [node name="player_plataforma" parent="." instance=ExtResource( 10 )]

@@ -144,7 +144,6 @@ scale = Vector2( 1.00222, 1 )
 texture = ExtResource( 5 )
 
 [node name="player_top_down" parent="." instance=ExtResource( 6 )]
-editor/display_folded = true
 position = Vector2( 487.853, 41.656 )
 scale = Vector2( 0.440059, 0.480055 )
 z_as_relative = false

@@ -28,6 +28,7 @@ extents = Vector2( 59.3942, 170.25 )
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
@@ -79,9 +80,11 @@ scale = Vector2( 0.648438, 14.7813 )
 texture = ExtResource( 5 )
 
 [node name="arvore" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1138.87, 451.108 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arvore"]
+editor/display_folded = true
 position = Vector2( 148.664, -410.608 )
 shape = SubResource( 3 )
 
@@ -91,7 +94,6 @@ scale = Vector2( 1.36141, 1.89703 )
 texture = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 208.5, 4.49999 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -99,6 +101,7 @@ position = Vector2( 1000.79, -194.341 )
 shape = SubResource( 4 )
 
 [node name="player_plataforma" parent="." instance=ExtResource( 7 )]
+editor/display_folded = true
 position = Vector2( 178.561, -68.1105 )
 scale = Vector2( 1.2, 1.2 )
 
@@ -129,6 +132,7 @@ position = Vector2( 767.25, -65.25 )
 position = Vector2( 952.773, -83.5909 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
 editor/display_folded = true
