@@ -98,13 +98,14 @@ position = Vector2( 271.322, -39.9445 )
 scale = Vector2( 0.5277, 0.453588 )
 frames = SubResource( 5 )
 animation = "Toha"
-frame = 3
+frame = 2
 playing = true
 
-[node name="entrar_area2" type="Area2D" parent="."]
+[node name="entrar_cena2" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 78.0211, 18.8622 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_area2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_cena2"]
 position = Vector2( -1.1955, -1.12888 )
 shape = SubResource( 6 )
-[connection signal="body_entered" from="entrar_area2" to="." method="_on_entrar_area2_body_entered"]
+[connection signal="body_entered" from="entrar_cena2" to="." method="_on_entrar_cena2_body_entered"]
