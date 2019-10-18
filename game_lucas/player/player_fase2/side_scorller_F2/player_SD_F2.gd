@@ -92,6 +92,7 @@ func fire_atack():
 		get_parent().add_child(O_F)
 		O_F.position = $position_projetil.global_position
 		
+		
 	
 # função responsavel por travar o codigo do game e chamar 
 #a cena game over caso avida chegue a zero
@@ -114,8 +115,9 @@ func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enimie"):
 		life =  atributos_player_singleton.life_player
 		death_player()
-		print(life)
-
+	if area .is_in_group("projetil_inimigo"):
+		life = atributos_player_singleton.life_player
+		death_player()
 
 
 func _on_area_arma_player_area_entered(area):

@@ -3,6 +3,8 @@ var side
 var motion = Vector2() 
 var speed = 3
 var mana_subtract = 20
+var damage = 20
+var stop = false
 
 
 func _ready():
@@ -10,7 +12,8 @@ func _ready():
 
 func _process(delta):
 	
-	move_projetil()
+	if stop == false :
+		move_projetil()
 
 func move_projetil():
 
@@ -21,5 +24,12 @@ func move_projetil():
 	translate(motion)
 
 
+func _on_orb__de_fogo_SD_area_entered(area):
+	stop = true
+	if area.is_in_group("enemie"):
+		atributos_player_singleton.damage_life_enimie_update(damage)
+	
+	queue_free()
+	
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

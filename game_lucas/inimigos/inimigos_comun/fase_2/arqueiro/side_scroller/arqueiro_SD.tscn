@@ -53,10 +53,16 @@ extents = Vector2( 460.922, 96.2393 )
 radius = 19.9223
 height = 67.134
 
-[node name="arqueiro_SD" type="KinematicBody2D"]
+[node name="arqueiro_SD" type="KinematicBody2D" groups=[
+"enemie",
+]]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"enemie",
+]]
 shape = SubResource( 1 )
 
 [node name="sprite_arqueiro_SD" type="Sprite" parent="."]
@@ -74,17 +80,21 @@ position = Vector2( -71.9999, -7.62939e-006 )
 [node name="area_atack_left" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_atack_left"]
-position = Vector2( -517.499, -58.4999 )
+position = Vector2( -492.749, -56.2499 )
 shape = SubResource( 6 )
 
 [node name="area_atack_rigth" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_atack_rigth"]
-position = Vector2( 524.249, -58.4999 )
+position = Vector2( 492.749, -56.2499 )
 shape = SubResource( 7 )
 
-[node name="area_corpo" type="Area2D" parent="."]
+[node name="area_corpo" type="Area2D" parent="." groups=[
+"enemie",
+]]
 editor/display_folded = true
+collision_layer = 3
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo"]
 shape = SubResource( 8 )
@@ -96,5 +106,6 @@ wait_time = 2.0
 [connection signal="body_exited" from="area_atack_left" to="." method="_on_area_atack_left_body_exited"]
 [connection signal="body_entered" from="area_atack_rigth" to="." method="_on_area_atack_rigth_body_entered"]
 [connection signal="body_exited" from="area_atack_rigth" to="." method="_on_area_atack_rigth_body_exited"]
+[connection signal="area_entered" from="area_corpo" to="." method="_on_area_corpo_area_entered"]
 [connection signal="body_entered" from="area_corpo" to="." method="_on_area_corpo_body_entered"]
 [connection signal="timeout" from="delay_atack_stop" to="." method="_on_delay_atack_stop_timeout"]
