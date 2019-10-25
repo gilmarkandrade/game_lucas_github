@@ -336,7 +336,10 @@ position = Vector2( 9.27521, 0 )
 shape = SubResource( 10 )
 
 [node name="delay_atack" type="Timer" parent="."]
-wait_time = 0.8
+wait_time = 2.0
+autostart = true
+
+[node name="positon_flecha" type="Position2D" parent="."]
 [connection signal="animation_finished" from="animation_A" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_h_c_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]

@@ -3,8 +3,8 @@
 [ext_resource path="res://fases/fase_test.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.tscn" type="PackedScene" id=5]
+[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 237.532, 10 )
@@ -36,7 +36,7 @@ position = Vector2( -5.77778, -58.2222 )
 current = true
 
 [node name="chao2" type="StaticBody2D" parent="."]
-position = Vector2( 362, -90 )
+position = Vector2( 438, -91 )
 scale = Vector2( 0.48, 1 )
 collision_layer = 3
 collision_mask = 3
@@ -58,7 +58,7 @@ position = Vector2( -5.77778, -58.2222 )
 current = true
 
 [node name="chao3" type="StaticBody2D" parent="."]
-position = Vector2( 11, -160 )
+position = Vector2( -3, -251 )
 scale = Vector2( 0.48, 1 )
 collision_layer = 3
 collision_mask = 3
@@ -79,9 +79,6 @@ texture = ExtResource( 3 )
 position = Vector2( -5.77778, -58.2222 )
 current = true
 
-[node name="player_SD_F2" parent="." instance=ExtResource( 4 )]
-position = Vector2( -1.33333, -64.4444 )
-
 [node name="area_test_cajado" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_test_cajado"]
@@ -94,6 +91,8 @@ position = Vector2( 1.51888, -3 )
 scale = Vector2( 0.09375, 1.5625 )
 texture = ExtResource( 3 )
 
-[node name="arqueiro_SD" parent="." instance=ExtResource( 5 )]
-position = Vector2( 354, -341 )
+[node name="player_top_down" parent="." instance=ExtResource( 4 )]
+
+[node name="arqueiro(T_D)" parent="." instance=ExtResource( 5 )]
+position = Vector2( 265, -154 )
 [connection signal="body_entered" from="area_test_cajado" to="." method="_on_area_test_cajado_body_entered"]
