@@ -94,5 +94,5 @@ texture = ExtResource( 3 )
 [node name="player_top_down" parent="." instance=ExtResource( 4 )]
 
 [node name="arqueiro(T_D)" parent="." instance=ExtResource( 5 )]
-position = Vector2( 265, -154 )
+position = Vector2( 266.053, -156.105 )
 [connection signal="body_entered" from="area_test_cajado" to="." method="_on_area_test_cajado_body_entered"]

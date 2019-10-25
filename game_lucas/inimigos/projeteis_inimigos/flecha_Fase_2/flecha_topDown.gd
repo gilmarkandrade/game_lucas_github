@@ -8,7 +8,7 @@ var target = atributos_player_singleton.pos_player_update
 var motion 
 var damage = 3
 var direction = target - position
-var speed = 0.2
+var speed = 0.5
 
 func _ready():
 	target = atributos_player_singleton.pos_player_update
@@ -19,10 +19,11 @@ func _ready():
 
 
 func _process(delta):
+	if position <= target:
+		position -= target 
+	elif position >= target:
+		position += target 
 	
-	motion =  target * speed  
-	
-	translate(motion)
 
 func _on_flecha_topDown_body_entered(body):
 	if body.is_in_group("player"):
