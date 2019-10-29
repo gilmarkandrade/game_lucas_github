@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-var speed = 0.6
+var speed = 0.4
 var seguir = true
 var death = false
 var attacking = false
@@ -53,10 +53,11 @@ func damage_death():
 		death = true 
 		$animation_A. play("death_animation")
 		
-func _on_corpo_h_c_area_entered(area):
+func _on_corpo_A_area_entered(area):
 	if area.is_in_group("arma_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
+	
 		
 func _on_arma_inimigo_body_entered(body):
 	if body.is_in_group("player") and death == false:
@@ -71,10 +72,13 @@ func _on_AI_perception_body_exited(body):
 		
 func atack():
 	#$animation_A.current_animation = "atack_animation"
-	print("foi")
+
 	var F_L = projetil.instance()
 	get_parent().add_child(F_L)
+	F_L.pos_arrow_parameter($position_fim_flecha. global_position)
 	F_L.position = $positon_flecha.global_position
+	F_L.look_at($position_fim_flecha.global_position)
+	
 
 
 func _on_delay_atack_timeout():
@@ -88,9 +92,3 @@ func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
 		queue_free()
 	
-
-
-
-
-
-

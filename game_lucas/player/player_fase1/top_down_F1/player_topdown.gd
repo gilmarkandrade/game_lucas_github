@@ -74,3 +74,6 @@ func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enemie"):
 		life = atributos_player_singleton.life_player
 		death_player()
+	elif area.is_in_group("projetil_inimigo"):
+		life = atributos_player_singleton.life_player
+		death_player()

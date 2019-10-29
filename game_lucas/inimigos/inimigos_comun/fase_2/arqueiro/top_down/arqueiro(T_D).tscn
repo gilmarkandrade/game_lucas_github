@@ -340,8 +340,11 @@ wait_time = 2.0
 autostart = true
 
 [node name="positon_flecha" type="Position2D" parent="."]
+
+[node name="position_fim_flecha" type="Position2D" parent="."]
+position = Vector2( 1855.42, 6.10352e-005 )
 [connection signal="animation_finished" from="animation_A" to="." method="_on_animation_H_C_animation_finished"]
-[connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_h_c_area_entered"]
+[connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_A_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]
 [connection signal="body_exited" from="area_ataque" to="." method="_on_area_ataque_body_exited"]
 [connection signal="body_entered" from="arma_inimigo" to="." method="_on_arma_inimigo_body_entered"]

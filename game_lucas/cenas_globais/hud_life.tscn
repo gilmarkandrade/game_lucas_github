@@ -20,7 +20,6 @@ margin_left = 42.9629
 margin_top = 32.5925
 margin_right = 200.963
 margin_bottom = 56.5925
-value = 98.0
 texture_progress = ExtResource( 3 )
 
 [node name="hud_mana" parent="." instance=ExtResource( 4 )]

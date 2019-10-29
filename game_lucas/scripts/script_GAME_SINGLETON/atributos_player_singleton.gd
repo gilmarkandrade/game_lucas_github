@@ -15,6 +15,7 @@ func player_life_update(life):
 func damage_life_enimie_update(damage):
 	life_enemie_update = damage
 	
+	
 func update_position_player(pos_player):
 	pos_player_update = pos_player
 	
@@ -32,4 +33,4 @@ func subtract_mana_player(mana_valueN):
 		fire_stop = true
 	if mana_player >= 20:
 		fire_stop = false
-		print(fire_stop)
+		

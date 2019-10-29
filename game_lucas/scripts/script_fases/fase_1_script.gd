@@ -118,3 +118,22 @@ func _on_area_inicio_cena_4_body_entered(body):
 		entrou_na_area5 = false
 		novapos = 6
 		atributos_fase_singleton.setar_posicao(novapos)
+
+#portal  fase 2 
+func _on_portal_fase_2_body_entered(body):
+	if body. is_in_group("player"):
+		$player_plataforma._physics_process(false)
+		$player_plataforma.visible = false
+		$portal_fase_2/animation_portal . play("portal_close")
+
+# animação arvore
+
+func _on_animaton_tree_animation_finished(anim_name):
+	if anim_name == "falling_down_tree":
+		$portal_fase_2/animation_portal. play("portal_open")
+	
+#animação portal
+
+func _on_animation_portal_animation_finished(anim_name):
+	if anim_name == "portal_close":
+		get_tree().change_scene("res://fases/fase_2/world_2_cena_1.tscn")

@@ -4,31 +4,43 @@ extends Area2D
 
 #em desesnvolvimento
 
-var target = atributos_player_singleton.pos_player_update
-var motion 
-var damage = 3
-var direction = target - position
-var speed = 0.5
+var target = Vector2()
+var motion = Vector2()
+var damage = 5
+var seguir = false
+var speed = 10
+
+
 
 func _ready():
-	target = atributos_player_singleton.pos_player_update
+	
 	look_at(target)
+
 	
 	#direction = target 
 	#motion = direction * speed
 
-
-func _process(delta):
-	if position <= target:
-		position -= target 
-	elif position >= target:
-		position += target 
+func pos_arrow_parameter(posshoot):
+	
+	target = posshoot
 	
 
+
+func _process(delta):
+	
+	
+	
+	motion = (target - position) .normalized() * speed
+	
+	translate(motion)
+
+
 func _on_flecha_topDown_body_entered(body):
+	
 	if body.is_in_group("player"):
 		atributos_player_singleton.player_life_update(damage)
 		queue_free()
+		
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

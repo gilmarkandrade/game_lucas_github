@@ -15,10 +15,13 @@ script = ExtResource( 1 )
 ]]
 rotation = 1.56587
 shape = SubResource( 1 )
+one_way_collision = true
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-[node name="icon" type="Sprite" parent="VisibilityNotifier2D"]
+[node name="icon" type="Sprite" parent="VisibilityNotifier2D" groups=[
+"projetil_inimigo",
+]]
 position = Vector2( 1.74112, -0.281418 )
 scale = Vector2( 0.703125, 0.25 )
 texture = ExtResource( 2 )
