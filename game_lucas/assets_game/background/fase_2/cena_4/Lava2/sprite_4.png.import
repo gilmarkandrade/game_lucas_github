@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background_topdow1.jpeg-21db2ee6644a6aa995fb26fadd6c70e7.stex"
+path="res://.import/sprite_4.png-c7a208e45dd3df6d64611853860708b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_game/background/fase_2/cena_2/background_topdow1.jpeg"
-dest_files=[ "res://.import/background_topdow1.jpeg-21db2ee6644a6aa995fb26fadd6c70e7.stex" ]
+source_file="res://assets_game/background/fase_2/cena_4/Lava2/sprite_4.png"
+dest_files=[ "res://.import/sprite_4.png-c7a208e45dd3df6d64611853860708b2.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/lava.png-46497bc3df1cc2148ea491295a446c13.stex"
+path="res://.import/sprite_2.png-79f4ed26552c7601858c7ea4c75c9def.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets_game/background/fase_2/cena_4/lava.png"
-dest_files=[ "res://.import/lava.png-46497bc3df1cc2148ea491295a446c13.stex" ]
+source_file="res://assets_game/background/fase_2/cena_4/Lava2/sprite_2.png"
+dest_files=[ "res://.import/sprite_2.png-79f4ed26552c7601858c7ea4c75c9def.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
