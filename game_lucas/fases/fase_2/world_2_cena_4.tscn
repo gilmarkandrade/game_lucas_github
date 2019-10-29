@@ -1,16 +1,20 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
-[ext_resource path="res://assets_game/background/fase_2/cena_4/Background.jpeg" type="Texture" id=2]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Parede_side2.png" type="Texture" id=2]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/Chão1.jpg" type="Texture" id=3]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/chão3.jpg" type="Texture" id=4]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/chão2.jpg" type="Texture" id=5]
-[ext_resource path="res://assets_game/background/fase_2/cena_4/lava.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_0.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_2.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_1.png" type="Texture" id=9]
-[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_3.png" type="Texture" id=10]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_0.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_2.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_3.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_5.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_4.png" type="Texture" id=10]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_0.png" type="Texture" id=11]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_2.png" type="Texture" id=12]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_1.png" type="Texture" id=13]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Tocha/Tocha_3.png" type="Texture" id=14]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 101.216, 70.115 )
@@ -22,23 +26,31 @@ extents = Vector2( 63.5768, 21.1626 )
 extents = Vector2( 71.7732, 19.3643 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 345.568, 12.8875 )
+extents = Vector2( 718.216, 21.3781 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 10, 233.717 )
+extents = Vector2( 20.5055, 390.629 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 12.6567, 250.211 )
+extents = Vector2( 16.7234, 399.163 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 374.591, 10 )
+extents = Vector2( 713.59, 15.2014 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 215.923, 46.3525 )
 
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Lava",
+"speed": 5.0
+} ]
+
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
 "loop": true,
 "name": "Tocha",
 "speed": 5.0
@@ -55,13 +67,13 @@ editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
-[node name="Background" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 303.548, -203.42 )
+[node name="Parede_side2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 290.732, -198.783 )
 texture = ExtResource( 2 )
 
 [node name="Chão" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 103.727, -61.5331 )
+position = Vector2( -216.158, 57.3986 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Chão"]
 shape = SubResource( 1 )
@@ -73,7 +85,7 @@ texture = ExtResource( 3 )
 
 [node name="Plataforma" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 537.879, -253.088 )
+position = Vector2( 228.144, -124.519 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
 position = Vector2( 0.902466, 0 )
@@ -86,7 +98,7 @@ texture = ExtResource( 4 )
 
 [node name="Plataforma2" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 335.645, -180.815 )
+position = Vector2( 23.9619, -60.0378 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2"]
 position = Vector2( 1.80499, -0.902512 )
@@ -99,7 +111,7 @@ texture = ExtResource( 5 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 308.034, 12.1884 )
+position = Vector2( 267.023, 139.322 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2( -27.1702, 0 )
@@ -107,74 +119,75 @@ shape = SubResource( 4 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( -9.97231, -208.311 )
+position = Vector2( -331.908, -181.654 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource( 5 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 617.176, -203.879 )
+position = Vector2( 908.354, -205.93 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 shape = SubResource( 6 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 308.034, -412.189 )
+position = Vector2( 293.68, -529.07 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
 shape = SubResource( 7 )
 
 [node name="Lava" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 422.601, -40.0631 )
+position = Vector2( 100.907, 72.2894 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lava"]
 shape = SubResource( 8 )
 
-[node name="Sprite" type="Sprite" parent="Lava/CollisionShape2D"]
-position = Vector2( -91.7574, -10.985 )
-scale = Vector2( 0.905227, 0.96199 )
-texture = ExtResource( 6 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Lava/CollisionShape2D"]
+position = Vector2( 20.2653, -6.23039 )
+scale = Vector2( 1.27265, 0.542856 )
+frames = SubResource( 11 )
+animation = "Lava"
+frame = 1
+playing = true
 
 [node name="Tocha" type="AnimatedSprite" parent="."]
 editor/display_folded = true
-position = Vector2( 345.106, -292.839 )
+position = Vector2( 29.4072, -149.34 )
 scale = Vector2( 0.446303, 0.40931 )
 frames = SubResource( 9 )
 animation = "Tocha"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Tocha2" type="AnimatedSprite" parent="Tocha"]
-position = Vector2( -539.033, 171.427 )
+position = Vector2( -542.353, 89.9182 )
 frames = SubResource( 9 )
 animation = "Tocha"
-frame = 2
 playing = true
 
 [node name="Tocha3" type="AnimatedSprite" parent="Tocha/Tocha2"]
 position = Vector2( 988.227, -290.376 )
 frames = SubResource( 9 )
 animation = "Tocha"
-frame = 2
 playing = true
 
-[node name="player_plataforma" parent="." instance=ExtResource( 11 )]
+[node name="player_plataforma" parent="." instance=ExtResource( 15 )]
 editor/display_folded = true
-position = Vector2( 117.248, -180.71 )
+position = Vector2( -179.46, -66.4695 )
 
 [node name="Camera2D" type="Camera2D" parent="player_plataforma"]
 current = true
 
 [node name="retorno_direto_cena3" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 16.6205, -186.149 )
+position = Vector2( -294.368, -68.7351 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="retorno_direto_cena3"]
 shape = SubResource( 10 )
 
 [node name="pos_inicio_cena4" type="Position2D" parent="."]
-position = Vector2( 62.3006, -182.323 )
+position = Vector2( -231.234, -66.4958 )
 [connection signal="body_entered" from="retorno_direto_cena3" to="." method="_on_retorno_direto_cena3_body_entered"]
