@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.gd" type="Script" id=1]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png" type="Texture" id=2]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack3.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 29.2658
@@ -12,6 +11,7 @@ height = 62.6674
 
 [sub_resource type="Animation" id=2]
 resource_name = "atack_animation_left"
+length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("position_projetil:position")
 tracks/0/interp = 1
@@ -23,6 +23,42 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( -71.9999, -7.62939e-006 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite_arqueiro_SD:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite_arqueiro_SD:flip_h")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("animation_arqueiro_SD:playback_speed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.5, 1.0, 0.5 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -50,7 +86,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 2 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
@@ -63,6 +99,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 0.5, 1.0, 0.5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite_arqueiro_SD:flip_h")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -94,8 +142,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="sprite_arqueiro_SD" type="Sprite" parent="."]
-position = Vector2( -0.828781, 13.8008 )
+position = Vector2( -0.274002, 13.8008 )
 texture = ExtResource( 2 )
+flip_h = true
 
 [node name="animation_arqueiro_SD" type="AnimationPlayer" parent="."]
 playback_speed = 0.5
@@ -105,7 +154,7 @@ anims/death_animation = SubResource( 4 )
 anims/idlle_animation = SubResource( 5 )
 
 [node name="position_projetil" type="Position2D" parent="."]
-position = Vector2( 65.2499, -4.50001 )
+position = Vector2( -71.9999, -7.62939e-006 )
 
 [node name="area_atack_left" type="Area2D" parent="."]
 
@@ -122,7 +171,6 @@ shape = SubResource( 7 )
 [node name="area_corpo" type="Area2D" parent="." groups=[
 "enemie",
 ]]
-editor/display_folded = true
 collision_layer = 3
 collision_mask = 3
 
