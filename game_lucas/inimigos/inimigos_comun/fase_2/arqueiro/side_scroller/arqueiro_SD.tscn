@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack3.png" type="Texture" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 29.2658
@@ -24,6 +27,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "atack_animation_rigth"
+length = 0.7
 tracks/0/type = "value"
 tracks/0/path = NodePath("position_projetil:position")
 tracks/0/interp = 1
@@ -33,8 +37,32 @@ tracks/0/enabled = true
 tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
-"update": 0,
+"update": 1,
 "values": [ Vector2( 65.2499, -4.50001 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite_arqueiro_SD:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0.5, 1.0, 0.5 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -66,16 +94,18 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="sprite_arqueiro_SD" type="Sprite" parent="."]
+position = Vector2( -0.828781, 13.8008 )
 texture = ExtResource( 2 )
 
 [node name="animation_arqueiro_SD" type="AnimationPlayer" parent="."]
+playback_speed = 0.5
 anims/atack_animation_left = SubResource( 2 )
 anims/atack_animation_rigth = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
 anims/idlle_animation = SubResource( 5 )
 
 [node name="position_projetil" type="Position2D" parent="."]
-position = Vector2( -71.9999, -7.62939e-006 )
+position = Vector2( 65.2499, -4.50001 )
 
 [node name="area_atack_left" type="Area2D" parent="."]
 

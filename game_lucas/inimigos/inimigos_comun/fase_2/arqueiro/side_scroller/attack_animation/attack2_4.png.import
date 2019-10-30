@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame0002.png-392bc4700f84562e666c970679f77240.stex"
+path="res://.import/attack2_4.png-8f3d5471cdec89f4657bfcd6be61847e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/death_animation/frame0002.png"
-dest_files=[ "res://.import/frame0002.png-392bc4700f84562e666c970679f77240.stex" ]
+source_file="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png"
+dest_files=[ "res://.import/attack2_4.png-8f3d5471cdec89f4657bfcd6be61847e.stex" ]
 
 [params]
 
