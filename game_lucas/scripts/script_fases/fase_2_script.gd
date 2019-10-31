@@ -75,8 +75,11 @@ func _physics_process(delta):
 		elif Input.is_action_pressed("ui_accept"):
 			get_tree().change_scene("res://fases/fase_2/world_2_cena_2.tscn")
 	if entrou_na_area3 == true:
-		get_tree().change_scene("res://fases/fase_2/world_2_cena_3.tscn")
-	if entrou_na_area4 == true:
+		if novapos == 3:
+			get_tree().change_scene("res://fases/fase_2/world_2_cena_3.tscn")
+		elif Input.is_action_pressed("ui_accept"):
+			get_tree().change_scene("res://fases/fase_2/world_2_cena_3.tscn")
+	if entrou_na_area4 == true && Input.is_action_pressed("ui_accept"):
 		get_tree().change_scene("res://fases/fase_2/world_2_cena_4.tscn")
 	
 	pass
