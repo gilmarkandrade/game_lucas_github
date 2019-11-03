@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://inimigos/inimigos_comun/fase_3/side_scroller/soldado_2_guerra/soldado_2_guerra_SD.gd" type="Script" id=1]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/soldado_2_guerra_SD.gd" type="Script" id=1]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/idle_animation/idle2.png" type="Texture" id=2]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png" type="Texture" id=4]
