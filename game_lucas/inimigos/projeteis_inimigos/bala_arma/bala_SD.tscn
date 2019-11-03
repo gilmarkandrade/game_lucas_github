@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha.gd" type="Script" id=1]
+[ext_resource path="res://inimigos/projeteis_inimigos/bala_arma/bala_SD.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
-[node name="flecha" type="Area2D" groups=[
+[node name="bala_arma" type="Area2D" groups=[
 "projetil_inimigo",
 ]]
 script = ExtResource( 1 )
@@ -18,7 +18,7 @@ shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-[node name="sprite_flecha" type="Sprite" parent="."]
+[node name="projetil" type="Sprite" parent="."]
 position = Vector2( 2.49926, 0.499848 )
 scale = Vector2( 0.578126, 0.234376 )
 texture = ExtResource( 2 )

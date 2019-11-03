@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet1.png-7e706b14477f24152176db36a1ba6111.stex"
+path="res://.import/bullet1.png-67b1a76e78fb8951f03e90c47f5a5837.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inimigos/projeteis_inimigos/bala_Fase_4/bullet1.png"
-dest_files=[ "res://.import/bullet1.png-7e706b14477f24152176db36a1ba6111.stex" ]
+source_file="res://inimigos/projeteis_inimigos/bala_arma/bullet1.png"
+dest_files=[ "res://.import/bullet1.png-67b1a76e78fb8951f03e90c47f5a5837.stex" ]
 
 [params]
 

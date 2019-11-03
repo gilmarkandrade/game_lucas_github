@@ -16,10 +16,10 @@ func move_projetil():
 
 	if side == false :
 		motion.x -= speed 
-		$sprite_flecha.flip_h = false
+		$projetil.flip_h = false
 	if side == true:
 		motion.x += speed 
-		$sprite_flecha.flip_h = true
+		$projetil.flip_h = true
 	translate(motion)
 
 
