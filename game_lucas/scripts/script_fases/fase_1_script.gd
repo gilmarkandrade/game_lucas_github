@@ -13,8 +13,11 @@ var entrou_na_area6 = false
 
 func _ready():
 	novapos = atributos_fase_singleton.mudarposicao 
+	atributos_fase_singleton.fase_restart = 1
 
 	
+	if novapos == 0:
+		$player_plataforma.position = $Posicao_0.global_position
 	if novapos == 1:
 		$player_plataforma.position = $Position2D.global_position
 	if novapos == 2:

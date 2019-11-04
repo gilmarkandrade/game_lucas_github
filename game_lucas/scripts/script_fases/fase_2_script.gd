@@ -50,8 +50,11 @@ func _on_retorno_direto_cena3_body_entered(body):
 
 
 func _ready():
-	novapos = atributos_fase_singleton.mudarposicao 
+	novapos = atributos_fase_singleton.mudarposicao
+	atributos_fase_singleton.fase_restart = 2 
 	
+	if novapos == 0:
+		$player_plataforma.position = $posicao_0.global_position
 	#if novapos == 1:
 	#	$player_plataforma.position = $Position2D.global_position
 	if novapos == 2:

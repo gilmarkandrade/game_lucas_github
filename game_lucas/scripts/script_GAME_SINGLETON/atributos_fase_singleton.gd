@@ -1,7 +1,7 @@
 extends Node
 var mudarposicao
-var  get_weapom_away= false
-
+var  get_weapom_away = false
+var fase_restart = 0
 
 func setar_posicao(posicao):
 	mudarposicao = posicao

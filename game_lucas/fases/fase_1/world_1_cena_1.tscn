@@ -94,11 +94,16 @@ scale = Vector2( 1.36141, 1.89703 )
 texture = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 208.5, 4.49999 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 1000.79, -194.341 )
 shape = SubResource( 4 )
+
+[node name="Posicao_0" type="Position2D" parent="."]
+position = Vector2( 178.561, -68.1105 )
+scale = Vector2( 1.2, 1.2 )
 
 [node name="player_plataforma" parent="." instance=ExtResource( 7 )]
 editor/display_folded = true
