@@ -1,27 +1,36 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.gd" type="Script" id=1]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0029.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0024.png" type="Texture" id=3]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0025.png" type="Texture" id=4]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0026.png" type="Texture" id=5]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0027.png" type="Texture" id=6]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0028.png" type="Texture" id=7]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0012.png" type="Texture" id=8]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0013.png" type="Texture" id=9]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0014.png" type="Texture" id=10]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0015.png" type="Texture" id=11]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0016.png" type="Texture" id=12]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0021.png" type="Texture" id=13]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0019.png" type="Texture" id=14]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0020.png" type="Texture" id=15]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0000.png" type="Texture" id=16]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0001.png" type="Texture" id=17]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0002.png" type="Texture" id=18]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0003.png" type="Texture" id=19]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0004.png" type="Texture" id=20]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0005.png" type="Texture" id=21]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0006.png" type="Texture" id=22]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0028.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0024.png" type="Texture" id=3]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0025.png" type="Texture" id=4]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0026.png" type="Texture" id=5]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0027.png" type="Texture" id=6]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0031.png" type="Texture" id=7]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0032.png" type="Texture" id=8]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0033.png" type="Texture" id=9]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0034.png" type="Texture" id=10]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0035.png" type="Texture" id=11]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0036.png" type="Texture" id=12]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0037.png" type="Texture" id=13]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0038.png" type="Texture" id=14]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0039.png" type="Texture" id=15]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0040.png" type="Texture" id=16]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0012.png" type="Texture" id=17]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0013.png" type="Texture" id=18]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0014.png" type="Texture" id=19]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0015.png" type="Texture" id=20]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0016.png" type="Texture" id=21]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/jump_up_and_down_animation/jump_down0021.png" type="Texture" id=22]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/jump_up_and_down_animation/jump_up0019.png" type="Texture" id=23]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/jump_up_and_down_animation/jump_up0020.png" type="Texture" id=24]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0000.png" type="Texture" id=25]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0001.png" type="Texture" id=26]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0002.png" type="Texture" id=27]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0003.png" type="Texture" id=28]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0004.png" type="Texture" id=29]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0005.png" type="Texture" id=30]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/walk_animation/walk0006.png" type="Texture" id=31]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.66667
@@ -37,10 +46,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -113,10 +122,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -181,6 +190,31 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id=4]
 resource_name = "death_animation"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_player:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animation_Player:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idlle_animation"
@@ -196,7 +230,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
+"values": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:scale")
@@ -220,7 +254,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( -1.53679, -1.53678 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("animation_Player:playback_speed")
@@ -259,7 +293,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ) ]
+"values": [ ExtResource( 22 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("area_arma_player/CollisionShape2D:position")
@@ -272,6 +306,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 44.5556, 4.44444 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("sprite_player:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.467575, -0.908997 ) ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -299,7 +345,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 14 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 23 ), ExtResource( 24 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("area_arma_player/CollisionShape2D:position")
@@ -327,7 +373,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+"values": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -339,7 +385,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 6, 12 ) ]
+"values": [ Vector2( 6.30736, 17.5324 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite_player:scale")
@@ -403,6 +449,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="animation_Player" type="AnimationPlayer" parent="."]
+playback_speed = 1.2
 anims/atack_1_animation_left = SubResource( 2 )
 anims/atack_1_animation_right = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -425,7 +472,7 @@ position = Vector2( -43, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_player"]
 modulate = Color( 0.490196, 0.87451, 0.141176, 1 )
-position = Vector2( 45.8889, 19.5556 )
+position = Vector2( 86.3333, 20 )
 shape = SubResource( 10 )
 
 [node name="position_projetil" type="Position2D" parent="."]

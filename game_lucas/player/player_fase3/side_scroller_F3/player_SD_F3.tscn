@@ -1,27 +1,33 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.gd" type="Script" id=1]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0029.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0024.png" type="Texture" id=3]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0025.png" type="Texture" id=4]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0026.png" type="Texture" id=5]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0027.png" type="Texture" id=6]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0028.png" type="Texture" id=7]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0012.png" type="Texture" id=8]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0013.png" type="Texture" id=9]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0014.png" type="Texture" id=10]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0015.png" type="Texture" id=11]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0016.png" type="Texture" id=12]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0021.png" type="Texture" id=13]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0019.png" type="Texture" id=14]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/jump_up_and_down/player_fase_1_jump_down0020.png" type="Texture" id=15]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0000.png" type="Texture" id=16]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0001.png" type="Texture" id=17]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0002.png" type="Texture" id=18]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0003.png" type="Texture" id=19]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0004.png" type="Texture" id=20]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0005.png" type="Texture" id=21]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0006.png" type="Texture" id=22]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0031.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/atack_animation/atack0044.png" type="Texture" id=3]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/atack_animation/atack0045.png" type="Texture" id=4]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/atack_animation/atack0046.png" type="Texture" id=5]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/atack_animation/atack0047.png" type="Texture" id=6]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0032.png" type="Texture" id=7]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0033.png" type="Texture" id=8]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0034.png" type="Texture" id=9]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0035.png" type="Texture" id=10]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0036.png" type="Texture" id=11]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0037.png" type="Texture" id=12]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/death_animation/death0038.png" type="Texture" id=13]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/idlle_animation/idlle0012.png" type="Texture" id=14]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/idlle_animation/idlle0013.png" type="Texture" id=15]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/idlle_animation/idlle0014.png" type="Texture" id=16]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/idlle_animation/idlle0015.png" type="Texture" id=17]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/idlle_animation/idlle0016.png" type="Texture" id=18]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/jump_up_and_jump_down/jump_dowm0021.png" type="Texture" id=19]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/jump_up_and_jump_down/jump_up0019.png" type="Texture" id=20]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/jump_up_and_jump_down/jump_up0020.png" type="Texture" id=21]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0000.png" type="Texture" id=22]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0001.png" type="Texture" id=23]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0002.png" type="Texture" id=24]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0003.png" type="Texture" id=25]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0004.png" type="Texture" id=26]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0005.png" type="Texture" id=27]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/walk_animation/walk0006.png" type="Texture" id=28]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.66667
@@ -29,7 +35,7 @@ height = 54.0
 
 [sub_resource type="Animation" id=2]
 resource_name = "atack_1_animation_left"
-length = 0.6
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite_player:texture")
 tracks/0/interp = 1
@@ -37,10 +43,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -52,7 +58,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 20.8889, -1.33333 ), Vector2( -18.2222, -2.22222 ) ]
+"values": [ Vector2( -0.718246, -0.165377 ), Vector2( -16.4703, -1.01571 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite_player:flip_h")
@@ -100,12 +106,12 @@ tracks/5/keys = {
 "times": PoolRealArray( 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -3.44444, 5.77778 ), Vector2( -3.44444, 5.77778 ), Vector2( 0.111111, 23.5556 ), Vector2( 41.8889, 16 ) ]
+"values": [ Vector2( -2.21502, -8.05326 ), Vector2( -2.82973, -1.59877 ), Vector2( -3.57717, -0.725548 ), Vector2( 41.8889, 16 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "atack_1_animation_right"
-length = 0.6
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite_player:texture")
 tracks/0/interp = 1
@@ -113,10 +119,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -128,7 +134,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( -16, -2.66667 ), Vector2( 20.8889, -2.66666 ) ]
+"values": [ Vector2( 3.27124, 4.92503 ), Vector2( 19.137, 4.04907 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite_player:flip_h")
@@ -173,14 +179,38 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 43.6667, 15.5556 ), Vector2( 89.4444, -0.888893 ), Vector2( 86.3333, 20 ), Vector2( 45.8889, 19.5556 ) ]
+"values": [ Vector2( 43.6667, 15.5556 ), Vector2( 89.4444, -0.888893 ), Vector2( 87.8701, 1.55862 ), Vector2( 45.8889, 19.5556 ) ]
 }
 
 [sub_resource type="Animation" id=4]
 resource_name = "death_animation"
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_player:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5, 0.6, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("animation_Player:playback_speed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idlle_animation"
@@ -196,7 +226,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
+"values": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:scale")
@@ -259,7 +289,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ) ]
+"values": [ ExtResource( 19 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("area_arma_player/CollisionShape2D:position")
@@ -299,7 +329,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 14 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 20 ), ExtResource( 21 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("area_arma_player/CollisionShape2D:position")
@@ -312,6 +342,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 44.5556, 4.44444 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("sprite_player:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.66834, -0.048912 ) ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -327,7 +369,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+"values": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -339,7 +381,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 6, 12 ) ]
+"values": [ Vector2( 4.2566, 18.3925 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite_player:scale")
@@ -377,6 +419,18 @@ tracks/4/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("position_projetil:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -0.193718, 5.81133 ) ]
+}
 
 [sub_resource type="CapsuleShape2D" id=9]
 radius = 12.7778
@@ -384,7 +438,7 @@ height = 48.6667
 
 [sub_resource type="CapsuleShape2D" id=10]
 radius = 5.88889
-height = 36.9261
+height = 17.2709
 
 [node name="player_SD_F3" type="KinematicBody2D" groups=[
 "player",
@@ -398,7 +452,7 @@ position = Vector2( 1.33333, 11.1111 )
 shape = SubResource( 1 )
 
 [node name="sprite_player" type="Sprite" parent="."]
-position = Vector2( 20.8889, -2.66666 )
+position = Vector2( 19.137, 4.04907 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
@@ -412,6 +466,7 @@ anims/jump_up = SubResource( 7 )
 anims/walk_animation = SubResource( 8 )
 
 [node name="area_corpo_player" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
 visible = false
@@ -421,6 +476,7 @@ shape = SubResource( 9 )
 [node name="area_arma_player" type="Area2D" parent="." groups=[
 "arma_player",
 ]]
+editor/display_folded = true
 position = Vector2( -43, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_player"]
@@ -429,6 +485,7 @@ position = Vector2( 45.8889, 19.5556 )
 shape = SubResource( 10 )
 
 [node name="position_projetil" type="Position2D" parent="."]
+position = Vector2( -0.193718, 5.81133 )
 [connection signal="animation_finished" from="animation_Player" to="." method="_on_animation_Player_animation_finished"]
 [connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]
 [connection signal="area_entered" from="area_arma_player" to="." method="_on_area_arma_player_area_entered"]

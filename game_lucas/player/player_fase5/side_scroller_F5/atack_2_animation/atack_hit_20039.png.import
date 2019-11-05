@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/atack_hit_20039.png-795e3deeb4af64dda741278c304081cc.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://player/player_fase5/side_scroller_F5/atack_2_animation/atack_hit_20039.png"
+dest_files=[ "res://.import/atack_hit_20039.png-795e3deeb4af64dda741278c304081cc.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
