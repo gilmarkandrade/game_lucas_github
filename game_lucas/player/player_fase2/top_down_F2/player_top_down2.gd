@@ -4,7 +4,8 @@ var move = Vector2()
 var speed = 150
 var death  = false
 var damage = 10
-
+var bullet = preload("res://player/player_fase2/top_down_F2/projetil_player_TD.tscn")
+var fire_stop = atributos_player_singleton.fire_stop
 var life = atributos_player_singleton.life_player
 var attacking = false
 
@@ -19,7 +20,9 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_atack"):
 			$animation_player.current_animation = "atack_animation"
 			attacking = true
-			
+		elif Input.is_action_just_pressed("ui_fire_atack") and attacking == false:
+			fire_stop = atributos_player_singleton.fire_stop
+			shoot_bullet()
 			
 		if Input.is_action_pressed("ui_left"):
 			move.x =- speed
@@ -59,9 +62,17 @@ func _on_animation_player_animation_finished(anim_name):
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 
 
-
+func shoot_bullet():
+	print(fire_stop)
+	if fire_stop == false:
+		var B_L = bullet. instance()
+		get_parent().add_child(B_L)
+		B_L.target = get_global_mouse_position() 
+		B_L.position = $position_bullet.global_position
+		B_L.look_at(get_global_mouse_position())
+	
 func death_player():
-	print("foi")
+	
 	if life <= 0:
 		death = true
 		$animation_player.current_animation ="death_animation"

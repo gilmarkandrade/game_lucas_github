@@ -24,7 +24,8 @@ func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
 	move.y += gravity
-	
+	# defini a visibilade do player
+	$cajado.visible = atributos_fase_singleton.get_weapom_away
 	if death == false:
 		
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
@@ -32,7 +33,7 @@ func _physics_process(delta):
 			attacking = true
 			atack_proximity()
 			
-		if Input . is_action_just_pressed("ui_fire_atack"):
+		if Input . is_action_just_pressed("ui_fire_atack") and attacking == false:
 			fire_atack()
 			
 		if Input.is_action_pressed("ui_right"):
@@ -48,14 +49,17 @@ func _physics_process(delta):
 				move.x =- speed
 			side_current = true
 			if is_on_floor() and attacking == false:
-				$animation_Player .current_animation = "walk_animation"
+				$animation_Player .current_animation = "walk_animation_left"
 			$sprite_player.flip_h = true
 		
 		else:
 			move.x = 0
 			
 			if is_on_floor() and attacking == false:
-				$animation_Player.current_animation = "idlle_animation"
+				if side_current == false:
+					$animation_Player.current_animation = "idlle_animation"
+				if side_current == true:
+					$animation_Player.current_animation = "idlle_animation_left"
 				
 		if is_on_floor():
 			if Input. is_action_just_pressed("ui_up"):
@@ -63,9 +67,17 @@ func _physics_process(delta):
 					
 		else:
 			if move.y <- 0.1 and attacking == false:
-				$animation_Player.current_animation = "jump_up"
+				if side_current == false:
+					$animation_Player.current_animation = "jump_up"
+				elif side_current == true :
+					$animation_Player.current_animation = "jump_up_left"
+			
+			
 			elif move.y > 0.1 and attacking == false :
-				$animation_Player.current_animation ="jump_down"
+				if side_current == false :
+					$animation_Player.current_animation ="jump_down"
+				elif side_current == true :
+					$animation_Player.current_animation ="jump_down_left"
 		move = move_and_slide(move,UP)
 	
 	
@@ -85,6 +97,7 @@ func atack_proximity():
 func fire_atack():
 	#get_weapon_away recebe o vaolor do singleton atributos fase e defini se oplayer ja possui ou nao o cajado
 	get_weapon_away = atributos_fase_singleton.get_weapom_away
+	$cajado.visible = atributos_fase_singleton.get_weapom_away
 	fire_stop = atributos_player_singleton.fire_stop
 	if get_weapon_away == true and fire_stop == false:
 		var O_F = orb_fire.instance()
@@ -100,8 +113,10 @@ func death_player():
 	if life <= 0:
 		life = 0 
 		death = true
-		$animation_Player.play("death_animation")
-		
+		if side_current == false :
+			$animation_Player.play("death_animation")
+		elif side_current == true:
+			$animation_Player.play("death_animation_left")
 		
 	
 #===========================================================
@@ -136,6 +151,11 @@ func _on_animation_Player_animation_finished(anim_name):
 	if anim_name == "death_animation":
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
+		
+	elif anim_name == "death_animation_left":
+		# quando terminara animacao de morte do player va para tela de gameover
+		get_tree().change_scene("res://cenas_globais/game_over.tscn")
+	
 	elif anim_name == "atack_1_animation_left":
 		attacking = false
 	elif anim_name == "atack_1_animation_right":

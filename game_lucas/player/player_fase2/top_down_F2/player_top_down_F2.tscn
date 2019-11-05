@@ -1,12 +1,12 @@
 [gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://player/player_fase2/top_down_F2/player_top_down2.gd" type="Script" id=1]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0015.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0016.png" type="Texture" id=3]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0017.png" type="Texture" id=4]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0018.png" type="Texture" id=5]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0019.png" type="Texture" id=6]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0020.png" type="Texture" id=7]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0020.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0015.png" type="Texture" id=3]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0016.png" type="Texture" id=4]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0017.png" type="Texture" id=5]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0018.png" type="Texture" id=6]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0019.png" type="Texture" id=7]
 [ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0022.png" type="Texture" id=8]
 [ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0023.png" type="Texture" id=9]
 [ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0024.png" type="Texture" id=10]
@@ -39,7 +39,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_player:position")
@@ -140,6 +140,7 @@ script = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
 "player",
 ]]
+editor/display_folded = true
 shape = SubResource( 1 )
 one_way_collision = true
 
@@ -158,6 +159,7 @@ anims/walk_animation = SubResource( 5 )
 "arma_player",
 ]]
 editor/display_folded = true
+position = Vector2( -3, 0 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -173,6 +175,9 @@ shape = SubResource( 6 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
 position = Vector2( 1.67247, 2.0906 )
 shape = SubResource( 7 )
+
+[node name="position_bullet" type="Position2D" parent="."]
+position = Vector2( 41.5806, 0 )
 [connection signal="animation_finished" from="animation_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="arma_player" to="." method="_on_arma_player_body_entered"]
 [connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]

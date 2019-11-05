@@ -27,10 +27,9 @@ func aply_camera_zoom(zom_in_out):
 	
 func subtract_mana_player(mana_valueN):
 	mana_player -=  mana_valueN
-	
-	
+
 	if mana_player <= 0:
 		fire_stop = true
-	if mana_player >= 20:
+	if mana_player >= 5:
 		fire_stop = false
 		
