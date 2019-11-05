@@ -1,24 +1,28 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=34 format=2]
 
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/death_animation/frame0001.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack1.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack2.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/damage_animation/damage1.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/death_animation/frame0000.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle1.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle2.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk1.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk2.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk3.png" type="Texture" id=11]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk4.png" type="Texture" id=12]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk5.png" type="Texture" id=13]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk6_12.png" type="Texture" id=14]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk7.png" type="Texture" id=15]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk8.png" type="Texture" id=16]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk9.png" type="Texture" id=17]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk10.png" type="Texture" id=18]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk11.png" type="Texture" id=19]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/script/mafioso_bruto.gd" type="Script" id=1]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack5.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack2.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack4.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/damage_animation/damage1.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death1.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death2.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death3.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle1.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle2.png" type="Texture" id=12]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk1.png" type="Texture" id=13]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk2.png" type="Texture" id=14]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk3.png" type="Texture" id=15]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk4.png" type="Texture" id=16]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk5.png" type="Texture" id=17]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk6_12.png" type="Texture" id=18]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk7.png" type="Texture" id=19]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk8.png" type="Texture" id=20]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk9.png" type="Texture" id=21]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk10.png" type="Texture" id=22]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk11.png" type="Texture" id=23]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 35.177
@@ -28,19 +32,19 @@ height = 7.47199
 resource_name = "atack_animation"
 length = 0.6
 tracks/0/type = "value"
-tracks/0/path = NodePath("spriter _A:texture")
+tracks/0/path = NodePath("spriter _H_C:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("spriter _A:position")
+tracks/1/path = NodePath("spriter _H_C:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -49,10 +53,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( 5.78169, -0.299728 ) ]
+"values": [ Vector2( 24.177, 7 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("animation_A:playback_speed")
+tracks/2/path = NodePath("animation_H_C:playback_speed")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -70,17 +74,17 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -0.111053, -0.0619049 ) ]
+"values": [ Vector2( 25, 56 ), Vector2( 39, 47 ), Vector2( 55, 6 ) ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "damage_animation"
 length = 0.4
 tracks/0/type = "value"
-tracks/0/path = NodePath("spriter _A:texture")
+tracks/0/path = NodePath("spriter _H_C:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -89,7 +93,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ) ]
+"values": [ ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_inimigo/CollisionShape2D:position")
@@ -104,7 +108,7 @@ tracks/1/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("spriter _A:position")
+tracks/2/path = NodePath("spriter _H_C:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -117,33 +121,33 @@ tracks/2/keys = {
 }
 
 [sub_resource type="Animation" id=4]
-length = 0.6
+length = 2.0
 tracks/0/type = "value"
-tracks/0/path = NodePath("spriter _A:texture")
+tracks/0/path = NodePath("spriter _H_C:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("spriter _A:position")
+tracks/1/path = NodePath("spriter _H_C:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( -0.11499, 3.79587 ), Vector2( -3.61885, 3.79585 ) ]
+"values": [ Vector2( 0.177002, 0 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("animation_A:playback_speed")
+tracks/2/path = NodePath("animation_H_C:playback_speed")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -152,7 +156,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 2.5, 0.3 ]
+"values": [ 2.5, 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("arma_inimigo/CollisionShape2D:position")
@@ -161,17 +165,17 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 1.09249 ),
+"transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( 4, -1 ), Vector2( -12, 0 ) ]
+"values": [ Vector2( 4, -1 ) ]
 }
 
 [sub_resource type="Animation" id=5]
 length = 0.6
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("spriter _A:texture")
+tracks/0/path = NodePath("spriter _H_C:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -180,10 +184,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 11 ), ExtResource( 12 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("spriter _A:position")
+tracks/1/path = NodePath("spriter _H_C:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -207,7 +211,7 @@ tracks/2/keys = {
 "values": [ Vector2( 0, -2 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("animation_A:playback_speed")
+tracks/3/path = NodePath("animation_H_C:playback_speed")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -223,7 +227,7 @@ tracks/3/keys = {
 length = 2.3
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("spriter _A:texture")
+tracks/0/path = NodePath("spriter _H_C:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -232,10 +236,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 14 ) ]
+"values": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 18 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("animation_A:playback_speed")
+tracks/1/path = NodePath("animation_H_C:playback_speed")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -262,8 +266,9 @@ tracks/2/keys = {
 [sub_resource type="CircleShape2D" id=7]
 radius = 36.2275
 
-[sub_resource type="CircleShape2D" id=8]
-radius = 83.3736
+[sub_resource type="CapsuleShape2D" id=8]
+radius = 13.177
+height = 41.826
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 21.1471
@@ -271,7 +276,7 @@ radius = 21.1471
 [sub_resource type="CircleShape2D" id=10]
 radius = 113.177
 
-[node name="arqueiro(T_D)" type="KinematicBody2D" groups=[
+[node name="mafioso_bruto_TD" type="KinematicBody2D" groups=[
 "enemie",
 ]]
 script = ExtResource( 1 )
@@ -281,67 +286,62 @@ script = ExtResource( 1 )
 ]]
 shape = SubResource( 1 )
 
-[node name="spriter _A" type="Sprite" parent="."]
-position = Vector2( -3.61885, 3.79585 )
+[node name="spriter _H_C" type="Sprite" parent="."]
+position = Vector2( 24.177, 7 )
 rotation = -1.5708
 texture = ExtResource( 2 )
 
-[node name="animation_A" type="AnimationPlayer" parent="."]
-playback_speed = 0.3
+[node name="animation_H_C" type="AnimationPlayer" parent="."]
 anims/atack_animation = SubResource( 2 )
 anims/damage_animation = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
 anims/idlle_animation = SubResource( 5 )
 anims/walk_animation = SubResource( 6 )
 
-[node name="corpo_A" type="Area2D" parent="." groups=[
+[node name="corpo_h_c" type="Area2D" parent="." groups=[
 "enemie",
 ]]
 editor/display_folded = true
 position = Vector2( 1, -3 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="corpo_A" groups=[
+[node name="CollisionShape2D" type="CollisionShape2D" parent="corpo_h_c" groups=[
 "enemie",
 ]]
 shape = SubResource( 7 )
 
 [node name="area_ataque" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 0.0551758, 0.587189 )
+position = Vector2( 12, 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_ataque"]
-position = Vector2( 8.1288, -3.29361 )
+position = Vector2( 36, -5 )
 shape = SubResource( 8 )
 
 [node name="arma_inimigo" type="Area2D" parent="." groups=[
 "weapom_enemie",
 ]]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arma_inimigo" groups=[
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( -12, 0 )
+position = Vector2( 55, 6 )
 shape = SubResource( 9 )
 
+[node name="delay_atack" type="Timer" parent="."]
+wait_time = 0.8
+
 [node name="AI_perception" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI_perception"]
-position = Vector2( 9.27521, 0 )
+position = Vector2( 7, 0 )
 shape = SubResource( 10 )
-
-[node name="delay_atack" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
-
-[node name="positon_flecha" type="Position2D" parent="."]
-
-[node name="position_fim_flecha" type="Position2D" parent="."]
-position = Vector2( 1855.42, 6.10352e-005 )
-[connection signal="animation_finished" from="animation_A" to="." method="_on_animation_H_C_animation_finished"]
-[connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_A_area_entered"]
+[connection signal="animation_finished" from="animation_H_C" to="." method="_on_animation_H_C_animation_finished"]
+[connection signal="area_entered" from="corpo_h_c" to="." method="_on_corpo_h_c_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]
 [connection signal="body_exited" from="area_ataque" to="." method="_on_area_ataque_body_exited"]
 [connection signal="body_entered" from="arma_inimigo" to="." method="_on_arma_inimigo_body_entered"]
-[connection signal="body_exited" from="AI_perception" to="." method="_on_AI_perception_body_exited"]
 [connection signal="timeout" from="delay_atack" to="." method="_on_delay_atack_timeout"]
+[connection signal="body_exited" from="AI_perception" to="." method="_on_AI_perception_body_exited"]
