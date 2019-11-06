@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/jump_dpwn0000.png-0dbf52908dae942bdb9783531cff6115.stex"
+path="res://.import/idlle.png-fb055317c53c5da97ae02a7f097cf394.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/player_fase2/top_down_F2/idlle_animation/jump_dpwn0000.png"
-dest_files=[ "res://.import/jump_dpwn0000.png-0dbf52908dae942bdb9783531cff6115.stex" ]
+source_file="res://player/player_fase2/top_down_F2/idlle_animation/idlle.png"
+dest_files=[ "res://.import/idlle.png-fb055317c53c5da97ae02a7f097cf394.stex" ]
 
 [params]
 

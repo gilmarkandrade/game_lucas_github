@@ -3,7 +3,7 @@ extends KinematicBody2D
 var move = Vector2()
 var speed = 150
 var death  = false
-var damage = 10
+var damage = 25
 var bullet = preload("res://player/player_fase2/top_down_F2/projetil_player_TD.tscn")
 var fire_stop = atributos_player_singleton.fire_stop
 var life = atributos_player_singleton.life_player
@@ -63,11 +63,12 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func shoot_bullet():
-	print(fire_stop)
+	
 	if fire_stop == false:
 		var B_L = bullet. instance()
 		get_parent().add_child(B_L)
-		B_L.target = get_global_mouse_position() 
+		B_L.pos = $position_bullet.global_position
+		B_L.target = $position_bullet_final.global_position
 		B_L.position = $position_bullet.global_position
 		B_L.look_at(get_global_mouse_position())
 	

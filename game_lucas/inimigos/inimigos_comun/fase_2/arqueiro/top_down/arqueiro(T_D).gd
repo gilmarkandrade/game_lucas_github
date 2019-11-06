@@ -12,6 +12,7 @@ var projetil = preload("res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha_t
 var target = atributos_player_singleton.pos_player_update
 
 func _ready():
+	atributos_fase_singleton.add_enemie_limit_in_game(1)
 	seguir = true
 	death = false
 	$delay_atack.start()
@@ -57,12 +58,14 @@ func _on_corpo_A_area_entered(area):
 	if area.is_in_group("arma_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
-	
-		
+	if area.is_in_group("projetil_player"):
+		life -= atributos_player_singleton.life_enemie_update
+		print(life)
+		damage_death()
 func _on_arma_inimigo_body_entered(body):
 	if body.is_in_group("player") and death == false:
 		atributos_player_singleton.player_life_update(damage)
-
+		damage_death()
 func _on_AI_perception_body_exited(body):
 	if body.is_in_group("player") and death == false:
 		seguir = true
@@ -90,5 +93,7 @@ func _on_delay_atack_timeout():
 
 func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
+		atributos_fase_singleton.update_enemie_dead(1)
+		atributos_fase_singleton.subtract_enemie_ingame(1)
 		queue_free()
 	
