@@ -1,28 +1,24 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/script/mafioso_bruto.gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack5.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack1.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack2.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack3.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/attack_animation/attack4.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/damage_animation/damage1.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death1.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death2.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/death_animation/death3.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle1.png" type="Texture" id=11]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/idle_animation/idle2.png" type="Texture" id=12]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk1.png" type="Texture" id=13]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk2.png" type="Texture" id=14]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk3.png" type="Texture" id=15]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk4.png" type="Texture" id=16]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk5.png" type="Texture" id=17]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk6_12.png" type="Texture" id=18]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk7.png" type="Texture" id=19]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk8.png" type="Texture" id=20]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk9.png" type="Texture" id=21]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk10.png" type="Texture" id=22]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk11.png" type="Texture" id=23]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack5.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack2.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack4.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/damage_animation/damage1.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death1.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death2.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death3.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/idle_animation/idle1.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/idle_animation/idle2.png" type="Texture" id=12]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk1_5.png" type="Texture" id=13]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk2_4.png" type="Texture" id=14]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk3.png" type="Texture" id=15]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk6_12.png" type="Texture" id=16]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk7_11.png" type="Texture" id=17]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk8_10.png" type="Texture" id=18]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk9.png" type="Texture" id=19]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 35.177
@@ -74,10 +70,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.3 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5, 0.567388 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 25, 56 ), Vector2( 39, 47 ), Vector2( 55, 6 ) ]
+"values": [ Vector2( 2, 34 ), Vector2( 11, 36 ), Vector2( 35, 15 ), Vector2( 35, 15 ), Vector2( 36, 15 ), Vector2( 36, 16 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -117,7 +113,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 16.177, -3 ) ]
+"values": [ Vector2( 8.177, 2 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -165,10 +161,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 1.09249 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0.1, 0.5, 1, 1.09249 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 4, -1 ) ]
+"values": [ Vector2( -43, -3 ), Vector2( -28, -3 ), Vector2( 0, -3 ), Vector2( 4, -1 ) ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -236,7 +232,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 18 ) ]
+"values": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -320,13 +316,12 @@ shape = SubResource( 8 )
 [node name="arma_inimigo" type="Area2D" parent="." groups=[
 "weapom_enemie",
 ]]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arma_inimigo" groups=[
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( 55, 6 )
+position = Vector2( 36, 16 )
 shape = SubResource( 9 )
 
 [node name="delay_atack" type="Timer" parent="."]
