@@ -98,15 +98,13 @@ position = Vector2( 271.322, -39.9445 )
 scale = Vector2( 0.5277, 0.453588 )
 frames = SubResource( 5 )
 animation = "Toha"
-frame = 2
 playing = true
 
 [node name="entrar_cena2" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 78.0211, 18.8622 )
+position = Vector2( 224.225, 22.4722 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_cena2"]
-position = Vector2( -1.1955, -1.12888 )
+position = Vector2( 0.609493, -2.03135 )
 shape = SubResource( 6 )
 
 [node name="posicao_0" type="Position2D" parent="."]

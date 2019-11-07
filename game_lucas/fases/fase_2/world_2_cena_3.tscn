@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_2/cena_3/Chão.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://icon.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.6564, 396.347 )
@@ -20,7 +21,7 @@ extents = Vector2( 674.833, 25.5806 )
 extents = Vector2( 51.3035, 26.6242 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 51.2805, 26.9166 )
+extents = Vector2( 51.2805, 91.7125 )
 
 [node name="world_2_cena_3" type="Node"]
 script = ExtResource( 1 )
@@ -30,65 +31,106 @@ editor/display_folded = true
 
 [node name="ParallaxLayer_chão" type="ParallaxLayer" parent="ParallaxBackground"]
 editor/display_folded = true
+position = Vector2( 349.05, 387.918 )
 
 [node name="Chão" type="Sprite" parent="ParallaxBackground/ParallaxLayer_chão"]
-position = Vector2( 216.216, 9.74991 )
+position = Vector2( -68.1694, -192.262 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Chão2" type="Sprite" parent="ParallaxBackground/ParallaxLayer_chão"]
+position = Vector2( 493.685, -192.262 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Chão3" type="Sprite" parent="ParallaxBackground/ParallaxLayer_chão"]
+position = Vector2( 493.685, 190.401 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Chão4" type="Sprite" parent="ParallaxBackground/ParallaxLayer_chão"]
+position = Vector2( -68.1695, 189.42 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 786.548, 6.89903 )
+position = Vector2( 1135.6, 394.817 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -13.6361, 5.84406 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -833.943, -13.1959 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 189.282, -392.07 )
+position = Vector2( 538.332, -4.15227 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource( 2 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( -366.522, -48.1394 )
+position = Vector2( -17.4719, 339.778 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 shape = SubResource( 3 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 172.068, 420.308 )
+position = Vector2( 521.118, 808.226 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+position = Vector2( -1.94812, -15.5841 )
 shape = SubResource( 4 )
 
 [node name="player_top_down" parent="." instance=ExtResource( 3 )]
-position = Vector2( 58.0304, -17.3271 )
-scale = Vector2( 0.8, 0.68 )
+position = Vector2( 186.617, 352.219 )
+scale = Vector2( 0.6, 0.6 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
 current = true
+zoom = Vector2( 0.8, 0.8 )
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 800
 
 [node name="pos_inicio_cena3" type="Position2D" parent="."]
-position = Vector2( 193.569, -289.706 )
+position = Vector2( 173.51, 64.8082 )
 scale = Vector2( 0.8, 0.68 )
 
 [node name="pos_retorno_cena4" type="Position2D" parent="."]
-position = Vector2( 184.157, 330.692 )
+position = Vector2( 182.498, 438.714 )
 
 [node name="retorno_direto_cena2" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 187.484, -389.583 )
+position = Vector2( 183.068, 11.289 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="retorno_direto_cena2"]
 shape = SubResource( 5 )
 
 [node name="entrar_direto_cena4" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 185.243, 394.458 )
+position = Vector2( 534.293, 782.376 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena4"]
+position = Vector2( -509.404, -325.684 )
 shape = SubResource( 6 )
+
+[node name="parede" type="Sprite" parent="."]
+modulate = Color( 0.00392157, 0, 0, 1 )
+position = Vector2( 301.637, 305.965 )
+scale = Vector2( 0.254732, 9.68887 )
+texture = ExtResource( 4 )
+
+[node name="porta" type="Sprite" parent="."]
+modulate = Color( 0.00392157, 0, 0, 1 )
+position = Vector2( 303.224, 695.491 )
+scale = Vector2( 0.254732, 2.12741 )
+texture = ExtResource( 4 )
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 34.7297, 435.961 )
+scale = Vector2( 1, 2.69627 )
+texture = ExtResource( 4 )
 [connection signal="body_entered" from="retorno_direto_cena2" to="." method="_on_retorno_direto_cena2_body_entered"]
 [connection signal="body_entered" from="entrar_direto_cena4" to="." method="_on_entrar_direto_cena4_body_entered"]

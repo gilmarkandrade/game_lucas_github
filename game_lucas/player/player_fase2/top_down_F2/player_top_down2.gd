@@ -9,7 +9,8 @@ var fire_stop = atributos_player_singleton.fire_stop
 var life = atributos_player_singleton.life_player
 var attacking = false
 
-
+func _ready():
+	$CollisionShape2D/cajado. visible = atributos_fase_singleton.get_weapom_away
 func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
@@ -64,7 +65,7 @@ func _on_animation_player_animation_finished(anim_name):
 
 func shoot_bullet():
 	
-	if fire_stop == false:
+	if fire_stop == false and atributos_fase_singleton. get_weapom_away == true:
 		var B_L = bullet. instance()
 		get_parent().add_child(B_L)
 		B_L.pos = $position_bullet.global_position

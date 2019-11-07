@@ -5,6 +5,7 @@ var fase_restart = 0
 var stop_spawn_enemie = false
 var cont_enemie 
 var enemie_limit_in_game = 0
+var block_break = false
 
 func setar_posicao(posicao):
 	mudarposicao = posicao
@@ -30,3 +31,7 @@ func subtract_enemie_ingame(enemiesub):
 	
 func add_enemie_limit_in_game(enemieadd):
 	enemie_limit_in_game += enemieadd
+	
+	
+func destroy_wall_fase_2(blockdestruct):
+	block_break = blockdestruct

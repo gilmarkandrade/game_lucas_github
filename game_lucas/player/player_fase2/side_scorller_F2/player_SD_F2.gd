@@ -26,7 +26,7 @@ func _physics_process(delta):
 	move.y += gravity
 	# defini a visibilade do player
 	$cajado.visible = atributos_fase_singleton.get_weapom_away
-	if death == false:
+	if death == false and atributos_player_singleton.stop_player == false:
 		
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
 		if Input.is_action_just_pressed("ui_atack"):

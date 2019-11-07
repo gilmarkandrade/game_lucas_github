@@ -7,6 +7,10 @@ var camere_shake_update
 var camera_zoom_update
 var mana_player = 100
 var fire_stop = false
+var stop_player = false
+
+func stop_movement_player(stop):
+	stop_player = stop
 
 func player_life_update(life):
 	life_player -=  life
