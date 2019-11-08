@@ -99,7 +99,7 @@ position = Vector2( 271.322, -39.9445 )
 scale = Vector2( 0.5277, 0.453588 )
 frames = SubResource( 5 )
 animation = "Toha"
-frame = 1
+frame = 2
 playing = true
 
 [node name="entrar_cena2" type="Area2D" parent="."]

@@ -8,4 +8,5 @@ func _on_item_municao_body_entered(body):
 		atributos_player_singleton.mana_player += 25
 		if atributos_player_singleton.mana_player > 100:
 			atributos_player_singleton.mana_player = 100
+	queue_free()
 	pass 

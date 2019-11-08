@@ -8,4 +8,5 @@ func _on_item_vida_body_entered(body):
 		atributos_player_singleton.life_player += 25
 		if atributos_player_singleton.life_player > 100:
 			atributos_player_singleton.life_player = 100
+	queue_free()
 	pass 
