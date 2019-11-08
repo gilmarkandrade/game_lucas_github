@@ -225,7 +225,7 @@ scale = Vector2( 0.654575, 0.629171 )
 z_index = -1
 frames = SubResource( 4 )
 animation = "cajado_aura"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Label2" type="Label" parent="area_cajado/cajado_aura"]

@@ -7,6 +7,8 @@ func _ready():
 func _on_restart_game_pressed():
 	atributos_fase_singleton.mudarposicao = 0
 	atributos_player_singleton.life_player = 100
+	atributos_player_singleton.mana_player = 100
+	atributos_player_singleton.fire_stop = false
 	atributos_fase_singleton.anim_close_door_finalized = 0
 	
 	if (atributos_fase_singleton.fase_restart == 1):
@@ -14,6 +16,7 @@ func _on_restart_game_pressed():
 	if (atributos_fase_singleton.fase_restart == 2):
 		atributos_fase_singleton.get_weapom_away = false
 		atributos_fase_singleton.block_break = false
+		atributos_fase_singleton.plataform_motion = 1
 		get_tree().change_scene("res://fases/fase_2/world_2_cena_1.tscn")
 	if (atributos_fase_singleton.fase_restart == 3):
 		get_tree().change_scene("res://fases/fase_3/world_3_cena_1.tscn")
