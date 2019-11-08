@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Background_fundo_da_cela.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Tocha/Tocha_1.png" type="Texture" id=6]
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Tocha/Tocha_2.png" type="Texture" id=7]
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Tocha/Tocha_3.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 323.025, 10 )
@@ -108,4 +109,7 @@ position = Vector2( 0.609493, -2.03135 )
 shape = SubResource( 6 )
 
 [node name="posicao_0" type="Position2D" parent="."]
+
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 9 )]
+position = Vector2( 279.374, 20.3625 )
 [connection signal="body_entered" from="entrar_cena2" to="." method="_on_entrar_cena2_body_entered"]

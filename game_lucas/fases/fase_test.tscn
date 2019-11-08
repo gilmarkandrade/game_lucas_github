@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://fases/fase_test.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 219.409, 10 )
@@ -82,9 +81,6 @@ texture = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down_F2"]
 current = true
-
-[node name="arqueiro(T_D)" parent="." instance=ExtResource( 5 )]
-position = Vector2( 316.37, -110.601 )
 
 [node name="delay_spawn_enemie" type="Timer" parent="."]
 wait_time = 2.0

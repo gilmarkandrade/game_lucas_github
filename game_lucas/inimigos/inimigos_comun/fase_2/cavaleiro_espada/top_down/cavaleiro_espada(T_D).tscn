@@ -1,19 +1,123 @@
 [gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/cavaleiro_espada(T_D).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack4.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack1.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack2.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/walk_animation/walk1.png" type="Texture" id=1]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack2.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack3.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack4.png" type="Texture" id=5]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/damage_animation/damage1.png" type="Texture" id=6]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/death_animation/death1.png" type="Texture" id=7]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/death_animation/death2.png" type="Texture" id=8]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/idle_animation/idle1.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/walk_animation/walk1.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/walk_animation/walk2.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/walk_animation/walk2.png" type="Texture" id=10]
+
+[sub_resource type="GDScript" id=11]
+script/source = "extends KinematicBody2D
+
+
+var speed = 1.2
+var seguir = true
+var death = false
+var attacking = false
+var damage = 5
+var life = 100
+var move = Vector2(0,0)
+var target = atributos_player_singleton.pos_player_update
+
+func _ready():
+	seguir = true
+	death = false
+	atributos_fase_singleton.add_enemie_limit_in_game(1)
+	
+func _physics_process(delta):
+	target = atributos_player_singleton.pos_player_update
+	if seguir == true and death == false :
+		perseguir(delta)
+	
+	elif seguir == false and attacking == false and death == false:
+		$animation_C_E.current_animation = \"idlle_animation\" 
+	
+func init(pos):
+	position = pos
+ 
+# pega direcao menos a posiçaõ do player vezes a velocidade para seguir o player
+func perseguir(delta):
+	look_at(target)
+	var direction = target - position 
+	var motion = direction *speed* delta
+	position += motion
+	if attacking == false:
+		$animation_C_E.current_animation = \"walk_animation\"
+
+func _on_area_ataque_body_entered(body):
+	if body.is_in_group(\"player\") and death == false:
+		seguir = false
+		$delay_atack.start()
+	
+func _on_area_ataque_body_exited(body):
+	if body.is_in_group(\"player\") and death == false:
+		seguir = true 
+	
+			
+
+func damage_death():
+	
+	if life <= 0:
+		death = true 
+		$animation_C_E. play(\"death_animation\")
+		
+func _on_corpo_h_c_area_entered(area):
+	if area.is_in_group(\"arma_player\") and death == false:
+		life -= atributos_player_singleton.life_enemie_update
+		damage_death()
+	if area.is_in_group(\"projetil_player\"):
+		life -= atributos_player_singleton.life_enemie_update
+		damage_death()
+		
+func _on_arma_inimigo_body_entered(body):
+	if body.is_in_group(\"player\") and death == false:
+		atributos_player_singleton.player_life_update(damage)
+
+func _on_AI_perception_body_exited(body):
+	if body.is_in_group(\"player\") and death == false:
+		seguir = true
+		attacking = false
+		$delay_atack.stop()
+	
+		
+func atack():
+	$animation_C_E.current_animation = \"atack_animation\"
+	
+
+
+func _on_delay_atack_timeout():
+      
+	if seguir == true and death == false:
+		$delay_atack.stop()
+		attacking = false
+	elif seguir == false and death == false :
+		attacking = true 
+		atack()
+
+
+func _on_animation_H_C_animation_finished(anim_name):
+	if anim_name == \"death_animation\":
+		atributos_fase_singleton.update_enemie_dead(1)
+		atributos_fase_singleton.subtract_enemie_ingame(1)
+		queue_free()
+	if anim_name == \"atack_animation\":
+		if seguir == false :
+			attacking = false
+
+
+
+
+
+
+"
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 35.177
+radius = 28.3238
 height = 7.47199
 
 [sub_resource type="Animation" id=2]
@@ -29,7 +133,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _C_E:position")
@@ -66,6 +170,18 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 29.4008, 14.2716 ), Vector2( 9.87395, 33.7984 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("arma_inimigo:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10.2384, -3.98158 ), Vector2( 9.66959, 11.376 ), Vector2( 0.568787, 21.6143 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -223,7 +339,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 1 ), ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_C_E:playback_speed")
@@ -249,6 +365,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ Vector2( -1, 0 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("arma_inimigo:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -6.82559, 7.96318 ) ]
+}
 
 [sub_resource type="CircleShape2D" id=7]
 radius = 36.2275
@@ -261,24 +389,28 @@ height = 41.826
 radius = 21.1471
 
 [sub_resource type="CircleShape2D" id=10]
-radius = 79.2433
+radius = 69.6504
 
 [node name="cavaleiro_espada" type="KinematicBody2D" groups=[
 "enemie",
 ]]
-script = ExtResource( 1 )
+position = Vector2( 43.5724, -20.2458 )
+script = SubResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
 "enemie",
 ]]
+position = Vector2( -11.1337, 2.14127 )
 shape = SubResource( 1 )
 
 [node name="spriter _C_E" type="Sprite" parent="."]
 position = Vector2( 24.177, 7 )
 rotation = -1.5708
-texture = ExtResource( 2 )
+scale = Vector2( 1.45948, 1.82831 )
+texture = ExtResource( 1 )
 
 [node name="animation_C_E" type="AnimationPlayer" parent="."]
+playback_speed = 0.5
 anims/atack_animation = SubResource( 2 )
 anims/damage_animation = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -289,7 +421,7 @@ anims/walk_animation = SubResource( 6 )
 "enemie",
 ]]
 editor/display_folded = true
-position = Vector2( 1, -3 )
+position = Vector2( -11.5734, 4.18483 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corpo_C_E" groups=[
 "enemie",
@@ -297,28 +429,30 @@ position = Vector2( 1, -3 )
 shape = SubResource( 7 )
 
 [node name="area_ataque" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 12, 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_ataque"]
 position = Vector2( 28.5179, -2.79937 )
 shape = SubResource( 8 )
-script = ExtResource( 1 )
 
 [node name="arma_inimigo" type="Area2D" parent="." groups=[
 "weapom_enemie",
 ]]
+editor/display_folded = true
+position = Vector2( -6.82559, 7.96318 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arma_inimigo" groups=[
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( 9.87395, 33.7984 )
+position = Vector2( -1, 0 )
 shape = SubResource( 9 )
 
 [node name="AI_perception" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI_perception"]
-position = Vector2( 7, 0 )
+position = Vector2( 7.44012, 0 )
 shape = SubResource( 10 )
 
 [node name="delay_atack" type="Timer" parent="."]

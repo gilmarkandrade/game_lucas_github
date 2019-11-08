@@ -128,6 +128,7 @@ func _on_portal_fase_2_body_entered(body):
 		$player_plataforma._physics_process(false)
 		$player_plataforma.visible = false
 		$portal_fase_2/animation_portal . play("portal_close")
+		atributos_fase_singleton.setar_posicao(0)
 
 # animação arvore
 

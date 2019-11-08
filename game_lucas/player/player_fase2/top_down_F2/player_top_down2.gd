@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 150
+var speed = 200
 var death  = false
-var damage = 25
+var damage = 30
 var bullet = preload("res://player/player_fase2/top_down_F2/projetil_player_TD.tscn")
 var fire_stop = atributos_player_singleton.fire_stop
 var life = atributos_player_singleton.life_player

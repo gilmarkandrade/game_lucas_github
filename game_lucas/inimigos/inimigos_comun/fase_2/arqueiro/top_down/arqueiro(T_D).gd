@@ -60,7 +60,6 @@ func _on_corpo_A_area_entered(area):
 		damage_death()
 	if area.is_in_group("projetil_player"):
 		life -= atributos_player_singleton.life_enemie_update
-		print(life)
 		damage_death()
 func _on_arma_inimigo_body_entered(body):
 	if body.is_in_group("player") and death == false:

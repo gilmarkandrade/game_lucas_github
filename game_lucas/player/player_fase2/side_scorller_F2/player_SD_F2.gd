@@ -7,7 +7,7 @@ var attacking= false
 var damage_hit = 10
 var side_current = false
 var death = false
-const jump_force = -300
+const jump_force = -350
 const gravity = 9
 const UP = Vector2(0,-1)
 var get_weapon_away = atributos_fase_singleton.get_weapom_away
@@ -133,6 +133,11 @@ func _on_area_corpo_player_area_entered(area):
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
 		death_player()
+	if area .is_in_group("armadilha"):
+		life = atributos_player_singleton.life_player
+		death_player()
+		print(life)
+		
 
 
 func _on_area_arma_player_area_entered(area):

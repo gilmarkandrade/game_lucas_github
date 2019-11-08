@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -25,14 +25,15 @@
 [ext_resource path="res://aliados/bru/idlle_animation/Bru_128_idle_f3.png" type="Texture" id=23]
 [ext_resource path="res://aliados/bru/idlle_animation/Bru_128_idle_f4.png" type="Texture" id=24]
 [ext_resource path="res://aliados/bru/idlle_animation/Bru_128_idle_f5.png" type="Texture" id=25]
+[ext_resource path="res://assets_game/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=26]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 51.2627, 89.2844 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 502.5, 23.5956 )
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 24.8124
 height = 59.1018
 
@@ -44,7 +45,7 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "bru_animation_finalized"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bru:texture")
@@ -71,8 +72,7 @@ tracks/1/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=5]
-resource_name = "idle_animation"
+[sub_resource type="Animation" id=6]
 length = 0.5
 loop = true
 tracks/0/type = "value"
@@ -100,8 +100,7 @@ tracks/1/keys = {
 "values": [ 0.6 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "spawn_bru_animation"
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Bru:texture")
 tracks/0/interp = 1
@@ -153,7 +152,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_retorno_cena3"]
 position = Vector2( -72.0572, 501.693 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="area_retorno_cena3/CollisionShape2D"]
 modulate = Color( 0.180392, 0.0627451, 0.0196078, 1 )
@@ -170,7 +169,7 @@ position = Vector2( -42.5352, 607.961 )
 texture = ExtResource( 5 )
 
 [node name="chão2" type="Sprite" parent="."]
-position = Vector2( -232.013, 607.428 )
+position = Vector2( -229.013, 608.428 )
 texture = ExtResource( 6 )
 
 [node name="chão4" type="Sprite" parent="."]
@@ -178,18 +177,29 @@ position = Vector2( 144.653, 607.943 )
 texture = ExtResource( 5 )
 
 [node name="chão5" type="Sprite" parent="."]
-position = Vector2( 331.47, 607.041 )
+position = Vector2( 330.47, 608.041 )
 texture = ExtResource( 5 )
 
 [node name="chão6" type="Sprite" parent="."]
-position = Vector2( -424.822, 604.333 )
+position = Vector2( -416.232, 608.115 )
 texture = ExtResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
 position = Vector2( -41.1624, 609.189 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 416.017, 225.281 )
+rotation = 1.58137
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -516.76, 252.976 )
+rotation = 1.58137
+shape = SubResource( 2 )
 
 [node name="player_SD_F2" parent="." instance=ExtResource( 7 )]
 position = Vector2( -168.405, 538.527 )
@@ -199,7 +209,7 @@ current = true
 zoom = Vector2( 0.6, 0.6 )
 limit_left = -500
 limit_top = 250
-limit_right = 500
+limit_right = 400
 limit_bottom = 625
 
 [node name="area_cajado" type="Area2D" parent="."]
@@ -207,7 +217,7 @@ script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_cajado"]
 position = Vector2( -89.408, 529.438 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="cajado_aura" type="AnimatedSprite" parent="area_cajado"]
 position = Vector2( -89.3423, 531.254 )
@@ -230,9 +240,9 @@ text = "press key \" Q\""
 
 [node name="animation_cajado" type="AnimationPlayer" parent="area_cajado"]
 playback_speed = 0.6
-anims/bru_animation_finalized = SubResource( 7 )
-anims/idle_animation = SubResource( 5 )
-anims/spawn_bru_animation = SubResource( 6 )
+anims/bru_animation_finalized = SubResource( 5 )
+anims/idle_animation = SubResource( 6 )
+anims/spawn_bru_animation = SubResource( 7 )
 
 [node name="Bru" type="Sprite" parent="area_cajado"]
 self_modulate = Color( 1, 1, 1, 0 )
@@ -280,6 +290,11 @@ one_shot = true
 speed_scale = 1.5
 explosiveness = 0.96
 process_material = SubResource( 8 )
+
+[node name="icone_mudar_perspectiva" parent="area_cajado" instance=ExtResource( 26 )]
+position = Vector2( -71.9352, 528.169 )
+rotation = -3.14159
+scale = Vector2( 0.560001, -0.68 )
 [connection signal="body_entered" from="area_retorno_cena3" to="." method="_on_area_retorno_cena3_body_entered"]
 [connection signal="body_entered" from="area_cajado" to="area_cajado" method="_on_area_cajado_body_entered"]
 [connection signal="body_exited" from="area_cajado" to="area_cajado" method="_on_area_cajado_body_exited"]

@@ -5,19 +5,24 @@ var fimcutcine = false
 var esta_na_area_cajado = false
 
 func _ready(): 
-	print(atributos_fase_singleton.get_weapom_away )
+
 	if atributos_fase_singleton.get_weapom_away == false:
 		$animation_cajado.play("spawn_bru_animation")
 		atributos_player_singleton.stop_movement_player(true)
 		bru_talking()
+		$icone_mudar_perspectiva.visible = false
+	
 	elif atributos_fase_singleton.get_weapom_away == true:
 		fimcutcine = true
 		$cajado_aura.visible = false
+		$icone_mudar_perspectiva.visible = true
+
 func _process(delta):
+	
+	
 	if Input.is_action_just_pressed("ui_interact") and atributos_fase_singleton.get_weapom_away == false:
 		if number_speak <= 3:
 			number_speak +=1 
-			
 			bru_talking()
 		elif number_speak >=3 and fimcutcine == false:
 			fimcutcine = true
@@ -28,6 +33,7 @@ func _process(delta):
 				atributos_fase_singleton.weapon_away_status(true)
 				$cajado_aura.visible = false
 				$particulacajado.emitting = true
+				$icone_mudar_perspectiva.visible = true
 		
 func _on_animation_cajado_animation_finished(anim_name):
 	if anim_name ==  "spawn_bru_animation":
@@ -58,7 +64,7 @@ func _on_area_cajado_body_entered(body):
 	if body.is_in_group("player") and atributos_fase_singleton.get_weapom_away == false :
 		esta_na_area_cajado = true 
 		$cajado_aura/Label2.visible = true
-		print(esta_na_area_cajado)
+		
 
 
 func _on_area_cajado_body_exited(body):

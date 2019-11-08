@@ -83,6 +83,9 @@ func _on_area_corpo_area_entered(area):
 		
 	if area.is_in_group("projetil_player"):
 		life -= atributos_player_singleton.life_enemie_update
+	
+	if area.is_in_group("projetil_player"):
+		life -= atributos_player_singleton.life_enemie_update
 		
 	
 

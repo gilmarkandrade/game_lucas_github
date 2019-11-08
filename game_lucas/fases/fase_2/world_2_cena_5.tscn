@@ -1,78 +1,770 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=48 format=2]
 
-[ext_resource path="res://assets_game/background/fase_2/cena_5/Parede_side2.png" type="Texture" id=1]
-[ext_resource path="res://assets_game/background/fase_2/cena_5/chão_side.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/player_plataforma.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
+[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets_game/background/fase_2/cena_5/Parede_side2.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_0.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_2.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_3.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_4.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Lava2/sprite_5.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_2/cena_5/chão_side.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/Chão1.jpg" type="Texture" id=10]
+[ext_resource path="res://icon.png" type="Texture" id=11]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/visibilidade_parede_fase2.gd" type="Script" id=13]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/area_armadilha_fase2.gd" type="Script" id=14]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0000.png" type="Texture" id=15]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0001.png" type="Texture" id=16]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0002.png" type="Texture" id=17]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0003.png" type="Texture" id=18]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0004.png" type="Texture" id=19]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0005.png" type="Texture" id=20]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/alavanca_animation/arqueiro_alavanca0006.png" type="Texture" id=21]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_2/alavanca/alavanca0003.png" type="Texture" id=22]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_2/alavanca/alavanca0004.png" type="Texture" id=23]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_2/alavanca/alavanca0005.png" type="Texture" id=24]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_2/alavanca/alavanca0006.png" type="Texture" id=25]
+[ext_resource path="res://assets_game/background/fase_2/cena_4/chão2.jpg" type="Texture" id=26]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/area_camera_zoom_fase2.gd" type="Script" id=27]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets_game/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=29]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "lava_motion",
+"speed": 6.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 305.527, 77.3377 )
+extents = Vector2( 796.933, 77.3377 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24.2331, 385.213 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 24.2332, 364.708 )
+extents = Vector2( 24.2332, 500 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 725.521, 20.2153 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 212.884, 73.5296 )
+extents = Vector2( 377.655, 64.7077 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 255.41, 152.478 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 650, 600 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 740, 70 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 30, 20 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "plataform_dow"
+length = 6.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("player_SD_F2/Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 3.7, 4, 5.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 2061.63, -851.161 ), Vector2( 2061.63, -851.161 ), Vector2( 1481.63, 38.8394 ), Vector2( 1481.63, 38.8394 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("chao_movivel/arqueiro_alavanca:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1.5, 1.7, 1.9, 2.1, 2.5, 2.7, 2.8, 3.1, 3.3, 3.5, 3.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("chao_movivel/alavanca:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5, 2.7, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("player_SD_F2/Camera2D:zoom")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 3.7, 4, 5.8, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.6, 0.6 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("chao_movivel/CollisionShape2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4, 6.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -8.33325, -9 ), Vector2( -8.33325, -9 ), Vector2( -8.33325, 170 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("chao_movivel/arqueiro_alavanca:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 6.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("arqueiro_SD:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 6.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "plataform_up"
+tracks/0/type = "value"
+tracks/0/path = NodePath("chao_movivel/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -8.33325, 153.727 ), Vector2( -8.33325, -13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("chao_movivel/alavanca:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 22 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("area_armadilha/area_alavanca/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 95.8176, 20.8867 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 61.036, 21.2936 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 648.942, 93.7402 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 660, 500 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "camera_zoom_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../player_SD_F2/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.2, 1.2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../player_SD_F2/Camera2D:limit_right")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2220 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../player_SD_F2/Camera2D:limit_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 800 ]
+}
+
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 40, 160 )
 
 [node name="world_2_cena_5" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.721569, 0.705882, 0.705882, 1 )
+position = Vector2( 174.68, -446.104 )
+motion_scale = Vector2( 1.2, 1 )
+motion_mirroring = Vector2( 1048, 0 )
 
 [node name="Parede_side2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 417.305, 125.656 )
-texture = ExtResource( 1 )
+position = Vector2( 391.996, 39.1592 )
+texture = ExtResource( 3 )
+
+[node name="Parede_side3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 392.32, -589.04 )
+texture = ExtResource( 3 )
+
+[node name="parallax_lava" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
+position = Vector2( 1100.93, -27.6243 )
+frames = SubResource( 9 )
+animation = "lava_motion"
+frame = 3
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
+position = Vector2( 1467.97, -30.5605 )
+frames = SubResource( 9 )
+animation = "lava_motion"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
+position = Vector2( 1837.31, -30.5605 )
+frames = SubResource( 9 )
+animation = "lava_motion"
+frame = 2
+playing = true
+
+[node name="AnimatedSprite4" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
+position = Vector2( 2204.03, -29.3164 )
+frames = SubResource( 9 )
+animation = "lava_motion"
+frame = 1
+playing = true
 
 [node name="StaticBody_chão" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 415.741, 431.951 )
+position = Vector2( 590.421, -14.1528 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody_chão"]
+position = Vector2( -443.585, -15.8472 )
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="StaticBody_chão/CollisionShape2D"]
-position = Vector2( -147.64, 1.02527 )
-scale = Vector2( 0.753934, 1.01266 )
-texture = ExtResource( 2 )
+[node name="Sprite" type="Sprite" parent="StaticBody_chão"]
+position = Vector2( -132.805, -5.43646 )
+scale = Vector2( 0.7847, 1.01266 )
+texture = ExtResource( 9 )
+
+[node name="StaticBody_teto" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1577.87, -1263.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody_teto"]
+position = Vector2( -117.873, -76.4969 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody_teto"]
+position = Vector2( -41.5526, -86.497 )
+scale = Vector2( 1.1228, 1.01266 )
+texture = ExtResource( 9 )
+flip_v = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( -209.156, 141.488 )
+position = Vector2( -34.4763, -304.616 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 4.66541, -5.83179 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 1043.73, 131.235 )
+position = Vector2( 1167, -300 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2( 1063, -650 )
 shape = SubResource( 3 )
+
+[node name="Sprite3" type="Sprite" parent="StaticBody2D2"]
+position = Vector2( 1211.75, -640 )
+rotation = 1.57079
+scale = Vector2( 0.822954, 2.15975 )
+z_index = 1
+texture = ExtResource( 9 )
+flip_v = true
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -195.846, -359.673 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+position = Vector2( 1055.85, -580.327 )
+shape = SubResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="StaticBody2D5/CollisionShape2D"]
+position = Vector2( -150, -5.62317 )
+rotation = 1.57079
+scale = Vector2( 0.822954, 2.14426 )
+z_index = 1
+texture = ExtResource( 9 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 editor/display_folded = true
-position = Vector2( 397.807, -209.156 )
+position = Vector2( 572.487, -655.26 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2( -390.424, 182.198 )
 shape = SubResource( 4 )
 
-[node name="StaticBody2D4" type="StaticBody2D" parent="."]
-position = Vector2( 1143.93, 431.8 )
+[node name="chao_statico_esquerdo" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1318.61, -14.3038 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao_statico_esquerdo"]
+position = Vector2( -757.901, -67.045 )
 shape = SubResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D4/CollisionShape2D"]
-position = Vector2( 150.715, -1.02531 )
-scale = Vector2( 0.605269, 0.911396 )
-texture = ExtResource( 2 )
+[node name="Sprite2" type="Sprite" parent="chao_statico_esquerdo"]
+position = Vector2( -761.93, -43.4114 )
+scale = Vector2( 0.62285, 1.02631 )
+texture = ExtResource( 9 )
 
-[node name="player_plataforma" parent="." instance=ExtResource( 3 )]
-position = Vector2( 406.009, 299.38 )
+[node name="Chão1" type="Sprite" parent="chao_statico_esquerdo"]
+position = Vector2( -518.61, -29.6962 )
+scale = Vector2( 1.63149, 1.82465 )
+texture = ExtResource( 10 )
+
+[node name="position_inicio_cena5" type="Position2D" parent="."]
+position = Vector2( 100.15, -150 )
+
+[node name="batente porta" type="Sprite" parent="."]
+modulate = Color( 0.0823529, 0.027451, 0.027451, 1 )
+position = Vector2( 249.403, -300.156 )
+scale = Vector2( 0.548233, 4.93004 )
+z_index = 1
+texture = ExtResource( 11 )
+
+[node name="batente porta3" type="Sprite" parent="."]
+modulate = Color( 0.0823529, 0.027451, 0.027451, 1 )
+position = Vector2( 2240, -280 )
+scale = Vector2( 0.548233, 5.14965 )
+z_index = 1
+texture = ExtResource( 11 )
+
+[node name="batente porta2" type="Sprite" parent="."]
+modulate = Color( 0.0823529, 0.027451, 0.027451, 1 )
+position = Vector2( 830.195, -300 )
+scale = Vector2( 0.548233, 4.93004 )
+z_index = 1
+texture = ExtResource( 11 )
+
+[node name="player_SD_F2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 98.3721, -158.839 )
+
+[node name="Camera2D" type="Camera2D" parent="player_SD_F2"]
+scale = Vector2( 0.6, 0.6 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+limit_left = 0
+limit_top = -1420
+limit_right = 2220
+limit_bottom = 0
+
+[node name="area_visibilidade_parede" type="Area2D" parent="."]
+editor/display_folded = true
+script = ExtResource( 13 )
+
+[node name="Parede_side2" type="Sprite" parent="area_visibilidade_parede"]
+position = Vector2( 538.757, -295 )
+scale = Vector2( 0.481261, 1.91358 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_visibilidade_parede"]
+position = Vector2( 592.473, -300.632 )
+shape = SubResource( 6 )
+
+[node name="area_armadilha" type="Area2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_armadilha"]
+position = Vector2( 1560, -766.779 )
+shape = SubResource( 11 )
+
+[node name="area_lava" type="Area2D" parent="area_armadilha" groups=[
+"armadilha",
+]]
+position = Vector2( 1270, 110 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_armadilha/area_lava"]
+modulate = Color( 0.521569, 0.0352941, 0.0352941, 1 )
+position = Vector2( 397.298, -120 )
+shape = SubResource( 18 )
+
+[node name="area_alavanca" type="Area2D" parent="area_armadilha"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_armadilha/area_alavanca"]
+position = Vector2( 2203.86, -1040 )
+shape = SubResource( 15 )
+
+[node name="animation_cena5" type="AnimationPlayer" parent="."]
+anims/plataform_dow = SubResource( 12 )
+anims/plataform_up = SubResource( 16 )
+
+[node name="plataformas" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 2133.86, -727.839 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão2" type="Sprite" parent="plataformas/CollisionShape2D"]
+position = Vector2( -0.784424, -4.26001 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1334.51, -1034.38 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão10" type="Sprite" parent="plataformas/CollisionShape2D2"]
+position = Vector2( -0.784668, -1.74243 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 860, -1012.71 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão7" type="Sprite" parent="plataformas/CollisionShape2D3"]
+position = Vector2( 4.25024, -9.29492 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 959.518, -744.037 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão6" type="Sprite" parent="plataformas/CollisionShape2D4"]
+position = Vector2( 1.73291, -1.74243 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 940.967, -579.735 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão6" type="Sprite" parent="plataformas/CollisionShape2D17"]
+position = Vector2( 1.73291, -1.74243 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1280, -320 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão5" type="Sprite" parent="plataformas/CollisionShape2D5"]
+position = Vector2( -0.784424, -4.25989 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1062.6, -210.497 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão4" type="Sprite" parent="plataformas/CollisionShape2D6"]
+position = Vector2( -0.784424, 3.2926 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 2150, -946.882 )
+shape = SubResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão11" type="Sprite" parent="plataformas/CollisionShape2D7"]
+position = Vector2( -13.3726, -1.74237 )
+scale = Vector2( 0.840158, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1436.89, -589.551 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão8" type="Sprite" parent="plataformas/CollisionShape2D8"]
+position = Vector2( -2.28833, -3.31567 )
+scale = Vector2( 0.650448, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1250.2, -700.975 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão8" type="Sprite" parent="plataformas/CollisionShape2D13"]
+position = Vector2( -2.28833, -3.31567 )
+scale = Vector2( 0.650448, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 891.269, -861.538 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão8" type="Sprite" parent="plataformas/CollisionShape2D15"]
+position = Vector2( -2.28833, -3.31567 )
+scale = Vector2( 0.650448, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1890, -860 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão3" type="Sprite" parent="plataformas/CollisionShape2D9"]
+position = Vector2( 1.43909, 0.516846 )
+scale = Vector2( 0.639607, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1774.2, -543.275 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão3" type="Sprite" parent="plataformas/CollisionShape2D14"]
+position = Vector2( 1.43909, 0.516846 )
+scale = Vector2( 0.639607, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1422.67, -424.518 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão3" type="Sprite" parent="plataformas/CollisionShape2D11"]
+position = Vector2( 1.43909, 0.516846 )
+scale = Vector2( 0.639607, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1242.21, -510.328 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão3" type="Sprite" parent="plataformas/CollisionShape2D12"]
+position = Vector2( 1.43909, 0.516846 )
+scale = Vector2( 0.639607, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1633.75, -955.886 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão9" type="Sprite" parent="plataformas/CollisionShape2D10"]
+position = Vector2( -0.403564, 2.245 )
+scale = Vector2( 0.587074, 1 )
+texture = ExtResource( 26 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="plataformas"]
+editor/display_folded = true
+position = Vector2( 1106.33, -928.127 )
+shape = SubResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="chão9" type="Sprite" parent="plataformas/CollisionShape2D16"]
+position = Vector2( -0.403564, 2.245 )
+scale = Vector2( 0.587074, 1 )
+texture = ExtResource( 26 )
+
+[node name="chao_movivel" type="StaticBody2D" parent="."]
+position = Vector2( 1710, -40 )
+scale = Vector2( 1.2, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao_movivel"]
+position = Vector2( -8.33325, -9 )
+shape = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="chao_movivel/CollisionShape2D"]
+position = Vector2( -4.2655, -18.7472 )
+scale = Vector2( 1.06305, 0.911396 )
+texture = ExtResource( 9 )
+
+[node name="arqueiro_alavanca" type="Sprite" parent="chao_movivel"]
+position = Vector2( 361.553, -975.119 )
+texture = ExtResource( 15 )
+
+[node name="alavanca" type="Sprite" parent="chao_movivel"]
+position = Vector2( 400, -995.144 )
+texture = ExtResource( 22 )
+
+[node name="area_zoom_out_plataform" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 1470, -880 )
+script = ExtResource( 27 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_zoom_out_plataform"]
+visible = false
+position = Vector2( 70, 20 )
+shape = SubResource( 13 )
+
+[node name="anim_camera_zoom" type="AnimationPlayer" parent="area_zoom_out_plataform"]
+anims/camera_zoom_out = SubResource( 14 )
+
+[node name="arqueiro_SD" parent="." instance=ExtResource( 28 )]
+visible = false
+position = Vector2( 2150, -1030 )
+
+[node name="arqueiro_SD2" parent="." instance=ExtResource( 28 )]
+position = Vector2( 2160, -810 )
+
+[node name="arqueiro_SD3" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1780, -620 )
+
+[node name="arqueiro_SD4" parent="." instance=ExtResource( 28 )]
+position = Vector2( 990, -830 )
+
+[node name="arqueiro_SD5" parent="." instance=ExtResource( 28 )]
+position = Vector2( 918, -1100 )
+
+[node name="arqueiro_SD6" parent="." instance=ExtResource( 28 )]
+position = Vector2( 1657.3, -1030 )
+
+[node name="area_retorno_cena5_para3" type="Area2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_retorno_cena5_para3"]
+position = Vector2( 10, -250 )
+shape = SubResource( 17 )
+
+[node name="area_entrar_cena6" type="Area2D" parent="."]
+editor/display_folded = true
+position = Vector2( 2310, -49 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_entrar_cena6"]
+position = Vector2( 10, -250 )
+shape = SubResource( 17 )
+
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 29 )]
+position = Vector2( -34.4763, -200 )
+scale = Vector2( -0.76, 1 )
+[connection signal="body_entered" from="area_visibilidade_parede" to="area_visibilidade_parede" method="_on_area_visibilidade_parede_body_entered"]
+[connection signal="body_exited" from="area_visibilidade_parede" to="area_visibilidade_parede" method="_on_area_visibilidade_parede_body_exited"]
+[connection signal="body_entered" from="area_armadilha" to="area_armadilha" method="_on_area_armadilha_body_entered"]
+[connection signal="body_entered" from="area_armadilha/area_lava" to="area_armadilha" method="_on_area_lava_body_entered"]
+[connection signal="area_entered" from="area_armadilha/area_alavanca" to="area_armadilha" method="_on_area_alavanca_area_entered"]
+[connection signal="animation_finished" from="animation_cena5" to="area_armadilha" method="_on_animation_cena5_animation_finished"]
+[connection signal="body_entered" from="area_zoom_out_plataform" to="area_zoom_out_plataform" method="_on_area_zoom_out_plataform_body_entered"]
+[connection signal="body_exited" from="area_zoom_out_plataform" to="area_zoom_out_plataform" method="_on_area_zoom_out_plataform_body_exited"]
+[connection signal="body_entered" from="area_retorno_cena5_para3" to="." method="_on_area_retorno_cena5_para3_body_entered"]
