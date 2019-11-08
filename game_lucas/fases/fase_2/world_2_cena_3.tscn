@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -7,36 +7,36 @@
 [ext_resource path="res://scripts/script_interagiveis_de_fase/criar_inimigos_fase_2.gd" type="Script" id=5]
 [ext_resource path="res://assets_game/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=6]
 [ext_resource path="res://icon.png" type="Texture" id=7]
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 75.4419, 32.5661 )
+[ext_resource path="res://assets_game/Itens_player/vida/item_vida.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.6564, 396.347 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 10, 68.3507 )
+extents = Vector2( 75.4419, 32.5661 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 661.691, 17.2889 )
+extents = Vector2( 11.6564, 396.347 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 23.5813, 440.598 )
+extents = Vector2( 10, 68.3507 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 674.833, 25.5806 )
+extents = Vector2( 661.691, 17.2889 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 51.3035, 26.6242 )
+extents = Vector2( 23.5813, 440.598 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 95.1958, 91.7125 )
+extents = Vector2( 674.833, 25.5806 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 51.3035, 26.6242 )
 
 [sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 95.1958, 91.7125 )
+
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 419.464, 393.546 )
 
-[sub_resource type="Animation" id=9]
-resource_name = "close_the_door"
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("../StaticBody2D3/CollisionShape2D2:position")
 tracks/0/interp = 1
@@ -122,8 +122,7 @@ tracks/6/keys = {
 "values": [ Vector2( 721.052, 721.905 ), Vector2( 721.188, 905.555 ), Vector2( 729.486, 920.519 ), Vector2( 715.611, 1027.99 ) ]
 }
 
-[sub_resource type="Animation" id=10]
-resource_name = "open_the_door"
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("../StaticBody2D3/CollisionShape2D3:rotation_degrees")
 tracks/0/interp = 1
@@ -241,7 +240,7 @@ editor/display_folded = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 31.993, 456.184 )
 rotation = 1.57909
-shape = SubResource( 11 )
+shape = SubResource( 1 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -249,30 +248,30 @@ position = Vector2( 1135.6, 394.817 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2( -13.6361, 5.84406 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2( -835.613, -170.381 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
 position = Vector2( -761.569, 190.906 )
 rotation = -1.92923
-shape = SubResource( 7 )
+shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 538.332, -4.15227 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
-shape = SubResource( 2 )
+shape = SubResource( 4 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( -17.4719, 339.778 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -280,7 +279,7 @@ position = Vector2( 521.118, 808.226 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
 position = Vector2( -1.94812, -15.5841 )
-shape = SubResource( 4 )
+shape = SubResource( 6 )
 
 [node name="player_top_down" parent="." instance=ExtResource( 4 )]
 position = Vector2( 156.73, 401.445 )
@@ -309,7 +308,7 @@ editor/display_folded = true
 position = Vector2( 183.068, 11.289 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="retorno_direto_cena2"]
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="entrar_direto_cena4" type="Area2D" parent="."]
 editor/display_folded = true
@@ -317,19 +316,19 @@ position = Vector2( 534.293, 782.376 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena4"]
 position = Vector2( -390.473, -251.865 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="area_criar_inimigos" type="Area2D" parent="."]
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigos"]
 position = Vector2( 722.306, 395.128 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="animation_dor" type="AnimationPlayer" parent="area_criar_inimigos"]
 playback_speed = 2.0
-anims/close_the_door = SubResource( 9 )
-anims/open_the_door = SubResource( 10 )
+anims/close_the_door = SubResource( 10 )
+anims/open_the_door = SubResource( 11 )
 
 [node name="position_inimigo_1" type="Position2D" parent="area_criar_inimigos"]
 position = Vector2( 679.761, 18.3719 )
@@ -399,6 +398,9 @@ shape = SubResource( 12 )
 [node name="icone_mudar_perspectiva2" parent="area_entrar_cena5" instance=ExtResource( 6 )]
 position = Vector2( -4.97272, -20.8958 )
 rotation = 0.00224996
+
+[node name="item_vida" parent="." instance=ExtResource( 8 )]
+position = Vector2( 939.919, 686.404 )
 [connection signal="body_entered" from="retorno_direto_cena2" to="." method="_on_retorno_direto_cena2_body_entered"]
 [connection signal="body_entered" from="entrar_direto_cena4" to="." method="_on_entrar_direto_cena4_body_entered"]
 [connection signal="body_entered" from="area_criar_inimigos" to="area_criar_inimigos" method="_on_area_criar_inimigos_body_entered"]
