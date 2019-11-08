@@ -1,21 +1,12 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack2.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack2.png" type="Texture" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/death_animation/frame0000.png" type="Texture" id=4]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/death_animation/frame0001.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk1.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk2.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk3.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk4.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk5.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk6_12.png" type="Texture" id=11]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk7.png" type="Texture" id=12]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk8.png" type="Texture" id=13]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk9.png" type="Texture" id=14]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk10.png" type="Texture" id=15]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/walk_animation/walk11.png" type="Texture" id=16]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/walk_animation/walk1.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/walk_animation/walk2.png" type="Texture" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.7094
@@ -34,7 +25,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 3 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _A:position")
@@ -177,7 +168,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ) ]
+"values": [ ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _A:position")
@@ -217,7 +208,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-length = 2.3
+length = 0.4
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("spriter _A:texture")
@@ -226,10 +217,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 6 ), ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_A:playback_speed")
@@ -238,10 +229,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 2.0 ]
+"values": [ 1.0, 0.3 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("arma_inimigo/CollisionShape2D:position")
@@ -250,10 +241,22 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
+"times": PoolRealArray( 0, 0.352295 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("spriter _A:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 9.78169, -1.29973 ) ]
 }
 
 [sub_resource type="CircleShape2D" id=7]
@@ -324,7 +327,7 @@ shape = SubResource( 9 )
 [node name="AI_perception" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI_perception"]
-position = Vector2( 9.27521, 0 )
+position = Vector2( 8.27521, 0 )
 shape = SubResource( 10 )
 
 [node name="delay_atack" type="Timer" parent="."]
