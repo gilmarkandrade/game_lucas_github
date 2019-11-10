@@ -151,7 +151,7 @@ texture = ExtResource( 3 )
 [node name="area_retorno_cena3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_retorno_cena3"]
-position = Vector2( -72.0572, 501.693 )
+position = Vector2( -71.4269, 501.063 )
 shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="area_retorno_cena3/CollisionShape2D"]
@@ -291,7 +291,7 @@ explosiveness = 0.96
 process_material = SubResource( 8 )
 
 [node name="icone_mudar_perspectiva" parent="area_cajado" instance=ExtResource( 26 )]
-position = Vector2( -71.9352, 528.169 )
+position = Vector2( -70.0445, 521.236 )
 rotation = -3.14159
 scale = Vector2( 0.560001, -0.68 )
 [connection signal="body_entered" from="area_retorno_cena3" to="." method="_on_area_retorno_cena3_body_entered"]

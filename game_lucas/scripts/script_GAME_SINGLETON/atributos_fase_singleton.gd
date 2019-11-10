@@ -8,7 +8,7 @@ var enemie_limit_in_game = 0
 var block_break = false
 var anim_close_door_finalized = 0
 var plataform_motion = 1
-var in_area_perspective= false
+var in_area_perspective = false
  
 
 func permission_altered_cena(inarea):
