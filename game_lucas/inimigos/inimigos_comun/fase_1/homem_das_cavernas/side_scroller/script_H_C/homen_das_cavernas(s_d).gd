@@ -11,6 +11,9 @@ var life = 100
 var damage = 5 
 var move = Vector2()
 var velocity = 50
+var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
+var item_probability = RandomNumberGenerator.new()
+var item_type = 0
 
 const gravity = 9
 
@@ -173,7 +176,23 @@ func _on_delay_atack_timeout():
 	
 	atack()
 
-	
+#==============================================================
+#                         SPSW ITEM
+#==============================================================
+
+func random_item():
+	item_probability. randomize()
+	var random_item = item_probability. randi_range(1,5)
+	item_type = random_item
+
+func spaw_item():
+	random_item()
+	if item_type == 1 :
+		var IV = item_vida.instance()
+		get_parent().add_child(IV)
+		IV.scale.x = 0.6
+		IV.scale.y = 0.6
+		IV.position = $".".global_position
 	
 #===============================================================
 #               ANIMATION FINISHED
@@ -182,6 +201,7 @@ func _on_delay_atack_timeout():
 # quando animação acaba 
 func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
+		spaw_item()
 		queue_free()
 
 
