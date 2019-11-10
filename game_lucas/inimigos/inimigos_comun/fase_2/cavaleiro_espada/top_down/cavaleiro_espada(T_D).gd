@@ -9,6 +9,10 @@ var damage = 5
 var life = 100
 var move = Vector2(0,0)
 var target = atributos_player_singleton.pos_player_update
+var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
+var item_mana = preload("res://assets_game/Itens_player/municao_mana/item_municao.tscn")
+var item_probability = RandomNumberGenerator.new()
+var item_type = 0
 
 func _ready():
 	seguir = true
@@ -82,9 +86,29 @@ func _on_delay_atack_timeout():
 		attacking = true 
 		atack()
 
+func random_item():
+	item_probability. randomize()
+	var random_item = item_probability. randi_range(1,10)
+	item_type = random_item
+
+func spaw_item():
+	random_item()
+	if item_type == 1 :
+		var IV = item_vida.instance()
+		get_parent().add_child(IV)
+		IV.scale.x = 0.6
+		IV.scale.y = 0.6
+		IV.position = $".".global_position
+	if item_type == 2 :
+		var IM = item_mana.instance()
+		get_parent().add_child(IM)
+		IM.scale.x = 0.6
+		IM.scale.y = 0.6
+		IM.position = $".".global_position
 
 func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
+		spaw_item()
 		queue_free()
 	if anim_name == "atack_animation":
 		if seguir == false :
