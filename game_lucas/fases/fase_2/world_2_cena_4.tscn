@@ -3,7 +3,7 @@
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/Parede_side2.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/background/fase_2/cena_5/Armario_dentro.png" type="Texture" id=4]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/chão3.jpg" type="Texture" id=5]
 [ext_resource path="res://assets_game/background/fase_2/cena_4/chão2.jpg" type="Texture" id=6]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=7]
@@ -155,9 +155,8 @@ position = Vector2( -71.4269, 501.063 )
 shape = SubResource( 1 )
 
 [node name="icon" type="Sprite" parent="area_retorno_cena3/CollisionShape2D"]
-modulate = Color( 0.180392, 0.0627451, 0.0196078, 1 )
-position = Vector2( -0.530792, 6.64191 )
-scale = Vector2( 1, 2.49104 )
+position = Vector2( 0.515887, 9.08033 )
+scale = Vector2( 1.88642, 2.5737 )
 z_index = -1
 texture = ExtResource( 4 )
 
