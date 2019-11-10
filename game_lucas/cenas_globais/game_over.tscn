@@ -2,7 +2,6 @@
 
 [ext_resource path="res://scripts/script_game_over/game_over.gd" type="Script" id=1]
 
-
 [node name="game_over" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
