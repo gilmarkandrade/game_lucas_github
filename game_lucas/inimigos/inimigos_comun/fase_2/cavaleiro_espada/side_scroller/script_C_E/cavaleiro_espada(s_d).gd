@@ -194,7 +194,7 @@ func spaw_item():
 		IV.scale.x = 0.6
 		IV.scale.y = 0.6
 		IV.position = $".".global_position
-	if item_type == 2 :
+	if item_type == 2 and atributos_fase_singleton.get_weapom_away == true:
 		var IM = item_mana.instance()
 		get_parent().add_child(IM)
 		IM.scale.x = 0.6
