@@ -276,27 +276,26 @@ texture = ExtResource( 3 )
 position = Vector2( 1100.93, -27.6243 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 2
+frame = 1
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1467.97, -30.5605 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1837.31, -30.5605 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 2204.03, -29.3164 )
 frames = SubResource( 1 )
 animation = "lava_motion"
+frame = 4
 playing = true
 
 [node name="StaticBody_chão" type="StaticBody2D" parent="."]

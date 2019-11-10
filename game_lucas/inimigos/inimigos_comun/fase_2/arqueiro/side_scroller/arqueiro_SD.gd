@@ -8,7 +8,10 @@ var death = false
 var side_current = false
 var are_in_area = false
 var arrow = preload("res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha.tscn")
-
+var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
+var item_mana = preload("res://assets_game/Itens_player/municao_mana/item_municao.tscn")
+var item_probability = RandomNumberGenerator.new()
+var item_type = 0
 
 func _physics_process(delta):
 	move.y += speed
@@ -95,6 +98,26 @@ func _on_delay_atack_stop_timeout():
 		$animation_arqueiro_SD.current_animation = "idlle_animation"
 	
 
+func random_item():
+	item_probability. randomize()
+	var random_item = item_probability. randi_range(1,10)
+	item_type = random_item
+
+func spaw_item():
+	random_item()
+	if item_type == 1 :
+		var IV = item_vida.instance()
+		get_parent().add_child(IV)
+		IV.scale.x = 0.6
+		IV.scale.y = 0.6
+		IV.position = $".".global_position
+	if item_type == 2 :
+		var IM = item_mana.instance()
+		get_parent().add_child(IM)
+		IM.scale.x = 0.6
+		IM.scale.y = 0.6
+		IM.position = $".".global_position
+
 
 func _on_animation_arqueiro_SD_animation_finished(anim_name):
 	if anim_name == "atack_animation_left" and death == false:
@@ -107,6 +130,7 @@ func _on_animation_arqueiro_SD_animation_finished(anim_name):
 		if are_in_area == true and death == false and side_current == true:
 			$animation_arqueiro_SD.current_animation = "atack_animation_rigth"
 	if anim_name == "death_animation":
+		spaw_item()
 		queue_free()
 
 
