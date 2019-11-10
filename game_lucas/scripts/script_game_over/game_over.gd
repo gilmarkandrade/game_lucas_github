@@ -16,7 +16,6 @@ func _on_restart_game_pressed():
 	if (atributos_fase_singleton.fase_restart == 1):
 		get_tree().change_scene("res://fases/fase_1/world_1_cena_1.tscn")
 	if (atributos_fase_singleton.fase_restart == 2):
-		atributos_fase_singleton.get_weapom_away = false
 		atributos_fase_singleton.block_break = false
 		atributos_fase_singleton.plataform_motion = 1
 		get_tree().change_scene("res://fases/fase_2/world_2_cena_1.tscn")
