@@ -103,8 +103,9 @@ func _physics_process(delta):
 	elif entrou_na_area3 == true :
 		get_tree().change_scene("res://fases/fase_2/world_2_cena_2.tscn")
 			
-	elif entrou_na_area4 == true && Input.is_action_just_pressed("ui_accept"):
-		get_tree().change_scene("res://fases/fase_2/world_2_cena_4.tscn")
+	elif entrou_na_area4 == true && atributos_fase_singleton.in_area_perspective == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			get_tree().change_scene("res://fases/fase_2/world_2_cena_4.tscn")
 		
 	elif entrou_na_area5 == true and atributos_fase_singleton.in_area_perspective == true:
 		if Input.is_action_just_pressed("ui_accept"):

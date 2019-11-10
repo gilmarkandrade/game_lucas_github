@@ -428,7 +428,6 @@ limit_right = 2220
 limit_bottom = 0
 
 [node name="area_visibilidade_parede" type="Area2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 13 )
 
 [node name="Parede_side2" type="Sprite" parent="area_visibilidade_parede"]

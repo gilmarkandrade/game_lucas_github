@@ -31,10 +31,10 @@ extents = Vector2( 674.833, 25.5806 )
 extents = Vector2( 51.3035, 26.6242 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 95.1958, 91.7125 )
+extents = Vector2( 94.0941, 72.2051 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 419.464, 393.546 )
+extents = Vector2( 313.535, 393.546 )
 
 [sub_resource type="Animation" id=10]
 tracks/0/type = "value"
@@ -208,10 +208,8 @@ editor/display_folded = true
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer_chão" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
 position = Vector2( 349.05, 387.918 )
 
 [node name="Chão" type="Sprite" parent="ParallaxBackground/ParallaxLayer_chão"]
@@ -282,7 +280,7 @@ position = Vector2( -1.94812, -15.5841 )
 shape = SubResource( 6 )
 
 [node name="player_top_down" parent="." instance=ExtResource( 4 )]
-position = Vector2( 156.73, 401.445 )
+position = Vector2( 162.27, 282.886 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
@@ -311,18 +309,17 @@ position = Vector2( 183.068, 11.289 )
 shape = SubResource( 7 )
 
 [node name="entrar_direto_cena4" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 534.293, 782.376 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena4"]
-position = Vector2( -390.473, -251.865 )
+position = Vector2( -383.825, -324.995 )
 shape = SubResource( 8 )
 
 [node name="area_criar_inimigos" type="Area2D" parent="."]
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigos"]
-position = Vector2( 722.306, 395.128 )
+position = Vector2( 725.906, 378.785 )
 shape = SubResource( 9 )
 
 [node name="animation_dor" type="AnimationPlayer" parent="area_criar_inimigos"]
@@ -337,10 +334,10 @@ position = Vector2( 679.761, 18.3719 )
 position = Vector2( 1119.02, 369.108 )
 
 [node name="delay_spawn_enemie" type="Timer" parent="area_criar_inimigos"]
-wait_time = 2.0
+wait_time = 0.3
 
 [node name="icone_mudar_perspectiva" parent="area_criar_inimigos/delay_spawn_enemie" instance=ExtResource( 6 )]
-position = Vector2( 153.001, 479.893 )
+position = Vector2( 154.109, 459.949 )
 
 [node name="porta" type="Sprite" parent="."]
 modulate = Color( 0.00392157, 0, 0, 1 )
