@@ -18,7 +18,7 @@ func _ready():
 
 func select_ramdon_enemie():
 	RNG . randomize()
-	var random_enemie = RNG. randi_range(1,2)	
+	var random_enemie = RNG. randi_range(1,2)
 	enemie_selected = random_enemie
 
 

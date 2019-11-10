@@ -34,7 +34,7 @@ extents = Vector2( 51.3035, 26.6242 )
 extents = Vector2( 94.0941, 72.2051 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 313.535, 393.546 )
+extents = Vector2( 405.379, 393.546 )
 
 [sub_resource type="Animation" id=10]
 tracks/0/type = "value"
@@ -319,7 +319,7 @@ shape = SubResource( 8 )
 script = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigos"]
-position = Vector2( 725.906, 378.785 )
+position = Vector2( 708.722, 378.785 )
 shape = SubResource( 9 )
 
 [node name="animation_dor" type="AnimationPlayer" parent="area_criar_inimigos"]
@@ -334,7 +334,7 @@ position = Vector2( 679.761, 18.3719 )
 position = Vector2( 1119.02, 369.108 )
 
 [node name="delay_spawn_enemie" type="Timer" parent="area_criar_inimigos"]
-wait_time = 0.3
+wait_time = 0.5
 
 [node name="icone_mudar_perspectiva" parent="area_criar_inimigos/delay_spawn_enemie" instance=ExtResource( 6 )]
 position = Vector2( 154.109, 459.949 )
