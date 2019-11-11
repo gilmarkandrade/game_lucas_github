@@ -1,5 +1,5 @@
 extends Node
-var enemie= preload("res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).tscn")
+var enemie= preload("res://inimigos/inimigos_comun/fase_4/mafioso_armado/mafioso_armado.tscn")
 # limite de inimigo vivo na cena
 var limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
 var stop_create = atributos_fase_singleton.stop_spawn_enemie
