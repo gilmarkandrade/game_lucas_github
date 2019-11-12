@@ -8,8 +8,8 @@ var death = false
 var side_current = false
 var are_in_area = false
 var arrow = preload("res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha.tscn")
-var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
-var item_mana = preload("res://assets_game/Itens_player/municao_mana/item_municao.tscn")
+var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
+var item_mana = preload("res://player/Itens_player/municao_mana/item_municao.tscn")
 var item_probability = RandomNumberGenerator.new()
 var item_type = 0
 

@@ -9,8 +9,8 @@ var block_break = false
 var anim_close_door_finalized = 0
 var plataform_motion = 1
 var in_area_perspective = false
- 
-
+var anim_tutor_cena_1 = false
+var homen_das_cavernas_dead = false
 func permission_altered_cena(inarea):
 	in_area_perspective = inarea
 
@@ -50,3 +50,10 @@ func animation_door_finalized(close_or_not):
 	
 func animation_plataform_dow(down):
 	plataform_motion += down
+
+func tutorial_1_cena_1(anim_tutor):
+	anim_tutor_cena_1 = anim_tutor
+	
+func homen_C_dead(isdead):
+	homen_das_cavernas_dead = isdead 
+	

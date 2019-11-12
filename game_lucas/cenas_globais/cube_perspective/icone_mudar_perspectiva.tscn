@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.gd" type="Script" id=1]
+[ext_resource path="res://cenas_globais/cube_perspective/com_nuvem/cube1.png" type="Texture" id=2]
+[ext_resource path="res://cenas_globais/cube_perspective/com_nuvem/cube2_8.png" type="Texture" id=3]
+[ext_resource path="res://cenas_globais/cube_perspective/com_nuvem/cube3_7.png" type="Texture" id=4]
+[ext_resource path="res://cenas_globais/cube_perspective/com_nuvem/cube4_6.png" type="Texture" id=5]
+[ext_resource path="res://cenas_globais/cube_perspective/com_nuvem/cube5.png" type="Texture" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 89.2782, 69.9159 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="icone_mudar_perspectiva" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.58661, 0 )
+shape = SubResource( 1 )
+
+[node name="animation_icon" type="AnimatedSprite" parent="."]
+position = Vector2( -70.8408, -3.08002 )
+frames = SubResource( 2 )
+frame = 2
+playing = true
+[connection signal="body_entered" from="." to="." method="_on_icone_mudar_perspectiva_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_icone_mudar_perspectiva_body_exited"]

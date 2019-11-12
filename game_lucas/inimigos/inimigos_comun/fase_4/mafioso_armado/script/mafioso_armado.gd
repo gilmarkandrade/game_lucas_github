@@ -10,8 +10,8 @@ var life = 100
 var move = Vector2(0,0)
 var projetil = preload("res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha_topDown.tscn")
 var target = atributos_player_singleton.pos_player_update
-var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
-var item_mana = preload("res://assets_game/Itens_player/municao_mana/item_municao.tscn")
+var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
+var item_mana = preload("res://player/Itens_player/municao_mana/item_municao.tscn")
 var item_probability = RandomNumberGenerator.new()
 var item_type = 0
 

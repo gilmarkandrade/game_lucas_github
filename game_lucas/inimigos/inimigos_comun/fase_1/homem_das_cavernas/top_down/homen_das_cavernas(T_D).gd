@@ -6,14 +6,15 @@ var seguir = true
 var death = false
 var attacking = false
 var damage = 5
-var life = 100
+var life = 50
 var move = Vector2(0,0)
 var target = atributos_player_singleton.pos_player_update
-var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
+var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
 var item_probability = RandomNumberGenerator.new()
 var item_type = 0
 
 func _ready():
+	atributos_fase_singleton.add_enemie_limit_in_game(1)
 	seguir = true
 	death = false
 	
@@ -87,7 +88,7 @@ func _on_delay_atack_timeout():
 
 func random_item():
 	item_probability. randomize()
-	var random_item = item_probability. randi_range(1,5)
+	var random_item = item_probability. randi_range(1,2)
 	item_type = random_item
 
 func spaw_item():
@@ -102,6 +103,8 @@ func spaw_item():
 func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
 		spaw_item()
+		atributos_fase_singleton.subtract_enemie_ingame(1)
+		atributos_fase_singleton.update_enemie_dead(1)
 		queue_free()
 	if anim_name == "atack_animation":
 		if seguir == false :

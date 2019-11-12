@@ -25,7 +25,8 @@
 [ext_resource path="res://aliados/bru/idlle_animation/Bru_128_idle_f3.png" type="Texture" id=23]
 [ext_resource path="res://aliados/bru/idlle_animation/Bru_128_idle_f4.png" type="Texture" id=24]
 [ext_resource path="res://aliados/bru/idlle_animation/Bru_128_idle_f5.png" type="Texture" id=25]
-[ext_resource path="res://assets_game/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=26]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=26]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 51.2627, 89.2844 )

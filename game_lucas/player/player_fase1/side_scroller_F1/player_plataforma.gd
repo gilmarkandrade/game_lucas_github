@@ -23,9 +23,14 @@ func _physics_process(delta):
 	atributos_player_singleton.update_position_player(pos)
 	move.y += gravity
 	
-	if death == false:
+	if atributos_player_singleton.stop_player == true and death == false:
+			$animation_Player.current_animation = "idlle_animation"
+			
+	if death == false and atributos_player_singleton.stop_player == false:
 		
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
+		
+		
 		if Input.is_action_just_pressed("ui_atack"):
 			attacking = true
 			atack_proximity()

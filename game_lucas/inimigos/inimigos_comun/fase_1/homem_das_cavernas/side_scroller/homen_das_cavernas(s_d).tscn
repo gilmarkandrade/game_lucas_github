@@ -19,7 +19,8 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk4.png" type="Texture" id=17]
 
 [sub_resource type="CapsuleShape2D" id=1]
-height = 101.554
+radius = 24.771
+height = 70.5549
 
 [sub_resource type="Animation" id=2]
 resource_name = "atack_left_animation"

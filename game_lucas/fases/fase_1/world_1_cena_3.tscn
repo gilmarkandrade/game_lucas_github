@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://assets_game/background/fase_1/cena_3/river_animation_cena3/river_motion0003.png" type="Texture" id=10]
 [ext_resource path="res://player/player_fase1/top_down_F1/player_top_down.tscn" type="PackedScene" id=11]
 [ext_resource path="res://assets_game/background/fase_1/cena_2/layer_topodaarvore.png" type="Texture" id=12]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar_inimigo_fase1.gd" type="Script" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.45, 355.894 )
@@ -40,10 +42,13 @@ animations = [ {
 extents = Vector2( 26.4464, 121.811 )
 
 [sub_resource type="CircleShape2D" id=8]
-radius = 64.2303
+radius = 73.4884
 
 [sub_resource type="CircleShape2D" id=9]
 radius = 29.1849
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 397.695, 252.925 )
 
 [node name="world_1_cena_3" type="Node"]
 script = ExtResource( 1 )
@@ -122,7 +127,7 @@ texture = ExtResource( 6 )
 position = Vector2( 284.36, -215.179 )
 frames = SubResource( 6 )
 animation = "Animação Rio"
-frame = 1
+frame = 2
 playing = true
 
 [node name="player_top_down" parent="." instance=ExtResource( 11 )]
@@ -152,16 +157,19 @@ position = Vector2( -185, 84 )
 shape = SubResource( 7 )
 
 [node name="area_fim_cena_3" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_fim_cena_3"]
-position = Vector2( 560.251, -186.75 )
+position = Vector2( 545.881, -185.553 )
 shape = SubResource( 8 )
 
 [node name="layer_topodaarvore" type="Sprite" parent="area_fim_cena_3"]
 position = Vector2( 541.055, -194.375 )
 scale = Vector2( 0.387688, 0.398124 )
 texture = ExtResource( 12 )
+
+[node name="icone_mudar_perspectiva" parent="area_fim_cena_3" instance=ExtResource( 13 )]
+position = Vector2( 548.339, -165.983 )
+scale = Vector2( 0.68, 0.759999 )
 
 [node name="position_fim_cena3" type="Position2D" parent="."]
 position = Vector2( 585.001, -81.0001 )
@@ -171,5 +179,25 @@ position = Vector2( 585.001, -81.0001 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="colisãoarvore"]
 position = Vector2( 542.25, -180 )
 shape = SubResource( 9 )
+
+[node name="area_criar_inimigo_fase1" type="Area2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigo_fase1"]
+position = Vector2( 357.994, -24.3435 )
+shape = SubResource( 10 )
+
+[node name="position_inimigo_1" type="Position2D" parent="area_criar_inimigo_fase1"]
+position = Vector2( -27.2075, 176.133 )
+
+[node name="position_inimigo_3" type="Position2D" parent="area_criar_inimigo_fase1"]
+position = Vector2( -27.2075, 176.133 )
+
+[node name="position_inimigo_2" type="Position2D" parent="area_criar_inimigo_fase1"]
+position = Vector2( 711.692, -126.014 )
+
+[node name="delay_spawn_enemie" type="Timer" parent="area_criar_inimigo_fase1"]
 [connection signal="body_entered" from="area_inicio_cena3" to="." method="_on_area_inicio_cena3_body_entered"]
 [connection signal="body_entered" from="area_fim_cena_3" to="." method="_on_area_fim_cena_3_body_entered"]
+[connection signal="body_entered" from="area_criar_inimigo_fase1" to="area_criar_inimigo_fase1" method="_on_area_criar_inimigo_fase1_body_entered"]
+[connection signal="timeout" from="area_criar_inimigo_fase1/delay_spawn_enemie" to="area_criar_inimigo_fase1" method="_on_delay_spawn_enemie_timeout"]

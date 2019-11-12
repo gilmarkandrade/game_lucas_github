@@ -11,7 +11,7 @@ var life = 100
 var damage = 5 
 var move = Vector2()
 var velocity = 50
-var item_vida = preload("res://assets_game/Itens_player/vida/item_vida.tscn")
+var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
 var item_probability = RandomNumberGenerator.new()
 var item_type = 0
 
@@ -201,6 +201,7 @@ func spaw_item():
 # quando animação acaba 
 func _on_animation_H_C_animation_finished(anim_name):
 	if anim_name == "death_animation":
+		atributos_fase_singleton.homen_C_dead(true)
 		spaw_item()
 		queue_free()
 

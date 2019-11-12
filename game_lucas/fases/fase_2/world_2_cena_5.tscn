@@ -29,7 +29,8 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_4/chão2.jpg" type="Texture" id=27]
 [ext_resource path="res://scripts/script_interagiveis_de_fase/area_camera_zoom_fase2.gd" type="Script" id=28]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.tscn" type="PackedScene" id=29]
-[ext_resource path="res://assets_game/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=30]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=30]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

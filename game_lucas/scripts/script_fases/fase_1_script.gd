@@ -14,7 +14,7 @@ var entrou_na_area6 = false
 func _ready():
 	novapos = atributos_fase_singleton.mudarposicao 
 	atributos_fase_singleton.fase_restart = 1
-
+	
 	
 	if novapos == 0:
 		$player_plataforma.position = $Posicao_0.global_position
@@ -33,25 +33,24 @@ func _ready():
 
 
 
+func _on_area_fim_cena1_body_exited(body):
+	pass
+	
 		
-func _on_Area2D_body_entered(body):
+
+func _on_area_fim_cena1_body_entered(body):
+	
 	if body.name == "player_plataforma":
 		entrou_na_area = true
 		novapos = 2
 		atributos_fase_singleton.setar_posicao(novapos)
-		$Label.visible = true
-
-
-
-func _on_Area2D_body_exited(body):
-	if body.name == "player_plataforma":
-		entrou_na_area = false
-		$Label.visible= false
+		
 		
 
 func _physics_process(delta):
 	
-	if entrou_na_area == true:
+	if entrou_na_area == true and atributos_fase_singleton.anim_tutor_cena_1 == true and atributos_fase_singleton.in_area_perspective == true:
+
 		if Input.is_action_pressed("ui_accept"):
 			get_tree().change_scene("res://fases/fase_1/world_1_cena_2.tscn")
 	
@@ -78,7 +77,6 @@ func _on_area_iniciocena2_body_entered(body):
 	if body.name == "player_top_down":
 		entrou_na_area2 = true
 		novapos = 1
-		print(novapos)
 		atributos_fase_singleton.setar_posicao(novapos)
 		$Label.visible = true
 
@@ -140,4 +138,11 @@ func _on_animaton_tree_animation_finished(anim_name):
 
 func _on_animation_portal_animation_finished(anim_name):
 	if anim_name == "portal_close":
+		atributos_fase_singleton.cont_enemie = 20
+		atributos_fase_singleton.stop_spawn_enemie = false
+		
 		get_tree().change_scene("res://fases/fase_2/world_2_cena_1.tscn")
+
+
+
+
