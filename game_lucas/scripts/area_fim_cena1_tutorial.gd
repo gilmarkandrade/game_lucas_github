@@ -5,7 +5,7 @@ func _ready():
 	$Panel/falas_bru. visible = false
 	$Panel.visible = false
 	$Panel/press_q.visible = false
-	
+	$Label.visible = false
 	if atributos_fase_singleton .homen_das_cavernas_dead == true:
 		$"../homen_das_cavernas(s_d)".queue_free()
 	
@@ -82,3 +82,28 @@ func _on_icone_mudar_perspectiva_body_entered(body):
 func _on_icone_mudar_perspectiva_body_exited(body):
 	if body.is_in_group("player"):
 		$Label.visible = false
+
+#======================= area label jump =================================
+func _on_area_tutorial_jump_body_entered(body):
+	if body.is_in_group("player"):
+		$area_tutorial_jump/Panel.visible = true
+		$area_tutorial_jump/Panel/Label.visible = true
+
+
+
+func _on_area_tutorial_jump_body_exited(body):
+	if body.is_in_group("player"):
+		$area_tutorial_jump/Panel.visible = false
+		$area_tutorial_jump/Panel/Label.visible = false
+
+#============================area label atack ===============================
+func _on_area_tutorial_ataque_body_entered(body):
+	if body.is_in_group("player"):
+		$area_tutorial_ataque/Panel2.visible = true
+		$area_tutorial_ataque/Panel2/Label.visible =  true
+
+
+func _on_area_tutorial_ataque_body_exited(body):
+	if body.is_in_group("player"):
+		$area_tutorial_ataque/Panel2.visible = false
+		$area_tutorial_ataque/Panel2/Label.visible =  false

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var life = 200
+var life = 120
 var break_tree = false
 func damage_tree():
 	if life <= 0:

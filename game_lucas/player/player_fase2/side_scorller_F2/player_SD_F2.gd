@@ -111,7 +111,7 @@ func fire_atack():
 #a cena game over caso avida chegue a zero
 func death_player():
 	if life <= 0:
-		life = 0 
+		
 		death = true
 		if side_current == false :
 			$animation_Player.play("death_animation")
@@ -133,9 +133,10 @@ func _on_area_corpo_player_area_entered(area):
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
 		death_player()
-	if area .is_in_group("armadilha"):
+	if area.is_in_group("armadilha"):
 		life = atributos_player_singleton.life_player
 		death_player()
+		print(life)
 		print(life)
 		
 

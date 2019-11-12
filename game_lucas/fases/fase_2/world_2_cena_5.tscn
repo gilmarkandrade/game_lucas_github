@@ -31,7 +31,6 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.tscn" type="PackedScene" id=29]
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=30]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
@@ -62,7 +61,7 @@ extents = Vector2( 255.41, 152.478 )
 extents = Vector2( 650, 600 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 740, 70 )
+extents = Vector2( 1212.7, 70 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 30, 20 )
@@ -277,26 +276,27 @@ texture = ExtResource( 3 )
 position = Vector2( 1100.93, -27.6243 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 1
+frame = 2
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1467.97, -30.5605 )
 frames = SubResource( 1 )
 animation = "lava_motion"
+frame = 1
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1837.31, -30.5605 )
 frames = SubResource( 1 )
 animation = "lava_motion"
+frame = 1
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 2204.03, -29.3164 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 4
 playing = true
 
 [node name="StaticBody_chão" type="StaticBody2D" parent="."]
@@ -450,7 +450,7 @@ position = Vector2( 1270, 110 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_armadilha/area_lava"]
 modulate = Color( 0.521569, 0.0352941, 0.0352941, 1 )
-position = Vector2( 397.298, -120 )
+position = Vector2( 392.491, -140 )
 shape = SubResource( 9 )
 
 [node name="area_alavanca" type="Area2D" parent="area_armadilha"]
@@ -693,6 +693,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="chao_movivel/CollisionShape2D"]
+visible = false
 position = Vector2( -4.2655, -18.7472 )
 scale = Vector2( 1.06305, 0.911396 )
 texture = ExtResource( 9 )
@@ -746,7 +747,7 @@ shape = SubResource( 18 )
 
 [node name="area_entrar_cena6" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 2310, -49 )
+position = Vector2( 2320, -50 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_entrar_cena6"]
 position = Vector2( 10, -250 )
