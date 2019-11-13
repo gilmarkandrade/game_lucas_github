@@ -2,7 +2,7 @@
 
 [ext_resource path="res://player/player_fase2/top_down_F2/player_top_down2.gd" type="Script" id=1]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/cajado/cajado.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0010.png" type="Texture" id=3]
+[ext_resource path="res://player/player_fase2/top_down_F2/death_animation/death0027.png" type="Texture" id=3]
 [ext_resource path="res://player/player_fase2/top_down_F2/atack_animation/sword_atack0015.png" type="Texture" id=4]
 [ext_resource path="res://player/player_fase2/top_down_F2/atack_animation/sword_atack0016.png" type="Texture" id=5]
 [ext_resource path="res://player/player_fase2/top_down_F2/atack_animation/sword_atack0017.png" type="Texture" id=6]
@@ -14,15 +14,15 @@
 [ext_resource path="res://player/player_fase2/top_down_F2/death_animation/death0024.png" type="Texture" id=12]
 [ext_resource path="res://player/player_fase2/top_down_F2/death_animation/death0025.png" type="Texture" id=13]
 [ext_resource path="res://player/player_fase2/top_down_F2/death_animation/death0026.png" type="Texture" id=14]
-[ext_resource path="res://player/player_fase2/top_down_F2/death_animation/death0027.png" type="Texture" id=15]
-[ext_resource path="res://player/player_fase2/top_down_F2/idlle_animation/idlle.png" type="Texture" id=16]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0003.png" type="Texture" id=17]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0004.png" type="Texture" id=18]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0005.png" type="Texture" id=19]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0006.png" type="Texture" id=20]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0007.png" type="Texture" id=21]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0008.png" type="Texture" id=22]
-[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0009.png" type="Texture" id=23]
+[ext_resource path="res://player/player_fase2/top_down_F2/idlle_animation/idlle.png" type="Texture" id=15]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0003.png" type="Texture" id=16]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0004.png" type="Texture" id=17]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0005.png" type="Texture" id=18]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0006.png" type="Texture" id=19]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0007.png" type="Texture" id=20]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0008.png" type="Texture" id=21]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0009.png" type="Texture" id=22]
+[ext_resource path="res://player/player_fase2/top_down_F2/walk_animation/walk0010.png" type="Texture" id=23]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 37.2308
@@ -93,6 +93,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "death_animation"
+length = 1.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("CollisionShape2D/sprite_player:texture")
 tracks/0/interp = 1
@@ -100,10 +101,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.5, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 3 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("CollisionShape2D/cajado:position")
@@ -112,7 +113,7 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
+"times": PoolRealArray( 0, 0.2, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2.30495, -29.9517 ), Vector2( 50.0458, -33.0318 ), Vector2( 78.2796, -45.8653 ) ]
@@ -131,7 +132,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 16 ) ]
+"values": [ ExtResource( 15 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_player:position")
@@ -195,7 +196,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.0234606, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 3 ) ]
+"values": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_player:position")
@@ -256,7 +257,7 @@ shape = SubResource( 1 )
 one_way_collision = true
 
 [node name="cajado" type="Sprite" parent="CollisionShape2D"]
-position = Vector2( 12.0756, -29.2147 )
+position = Vector2( 78.2796, -45.8653 )
 rotation = 1.99331
 texture = ExtResource( 2 )
 
@@ -303,6 +304,11 @@ shape = SubResource( 8 )
 
 [node name="position_bullet_final" type="Position2D" parent="."]
 position = Vector2( 2000, 0 )
+
+[node name="delay_death_special" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
 [connection signal="animation_finished" from="animation_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="arma_player" to="." method="_on_arma_player_body_entered"]
 [connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]
+[connection signal="timeout" from="delay_death_special" to="." method="_on_delay_death_special_timeout"]

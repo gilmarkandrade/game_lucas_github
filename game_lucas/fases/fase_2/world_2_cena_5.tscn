@@ -61,7 +61,7 @@ extents = Vector2( 255.41, 152.478 )
 extents = Vector2( 650, 600 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 1212.7, 70 )
+extents = Vector2( 927.509, 70 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 30, 20 )
@@ -255,8 +255,10 @@ editor/display_folded = true
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 modulate = Color( 0.721569, 0.705882, 0.705882, 1 )
 position = Vector2( 174.68, -446.104 )
 motion_scale = Vector2( 1.2, 1 )
@@ -271,32 +273,34 @@ position = Vector2( 392.32, -589.04 )
 texture = ExtResource( 3 )
 
 [node name="parallax_lava" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1100.93, -27.6243 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 2
+frame = 4
 playing = true
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1467.97, -30.5605 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 1
+frame = 3
 playing = true
 
 [node name="AnimatedSprite3" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 1837.31, -30.5605 )
 frames = SubResource( 1 )
 animation = "lava_motion"
-frame = 1
+frame = 3
 playing = true
 
 [node name="AnimatedSprite4" type="AnimatedSprite" parent="ParallaxBackground/parallax_lava"]
 position = Vector2( 2204.03, -29.3164 )
 frames = SubResource( 1 )
 animation = "lava_motion"
+frame = 2
 playing = true
 
 [node name="StaticBody_chão" type="StaticBody2D" parent="."]
@@ -394,6 +398,9 @@ texture = ExtResource( 10 )
 [node name="position_inicio_cena5" type="Position2D" parent="."]
 position = Vector2( 100.15, -150 )
 
+[node name="position_retorno_cena5" type="Position2D" parent="."]
+position = Vector2( 2176.2, -200 )
+
 [node name="batente porta" type="Sprite" parent="."]
 position = Vector2( 233.461, -293.943 )
 scale = Vector2( 0.446942, 0.30929 )
@@ -413,6 +420,7 @@ z_index = 1
 texture = ExtResource( 11 )
 
 [node name="player_SD_F2" parent="." instance=ExtResource( 12 )]
+editor/display_folded = true
 position = Vector2( 98.3721, -158.839 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F2"]
@@ -425,6 +433,7 @@ limit_right = 2220
 limit_bottom = 0
 
 [node name="area_visibilidade_parede" type="Area2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 13 )
 
 [node name="Parede_side2" type="Sprite" parent="area_visibilidade_parede"]
@@ -437,6 +446,7 @@ position = Vector2( 592.473, -300.632 )
 shape = SubResource( 7 )
 
 [node name="area_armadilha" type="Area2D" parent="."]
+editor/display_folded = true
 script = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_armadilha"]
@@ -450,7 +460,7 @@ position = Vector2( 1270, 110 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_armadilha/area_lava"]
 modulate = Color( 0.521569, 0.0352941, 0.0352941, 1 )
-position = Vector2( 392.491, -140 )
+position = Vector2( 382.491, -130 )
 shape = SubResource( 9 )
 
 [node name="area_alavanca" type="Area2D" parent="area_armadilha"]
@@ -682,6 +692,7 @@ scale = Vector2( 0.587074, 1 )
 texture = ExtResource( 27 )
 
 [node name="chao_movivel" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1710, -40 )
 scale = Vector2( 1.2, 1 )
 
@@ -693,7 +704,6 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="chao_movivel/CollisionShape2D"]
-visible = false
 position = Vector2( -4.2655, -18.7472 )
 scale = Vector2( 1.06305, 0.911396 )
 texture = ExtResource( 9 )
@@ -746,8 +756,7 @@ position = Vector2( 10, -250 )
 shape = SubResource( 18 )
 
 [node name="area_entrar_cena6" type="Area2D" parent="."]
-editor/display_folded = true
-position = Vector2( 2320, -50 )
+position = Vector2( 2240, -60 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_entrar_cena6"]
 position = Vector2( 10, -250 )
@@ -765,3 +774,4 @@ scale = Vector2( -0.76, 1 )
 [connection signal="body_entered" from="area_zoom_out_plataform" to="area_zoom_out_plataform" method="_on_area_zoom_out_plataform_body_entered"]
 [connection signal="body_exited" from="area_zoom_out_plataform" to="area_zoom_out_plataform" method="_on_area_zoom_out_plataform_body_exited"]
 [connection signal="body_entered" from="area_retorno_cena5_para3" to="." method="_on_area_retorno_cena5_para3_body_entered"]
+[connection signal="body_entered" from="area_entrar_cena6" to="." method="_on_area_entrar_cena6_body_entered"]

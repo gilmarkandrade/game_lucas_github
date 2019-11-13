@@ -8,6 +8,10 @@ var entrou_na_area4 = false
 var entrou_na_area5 = false
 var entrou_na_area6 = false
 var entrou_na_area7 = false
+var entrou_na_area8 = false
+var entrou_na_area9 = false
+var entrou_na_area10 = false
+var entrou_na_area11 = false
 
 func _on_entrar_cena2_body_entered(body):
 	if body.is_in_group("player"):
@@ -67,6 +71,36 @@ func _on_area_retorno_cena5_para3_body_entered(body):
 		atributos_fase_singleton.setar_posicao(novapos)
 
 
+func _on_area_entrar_cena6_body_entered(body):
+	if body.is_in_group("player"):
+		entrou_na_area8 = true
+		entrou_na_area7 = false
+		novapos = 8
+		atributos_fase_singleton.setar_posicao(novapos)
+
+func _on_area_retorno_cena_5_body_entered(body):
+	if body.is_in_group("player"):
+		entrou_na_area9 = true
+		entrou_na_area8 = false
+		entrou_na_area10 = false
+		novapos = 9
+		atributos_fase_singleton.setar_posicao(novapos)
+
+func _on_area_entrar_cena7_body_entered(body):
+	if body.is_in_group("player"):
+		entrou_na_area10 = true
+		entrou_na_area9 = false
+		novapos = 10
+		$"delay_ativar_icone".start()
+		$animation_camera.play("camera_zoom_fase2_cena6")
+		atributos_fase_singleton.setar_posicao(novapos)
+		
+func _on_area_entrar_cena7_body_exited(body):
+	if body.is_in_group("player"):
+		$animation_camera.play_backwards("camera_zoom_fase2_cena6")
+
+
+
 func _ready():
 	novapos = atributos_fase_singleton.mudarposicao
 	atributos_fase_singleton.fase_restart = 2 
@@ -89,7 +123,14 @@ func _ready():
 		$player_SD_F2.position = $position_inicio_cena5.global_position
 	if novapos == 7 :
 		$player_top_down.position = $pos_retorno_da_cena_5.global_position
-	
+	if novapos == 8 :
+		$player_SD_F2.position = $position_inicio_cena6.global_position
+	if novapos == 9:
+		$player_SD_F2.position =$position_retorno_cena5.global_position
+	if novapos == 10:
+		$player_top_down_F2.position = $position_inicio_cena7.global_position
+		
+		
 func _physics_process(delta):
 	
 	
@@ -119,5 +160,26 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_accept") and atributos_fase_singleton.in_area_perspective == true:
 			get_tree().change_scene("res://fases/fase_2/world_2_cena_3.tscn")
 
+	elif entrou_na_area8 == true:
+		get_tree().change_scene("res://fases/fase_2/world_2_cena_6.tscn")
+
+	elif entrou_na_area9 == true:
+		get_tree().change_scene("res://fases/fase_2/world_2_cena_5.tscn")
+
+	elif entrou_na_area10 == true and atributos_fase_singleton.in_area_perspective == true:
+		if Input.is_action_just_pressed("ui_accept"):
+			get_tree().change_scene("res://fases/fase_2/world_2_cena_7.tscn")
 
 
+
+
+
+
+# ativar a visibilidade do icone de perspectiva na fase 2 cena 6
+func _on_delay_ativar_icone_timeout():
+	$"icone_mudar_perspectiva".visible = true
+
+
+func _on_area_buraco_cena7_body_entered(body):
+	if body.is_in_group("player"):
+		$area_buraco_cena7/animation_cena7.play("player_scale")

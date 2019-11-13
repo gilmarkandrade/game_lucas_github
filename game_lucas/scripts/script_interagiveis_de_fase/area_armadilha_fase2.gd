@@ -23,6 +23,7 @@ func _on_area_alavanca_area_entered(area):
 
 func _on_area_lava_body_entered(body):
 	if body.is_in_group("player"):
-		atributos_player_singleton.player_life_update(100)
+		atributos_player_singleton.player_life_update(110)
+		print("foi")
 		
 

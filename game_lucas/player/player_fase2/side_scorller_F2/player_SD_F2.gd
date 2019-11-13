@@ -26,6 +26,8 @@ func _physics_process(delta):
 	move.y += gravity
 	# defini a visibilade do player
 	$cajado.visible = atributos_fase_singleton.get_weapom_away
+	if death == false:
+		death_player()
 	if death == false and atributos_player_singleton.stop_player == false:
 		
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
@@ -111,14 +113,13 @@ func fire_atack():
 #a cena game over caso avida chegue a zero
 func death_player():
 	if life <= 0:
-		
 		death = true
 		if side_current == false :
 			$animation_Player.play("death_animation")
 		elif side_current == true:
 			$animation_Player.play("death_animation_left")
 		
-	
+		print(life)
 #===========================================================
 #                  AREA\BODY ENTERED
 #===========================================================
@@ -127,17 +128,19 @@ func death_player():
 #AREA responsavel por receber o valor de dano conforme a area inimiga 
 # que entrou no corpo do player
 func _on_area_corpo_player_area_entered(area):
+	
 	if area.is_in_group("weapom_enimie"):
 		life =  atributos_player_singleton.life_player
-		death_player()
+		
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
 		death_player()
 	if area.is_in_group("armadilha"):
-		life = atributos_player_singleton.life_player
-		death_player()
-		print(life)
-		print(life)
+		life = -10
+		
+		
+		
+		
 		
 
 
