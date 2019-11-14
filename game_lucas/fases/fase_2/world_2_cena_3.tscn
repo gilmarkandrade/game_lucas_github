@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -6,8 +6,9 @@
 [ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scripts/script_interagiveis_de_fase/criar_inimigos_fase_2.gd" type="Script" id=5]
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=6]
-[ext_resource path="res://icon.png" type="Texture" id=7]
-[ext_resource path="res://player/Itens_player/vida/item_vida.tscn" type="PackedScene" id=8]
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=7]
+[ext_resource path="res://icon.png" type="Texture" id=8]
+[ext_resource path="res://player/Itens_player/vida/item_vida.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 75.4419, 32.5661 )
@@ -339,12 +340,17 @@ wait_time = 0.5
 [node name="icone_mudar_perspectiva" parent="area_criar_inimigos/delay_spawn_enemie" instance=ExtResource( 6 )]
 position = Vector2( 154.109, 459.949 )
 
+[node name="som_trilha" type="AudioStreamPlayer" parent="area_criar_inimigos"]
+stream = ExtResource( 7 )
+volume_db = -10.0
+autoplay = true
+
 [node name="porta" type="Sprite" parent="."]
 modulate = Color( 0.00392157, 0, 0, 1 )
 position = Vector2( 303.224, 623.651 )
 rotation = -2.02917
 scale = Vector2( 0.254732, 2.33997 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, 30.78 )
 
 [node name="saida_inimigo_1" type="Sprite" parent="."]
@@ -353,7 +359,7 @@ position = Vector2( 755.484, 31.6615 )
 rotation = 1.57796
 scale = Vector2( 0.698174, 2.54873 )
 z_index = 1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, 30.78 )
 
 [node name="saida_inimigo_2" type="Sprite" parent="."]
@@ -362,7 +368,7 @@ position = Vector2( 1099.54, 462.566 )
 rotation = 3.15343
 scale = Vector2( 0.698174, 2.54873 )
 z_index = 1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, 30.78 )
 
 [node name="saida_player" type="Sprite" parent="."]
@@ -371,19 +377,19 @@ position = Vector2( 634.998, 737.468 )
 rotation = 4.72369
 scale = Vector2( 0.698174, 2.54873 )
 z_index = 1
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 offset = Vector2( 0, 30.78 )
 
 [node name="parede" type="Sprite" parent="."]
 modulate = Color( 0.00392157, 0, 0, 1 )
 position = Vector2( 301.637, 305.965 )
 scale = Vector2( 0.254732, 9.68887 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="armario" type="Sprite" parent="."]
 position = Vector2( 34.7297, 453.961 )
 scale = Vector2( 1, 2.69627 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="area_entrar_cena5" type="Area2D" parent="."]
 position = Vector2( 721.052, 721.905 )
@@ -396,7 +402,7 @@ shape = SubResource( 12 )
 position = Vector2( -4.97272, -20.8958 )
 rotation = 0.00224996
 
-[node name="item_vida" parent="." instance=ExtResource( 8 )]
+[node name="item_vida" parent="." instance=ExtResource( 9 )]
 position = Vector2( 939.919, 686.404 )
 [connection signal="body_entered" from="retorno_direto_cena2" to="." method="_on_retorno_direto_cena2_body_entered"]
 [connection signal="body_entered" from="entrar_direto_cena4" to="." method="_on_entrar_direto_cena4_body_entered"]

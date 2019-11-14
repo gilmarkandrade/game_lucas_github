@@ -41,7 +41,7 @@ func dialogue_tutor_1():
 	elif number_speech == 4:
 		$Panel/falas_bru.text ="  ha! assim ja iria me esquecer HA HA HA!, você esta com um problema e nao consegue seguir adiante voce tera que fazer melhor que isso se quiser realmente vencer o Caos"
 	elif number_speech == 5:
-		$Panel/falas_bru.text = "Olhe por outra perspectiva abra sua mente e consiguira sempre, achar uma saida! "
+		$Panel/falas_bru.text = "Olhe por outra perspectiva abra sua mente e conseguira sempre, achar uma saida! "
 	elif number_speech == 6 :
 		$Panel/falas_bru.text = "Bem não entendeu ainda? então irei ajudalo toda vez que surgir este simbolo isto quer dizer que voce podera trocar a perspectiva que você enxerga isto abrira outros caminhos"
 		$"../icone_mudar_perspectiva".visible = true

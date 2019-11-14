@@ -5,7 +5,7 @@ var RNG = RandomNumberGenerator.new()
 var limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
 var stop_create = atributos_fase_singleton.stop_spawn_enemie
 var enemie_selected = 0
-
+var camera_zom_finalized = false
 func _ready():
 	# quantidade de inimigo que sera spawnada
 	atributos_fase_singleton.cont_enemie = 15
@@ -43,7 +43,15 @@ func _on_delay_spawn_enemie_timeout():
 	limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
 	if limit_enemie <= 3 and stop_create == false:
 		spaw_enemie()
-	
+		$som_trilha.volume_db = 0
+		if camera_zom_finalized == false:
+			$camera_zoom.play("camera_zoom")
+			camera_zom_finalized = true
+	if limit_enemie <= 0 and stop_create == true:
+		$som_trilha.volume_db = -5
+		if camera_zom_finalized == true:
+			$camera_zoom.play_backwards("camera_zoom")
+			camera_zom_finalized = false
 	
 func _on_area_criar_inimigo_fase1_body_entered(body):
 	if body.is_in_group("player"):

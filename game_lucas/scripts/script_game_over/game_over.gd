@@ -9,8 +9,10 @@ func _on_restart_game_pressed():
 	atributos_player_singleton.life_player = 100
 	atributos_player_singleton.mana_player = 100
 	atributos_player_singleton.fire_stop = false
+	atributos_fase_singleton.enemie_limit_in_game = 0
 	atributos_fase_singleton.anim_close_door_finalized = 0
 	atributos_fase_singleton.homen_C_dead(false)
+	atributos_fase_singleton.finalized_plataform_quest = false
 	
 	if (atributos_fase_singleton.fase_restart == 0):
 		get_tree().change_scene("res://cenas_globais/Menu_Inicial/menu_inicial.tscn")

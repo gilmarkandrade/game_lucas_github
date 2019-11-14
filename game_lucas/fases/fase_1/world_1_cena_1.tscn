@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://aliados/bru/bru_fly/Bru 128 idle broom f5.png" type="Texture" id=19]
 [ext_resource path="res://aliados/bru/bru_fly/Bru 128 idle broom f6.png" type="Texture" id=20]
 [ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=21]
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 1.wav" type="AudioStream" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 504.622, 10 )
@@ -119,6 +120,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ Vector2( 1299.21, -168.776 ), Vector2( 1313.95, -168.776 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("animation_cut_cine_cena1/Bru:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=10]
 length = 0.6
@@ -202,7 +215,6 @@ emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
 gravity = Vector3( 0, 98, 0 )
-angular_velocity = 0.0
 orbit_velocity = 0.1
 orbit_velocity_random = 0.0
 linear_accel = 100.0
@@ -472,18 +484,17 @@ scale = Vector2( 1.30458, 0.952066 )
 texture = ExtResource( 13 )
 
 [node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1313.95, -168.776 )
+position = Vector2( 1299.21, -168.776 )
 
 [node name="animation_cut_cine_cena1" type="AnimationPlayer" parent="."]
-editor/display_folded = true
 "anims/animation_bru _surgindo" = SubResource( 8 )
 anims/animation_bru_exitcena = SubResource( 9 )
 anims/animation_fly_bru = SubResource( 10 )
 anims/animation_portal_closed = SubResource( 11 )
 
 [node name="Bru" type="Sprite" parent="animation_cut_cine_cena1"]
-position = Vector2( 1229.38, -413.412 )
-scale = Vector2( 0.0457745, 0.0602326 )
+visible = false
+position = Vector2( 1036.92, -220.947 )
 z_index = -1
 texture = ExtResource( 15 )
 
@@ -492,6 +503,14 @@ visible = false
 position = Vector2( -313.911, -234.769 )
 scale = Vector2( 1e-005, 1e-005 )
 process_material = SubResource( 16 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 529.185, -59.775 )
+
+[node name="som_trilha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+volume_db = -10.0
+autoplay = true
 [connection signal="body_entered" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_entered"]
 [connection signal="body_entered" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_entered"]
 [connection signal="body_exited" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_exited"]

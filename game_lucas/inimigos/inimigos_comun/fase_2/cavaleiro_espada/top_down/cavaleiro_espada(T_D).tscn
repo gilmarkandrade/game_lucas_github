@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/walk_animation/walk1.png" type="Texture" id=1]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/cavaleiro_espada/top_down/attack_animation/attack1.png" type="Texture" id=2]
@@ -389,10 +389,13 @@ radius = 21.1471
 [sub_resource type="CircleShape2D" id=11]
 radius = 69.6504
 
+[sub_resource type="CircleShape2D" id=12]
+radius = 16.3896
+
 [node name="cavaleiro_espada" type="KinematicBody2D" groups=[
 "enemie",
 ]]
-position = Vector2( 43.5724, -20.2458 )
+position = Vector2( 0.343792, 0.2309 )
 script = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
@@ -455,6 +458,12 @@ shape = SubResource( 11 )
 
 [node name="delay_atack" type="Timer" parent="."]
 wait_time = 0.8
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -6.25679, 2.27519 )
+shape = SubResource( 12 )
 [connection signal="animation_finished" from="animation_C_E" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_C_E" to="." method="_on_corpo_h_c_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]

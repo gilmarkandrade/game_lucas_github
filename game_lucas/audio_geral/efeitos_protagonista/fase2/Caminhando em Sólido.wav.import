@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Caminhando em Sólido.wav-81395e6ab4469a40e5733387aa175abd.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_protagonista/fase2/Caminhando em Sólido.wav"
+dest_files=[ "res://.import/Caminhando em Sólido.wav-81395e6ab4469a40e5733387aa175abd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

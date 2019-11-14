@@ -13,6 +13,7 @@ var enemie_selected = 0
 func _ready():
 	# quantidade de inimigo que sera spawnada
 	atributos_fase_singleton.cont_enemie = 20
+	atributos_fase_singleton.stop_spawn_enemie = false
 
 
 
@@ -46,17 +47,20 @@ func _on_delay_spawn_enemie_timeout():
 	# desta forma bloqueando a criaçao de qualquer inimigo na cena
 	stop_create = atributos_fase_singleton.stop_spawn_enemie
 	limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
-	if limit_enemie <= 5 and stop_create == false:
+	if limit_enemie <= 5 and stop_create == false and atributos_fase_singleton.anim_close_door_finalized <= 2 :
 		spaw_enemie()
+		$som_trilha.volume_db = -1
+		$som_trilha.pitch_scale = 1.3
 	
 	if atributos_fase_singleton.anim_close_door_finalized == 1:
 		$animation_dor.current_animation = "close_the_door"
 		
-	elif atributos_fase_singleton.stop_spawn_enemie == true and atributos_fase_singleton.anim_close_door_finalized == 2:
+	elif atributos_fase_singleton.stop_spawn_enemie == true and atributos_fase_singleton.anim_close_door_finalized == 2 and limit_enemie <=0 :
 		
 		$animation_dor.current_animation = "open_the_door"
 		atributos_fase_singleton.animation_door_finalized(1)
-
+		$som_trilha.volume_db = -10
+		$som_trilha.pitch_scale = 1
 func _on_area_criar_inimigos_body_entered(body):
 	if body.is_in_group("player"):
 		$delay_spawn_enemie.start()

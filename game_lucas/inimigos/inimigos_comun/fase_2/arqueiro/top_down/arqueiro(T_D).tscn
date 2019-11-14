@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).gd" type="Script" id=1]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack1.png" type="Texture" id=2]
@@ -271,6 +271,9 @@ radius = 21.1471
 [sub_resource type="CircleShape2D" id=10]
 radius = 113.177
 
+[sub_resource type="CircleShape2D" id=11]
+radius = 21.2544
+
 [node name="arqueiro(T_D)" type="KinematicBody2D" groups=[
 "enemie",
 ]]
@@ -339,6 +342,12 @@ position = Vector2( 32.8539, -27.2072 )
 
 [node name="position_fim_flecha" type="Position2D" parent="."]
 position = Vector2( 1855.42, 6.10352e-005 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -0.630249, -1.26048 )
+shape = SubResource( 11 )
 [connection signal="animation_finished" from="animation_A" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_A_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]

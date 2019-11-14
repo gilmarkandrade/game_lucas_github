@@ -1,22 +1,22 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://player/player_fase1/side_scroller_F1/player_plataforma.gd" type="Script" id=1]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0012.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0029.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0024.png" type="Texture" id=3]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0025.png" type="Texture" id=4]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0026.png" type="Texture" id=5]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0027.png" type="Texture" id=6]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0028.png" type="Texture" id=7]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/atack_animation/player_fase_1_atack0029.png" type="Texture" id=8]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0031.png" type="Texture" id=9]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0032.png" type="Texture" id=10]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0033.png" type="Texture" id=11]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0034.png" type="Texture" id=12]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0035.png" type="Texture" id=13]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0036.png" type="Texture" id=14]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0037.png" type="Texture" id=15]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0038.png" type="Texture" id=16]
-[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0039.png" type="Texture" id=17]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0031.png" type="Texture" id=8]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0032.png" type="Texture" id=9]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0033.png" type="Texture" id=10]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0034.png" type="Texture" id=11]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0035.png" type="Texture" id=12]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0036.png" type="Texture" id=13]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0037.png" type="Texture" id=14]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0038.png" type="Texture" id=15]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/death_animation/player_SD_fase1_death0039.png" type="Texture" id=16]
+[ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0012.png" type="Texture" id=17]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0013.png" type="Texture" id=18]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0014.png" type="Texture" id=19]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/idlle_animation/player_fase_1_idlle0015.png" type="Texture" id=20]
@@ -31,6 +31,9 @@
 [ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0004.png" type="Texture" id=29]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0005.png" type="Texture" id=30]
 [ext_resource path="res://player/player_fase1/side_scroller_F1/walk_animation/player_fase_1_walk0006.png" type="Texture" id=31]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase1/Caminhando na Grama.wav" type="AudioStream" id=32]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase2/Ataque Protagonista.wav" type="AudioStream" id=33]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase1/Protagonista levando dano.wav" type="AudioStream" id=34]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 9.66667
@@ -49,7 +52,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -111,6 +114,30 @@ tracks/5/keys = {
 "update": 1,
 "values": [ Vector2( -3.44444, 5.77778 ), Vector2( -3.44444, 5.77778 ), Vector2( 0.111111, 23.5556 ), Vector2( 41.8889, 16 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("som_passos:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("som_atack:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "atack_1_animation_right"
@@ -125,7 +152,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:position")
@@ -187,6 +214,30 @@ tracks/5/keys = {
 "update": 1,
 "values": [ Vector2( 43.6667, 15.5556 ), Vector2( 89.4444, -0.888893 ), Vector2( 86.3333, 20 ), Vector2( 45.8889, 19.5556 ) ]
 }
+tracks/6/type = "value"
+tracks/6/path = NodePath("som_passos:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("som_atack:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "death_animation"
@@ -201,7 +252,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.7, 0.8, 0.9, 1, 1.1 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ]
+"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_Player:playback_speed")
@@ -239,6 +290,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ 2 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("som_passos:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idlle_animation"
@@ -254,7 +317,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
+"values": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:scale")
@@ -328,6 +391,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ 1 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("som_passos:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=6]
 resource_name = "jump_down"
@@ -354,6 +429,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 44.5556, 4.44444 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("som_passos:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -394,6 +481,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 44.5556, 4.44444 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("som_passos:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -483,6 +582,18 @@ tracks/6/keys = {
 "update": 1,
 "values": [ 1 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("som_passos:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="CapsuleShape2D" id=9]
 radius = 12.7778
@@ -504,12 +615,13 @@ position = Vector2( 1.33333, 11.1111 )
 shape = SubResource( 1 )
 
 [node name="sprite_player" type="Sprite" parent="."]
+position = Vector2( -18.2222, -2.22222 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 flip_h = true
 
 [node name="animation_Player" type="AnimationPlayer" parent="."]
-playback_speed = 0.7
+playback_speed = 1.2
 anims/atack_1_animation_left = SubResource( 2 )
 anims/atack_1_animation_right = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -534,7 +646,7 @@ position = Vector2( -43, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_player"]
 modulate = Color( 0.490196, 0.87451, 0.141176, 1 )
-position = Vector2( 44.5556, 4.44444 )
+position = Vector2( 41.8889, 16 )
 shape = SubResource( 10 )
 
 [node name="delay_camera_shake" type="Timer" parent="."]
@@ -544,6 +656,19 @@ one_shot = true
 [node name="delay_camera_zoom" type="Timer" parent="."]
 wait_time = 0.4
 one_shot = true
+
+[node name="som_passos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 32 )
+volume_db = -6.0
+
+[node name="som_atack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 33 )
+volume_db = -6.0
+
+[node name="som_dano" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 34 )
+volume_db = -10.0
+pitch_scale = 1.2
 [connection signal="animation_finished" from="animation_Player" to="." method="_on_animation_Player_animation_finished"]
 [connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]
 [connection signal="area_entered" from="area_arma_player" to="." method="_on_area_arma_player_area_entered"]

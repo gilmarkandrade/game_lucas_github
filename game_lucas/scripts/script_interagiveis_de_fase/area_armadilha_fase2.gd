@@ -1,6 +1,8 @@
 extends Area2D
 
-
+func _ready():
+	if atributos_fase_singleton.finalized_plataform_quest == false:
+		atributos_fase_singleton.plataform_motion = 1
 
 
 
@@ -14,6 +16,8 @@ func _on_area_armadilha_body_entered(body):
 
 func _on_animation_cena5_animation_finished(anim_name):
 		atributos_player_singleton.stop_movement_player(false)
+		if anim_name == "plataform_up":
+			atributos_fase_singleton.finalized_plataform_quest = true
 
 
 func _on_area_alavanca_area_entered(area):
@@ -24,6 +28,6 @@ func _on_area_alavanca_area_entered(area):
 func _on_area_lava_body_entered(body):
 	if body.is_in_group("player"):
 		atributos_player_singleton.player_life_update(110)
-		print("foi")
+		
 		
 

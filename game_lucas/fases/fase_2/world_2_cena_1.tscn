@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Background_fundo_da_cela.png" type="Texture" id=2]
@@ -9,7 +9,7 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Tocha/Tocha_2.png" type="Texture" id=7]
 [ext_resource path="res://assets_game/background/fase_2/cena_1/Tocha/Tocha_3.png" type="Texture" id=8]
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=9]
-
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 323.025, 10 )
@@ -77,14 +77,13 @@ position = Vector2( 262, -10 )
 shape = SubResource( 4 )
 
 [node name="player_plataforma" parent="." instance=ExtResource( 3 )]
-editor/display_folded = true
 position = Vector2( 9.04407, 28.6395 )
 
 [node name="Camera2D" type="Camera2D" parent="player_plataforma"]
 position = Vector2( 21.9259, 0.59259 )
 current = true
-zoom = Vector2( 0.4, 0.4 )
-limit_left = 10
+zoom = Vector2( 0.45, 0.45 )
+limit_left = -5
 limit_top = -225
 limit_right = 550
 limit_bottom = 125
@@ -100,7 +99,7 @@ position = Vector2( 271.322, -39.9445 )
 scale = Vector2( 0.5277, 0.453588 )
 frames = SubResource( 5 )
 animation = "Toha"
-frame = 3
+frame = 1
 playing = true
 
 [node name="entrar_cena2" type="Area2D" parent="."]
@@ -114,4 +113,9 @@ shape = SubResource( 6 )
 
 [node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 9 )]
 position = Vector2( 279.374, 20.3625 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -10.0
+autoplay = true
 [connection signal="body_entered" from="entrar_cena2" to="." method="_on_entrar_cena2_body_entered"]

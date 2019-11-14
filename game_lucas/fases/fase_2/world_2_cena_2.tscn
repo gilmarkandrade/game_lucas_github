@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_4.png" type="Texture" id=8]
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Chão.png" type="Texture" id=9]
 [ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.6204, 50.6053 )
@@ -243,5 +244,10 @@ position = Vector2( 562.364, 403.938 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena3"]
 position = Vector2( 0, 7.15985 )
 shape = SubResource( 13 )
+
+[node name="som_trilha" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -10.0
+autoplay = true
 [connection signal="area_entered" from="Parede_quebrada" to="Parede_quebrada" method="_on_Parede_quebrada_area_entered"]
 [connection signal="body_entered" from="entrar_direto_cena3" to="." method="_on_entrar_direto_cena3_body_entered"]

@@ -99,6 +99,8 @@ func death_player():
 # que entrou no corpo do player
 func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enemie"):
+		if death == false:
+			$som_dano.play()
 		life =  atributos_player_singleton.life_player
 		death_player()
 		camera_shake_emitter = true

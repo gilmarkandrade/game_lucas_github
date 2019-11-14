@@ -1,27 +1,30 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://player/player_fase1/top_down_F1/player_topdown.gd" type="Script" id=1]
-[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0020.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0007.png" type="Texture" id=2]
 [ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0015.png" type="Texture" id=3]
 [ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0016.png" type="Texture" id=4]
 [ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0017.png" type="Texture" id=5]
 [ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0018.png" type="Texture" id=6]
 [ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0019.png" type="Texture" id=7]
-[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0022.png" type="Texture" id=8]
-[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0023.png" type="Texture" id=9]
-[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0024.png" type="Texture" id=10]
-[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0025.png" type="Texture" id=11]
-[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0026.png" type="Texture" id=12]
-[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0027.png" type="Texture" id=13]
-[ext_resource path="res://player/player_fase1/top_down_F1/idlle_animation/player_fase_1_T_D_idlle0000.png" type="Texture" id=14]
-[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0003.png" type="Texture" id=15]
-[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0004.png" type="Texture" id=16]
-[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0005.png" type="Texture" id=17]
-[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0006.png" type="Texture" id=18]
-[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0007.png" type="Texture" id=19]
+[ext_resource path="res://player/player_fase1/top_down_F1/atack_animation/player_fase_1_T_D_atack0020.png" type="Texture" id=8]
+[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0022.png" type="Texture" id=9]
+[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0023.png" type="Texture" id=10]
+[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0024.png" type="Texture" id=11]
+[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0025.png" type="Texture" id=12]
+[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0026.png" type="Texture" id=13]
+[ext_resource path="res://player/player_fase1/top_down_F1/death_animation/player_fase_1_T_D_death0027.png" type="Texture" id=14]
+[ext_resource path="res://player/player_fase1/top_down_F1/idlle_animation/player_fase_1_T_D_idlle0000.png" type="Texture" id=15]
+[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0003.png" type="Texture" id=16]
+[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0004.png" type="Texture" id=17]
+[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0005.png" type="Texture" id=18]
+[ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0006.png" type="Texture" id=19]
 [ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0008.png" type="Texture" id=20]
 [ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0009.png" type="Texture" id=21]
 [ext_resource path="res://player/player_fase1/top_down_F1/walk_animation/player_fase_1_T_D_walk0010.png" type="Texture" id=22]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase1/Caminhando na Grama.wav" type="AudioStream" id=23]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase2/Ataque Protagonista.wav" type="AudioStream" id=24]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase1/Protagonista levando dano.wav" type="AudioStream" id=25]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 40.3333
@@ -39,7 +42,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_player:position")
@@ -52,6 +55,30 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ), Vector2( 74.6667, 20 ), Vector2( 48, -18 ), Vector2( -3.33333, -2 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("som_passos:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("som_ataque:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -66,7 +93,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("CollisionShape2D/sprite_player:position")
@@ -79,6 +106,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 1.33333, 30 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("som_passos:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -94,7 +133,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 14 ) ]
+"values": [ ExtResource( 15 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_player:position")
@@ -107,6 +146,18 @@ tracks/1/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("som_passos:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=5]
@@ -122,7 +173,19 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+"values": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 2 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("som_passos:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="CapsuleShape2D" id=6]
@@ -173,6 +236,17 @@ shape = SubResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
 shape = SubResource( 7 )
+
+[node name="som_passos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+
+[node name="som_ataque" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+
+[node name="som_dano" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -10.0
+pitch_scale = 1.2
 [connection signal="animation_finished" from="animation_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="arma_player" to="." method="_on_arma_player_body_entered"]
 [connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]

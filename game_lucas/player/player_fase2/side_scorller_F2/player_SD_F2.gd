@@ -131,10 +131,13 @@ func _on_area_corpo_player_area_entered(area):
 	
 	if area.is_in_group("weapom_enimie"):
 		life =  atributos_player_singleton.life_player
-		
+		if death == false:
+			$som_dano.play()
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
 		death_player()
+		if death == false:
+			$som_dano.play()
 	if area.is_in_group("armadilha"):
 		life = -10
 		
