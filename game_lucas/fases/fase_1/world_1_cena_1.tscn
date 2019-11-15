@@ -517,10 +517,10 @@ position = Vector2( 529.185, -59.775 )
 stream = ExtResource( 22 )
 volume_db = -10.0
 autoplay = true
-[connection signal="body_entered" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_entered"]
 [connection signal="body_entered" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_entered"]
-[connection signal="body_exited" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_exited"]
+[connection signal="body_entered" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_entered"]
 [connection signal="body_exited" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_exited"]
+[connection signal="body_exited" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_exited"]
 [connection signal="body_entered" from="area_fim_cena1/area_tutorial_jump" to="area_fim_cena1" method="_on_area_tutorial_jump_body_entered"]
 [connection signal="body_exited" from="area_fim_cena1/area_tutorial_jump" to="area_fim_cena1" method="_on_area_tutorial_jump_body_exited"]
 [connection signal="body_entered" from="area_fim_cena1/area_tutorial_ataque" to="area_fim_cena1" method="_on_area_tutorial_ataque_body_entered"]
