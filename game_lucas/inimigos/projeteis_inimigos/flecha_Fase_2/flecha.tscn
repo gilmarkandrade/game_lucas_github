@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha1.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -19,8 +19,9 @@ shape = SubResource( 1 )
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
 [node name="sprite_flecha" type="Sprite" parent="."]
-position = Vector2( 2.49926, 0.499848 )
-scale = Vector2( 0.578126, 0.234376 )
+position = Vector2( -5.48075, -2.9895 )
+rotation = 1.5708
+scale = Vector2( 2, 1.25 )
 texture = ExtResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_flecha_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
