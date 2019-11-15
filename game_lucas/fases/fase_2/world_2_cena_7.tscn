@@ -1,13 +1,16 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets_game/background/fase_2/cena_3/Chão.png" type="Texture" id=3]
-[ext_resource path="res://icon.png" type="Texture" id=4]
-[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar_inimigo_fase2_cena7 .gd" type="Script" id=6]
-[ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=7]
-[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets_game/background/fase_2/cena_6/Tapete.png" type="Texture" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar_inimigo_fase2_cena7 .gd" type="Script" id=7]
+[ext_resource path="res://assets_game/background/fase_2/cena_3/Porta_Pedra.png" type="Texture" id=8]
+[ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets_game/background/fase_2/cena_3/Parede_Top_Dow2.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -308,7 +311,6 @@ emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
 gravity = Vector3( 0, 98, 0 )
-angular_velocity = 1.05
 orbit_velocity = 0.1
 orbit_velocity_random = 0.0
 linear_accel = 100.0
@@ -417,6 +419,11 @@ position = Vector2( -450, 560 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
+[node name="Tapete" type="Sprite" parent="."]
+position = Vector2( 1081.72, 544.747 )
+scale = Vector2( 1.69482, 1.38458 )
+texture = ExtResource( 4 )
+
 [node name="area_buraco_cena7" type="Area2D" parent="." groups=[
 "armadilha",
 ]]
@@ -427,7 +434,7 @@ position = Vector2( -30, 650 )
 self_modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 344.5, 29.7156 )
 scale = Vector2( 5.17188, 3.75889 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_buraco_cena7" groups=[
 "armadilha",
@@ -438,7 +445,7 @@ shape = SubResource( 9 )
 [node name="animation_cena7" type="AnimationPlayer" parent="area_buraco_cena7"]
 anims/player_scale = SubResource( 10 )
 
-[node name="player_top_down_F2" parent="." instance=ExtResource( 5 )]
+[node name="player_top_down_F2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 100, 640 )
 scale = Vector2( 0.8, 0.8 )
 
@@ -450,7 +457,7 @@ limit_top = 340
 limit_bottom = 710
 
 [node name="area_criar_inimigo_fase2_cena7 " type="Area2D" parent="."]
-script = ExtResource( 6 )
+script = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigo_fase2_cena7 "]
 position = Vector2( 1220, 520 )
@@ -476,32 +483,26 @@ anims/close_portal = SubResource( 13 )
 anims/open_portal = SubResource( 14 )
 
 [node name="batente1" type="Sprite" parent="area_criar_inimigo_fase2_cena7 "]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1224, 1010 )
-scale = Vector2( 2.84375, 1 )
-texture = ExtResource( 4 )
+position = Vector2( 1219, 1004 )
+rotation = 3.14159
+texture = ExtResource( 8 )
 
 [node name="batente2" type="Sprite" parent="area_criar_inimigo_fase2_cena7 "]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1210, 30 )
-scale = Vector2( 2.84375, 1 )
-texture = ExtResource( 4 )
+position = Vector2( 1185.83, 39.573 )
+texture = ExtResource( 8 )
 
 [node name="batente3" type="Sprite" parent="area_criar_inimigo_fase2_cena7 "]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1810, 190 )
-rotation = -1.57079
-scale = Vector2( 2.84375, 1 )
-texture = ExtResource( 4 )
+position = Vector2( 1801.45, 204.608 )
+rotation = 1.5708
+scale = Vector2( 0.911665, 1 )
+texture = ExtResource( 8 )
 
 [node name="batente4" type="Sprite" parent="area_criar_inimigo_fase2_cena7 "]
-modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1810, 860 )
-rotation = -1.57079
-scale = Vector2( 2.84375, 1 )
-texture = ExtResource( 4 )
+position = Vector2( 1799.46, 869.076 )
+rotation = 1.5708
+texture = ExtResource( 8 )
 
-[node name="particula_portal2" parent="area_criar_inimigo_fase2_cena7 " instance=ExtResource( 7 )]
+[node name="particula_portal2" parent="area_criar_inimigo_fase2_cena7 " instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 1470, 420 )
 rotation = 0.261799
@@ -518,9 +519,37 @@ shape = SubResource( 20 )
 disabled = true
 
 [node name="som_trilha" type="AudioStreamPlayer" parent="area_criar_inimigo_fase2_cena7 "]
-stream = ExtResource( 8 )
+stream = ExtResource( 10 )
 volume_db = -10.0
 autoplay = true
+
+[node name="Parede_Top_Dow2" type="Sprite" parent="."]
+position = Vector2( 1210.05, 1063.21 )
+scale = Vector2( 1.10551, 1.31187 )
+texture = ExtResource( 11 )
+
+[node name="Parede_Top_Dow3" type="Sprite" parent="."]
+position = Vector2( 1859.24, 522.798 )
+rotation = 1.5708
+scale = Vector2( 0.873131, 1.36384 )
+texture = ExtResource( 11 )
+
+[node name="Parede_Top_Dow4" type="Sprite" parent="."]
+position = Vector2( 1220.13, -22.1078 )
+scale = Vector2( 1.10426, 1.20791 )
+texture = ExtResource( 11 )
+
+[node name="Parede_Top_Dow2" type="Sprite" parent="Parede_Top_Dow4"]
+position = Vector2( -580.903, 69.9237 )
+rotation = 1.5708
+scale = Vector2( 0.36254, 1.09057 )
+texture = ExtResource( 11 )
+
+[node name="Parede_Top_Dow5" type="Sprite" parent="."]
+position = Vector2( 573.698, 1059 )
+rotation = 1.5708
+scale = Vector2( 0.457921, 1.2276 )
+texture = ExtResource( 11 )
 [connection signal="body_entered" from="area_buraco_cena7" to="." method="_on_area_buraco_cena7_body_entered"]
 [connection signal="body_entered" from="area_criar_inimigo_fase2_cena7 " to="area_criar_inimigo_fase2_cena7 " method="_on_area_criar_inimigo_fase2_cena7__body_entered"]
 [connection signal="timeout" from="area_criar_inimigo_fase2_cena7 /delay_spawn_enemie" to="area_criar_inimigo_fase2_cena7 " method="_on_delay_spawn_enemie_timeout"]

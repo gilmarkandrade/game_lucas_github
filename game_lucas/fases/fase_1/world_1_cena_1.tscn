@@ -215,6 +215,7 @@ emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
 gravity = Vector3( 0, 98, 0 )
+angular_velocity = 0.0
 orbit_velocity = 0.1
 orbit_velocity_random = 0.0
 linear_accel = 100.0
@@ -233,6 +234,7 @@ editor/display_folded = true
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="Chão" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -63.2539, 24.6227 )
 scale = Vector2( 3.16, 1 )
 
@@ -246,6 +248,7 @@ scale = Vector2( 1.04418, 0.734804 )
 texture = ExtResource( 3 )
 
 [node name="Pedra" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -32.9999, 0.750015 )
 
 [node name="icon2" type="Sprite" parent="Pedra"]
@@ -285,6 +288,7 @@ scale = Vector2( 0.648438, 14.7813 )
 texture = ExtResource( 5 )
 
 [node name="Pedra2" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( -471.636, 41.4482 )
 z_index = -1
 
@@ -299,6 +303,7 @@ texture = ExtResource( 4 )
 flip_h = true
 
 [node name="arvore" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1138.87, 451.108 )
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="arvore"]
@@ -330,6 +335,7 @@ editor_draw_screen = false
 script = ExtResource( 9 )
 
 [node name="area_fim_cena1" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 210.448, 27.8762 )
 script = ExtResource( 10 )
 
@@ -430,6 +436,7 @@ scale = Vector2( 1.2, 1.2 )
 position = Vector2( 772.55, -67.9001 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2( -1, 70 )
