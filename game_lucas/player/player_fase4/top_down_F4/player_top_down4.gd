@@ -4,13 +4,15 @@ var move = Vector2()
 var speed = 200
 var death  = false
 var damage = 30
-var bullet = preload("res://player/player_fase3/top_down_F3/projetil_player_TD3.tscn")
+var bullet = preload("res://player/player_fase4/top_down_F4/projetil_player_TD4.tscn")
 var fire_stop = atributos_player_singleton.fire_stop
 var life = atributos_player_singleton.life_player
 var attacking = false
 
-func _ready():
-	$CollisionShape2D/cajado. visible = atributos_fase_singleton.get_weapom_away
+func _ready(): 
+#test provisorio
+	atributos_player_singleton.fire_stop= false
+	
 func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
@@ -22,8 +24,9 @@ func _physics_process(delta):
 			$animation_player.current_animation = "atack_animation"
 			attacking = true
 		elif Input.is_action_just_pressed("ui_fire_atack") and attacking == false:
-			fire_stop = atributos_player_singleton.fire_stop
-			shoot_bullet()
+			$delay_metralhadora.start()
+		elif Input.is_action_just_released("ui_fire_atack"):
+			$delay_metralhadora.stop()
 			
 		if Input.is_action_pressed("ui_left"):
 			move.x =- speed
@@ -65,13 +68,13 @@ func _on_animation_player_animation_finished(anim_name):
 
 func shoot_bullet():
 	
-	if fire_stop == false and atributos_fase_singleton. get_weapom_away == true:
+	if fire_stop == false :#and atributos_fase_singleton. get_weapom_away == true:
 		var B_L = bullet. instance()
 		get_parent().add_child(B_L)
 		B_L.pos = $position_bullet.global_position
 		B_L.target = $position_bullet_final.global_position
 		B_L.position = $position_bullet.global_position
-		B_L.look_at(get_global_mouse_position())
+		B_L.look_at($position_bullet_final.global_position)
 	
 func death_player():
 	
@@ -92,8 +95,17 @@ func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enemie"):
 		life = atributos_player_singleton.life_player
 		death_player()
+		if death == false:
+			$som_dano.play()
 	elif area.is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
 		death_player()
+		if death == false:
+			$som_dano.play()
 		
 
+
+
+func _on_delay_metralhadora_timeout():
+		fire_stop = atributos_player_singleton.fire_stop
+		shoot_bullet()

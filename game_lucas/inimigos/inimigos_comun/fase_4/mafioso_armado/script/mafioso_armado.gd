@@ -96,7 +96,7 @@ func _on_delay_atack_timeout():
 	
 func random_item():
 	item_probability. randomize()
-	var random_item = item_probability. randi_range(1,10)
+	var random_item = item_probability. randi_range(1,5)
 	item_type = random_item
 
 func spaw_item():

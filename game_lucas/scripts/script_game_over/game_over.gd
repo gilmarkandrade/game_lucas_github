@@ -28,4 +28,4 @@ func _on_restart_game_pressed():
 		get_tree().change_scene("res://fases/fase_4/world_4_cena_1.tscn")
 	if (atributos_fase_singleton.fase_restart == 5):
 		get_tree().change_scene("res://fases/fase_5/world_5_cena_1.tscn")
-	pass
+	
