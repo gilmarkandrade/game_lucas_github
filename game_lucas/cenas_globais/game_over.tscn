@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scripts/script_game_over/game_over.gd" type="Script" id=1]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f3.png" type="Texture" id=2]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f4.png" type="Texture" id=3]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f5.png" type="Texture" id=4]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f6.png" type="Texture" id=5]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f7.png" type="Texture" id=6]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f8.png" type="Texture" id=7]
+[ext_resource path="res://aliados/bru/idlle_animation/Bru_128_casting_f9.png" type="Texture" id=8]
+[ext_resource path="res://scripts/script_game_over/bru_dialogo_gameover.gd" type="Script" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "bru_idle",
+"speed": 5.0
+} ]
 
 [node name="game_over" type="Control"]
 anchor_right = 1.0
@@ -27,10 +43,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -74.0
-margin_top = -180.0
-margin_right = 57.0
-margin_bottom = -153.0
+margin_left = 92.6364
+margin_top = -90.6147
+margin_right = 223.636
+margin_bottom = -63.6147
 
 [node name="restart_game" type="Button" parent="CanvasLayer/VBoxContainer"]
 margin_right = 131.0
@@ -38,4 +54,23 @@ margin_bottom = 20.0
 custom_colors/font_color_hover = Color( 0.823529, 0.129412, 0.290196, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "Restart game"
+
+[node name="bru_animated_sprite" type="AnimatedSprite" parent="CanvasLayer"]
+position = Vector2( 347.969, 540.985 )
+scale = Vector2( 2.90039, 2.70019 )
+frames = SubResource( 1 )
+animation = "bru_idle"
+frame = 8
+playing = true
+script = ExtResource( 9 )
+
+[node name="falas_bru" type="Label" parent="CanvasLayer/bru_animated_sprite"]
+margin_left = 48.9111
+margin_top = -60.0237
+margin_right = 347.911
+margin_bottom = 33.9763
+rect_min_size = Vector2( -2.04, -1.88 )
+rect_scale = Vector2( 0.5, 0.5 )
+text = "tes"
+autowrap = true
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/restart_game" to="." method="_on_restart_game_pressed"]

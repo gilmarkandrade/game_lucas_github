@@ -2,7 +2,7 @@
 
 [ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.gd" type="Script" id=1]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/cajado/cajado.png" type="Texture" id=2]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0012.png" type="Texture" id=3]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0015.png" type="Texture" id=3]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0024.png" type="Texture" id=4]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0025.png" type="Texture" id=5]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/atack_animation/sword_atack0026.png" type="Texture" id=6]
@@ -18,9 +18,9 @@
 [ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0038.png" type="Texture" id=16]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0039.png" type="Texture" id=17]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/death_animation/death0040.png" type="Texture" id=18]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0013.png" type="Texture" id=19]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0014.png" type="Texture" id=20]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0015.png" type="Texture" id=21]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0012.png" type="Texture" id=19]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0013.png" type="Texture" id=20]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0014.png" type="Texture" id=21]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/idle/idle0016.png" type="Texture" id=22]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/jump_up_and_down_animation/jump_down0021.png" type="Texture" id=23]
 [ext_resource path="res://player/player_fase2/side_scorller_F2/jump_up_and_down_animation/jump_up0019.png" type="Texture" id=24]
@@ -513,7 +513,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+"values": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 22 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:scale")
@@ -650,7 +650,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+"values": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 22 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_player:scale")
@@ -1534,7 +1534,7 @@ position = Vector2( 1.33333, 11.1111 )
 shape = SubResource( 1 )
 
 [node name="cajado" type="Sprite" parent="."]
-position = Vector2( 17.131, 7.50884 )
+position = Vector2( 20.4605, 4.65492 )
 rotation = 1.11861
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
@@ -1577,7 +1577,7 @@ position = Vector2( 44.5556, 4.44444 )
 shape = SubResource( 15 )
 
 [node name="position_projetil" type="Position2D" parent="."]
-position = Vector2( 41.3067, -5.25723 )
+position = Vector2( 44.6029, -9.09583 )
 
 [node name="som_passos" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 33 )

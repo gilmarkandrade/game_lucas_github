@@ -60,6 +60,7 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "atack_animation":
 		attacking = false
 	if anim_name == "death_animation":
+		atributos_player_singleton.cont_death_player(1)
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 
 

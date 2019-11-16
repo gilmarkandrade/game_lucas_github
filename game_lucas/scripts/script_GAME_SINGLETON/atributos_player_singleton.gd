@@ -8,6 +8,8 @@ var camera_zoom_update
 var mana_player = 100
 var fire_stop = false
 var stop_player = false
+var death_number = 0
+var diag_bru_gameover = false
 
 func stop_movement_player(stop):
 	stop_player = stop
@@ -15,7 +17,9 @@ func stop_movement_player(stop):
 func player_life_update(life):
 	life_player -=  life
 
-
+func cont_death_player(death):
+	death_number +=death
+	
 func damage_life_enimie_update(damage):
 	life_enemie_update = damage
 	

@@ -135,6 +135,7 @@ func _on_delay_camera_zoom_timeout():
 #quando alguma animação finalizar execute o evento 
 func _on_animation_Player_animation_finished(anim_name):
 	if anim_name == "death_animation":
+		atributos_player_singleton.cont_death_player(1)
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 	elif anim_name == "atack_1_animation_left":
