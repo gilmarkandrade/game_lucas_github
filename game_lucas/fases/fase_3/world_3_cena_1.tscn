@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=3]
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets_game/background/fase_3/cena_1/Trincheira_topDown.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 555.395 )
@@ -18,13 +19,13 @@ extents = Vector2( 11.5433, 582.207 )
 extents = Vector2( 717.563, 10 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 10, 501.107 )
+extents = Vector2( 18.4202, 207.634 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 50.5858, 10 )
+extents = Vector2( 17.0241, 190.027 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 10, 568.913 )
+extents = Vector2( 25.395, 568.913 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 112.516, 49.042 )
@@ -33,11 +34,11 @@ extents = Vector2( 112.516, 49.042 )
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="barreiras" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 40.1115, 577.721 )
@@ -56,15 +57,15 @@ position = Vector2( 730.907, 1134.06 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 339.511, 652.583 )
+position = Vector2( 271.542, 921.288 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 290.04, 162.398 )
+position = Vector2( 281.671, 218.188 )
 shape = SubResource( 6 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 549.462, 581.673 )
+position = Vector2( 457.408, 578.883 )
 shape = SubResource( 7 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
@@ -74,10 +75,11 @@ shape = SubResource( 7 )
 [node name="area_entrar_cena2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena2"]
-position = Vector2( 445.206, 1089.16 )
+position = Vector2( 402.235, 1075.65 )
 shape = SubResource( 8 )
 
 [node name="Area2D2" type="Area2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D2"]
 
@@ -87,13 +89,26 @@ scale = Vector2( 0.6, 0.6 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down_F3"]
 current = true
+limit_left = 50
+limit_top = 25
+limit_right = 1430
+limit_bottom = 1125
 
 [node name="position_inicio_cena1" type="Position2D" parent="."]
 position = Vector2( 110.016, 772.505 )
 
 [node name="position_retorno_cena1" type="Position2D" parent="."]
-position = Vector2( 447.24, 1085.81 )
+position = Vector2( 382.867, 1082.4 )
 
 [node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 4 )]
-position = Vector2( 444.848, 1112.12 )
+position = Vector2( 377.323, 1107.21 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Trincheira_topDown" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 747.032, 575.081 )
+scale = Vector2( 2.32358, 2.7441 )
+texture = ExtResource( 5 )
 [connection signal="body_entered" from="area_entrar_cena2" to="." method="_on_area_entrar_cena2_body_entered"]

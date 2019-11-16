@@ -1,15 +1,20 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
-[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=3]
-[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_com_tiro.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Madeira_teste.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_de_areia.png" type="Texture" id=5]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Background_2_guerra.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Trincheira_sidescroleer.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1968.64, 19.3733 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 36.3918, 29.9074 )
+extents = Vector2( 58.1559, 43.6543 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 24.7712, 802.64 )
@@ -21,7 +26,7 @@ extents = Vector2( 24.7714, 1026.27 )
 extents = Vector2( 80.1728, 15.6534 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 27.1588, 32.0297 )
+extents = Vector2( 76.4991, 49.4995 )
 
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 26.8657, 101.542 )
@@ -29,23 +34,22 @@ extents = Vector2( 26.8657, 101.542 )
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 98.6152, 20.226 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 48.0681, 16.657 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 32.5315, 26.0999 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 84.3857, 85.4582 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 91.988, 95.6274 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 561.362, 113.995 )
 
-[sub_resource type="Animation" id=12]
-resource_name = "soldies_motion"
+[sub_resource type="Animation" id=14]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -65,19 +69,24 @@ tracks/0/keys = {
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="chao e barreiras" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1966.84, 647.066 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="chao e barreiras"]
-position = Vector2( 364.686, 597.391 )
+position = Vector2( 375.212, 583.707 )
 shape = SubResource( 2 )
+
+[node name="saco_com_tiro" type="Sprite" parent="chao e barreiras/CollisionShape2D2"]
+position = Vector2( 3.33905, -0.712616 )
+scale = Vector2( 0.535088, 0.639474 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 18.636, -97.8389 )
@@ -91,25 +100,56 @@ shape = SubResource( 4 )
 position = Vector2( 1244.95, 496.255 )
 shape = SubResource( 5 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D5"]
+position = Vector2( -0.404644, -0.0293465 )
+scale = Vector2( 2.35132, 2.75514 )
+texture = ExtResource( 4 )
+
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1026.81, 595.734 )
 shape = SubResource( 6 )
+
+[node name="saco_de_areia" type="Sprite" parent="chao e barreiras/CollisionShape2D6"]
+position = Vector2( 4.18442, -7.09637 )
+scale = Vector2( 0.739858, 0.702866 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1461.3, 547.69 )
 shape = SubResource( 7 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D7"]
+position = Vector2( -0.300164, -10.1901 )
+rotation = 1.5708
+scale = Vector2( 2.69118, 4.81818 )
+texture = ExtResource( 4 )
+
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1717.21, 404.19 )
 shape = SubResource( 8 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D8"]
+position = Vector2( -0.0531616, 0.0781555 )
+scale = Vector2( 2.86924, 3.63606 )
+texture = ExtResource( 4 )
+
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1503.37, 545.59 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
+
+[node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D9"]
+position = Vector2( 0.0859482, -4.9432 )
+scale = Vector2( 1.41393, 2.11766 )
+texture = ExtResource( 4 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1632.74, 605.367 )
-shape = SubResource( 14 )
+shape = SubResource( 10 )
+
+[node name="saco_com_tiro" type="Sprite" parent="chao e barreiras/CollisionShape2D10"]
+position = Vector2( 4.38232, -5.31439 )
+scale = Vector2( 0.446056, 0.440489 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( -11.9583, 0 )
@@ -119,46 +159,83 @@ editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_retorno_cena_1"]
 position = Vector2( 192.898, 542.752 )
-shape = SubResource( 9 )
+shape = SubResource( 11 )
 
 [node name="area_entrar_cena3" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 115.841, 43.9396 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena3"]
 position = Vector2( 1952.28, 492.519 )
-shape = SubResource( 10 )
+shape = SubResource( 12 )
 
 [node name="area_batalhao_inimigo" type="Area2D" parent="." groups=[
 "armadilha",
 ]]
+editor/display_folded = true
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="area_batalhao_inimigo" groups=[
 "armadilha",
 ]]
 position = Vector2( 3074.36, 517.238 )
-shape = SubResource( 11 )
+shape = SubResource( 13 )
 
 [node name="animation batalhão" type="AnimationPlayer" parent="area_batalhao_inimigo"]
 autoplay = "soldies_motion"
 playback_speed = 0.5
-anims/soldies_motion = SubResource( 12 )
+anims/soldies_motion = SubResource( 14 )
 
-[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 3 )]
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2064.6, 517.065 )
 
-[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 3 )]
+[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 190.123, 524.491 )
 
-[node name="player_SD_F3" parent="." instance=ExtResource( 4 )]
+[node name="player_SD_F3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 200.607, 574.951 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]
 current = true
+limit_left = 44
+limit_bottom = 630
 
 [node name="position_inicio_cena2" type="Position2D" parent="."]
 position = Vector2( 191.736, 575.209 )
 
 [node name="position_retorno_cena3" type="Position2D" parent="."]
 position = Vector2( 1821.49, 563.225 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer_fundo" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1800, 0 )
+
+[node name="Background_2_guerra" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
+position = Vector2( 345.763, 106.954 )
+texture = ExtResource( 8 )
+
+[node name="Background_2_guerra2" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
+position = Vector2( 945.818, 107.135 )
+texture = ExtResource( 8 )
+
+[node name="Background_2_guerra3" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
+position = Vector2( 1545.85, 107.179 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer_trincheira" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
+motion_mirroring = Vector2( 1799, 0 )
+
+[node name="Trincheira_sidescroleer" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
+position = Vector2( 343.39, 428.551 )
+texture = ExtResource( 9 )
+
+[node name="Trincheira_sidescroleer2" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
+position = Vector2( 943.297, 428.623 )
+texture = ExtResource( 9 )
+
+[node name="Trincheira_sidescroleer3" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
+position = Vector2( 1543.34, 428.605 )
+texture = ExtResource( 9 )
 [connection signal="body_entered" from="area_retorno_cena_1" to="." method="_on_area_retorno_cena_1_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena3" to="." method="_on_area_entrar_cena3_body_entered"]

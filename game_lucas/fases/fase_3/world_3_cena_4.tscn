@@ -89,6 +89,7 @@ extents = Vector2( 23.1877, 402.988 )
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
@@ -206,6 +207,7 @@ position = Vector2( 3726.58, -572.381 )
 shape = SubResource( 27 )
 
 [node name="player_SD_F3" parent="." instance=ExtResource( 3 )]
+editor/display_folded = true
 position = Vector2( 2737.52, -195.597 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]

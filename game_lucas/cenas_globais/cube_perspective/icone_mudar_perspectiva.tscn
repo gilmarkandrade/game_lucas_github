@@ -28,7 +28,7 @@ shape = SubResource( 1 )
 [node name="animation_icon" type="AnimatedSprite" parent="."]
 position = Vector2( -70.8408, -3.08002 )
 frames = SubResource( 2 )
-frame = 2
+frame = 6
 playing = true
 [connection signal="body_entered" from="." to="." method="_on_icone_mudar_perspectiva_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_icone_mudar_perspectiva_body_exited"]
