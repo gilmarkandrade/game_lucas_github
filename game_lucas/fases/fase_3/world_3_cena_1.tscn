@@ -1,3 +1,99 @@
-[gd_scene format=2]
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
+[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 555.395 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 698.042, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 11.5433, 582.207 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 717.563, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 501.107 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 50.5858, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 10, 568.913 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 112.516, 49.042 )
 
 [node name="world_3_cena_1" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="barreiras" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 40.1115, 577.721 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 748.316, 16.2677 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 1438.93, 563.875 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 730.907, 1134.06 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 339.511, 652.583 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 290.04, 162.398 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 549.462, 581.673 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="barreiras"]
+
+[node name="area_entrar_cena2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena2"]
+position = Vector2( 445.206, 1089.16 )
+shape = SubResource( 8 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D2"]
+
+[node name="player_top_down_F3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 161.686, 944.79 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Camera2D" type="Camera2D" parent="player_top_down_F3"]
+current = true
+
+[node name="position_inicio_cena1" type="Position2D" parent="."]
+position = Vector2( 110.016, 772.505 )
+
+[node name="position_retorno_cena1" type="Position2D" parent="."]
+position = Vector2( 447.24, 1085.81 )
+
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 4 )]
+position = Vector2( 444.848, 1112.12 )
+[connection signal="body_entered" from="area_entrar_cena2" to="." method="_on_area_entrar_cena2_body_entered"]

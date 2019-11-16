@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -8,9 +8,10 @@
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_1.png" type="Texture" id=6]
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_2.png" type="Texture" id=7]
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_4.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/background/fase_2/cena_2/Chão.png" type="Texture" id=9]
-[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=10]
-[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=11]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase2/QuebrandoParede.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets_game/background/fase_2/cena_2/Chão.png" type="Texture" id=10]
+[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.6204, 50.6053 )
@@ -143,11 +144,19 @@ anims/destroy_block_finalized = SubResource( 3 )
 position = Vector2( 23.6205, 8.9595 )
 emitting = false
 amount = 100
+lifetime = 0.6
 one_shot = true
 speed_scale = 2.0
 explosiveness = 0.88
 randomness = 0.37
 process_material = SubResource( 4 )
+
+[node name="som_bloco" type="AudioStreamPlayer2D" parent="Parede_quebrada"]
+position = Vector2( -10.4971, 47.82 )
+stream = ExtResource( 9 )
+volume_db = 20.0
+pitch_scale = 0.9
+attenuation = 0.965936
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -160,7 +169,7 @@ motion_mirroring = Vector2( 560, 380 )
 modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
 position = Vector2( 455.808, 197.896 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -194,6 +203,7 @@ position = Vector2( 560.762, -364.347 )
 shape = SubResource( 8 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 199.424, -181.135 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
@@ -201,6 +211,7 @@ position = Vector2( 289.34, 68.4237 )
 shape = SubResource( 9 )
 
 [node name="collisão bloco" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 199.424, -181.135 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collisão bloco"]
@@ -215,13 +226,14 @@ position = Vector2( 420.755, -22.0939 )
 shape = SubResource( 11 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="."]
+editor/display_folded = true
 position = Vector2( 1090.02, -22.0939 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
 position = Vector2( 8.20215, -2.05054 )
 shape = SubResource( 12 )
 
-[node name="player_top_down" parent="." instance=ExtResource( 10 )]
+[node name="player_top_down" parent="." instance=ExtResource( 11 )]
 position = Vector2( 407.371, -140.151 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
@@ -239,6 +251,7 @@ position = Vector2( 342.219, -134.689 )
 position = Vector2( 561.524, 339.003 )
 
 [node name="entrar_direto_cena3" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 562.364, 403.938 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena3"]
@@ -246,7 +259,7 @@ position = Vector2( 0, 7.15985 )
 shape = SubResource( 13 )
 
 [node name="som_trilha" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource( 12 )
 volume_db = -10.0
 autoplay = true
 [connection signal="area_entered" from="Parede_quebrada" to="Parede_quebrada" method="_on_Parede_quebrada_area_entered"]

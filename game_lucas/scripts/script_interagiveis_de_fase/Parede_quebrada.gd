@@ -12,8 +12,11 @@ func _ready():
 func _on_Parede_quebrada_area_entered(area):
 	if area. is_in_group("arma_player") and break_wall == false :
 		hit_wall += 1
+		$som_bloco.play()
 		$particula_bloco.emitting = true
 		if hit_wall >= 3:
+			$som_bloco.pitch_scale = 0.5
+			$som_bloco.play()
 			break_wall = true 
 			$animation_block. play("destroy_block")
 			atributos_fase_singleton.destroy_wall_fase_2(break_wall)

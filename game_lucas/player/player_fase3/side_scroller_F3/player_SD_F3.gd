@@ -12,7 +12,7 @@ const gravity = 9
 const UP = Vector2(0,-1)
 var get_weapon_away = atributos_fase_singleton.get_weapom_away
 var fire_stop = atributos_player_singleton.fire_stop
-var orb_fire = preload( "res://player/player_fase2/side_scorller_F2/orb_fogo_SD/orb__de_fogo_SD.tscn")
+var orb_fire = preload( "res://player/player_fase3/side_scroller_F3/gun_bullet_F3_SD/gun_bullet_F3_SD.tscn")
 
 
 #========================================================
@@ -32,9 +32,12 @@ func _physics_process(delta):
 			attacking = true
 			atack_proximity()
 			
-		if Input . is_action_just_pressed("ui_fire_atack"):
-			fire_atack()
+		elif Input.is_action_just_pressed("ui_fire_atack"):
+			$delay_weapon.start()
 			
+		elif Input.is_action_just_released("ui_fire_atack"):
+			$delay_weapon.stop()
+		
 		if Input.is_action_pressed("ui_right"):
 			if attacking == false :
 				move.x =+ speed
@@ -48,7 +51,7 @@ func _physics_process(delta):
 				move.x =- speed
 			side_current = true
 			if is_on_floor() and attacking == false:
-				$animation_Player .current_animation = "walk_animation"
+				$animation_Player .current_animation = "walk_animation_left"
 			$sprite_player.flip_h = true
 		
 		else:
@@ -86,7 +89,7 @@ func fire_atack():
 	#get_weapon_away recebe o vaolor do singleton atributos fase e defini se oplayer ja possui ou nao o cajado
 	get_weapon_away = atributos_fase_singleton.get_weapom_away
 	fire_stop = atributos_player_singleton.fire_stop
-	if get_weapon_away == true and fire_stop == false:
+	if  fire_stop == false: #and get_weapon_away == true:
 		var O_F = orb_fire.instance()
 		O_F. side = side_current
 		get_parent().add_child(O_F)
@@ -115,8 +118,15 @@ func _on_area_corpo_player_area_entered(area):
 	if area.is_in_group("weapom_enimie"):
 		life =  atributos_player_singleton.life_player
 		death_player()
+		if death == false:
+			$som_dano.play()
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
+		death_player()
+		if death == false:
+			$som_dano.play()
+	if area .is_in_group("armadilha"):
+		life = -10
 		death_player()
 
 
@@ -141,3 +151,8 @@ func _on_animation_Player_animation_finished(anim_name):
 	elif anim_name == "atack_1_animation_right":
 		attacking = false
 
+
+
+func _on_delay_weapon_timeout():
+	fire_atack()
+	print("foi")

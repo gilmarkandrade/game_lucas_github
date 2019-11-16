@@ -2,7 +2,7 @@ extends Area2D
 var side
 var motion = Vector2() 
 var speed = 3
-var mana_subtract = 20
+var mana_subtract = 3
 var damage = 20
 var stop = false
 

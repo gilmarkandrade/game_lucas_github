@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TiroEspacial.wav-0741d08e3b6ebc60854dfea3e5867bf0.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_protagonista/fase5/TiroEspacial.wav"
+dest_files=[ "res://.import/TiroEspacial.wav-0741d08e3b6ebc60854dfea3e5867bf0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

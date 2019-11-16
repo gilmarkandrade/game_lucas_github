@@ -1,3 +1,175 @@
-[gd_scene format=2]
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
+[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 698.983, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 476.276 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 714.162, 17.1073 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 19.717, 521.813 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 144.945, 10 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 160.124, 10 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 220.84, 100.592 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 19.7172, 168.898 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 10, 176.488 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 459.911, 10 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 76.6389, 93.0029 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 736.93, 10 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 65.2162, 67.7622 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 76.6389, 70.2343 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 167.714, 100.592 )
+
+[sub_resource type="Animation" id=16]
+resource_name = "soldies_motion"
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionShape2D16:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 931.301, 563.842 ), Vector2( 420.38, 563.842 ), Vector2( 931.301, 555.033 ) ]
+}
 
 [node name="world_3_cena_3" type="Node"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="barreiras" type="StaticBody2D" parent="."]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 702.034, 929.721 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 0.00012207, 470.552 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 709.624, 3.79468 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 1404.07, 493.321 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 144.202, 447.784 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 1248.48, 432.605 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 667.881, 356.709 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 269.429, 292.198 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 1092.9, 261.84 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 705.829, 110.049 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 7.5896, 554.038 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 694.445, 683.06 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="barreiras"]
+
+[node name="area_retorno_cena2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="area_retorno_cena2"]
+position = Vector2( 141.97, 545.332 )
+shape = SubResource( 13 )
+
+[node name="area_entrar_cena4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="area_entrar_cena4"]
+position = Vector2( 1305.4, 531.269 )
+shape = SubResource( 14 )
+
+[node name="area_batalhão_inimigo" type="Area2D" parent="." groups=[
+"armadilha",
+]]
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="area_batalhão_inimigo" groups=[
+"armadilha",
+]]
+position = Vector2( 931.301, 555.033 )
+shape = SubResource( 15 )
+
+[node name="animation_batalhao" type="AnimationPlayer" parent="area_batalhão_inimigo"]
+autoplay = "soldies_motion"
+anims/soldies_motion = SubResource( 16 )
+
+[node name="player_top_down_F3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 93.9112, 588.811 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Camera2D" type="Camera2D" parent="player_top_down_F3"]
+current = true
+
+[node name="position_inicio_cena3" type="Position2D" parent="."]
+position = Vector2( 113.573, 552.831 )
+
+[node name="position_retorno_cena4" type="Position2D" parent="."]
+position = Vector2( 1301.07, 529.448 )
+
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 4 )]
+position = Vector2( 115.407, 547.571 )
+
+[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1319.44, 531.118 )
+[connection signal="body_entered" from="area_retorno_cena2" to="." method="_on_area_retorno_cena2_body_entered"]
+[connection signal="body_entered" from="area_entrar_cena4" to="." method="_on_area_entrar_cena4_body_entered"]

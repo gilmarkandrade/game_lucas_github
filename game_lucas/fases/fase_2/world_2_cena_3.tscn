@@ -60,10 +60,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -110.537, 0.0 ]
+"values": [ -207.546, -252.665, -296.488, -359.861 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("../StaticBody2D3/CollisionShape2D3:position")
@@ -72,10 +72,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -761.569, 190.906 ), Vector2( -833.569, 303.905 ) ]
+"values": [ Vector2( -867.541, 166.351 ), Vector2( -900.924, 201.99 ), Vector2( -901.887, 266.05 ), Vector2( -829.647, 309.508 ) ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("../porta:position")
@@ -84,10 +84,10 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 303.224, 623.651 ) ]
+"values": [ Vector2( 303.224, 623.651 ), Vector2( 306.382, 626.809 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("../porta:rotation_degrees")
@@ -96,10 +96,10 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ -116.263, 0.0 ]
+"values": [ -209.25, -359.92 ]
 }
 tracks/5/type = "value"
 tracks/5/path = NodePath("../player_top_down/Camera2D:zoom")
@@ -256,8 +256,8 @@ position = Vector2( -835.613, -170.381 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( -761.569, 190.906 )
-rotation = -1.92923
+position = Vector2( -884.233, 184.171 )
+rotation = -4.0161
 shape = SubResource( 3 )
 
 [node name="Parede_Top_Dow2" type="Sprite" parent="StaticBody2D3"]
@@ -308,7 +308,7 @@ scale = Vector2( 0.6, 0.6 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
 current = true
-zoom = Vector2( 0.8, 0.8 )
+zoom = Vector2( 0.84, 0.84 )
 limit_left = 0
 limit_top = 0
 limit_right = 1150
@@ -368,35 +368,37 @@ volume_db = -10.0
 autoplay = true
 
 [node name="porta" type="Sprite" parent="."]
-position = Vector2( 232.916, 649.824 )
-rotation = -2.02917
+position = Vector2( 303.675, 624.102 )
+rotation = -4.02777
 scale = Vector2( 0.0422603, 4.87911 )
 texture = ExtResource( 9 )
-offset = Vector2( 0, 30.78 )
+offset = Vector2( 0, 14.87 )
 
 [node name="saida_inimigo_1" type="Sprite" parent="."]
-position = Vector2( 678.609, 18.0954 )
+position = Vector2( 677.816, 13.9152 )
+scale = Vector2( 0.53792, 0.491455 )
 z_index = 1
 texture = ExtResource( 10 )
 offset = Vector2( 0, 30.78 )
 
 [node name="saida_inimigo_2" type="Sprite" parent="."]
-position = Vector2( 1119.14, 391.721 )
+position = Vector2( 1122.1, 400.786 )
 rotation = 1.5708
+scale = Vector2( 0.602263, 0.473917 )
 z_index = 1
 texture = ExtResource( 10 )
 offset = Vector2( 0, 30.78 )
 
 [node name="saida_player" type="Sprite" parent="."]
-position = Vector2( 724.685, 763.887 )
+position = Vector2( 716.523, 768.688 )
 rotation = 3.14159
-scale = Vector2( 0.931244, 0.903376 )
+scale = Vector2( 0.606666, 0.484806 )
 z_index = 1
 texture = ExtResource( 10 )
 offset = Vector2( 0, 30.78 )
 
 [node name="parede" type="Sprite" parent="."]
-position = Vector2( 303.032, 297.331 )
+position = Vector2( 305.487, 331.707 )
 rotation = 1.5708
 scale = Vector2( 0.489029, 0.903811 )
 texture = ExtResource( 4 )
@@ -407,7 +409,7 @@ scale = Vector2( 1.1896, 6.13185 )
 texture = ExtResource( 11 )
 
 [node name="area_entrar_cena5" type="Area2D" parent="."]
-position = Vector2( 721.052, 721.905 )
+position = Vector2( 721.188, 905.555 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_entrar_cena5"]
 position = Vector2( -3.55865, -51.5477 )
