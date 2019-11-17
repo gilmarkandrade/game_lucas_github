@@ -1,8 +1,12 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
-[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_3/cena_4/saco_com_tiro.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste pronto.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/background/fase_3/cena_4/saco_de_areia.png" type="Texture" id=6]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1619.28, 23.6984 )
@@ -56,7 +60,7 @@ extents = Vector2( 32.5684, 44.9402 )
 extents = Vector2( 147.175, 29.8417 )
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 59.2729, 31.1918 )
+extents = Vector2( 120.32, 31.1918 )
 
 [sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 28.8416, 26.4023 )
@@ -108,96 +112,230 @@ position = Vector2( 3164.22, 155.812 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 1094.49, 517.596 )
 shape = SubResource( 4 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D4"]
+position = Vector2( 0.372131, -7.97577 )
+rotation = 1.5708
+scale = Vector2( 3.75334, 4.46183 )
+texture = ExtResource( 3 )
+flip_v = true
+
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 1185.08, 565.412 )
 shape = SubResource( 5 )
 
+[node name="saco_com_tiro" type="Sprite" parent="chao_barrera/CollisionShape2D5"]
+position = Vector2( 7.67731, 4.03641 )
+scale = Vector2( 0.582176, 0.551765 )
+texture = ExtResource( 4 )
+
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 1997.25, 583.198 )
 shape = SubResource( 6 )
 
+[node name="saco_com_tiro" type="Sprite" parent="chao_barrera/CollisionShape2D6"]
+position = Vector2( -15.8491, -17.7257 )
+scale = Vector2( 0.558449, 0.571436 )
+texture = ExtResource( 4 )
+flip_h = true
+
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 3042.43, -250.653 )
 shape = SubResource( 7 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D7"]
+position = Vector2( -13.47, -0.634079 )
+scale = Vector2( 0.794588, 0.814938 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2595.71, 366.566 )
 shape = SubResource( 8 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D8"]
+position = Vector2( 0.255043, 0.827126 )
+scale = Vector2( 0.694742, 0.707797 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 1019.66, 481.075 )
 shape = SubResource( 9 )
+
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D9"]
+position = Vector2( 13.6368, 1.10632 )
+scale = Vector2( 0.656493, 0.471109 )
+texture = ExtResource( 5 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="chao_barrera"]
 position = Vector2( 3818.62, -291.452 )
 shape = SubResource( 10 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2958.63, 442.97 )
 shape = SubResource( 11 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D11"]
+position = Vector2( 10.0254, 1.53039 )
+scale = Vector2( 1.4706, 0.545463 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2363.68, 293.75 )
 shape = SubResource( 12 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D12"]
+position = Vector2( -0.608154, -0.37619 )
+scale = Vector2( 0.440271, 0.591778 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2147.16, 124.852 )
 shape = SubResource( 13 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D13"]
+position = Vector2( -1.53691, 0.830238 )
+scale = Vector2( 1.31976, 0.433178 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2497.96, 178.306 )
 shape = SubResource( 14 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D14"]
+position = Vector2( 0.509005, -0.967136 )
+scale = Vector2( 0.487194, 0.550443 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2650.69, 110.219 )
 shape = SubResource( 15 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D15"]
+position = Vector2( 3.61768, 1.9898 )
+scale = Vector2( 0.269367, 1.08351 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2706.34, 565.492 )
 shape = SubResource( 16 )
 
+[node name="saco_com_tiro" type="Sprite" parent="chao_barrera/CollisionShape2D16"]
+position = Vector2( 12.0322, -0.660522 )
+scale = Vector2( 0.645775, 0.717374 )
+texture = ExtResource( 4 )
+flip_h = true
+
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2387.12, -20.9108 )
 shape = SubResource( 17 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D17"]
+position = Vector2( 0.559082, -1.47276 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="chao_barrera"]
-position = Vector2( 2743.38, -114.792 )
+editor/display_folded = true
+position = Vector2( 2813.7, -113.034 )
 shape = SubResource( 18 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D18"]
+position = Vector2( 25.9143, -0.443016 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 876.746, 582.214 )
 shape = SubResource( 19 )
 
+[node name="saco_de_areia" type="Sprite" parent="chao_barrera/CollisionShape2D19"]
+position = Vector2( -9.19092, -6.41882 )
+scale = Vector2( 0.48962, 0.496231 )
+texture = ExtResource( 6 )
+flip_h = true
+
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2648.13, 584.483 )
 shape = SubResource( 20 )
 
+[node name="saco_de_areia" type="Sprite" parent="chao_barrera/CollisionShape2D20"]
+position = Vector2( -10.3994, -1.56335 )
+scale = Vector2( 0.371942, 0.415906 )
+texture = ExtResource( 6 )
+flip_h = true
+
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2947.14, 78.7639 )
 shape = SubResource( 21 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D21"]
+position = Vector2( 4.66895, 0.918106 )
+scale = Vector2( 5.73668, 1.86546 )
+texture = ExtResource( 3 )
+
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 1984.93, 235.813 )
 shape = SubResource( 22 )
 
+[node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D22"]
+position = Vector2( -0.251266, 7.69934 )
+scale = Vector2( 1.61684, 0.591777 )
+texture = ExtResource( 5 )
+
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 1885.78, 210.971 )
 shape = SubResource( 23 )
 
+[node name="saco_de_areia" type="Sprite" parent="chao_barrera/CollisionShape2D23"]
+position = Vector2( -7.83887, -6.43567 )
+scale = Vector2( 0.345207, 0.334437 )
+texture = ExtResource( 6 )
+flip_h = true
+
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2543.69, -2.26691 )
 shape = SubResource( 24 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D24"]
+position = Vector2( 0.752441, -0.521206 )
+texture = ExtResource( 3 )
+
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2672.59, -89.1726 )
 shape = SubResource( 25 )
 
+[node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D25"]
+position = Vector2( 9.48438, 0.947716 )
+texture = ExtResource( 3 )
+
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="chao_barrera"]
+editor/display_folded = true
 position = Vector2( 2916.5, -230.942 )
 shape = SubResource( 26 )
+
+[node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D26"]
+position = Vector2( -5.92139, -0.268631 )
+texture = ExtResource( 3 )
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="chao_barrera"]
 
@@ -205,9 +343,11 @@ shape = SubResource( 26 )
 position = Vector2( 3726.58, -572.381 )
 shape = SubResource( 27 )
 
-[node name="player_SD_F3" parent="." instance=ExtResource( 3 )]
+[node name="player_SD_F3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 162.817, 559.649 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]
 position = Vector2( 25.9086, -7.40247 )
 current = true
+limit_left = -15
+limit_bottom = 625

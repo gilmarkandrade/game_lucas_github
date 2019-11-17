@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets_game/itens_interagiveis/fase_4/Cadeira/Cadeira.png" type="Texture" id=1]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_4/Cadeira/cadeira0.png" type="Texture" id=2]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_4/Cadeira/cadeira1.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_4/Cadeira/cadeira3.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/itens_interagiveis/fase_4/Cadeira/cadeira2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idlle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "cadeira_break",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 28.8087, 32.1118 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21.6711, 23.0171 )
+
+[node name="Cadeira" type="RigidBody2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 13.2316, -10.6588 )
+scale = Vector2( 1.26463, 1.17473 )
+frames = SubResource( 1 )
+animation = "cadeira_break"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 11.1459, -12.0032 )
+shape = SubResource( 2 )
+
+[node name="Cadeira area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cadeira area"]
+position = Vector2( 8.92593, -12.4966 )
+shape = SubResource( 3 )

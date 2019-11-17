@@ -436,8 +436,10 @@ scale = Vector2( 1.2, 1.2 )
 position = Vector2( 772.55, -67.9001 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 position = Vector2( -1, 70 )
 motion_scale = Vector2( 1, 0.5 )
 motion_offset = Vector2( 1, 0 )
