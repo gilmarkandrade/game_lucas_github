@@ -10,7 +10,7 @@ var stop_create = atributos_fase_singleton.stop_spawn_enemie
 var enemie_selected = 0
 var position_enemie
 var portal_create = false
-
+var close_the_door = false
 func _ready():
 	# quantidade de inimigo que sera spawnada
 	atributos_fase_singleton.cont_enemie = 50
@@ -61,7 +61,9 @@ func _on_delay_spawn_enemie_timeout():
 	# desta forma bloqueando a criaçao de qualquer inimigo na cena
 	stop_create = atributos_fase_singleton.stop_spawn_enemie
 	limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
-	
+	if close_the_door == false  :
+		$animation_door.play("door_1_close")
+		close_the_door = true  
 	if limit_enemie <= 5 and stop_create == false:
 		spaw_enemie()
 		
