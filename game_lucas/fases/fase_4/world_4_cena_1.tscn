@@ -2,10 +2,10 @@
 
 [ext_resource path="res://scripts/script_fases/fase_4_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Calçada.png" type="Texture" id=2]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4.png" type="Texture" id=3]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Corredor_Mafia.png" type="Texture" id=4]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4_Banheiro.png" type="Texture" id=5]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_escritorio.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Corredor_Mafia.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4_Banheiro.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_escritorio.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4.png" type="Texture" id=6]
 [ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Rua.jpg" type="Texture" id=7]
 [ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Parede.png" type="Texture" id=8]
 [ext_resource path="res://player/player_fase4/top_down_F4/player_top_down_F4.tscn" type="PackedScene" id=9]
@@ -85,40 +85,42 @@ extents = Vector2( 42.2601, 41.9583 )
 script = ExtResource( 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
-[node name="ParallaxLayer_calçada" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
-motion_mirroring = Vector2( 0, 1679.72 )
-
-[node name="Calçada" type="Sprite" parent="ParallaxBackground/ParallaxLayer_calçada"]
+[node name="Calçada" type="Sprite" parent="ParallaxBackground"]
 position = Vector2( 1648.29, 853.466 )
 texture = ExtResource( 2 )
 
-[node name="ParallaxLayer_salão" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
-motion_mirroring = Vector2( 1168.95, 1000.14 )
-
-[node name="Chão_fase4" type="Sprite" parent="ParallaxBackground/ParallaxLayer_salão"]
-position = Vector2( 595.916, 513.743 )
-texture = ExtResource( 3 )
+[node name="ParallaxLayer_calçada" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 0, 1679.72 )
 
 [node name="ParallaxLayer_banheiro" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
+position = Vector2( 849.623, 3859.73 )
 motion_mirroring = Vector2( 0, 563.01 )
 
 [node name="Corredor_Mafia" type="Sprite" parent="ParallaxBackground/ParallaxLayer_banheiro"]
-position = Vector2( 1092.23, 2296.2 )
-scale = Vector2( 1, 1.1292 )
-texture = ExtResource( 4 )
+position = Vector2( 250.19, 334.791 )
+scale = Vector2( 1, 1.77973 )
+texture = ExtResource( 3 )
 
 [node name="Chão_fase4_Banheiro" type="Sprite" parent="ParallaxBackground/ParallaxLayer_banheiro"]
-position = Vector2( 1686.57, 2294.57 )
+position = Vector2( 844.621, 325.986 )
 rotation = 1.5708
-texture = ExtResource( 5 )
+scale = Vector2( 1.55225, 1 )
+texture = ExtResource( 4 )
 
 [node name="Chão_escritorio" type="Sprite" parent="ParallaxBackground/ParallaxLayer_banheiro"]
-position = Vector2( 388.169, 2397.83 )
+position = Vector2( -453.871, 273.788 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer_salão" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1168.95, 0 )
+
+[node name="Chão_fase4" type="Sprite" parent="ParallaxBackground/ParallaxLayer_salão"]
+position = Vector2( 595.916, 513.743 )
+texture = ExtResource( 6 )
+
+[node name="Chão_fase5" type="Sprite" parent="ParallaxBackground/ParallaxLayer_salão"]
+position = Vector2( 595.916, 1519.11 )
 texture = ExtResource( 6 )
 
 [node name="ParallaxLayer_rua" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -258,7 +260,7 @@ texture = ExtResource( 8 )
 
 [node name="player_top_down_F4" parent="." instance=ExtResource( 9 )]
 editor/display_folded = true
-position = Vector2( 999.828, 2978.93 )
+position = Vector2( 1073.39, 3013.26 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down_F4"]
 current = true
@@ -268,7 +270,6 @@ limit_right = 3000
 limit_bottom = 3165
 
 [node name="area_criar inimigos_fase4" type="Area2D" parent="."]
-editor/display_folded = true
 script = ExtResource( 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar inimigos_fase4"]
@@ -276,14 +277,16 @@ position = Vector2( 1174.07, 1024.98 )
 shape = SubResource( 13 )
 
 [node name="position_inimigo1" type="Position2D" parent="area_criar inimigos_fase4"]
+position = Vector2( 1826.33, -9.31802 )
 
 [node name="position_inimigo2" type="Position2D" parent="area_criar inimigos_fase4"]
+position = Vector2( 18.636, 638.283 )
 
 [node name="position_inimigo3" type="Position2D" parent="area_criar inimigos_fase4"]
-position = Vector2( 5.16235, 1667.43 )
+position = Vector2( 405.836, 1979.58 )
 
 [node name="position_inimigo4" type="Position2D" parent="area_criar inimigos_fase4"]
-position = Vector2( 5.16235, 392.336 )
+position = Vector2( 2362.62, 1636.29 )
 
 [node name="delay_spawn_enemie" type="Timer" parent="area_criar inimigos_fase4"]
 

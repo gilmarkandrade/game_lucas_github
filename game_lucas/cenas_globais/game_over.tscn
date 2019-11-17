@@ -49,7 +49,7 @@ margin_right = 223.636
 margin_bottom = -63.6147
 
 [node name="restart_game" type="Button" parent="CanvasLayer/VBoxContainer"]
-margin_right = 131.0
+margin_right = 130.0
 margin_bottom = 20.0
 custom_colors/font_color_hover = Color( 0.823529, 0.129412, 0.290196, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
@@ -60,7 +60,7 @@ position = Vector2( 347.969, 540.985 )
 scale = Vector2( 2.90039, 2.70019 )
 frames = SubResource( 1 )
 animation = "bru_idle"
-frame = 8
+frame = 1
 playing = true
 script = ExtResource( 9 )
 

@@ -71,7 +71,6 @@ limit_right = 3615
 limit_bottom = 1600
 
 [node name="Paredes" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes"]
 position = Vector2( 10.2663, 801.181 )

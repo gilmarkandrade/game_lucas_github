@@ -24,16 +24,16 @@ extents = Vector2( 19.717, 521.813 )
 extents = Vector2( 159.445, 15.4473 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 224.839, 18.2498 )
+extents = Vector2( 249.843, 18.2498 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 126.288, 100.592 )
+extents = Vector2( 173.671, 140.001 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 19.7172, 158.738 )
+extents = Vector2( 19.7172, 187.21 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 24.1425, 166.074 )
+extents = Vector2( 24.1425, 173.071 )
 
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 459.911, 16.9556 )
@@ -75,7 +75,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 2.5, 5 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 931.301, 563.842 ), Vector2( 420.38, 563.842 ), Vector2( 931.301, 555.033 ) ]
+"values": [ Vector2( 952.404, 461.343 ), Vector2( 425.738, 473.17 ), Vector2( 937.33, 469.115 ) ]
 }
 
 [node name="world_3_cena_3" type="Node"]
@@ -120,19 +120,19 @@ position = Vector2( 168.769, 368.155 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 1159.41, 352.326 )
+position = Vector2( 1152.95, 352.326 )
 shape = SubResource( 6 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 612.534, 263.174 )
+position = Vector2( 621.578, 254.13 )
 shape = SubResource( 7 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 326.503, 191.384 )
+position = Vector2( 320.156, 196.144 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 915.989, 194.619 )
+position = Vector2( 890.364, 193.112 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="barreiras"]
@@ -189,7 +189,7 @@ shape = SubResource( 17 )
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="area_batalhão_inimigo" groups=[
 "armadilha",
 ]]
-position = Vector2( 975.715, 465.864 )
+position = Vector2( 952.404, 461.343 )
 shape = SubResource( 18 )
 
 [node name="animation_batalhao" type="AnimationPlayer" parent="area_batalhão_inimigo"]
