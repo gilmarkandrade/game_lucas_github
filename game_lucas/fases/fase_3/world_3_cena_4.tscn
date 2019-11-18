@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -6,12 +6,14 @@
 [ext_resource path="res://assets_game/background/fase_3/cena_4/saco_com_tiro.png" type="Texture" id=4]
 [ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste pronto.png" type="Texture" id=5]
 [ext_resource path="res://assets_game/background/fase_3/cena_4/saco_de_areia.png" type="Texture" id=6]
-[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=7]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/Backgound_Ceu.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/segunda_guejhony.png" type="Texture" id=9]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/Backgound_Chão.png" type="Texture" id=10]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/Trincheira_sidescroleer.png" type="Texture" id=11]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/chao .png" type="Texture" id=12]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_com_tiro.png" type="Texture" id=7]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Backgound_Ceu.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/segunda_guejhony.png" type="Texture" id=10]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Backgound_Chão.png" type="Texture" id=11]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Trincheira_sidescroleer.png" type="Texture" id=12]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/chao .png" type="Texture" id=13]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/back_ground_tile2.png" type="Texture" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1619.28, 23.6984 )
@@ -91,6 +93,12 @@ extents = Vector2( 22.8579, 6.51218 )
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 39.658, 5.21983 )
 
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 27.9514, 23.2642 )
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 25.3572, 23.4736 )
+
 [sub_resource type="RectangleShape2D" id=27]
 extents = Vector2( 23.1877, 402.988 )
 
@@ -118,11 +126,11 @@ position = Vector2( 3164.22, 155.812 )
 shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 1094.49, 517.596 )
 shape = SubResource( 4 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D4"]
+modulate = Color( 0.72549, 0.72549, 0.72549, 1 )
 position = Vector2( 0.372131, -7.97577 )
 rotation = 1.5708
 scale = Vector2( 3.75334, 4.46183 )
@@ -183,7 +191,6 @@ position = Vector2( 3818.62, -291.452 )
 shape = SubResource( 10 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2958.63, 442.97 )
 shape = SubResource( 11 )
 
@@ -193,12 +200,11 @@ scale = Vector2( 1.4706, 0.545463 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2363.68, 293.75 )
 shape = SubResource( 12 )
 
 [node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D12"]
-position = Vector2( -0.608154, -0.37619 )
+position = Vector2( 3.82397, -3.70029 )
 scale = Vector2( 0.440271, 0.591778 )
 texture = ExtResource( 5 )
 
@@ -252,12 +258,12 @@ position = Vector2( 0.559082, -1.47276 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2813.7, -113.034 )
 shape = SubResource( 18 )
 
 [node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D18"]
-position = Vector2( 25.9143, -0.443016 )
+position = Vector2( -0.085701, -1.34551 )
+scale = Vector2( 0.821306, 1 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="chao_barrera"]
@@ -282,22 +288,20 @@ texture = ExtResource( 6 )
 flip_h = true
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2947.14, 78.7639 )
 shape = SubResource( 21 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D21"]
-position = Vector2( 4.66895, 0.918106 )
+position = Vector2( 4.66895, -1.29796 )
 scale = Vector2( 5.73668, 1.86546 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 1984.93, 235.813 )
 shape = SubResource( 22 )
 
 [node name="Madeira_teste pronto" type="Sprite" parent="chao_barrera/CollisionShape2D22"]
-position = Vector2( -0.251266, 7.69934 )
+position = Vector2( -0.251282, 4.99185 )
 scale = Vector2( 1.61684, 0.591777 )
 texture = ExtResource( 5 )
 
@@ -341,11 +345,31 @@ texture = ExtResource( 3 )
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="chao_barrera"]
 
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="chao_barrera"]
+position = Vector2( 3374.73, -358.947 )
+shape = SubResource( 28 )
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="chao_barrera"]
+position = Vector2( 2917.64, 50.6974 )
+shape = SubResource( 29 )
+
+[node name="saco_com_tiro" type="Sprite" parent="chao_barrera/CollisionShape2D29"]
+position = Vector2( -1.23535, 2.56509 )
+scale = Vector2( 0.261312, 0.387813 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="saco_com_tiro2" type="Sprite" parent="chao_barrera/CollisionShape2D29"]
+position = Vector2( 457.883, -408.298 )
+scale = Vector2( 0.261312, 0.387813 )
+texture = ExtResource( 7 )
+flip_h = true
+
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="chao_barrera"]
 position = Vector2( 3726.58, -572.381 )
 shape = SubResource( 27 )
 
-[node name="player_SD_F3" parent="." instance=ExtResource( 7 )]
+[node name="player_SD_F3" parent="." instance=ExtResource( 8 )]
 position = Vector2( 200.261, 554.417 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]
@@ -354,7 +378,26 @@ current = true
 limit_left = -15
 limit_bottom = 625
 
+[node name="Madeira_teste" type="Sprite" parent="."]
+position = Vector2( 3161.04, 185.383 )
+rotation = 1.56832
+scale = Vector2( 13.5749, 6.64856 )
+texture = ExtResource( 3 )
+
+[node name="Madeira_teste2" type="Sprite" parent="."]
+position = Vector2( 3453.98, 432.069 )
+rotation = 1.56832
+scale = Vector2( 14.486, 3.72576 )
+texture = ExtResource( 3 )
+
+[node name="Madeira_teste3" type="Sprite" parent="."]
+position = Vector2( 3724.13, -677.861 )
+rotation = 1.56832
+scale = Vector2( 14.486, 3.72576 )
+texture = ExtResource( 3 )
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="Parallax_ceu" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 1, 0.1 )
@@ -362,27 +405,27 @@ motion_mirroring = Vector2( 599.86, 0 )
 
 [node name="Backgound_Ceu" type="Sprite" parent="ParallaxBackground/Parallax_ceu"]
 position = Vector2( 261.633, -178.749 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="Backgound_Ceu3" type="Sprite" parent="ParallaxBackground/Parallax_ceu"]
 position = Vector2( 261.633, -178.749 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="Backgound_Ceu2" type="Sprite" parent="ParallaxBackground/Parallax_ceu"]
 position = Vector2( 858.384, -178.943 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="Backgound_Ceu4" type="Sprite" parent="ParallaxBackground/Parallax_ceu"]
 position = Vector2( 858.384, -178.943 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 
 [node name="segunda_guejhony" type="Sprite" parent="ParallaxBackground/Parallax_ceu"]
 position = Vector2( 264.658, 173.774 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="segunda_guejhony2" type="Sprite" parent="ParallaxBackground/Parallax_ceu"]
 position = Vector2( 862.582, 173.774 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="Parallax_background" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.5, 1 )
@@ -390,27 +433,52 @@ motion_mirroring = Vector2( 598.3, 0 )
 
 [node name="Backgound_Chão" type="Sprite" parent="ParallaxBackground/Parallax_background"]
 position = Vector2( 260.427, 167.858 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Backgound_Chão2" type="Sprite" parent="ParallaxBackground/Parallax_background"]
 position = Vector2( 856.325, 167.858 )
-texture = ExtResource( 10 )
+texture = ExtResource( 11 )
 
 [node name="Parallax_chão_trincheira" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 597.98, 0 )
 
 [node name="Trincheira_sidescroleer" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
 position = Vector2( 292.676, 424.498 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="Trincheira_sidescroleer2" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
 position = Vector2( 890.028, 424.485 )
-texture = ExtResource( 11 )
+texture = ExtResource( 12 )
 
 [node name="chao " type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
-position = Vector2( 265.701, 623.084 )
+position = Vector2( 265.701, 620.084 )
+texture = ExtResource( 13 )
+
+[node name="chao 2" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira/chao "]
+position = Vector2( 594.665, 0.183838 )
+texture = ExtResource( 13 )
+
+[node name="Trincheira_sidescroleer3" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
+position = Vector2( 3450.47, -213.006 )
 texture = ExtResource( 12 )
 
-[node name="chao 2" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
-position = Vector2( 864.292, 624.878 )
-texture = ExtResource( 12 )
+[node name="back_ground_tile2" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
+modulate = Color( 0.756863, 0.745098, 0.745098, 1 )
+position = Vector2( 3448.28, 58.3152 )
+scale = Vector2( 1.00686, 1 )
+z_index = 1
+texture = ExtResource( 14 )
+
+[node name="back_ground_tile3" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
+modulate = Color( 0.756863, 0.745098, 0.745098, 1 )
+position = Vector2( 3451.22, 290.445 )
+scale = Vector2( 1.00686, 1 )
+z_index = 1
+texture = ExtResource( 14 )
+
+[node name="back_ground_tile4" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
+modulate = Color( 0.756863, 0.745098, 0.745098, 1 )
+position = Vector2( 3457.25, 524.082 )
+scale = Vector2( 1.00686, 1 )
+z_index = 1
+texture = ExtResource( 14 )

@@ -1,13 +1,14 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 180
+var speed = 250
 var life = 100
+var hit_atack = 1
 var attacking= false
 var damage_hit = 10
 var side_current = false
 var death = false
-const jump_force = -400
+const jump_force = -450
 const gravity = 9
 const UP = Vector2(0,-1)
 var get_weapon_away = atributos_fase_singleton.get_weapom_away
@@ -30,6 +31,9 @@ func _physics_process(delta):
 		# movimentação do player esquerda ou direita ou parado se não estiver recebendo input
 		if Input.is_action_just_pressed("ui_atack"):
 			attacking = true
+			hit_atack +=1
+			if hit_atack >= 3:
+				hit_atack = 1
 			atack_proximity()
 			
 		if Input . is_action_just_pressed("ui_fire_atack"):
@@ -75,11 +79,18 @@ func _physics_process(delta):
 # esta função é para o ataque de armas de mão de curto alcance 
 func atack_proximity():
 	
-	if side_current == true:
-		$animation_Player.current_animation = "atack_1_animation_left"
+	if side_current == true and hit_atack == 1:
+		$animation_Player.play("atack_1_animation_left")
 		move.x =0
-	elif side_current ==false:
-		$animation_Player.current_animation = "atack_1_animation_right"
+	elif side_current == true and hit_atack == 2:
+		$animation_Player.play("atack_2_animation_left")
+		move.x =0
+	
+	if side_current == false and hit_atack == 1:
+		$animation_Player.play("atack_1_animation_right")
+		move.x =0
+	elif side_current == false and hit_atack == 2:
+		$animation_Player.play("atack_2_animation_right")
 		move.x =0
 		
 func fire_atack():
@@ -141,4 +152,7 @@ func _on_animation_Player_animation_finished(anim_name):
 		attacking = false
 	elif anim_name == "atack_1_animation_right":
 		attacking = false
-
+	elif anim_name == "atack_2_animation_right":
+		attacking = false
+	elif anim_name ==  "atack_1_animation_left" :
+		attacking = false

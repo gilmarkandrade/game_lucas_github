@@ -1,10 +1,22 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
-[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=3]
-[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets_game/background/fase_3/cena_1/Trincheira_topDown.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown_com_tiro.png" type="Texture" id=4]
+[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets_game/background/fase_3/cena_1/back_ground_top_down.png" type="Texture" id=7]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0012.png" type="Texture" id=8]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0013.png" type="Texture" id=9]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0014.png" type="Texture" id=10]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0015.png" type="Texture" id=11]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0016.png" type="Texture" id=12]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0009.png" type="Texture" id=13]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0007.png" type="Texture" id=14]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0008.png" type="Texture" id=15]
+[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0002.png" type="Texture" id=16]
+[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 555.395 )
@@ -22,13 +34,354 @@ extents = Vector2( 717.563, 10 )
 extents = Vector2( 18.4202, 476.972 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 17.0241, 54.9797 )
+extents = Vector2( 8.08069, 54.9797 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 25.395, 568.913 )
+extents = Vector2( 99.5144, 568.913 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 72.226, 10 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 19.4398, 70.5828 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 112.516, 49.042 )
+
+[sub_resource type="Animation" id=11]
+resource_name = "action_cena"
+length = 12.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("soldado_aliado:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 624.135, 123.612 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("soldado_aliado:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 89.9815 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("soldado_aliado:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "shoot" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("soldado_aliado2:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3, 4.6, 10.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "shoot", "death", "run", "shoot" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("soldado_aliado2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4.4, 4.6, 5.5, 6.3, 6.8, 7.3, 8, 8.6, 9, 9.5, 9.7, 10, 10.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 615.196, 302.234 ), Vector2( 615.196, 302.234 ), Vector2( -368.612, 952.047 ), Vector2( 125.503, 783.64 ), Vector2( 131.055, 250.662 ), Vector2( 277.254, 150.729 ), Vector2( 362.382, 219.202 ), Vector2( 393.14, 539.087 ), Vector2( 417.747, 549.34 ), Vector2( 434.151, 547.289 ), Vector2( 501.819, 541.138 ), Vector2( 501.819, 541.138 ), Vector2( 618.701, 301.224 ), Vector2( 618.701, 301.224 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("soldado_aliado2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 4.4, 5.5, 6.8, 7.3, 8, 8.6, 9, 9.5, 9.7, 10, 10.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 89.9815, 90.0, -0.202829, 90.0, 180.0, 152.774, 90.0, 90.0, 90.0, 44.6461, 44.6461, 90.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("soldado_aliado3:animation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "shoot" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("soldado_aliado3:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 727.713, 544.85 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("soldado_aliado3:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 89.9815 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("soldado_aliado4:animation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "shoot" ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("soldado_aliado4:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 659.148, 801.53 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("soldado_aliado4:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 89.9815 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("soldado_aliado5:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 743.193, 483.703 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("soldado_aliado5:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 89.9815 ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("soldado_aliado5:animation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "shoot" ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("soldado_aliado6:animation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "run" ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("soldado_aliado6:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -172.078, 939.703 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("soldado_aliado6:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 89.9815 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("soldado_aliado7:animation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "run" ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("soldado_aliado7:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -283.121, 953.444 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("soldado_aliado7:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 89.9815 ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("soldado_aliado8:animation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 6.9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "run", "shoot", "death" ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("soldado_aliado8:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5, 2, 2.5, 3.2, 4, 4.9, 5.5, 6, 6.5, 6.8, 12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -225.717, 949.227 ), Vector2( 104.331, 870.302 ), Vector2( 144.612, 308.892 ), Vector2( 86.7085, 215.743 ), Vector2( 262.936, 157.84 ), Vector2( 356.084, 177.98 ), Vector2( 368.672, 462.462 ), Vector2( 416.505, 532.953 ), Vector2( 447.263, 532.953 ), Vector2( 508.066, 538.755 ), Vector2( 626.971, 702.76 ), Vector2( 662.035, 724.188 ), Vector2( 662.035, 724.188 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("soldado_aliado8:rotation_degrees")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 1.5, 2, 2.5, 3.2, 4, 4.9, 5.5, 6, 6.5, 6.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 89.9815, -0.808209, -25.7491, 90.1174, 167.846, 180.088, 89.8255, 89.8255, 89.8255, 123.688, 89.7158 ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("soldado_aliado2:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 4.2, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("soldado_aliado8:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": false,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "run",
+"speed": 3.01
+} ]
 
 [node name="world_3_cena_1" type="Node"]
 script = ExtResource( 1 )
@@ -39,6 +392,7 @@ editor/display_folded = true
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="barreiras" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 40.1115, 577.721 )
@@ -57,26 +411,79 @@ position = Vector2( 730.907, 1134.06 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 275.438, 679.734 )
+position = Vector2( 273.49, 699.214 )
 shape = SubResource( 5 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 248.555, 210.396 )
-rotation = -1.55068
+position = Vector2( 234.919, 235.72 )
+rotation = -1.71384
 shape = SubResource( 6 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="barreiras"]
-position = Vector2( 457.408, 578.883 )
+position = Vector2( 536.985, 458.593 )
 shape = SubResource( 7 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 220.966, 47.867 )
+rotation = 0.416552
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="barreiras"]
 
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="barreiras"]
+position = Vector2( 563.719, 1086.2 )
+shape = SubResource( 10 )
+
+[node name="saco_topdown" type="Sprite" parent="barreiras"]
+position = Vector2( 256.223, 1087.4 )
+rotation = 3.12684
+texture = ExtResource( 3 )
+
+[node name="saco_topdown_com_tiro" type="Sprite" parent="barreiras"]
+position = Vector2( 574.47, 1076.53 )
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro3" type="Sprite" parent="barreiras"]
+position = Vector2( 707.089, 733.133 )
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro5" type="Sprite" parent="barreiras"]
+position = Vector2( 691.184, 65.1439 )
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro7" type="Sprite" parent="barreiras"]
+position = Vector2( 684.368, 226.461 )
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro8" type="Sprite" parent="barreiras"]
+position = Vector2( 786.611, 480.933 )
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro2" type="Sprite" parent="barreiras"]
+position = Vector2( 699.335, 811.967 )
+rotation = 0.237706
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro4" type="Sprite" parent="barreiras"]
+position = Vector2( 683.43, 143.978 )
+rotation = 0.237706
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro6" type="Sprite" parent="barreiras"]
+position = Vector2( 676.614, 305.295 )
+rotation = 0.237706
+texture = ExtResource( 4 )
+
+[node name="saco_topdown_com_tiro9" type="Sprite" parent="barreiras"]
+position = Vector2( 778.857, 559.767 )
+rotation = 0.237706
+texture = ExtResource( 4 )
+
 [node name="area_entrar_cena2" type="Area2D" parent="."]
+position = Vector2( 186.965, 2.7019 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena2"]
-position = Vector2( 402.235, 1075.65 )
+position = Vector2( 402.933, 1074.95 )
 shape = SubResource( 8 )
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -84,7 +491,7 @@ editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D2"]
 
-[node name="player_top_down_F3" parent="." instance=ExtResource( 3 )]
+[node name="player_top_down_F3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 161.686, 944.79 )
 scale = Vector2( 0.6, 0.6 )
 
@@ -101,15 +508,93 @@ position = Vector2( 110.016, 772.505 )
 [node name="position_retorno_cena1" type="Position2D" parent="."]
 position = Vector2( 382.867, 1082.4 )
 
-[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 4 )]
-position = Vector2( 377.323, 1107.21 )
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 6 )]
+position = Vector2( 563.591, 1096.8 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Trincheira_topDown" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 747.032, 575.081 )
+position = Vector2( 747.032, 575.474 )
 scale = Vector2( 2.32358, 2.7441 )
-texture = ExtResource( 5 )
+texture = ExtResource( 7 )
+
+[node name="animation_cena" type="Node" parent="."]
+
+[node name="animation_cena" type="AnimationPlayer" parent="animation_cena"]
+autoplay = "action_cena"
+playback_speed = 0.6
+anims/action_cena = SubResource( 11 )
+
+[node name="soldado_aliado" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 624.135, 123.612 )
+rotation = 1.57047
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "shoot"
+frame = 3
+playing = true
+
+[node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 615.196, 302.234 )
+rotation = 1.57074
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "death"
+frame = 4
+playing = true
+
+[node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 727.713, 544.85 )
+rotation = 1.57047
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "shoot"
+frame = 1
+playing = true
+
+[node name="soldado_aliado4" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 659.148, 801.53 )
+rotation = 1.57047
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "shoot"
+frame = 1
+playing = true
+
+[node name="soldado_aliado5" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 743.193, 483.703 )
+rotation = 1.57047
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "shoot"
+frame = 2
+playing = true
+flip_h = true
+
+[node name="soldado_aliado6" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( -172.078, 939.703 )
+rotation = 1.57047
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "run"
+playing = true
+
+[node name="soldado_aliado7" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( -283.121, 953.444 )
+rotation = 1.57047
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "run"
+playing = true
+
+[node name="soldado_aliado8" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 362.765, 328.97 )
+rotation = 3.04287
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "run"
+playing = true
+flip_h = true
 [connection signal="body_entered" from="area_entrar_cena2" to="." method="_on_area_entrar_cena2_body_entered"]
