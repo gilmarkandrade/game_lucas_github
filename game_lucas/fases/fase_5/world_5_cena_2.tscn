@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://player/player_fase5/side_scroller_F5/player_SD_F5.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets_game/background/fase_5/cena_2/chão2.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 19.9166, 751.193 )
@@ -46,7 +47,6 @@ limit_left = 0
 limit_bottom = 1000
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -19.567, 529.38 )
@@ -55,6 +55,10 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1578.15, 1014.07 )
 shape = SubResource( 2 )
+
+[node name="chão2" type="Sprite" parent="StaticBody2D/CollisionShape2D2"]
+position = Vector2( -1561.15, -22.8239 )
+texture = ExtResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3777.43, 627.458 )
