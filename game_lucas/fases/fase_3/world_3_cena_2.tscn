@@ -1,58 +1,92 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_3/cena_2/Backgound_Ceu.png" type="Texture" id=2]
 [ext_resource path="res://assets_game/background/fase_3/cena_2/Backgound_Chão.png" type="Texture" id=3]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/Trincheira_sidescroleer.png" type="Texture" id=4]
-[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_com_tiro.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/Madeira_teste pronto.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_de_areia.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/background/fase_3/cena_2/Madeira_teste.png" type="Texture" id=9]
-[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=10]
-[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=11]
-[ext_resource path="res://icon.png" type="Texture" id=12]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/death/shoot0039.png" type="Texture" id=4]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/death/shoot0040.png" type="Texture" id=5]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/death/shoot0041.png" type="Texture" id=6]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/death/shoot0042.png" type="Texture" id=7]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/death/shoot0043.png" type="Texture" id=8]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/death/shoot0044.png" type="Texture" id=9]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/shoot/shoot0031.png" type="Texture" id=10]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/shoot/shoot0032.png" type="Texture" id=11]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/shoot/shoot0033.png" type="Texture" id=12]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/run/rum0023.png" type="Texture" id=13]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/run/rum0024.png" type="Texture" id=14]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/run/rum0025.png" type="Texture" id=15]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/run/rum0026.png" type="Texture" id=16]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/run/rum0027.png" type="Texture" id=17]
+[ext_resource path="res://aliados/soldado_aliado/side_scroller/run/rum0028.png" type="Texture" id=18]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_com_tiro.png" type="Texture" id=19]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Trincheira_sidescroleer.png" type="Texture" id=20]
+[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Madeira_teste pronto.png" type="Texture" id=22]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/saco_de_areia.png" type="Texture" id=23]
+[ext_resource path="res://assets_game/background/fase_3/cena_2/Madeira_teste.png" type="Texture" id=24]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=25]
+[ext_resource path="res://player/player_fase3/side_scroller_F3/player_SD_F3.tscn" type="PackedScene" id=26]
+[ext_resource path="res://icon.png" type="Texture" id=27]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=28]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 1968.64, 19.3733 )
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "death",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 48.2595, 23.2986 )
+extents = Vector2( 1968.64, 19.3733 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 24.7712, 802.64 )
+extents = Vector2( 48.2595, 23.2986 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 24.7714, 1026.27 )
+extents = Vector2( 24.7712, 802.64 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 80.1728, 15.6534 )
+extents = Vector2( 24.7714, 1026.27 )
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 53.292, 31.2589 )
+extents = Vector2( 80.1728, 15.6534 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 26.8657, 101.542 )
+extents = Vector2( 53.292, 31.2589 )
 
 [sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 98.6152, 20.226 )
+extents = Vector2( 26.8657, 101.542 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 48.0681, 16.657 )
+extents = Vector2( 98.6152, 20.226 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 32.5315, 26.0999 )
+extents = Vector2( 48.0681, 16.657 )
 
 [sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 84.3857, 85.4582 )
+extents = Vector2( 32.5315, 26.0999 )
 
 [sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 91.988, 95.6274 )
+extents = Vector2( 84.3857, 85.4582 )
 
 [sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 91.988, 95.6274 )
+
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 561.362, 113.995 )
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -68,12 +102,210 @@ tracks/0/keys = {
 "values": [ Vector2( 3520.7, 515.709 ), Vector2( 2468.02, 519.314 ), Vector2( 3520.7, 515.709 ) ]
 }
 
+[sub_resource type="Animation" id=16]
+resource_name = "action_cena"
+length = 17.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("soldado_aliado:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.1, 12.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "run", "shoot", "death" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("soldado_aliado:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.1, 14.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -139.368, 568.094 ), Vector2( 294.907, 571.094 ), Vector2( 294.907, 571.094 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("soldado_aliado:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 14.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("soldado_aliado:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 9.8 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado3:animation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "shoot" ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 98.7267, 122.238 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado3:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado2:animation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 7.7, 12.1, 15, 16 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "run", "shoot", "death", "run", "shoot" ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado2:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado2:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 14.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../ParallaxBackground/ParallaxLayer_fundo/soldado_aliado2:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 7.7, 14.1, 14.3, 15.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1854.85, 145.277 ), Vector2( 254.812, 181.597 ), Vector2( 254.812, 181.597 ), Vector2( -244.947, 191.621 ), Vector2( -1846.83, 140.737 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../ParallaxBackground/ParallaxLayer_soldado/soldado_aliado4:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 11.2, 13 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2345.37, 193.686 ), Vector2( 320.462, 167.922 ), Vector2( 320.462, 167.922 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../ParallaxBackground/ParallaxLayer_soldado/soldado_aliado4:animation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 11.2, 13 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "run", "death", "death" ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../ParallaxBackground/ParallaxLayer_soldado/soldado_aliado4:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 13 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../ParallaxBackground/ParallaxLayer_trincheira/soldado_aliado5:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 10.1, 11.9, 11.9, 14.5, 17 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1893.25, 253.254 ), Vector2( 154.208, 265.521 ), Vector2( 154.208, 265.521 ), Vector2( 154.207, 265.521 ), Vector2( 831.447, 252.241 ), Vector2( 831.447, 252.241 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../ParallaxBackground/ParallaxLayer_trincheira/soldado_aliado5:animation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 10.1, 11.9, 14.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "run", "shoot", "run", "death" ]
+}
+
 [node name="world_3_cena_2" type="Node"]
 script = ExtResource( 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer_céu" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 motion_mirroring = Vector2( 1795.76, 0 )
 
 [node name="Backgound_Ceu" type="Sprite" parent="ParallaxBackground/ParallaxLayer_céu"]
@@ -96,10 +328,12 @@ motion_mirroring = Vector2( 1792.36, 0 )
 [node name="Backgound_Chão" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
 position = Vector2( 49.8565, 120.766 )
 scale = Vector2( 1.30063, 1 )
+z_index = -1
 texture = ExtResource( 3 )
 
 [node name="Backgound_Chão2" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
 position = Vector2( 734.674, 120.618 )
+z_index = -1
 texture = ExtResource( 3 )
 
 [node name="Backgound_Chão3" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
@@ -107,105 +341,163 @@ position = Vector2( 1242.57, 119.562 )
 scale = Vector2( 0.715991, 1 )
 texture = ExtResource( 3 )
 
+[node name="soldado_aliado2" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
+position = Vector2( -1382.19, 153.415 )
+scale = Vector2( 0.7, 0.7 )
+z_index = 1
+frames = SubResource( 1 )
+animation = "run"
+frame = 2
+playing = true
+
+[node name="saco_com_tiro2" type="Sprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
+position = Vector2( 149.44, 155.355 )
+scale = Vector2( 0.409717, 0.465492 )
+z_index = 1
+texture = ExtResource( 19 )
+
+[node name="soldado_aliado3" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
+position = Vector2( 98.7267, 122.238 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 1 )
+animation = "shoot"
+playing = true
+
 [node name="ParallaxLayer_trincheira" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 1799, 0 )
+
+[node name="saco_com_tiro3" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
+position = Vector2( 300.525, 206.944 )
+scale = Vector2( 0.3144, 0.389629 )
+texture = ExtResource( 19 )
+
+[node name="soldado_aliado5" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
+position = Vector2( -1543.53, 255.35 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 1 )
+animation = "run"
+frame = 2
+playing = true
+
+[node name="soldado_aliado6" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
+visible = false
+position = Vector2( -1893.25, 253.254 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 1 )
+animation = "run"
+frame = 4
+playing = true
 
 [node name="Trincheira_sidescroleer" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
 position = Vector2( 338.06, 439.655 )
 scale = Vector2( 1.01234, 1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 20 )
 
 [node name="Trincheira_sidescroleer2" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
 position = Vector2( 941.446, 439.727 )
-texture = ExtResource( 4 )
+texture = ExtResource( 20 )
 
 [node name="Trincheira_sidescroleer3" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
 position = Vector2( 1539.64, 436.007 )
-texture = ExtResource( 4 )
+texture = ExtResource( 20 )
+
+[node name="ParallaxLayer_soldado" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 425.294, 10.1563 )
+motion_scale = Vector2( 0.6, 1 )
+motion_mirroring = Vector2( 1792.36, 0 )
+
+[node name="soldado_aliado4" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_soldado"]
+position = Vector2( -1934.75, 189.717 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 1 )
+animation = "run"
+frame = 2
+playing = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 editor/display_folded = true
 
-[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 5 )]
+[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 21 )]
 
 [node name="chao e barreiras" type="StaticBody2D" parent="."]
+editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1966.84, 647.066 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 374.397, 594.295 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="saco_com_tiro" type="Sprite" parent="chao e barreiras/CollisionShape2D2"]
 position = Vector2( 2.96777, 6.24658 )
 scale = Vector2( 0.409717, 0.465492 )
-texture = ExtResource( 6 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 18.636, -97.8389 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 3892.83, -398.415 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1244.95, 496.255 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D5"]
 position = Vector2( 1.85146, 0.421906 )
 scale = Vector2( 0.555624, 0.554308 )
-texture = ExtResource( 7 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1049.94, 591.653 )
-shape = SubResource( 6 )
+shape = SubResource( 7 )
 
 [node name="saco_de_areia" type="Sprite" parent="chao e barreiras/CollisionShape2D6"]
 position = Vector2( -6.06482, 6.92487 )
 scale = Vector2( 0.463187, 0.490957 )
-texture = ExtResource( 8 )
+texture = ExtResource( 23 )
 flip_h = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1461.3, 547.69 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D7"]
 position = Vector2( -0.300164, -10.1901 )
 rotation = 1.5708
 scale = Vector2( 2.69118, 4.81818 )
-texture = ExtResource( 9 )
+texture = ExtResource( 24 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1717.21, 404.19 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D8"]
 position = Vector2( -0.250464, -1.85961 )
 scale = Vector2( 0.685729, 0.689375 )
-texture = ExtResource( 7 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1503.37, 545.59 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao e barreiras/CollisionShape2D9"]
 position = Vector2( 1.71509, -1.24519 )
 scale = Vector2( 0.340856, 0.531242 )
-texture = ExtResource( 7 )
+texture = ExtResource( 22 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( 1632.74, 605.367 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="saco_com_tiro" type="Sprite" parent="chao e barreiras/CollisionShape2D10"]
 position = Vector2( 0.716973, 1.60894 )
 scale = Vector2( 0.355103, 0.405872 )
-texture = ExtResource( 6 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="chao e barreiras"]
 position = Vector2( -11.9583, 0 )
@@ -215,14 +507,15 @@ editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_retorno_cena_1"]
 position = Vector2( 192.898, 542.752 )
-shape = SubResource( 11 )
+shape = SubResource( 12 )
 
 [node name="area_entrar_cena3" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 115.841, 43.9396 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena3"]
 position = Vector2( 1915.55, 496.6 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="area_batalhao_inimigo" type="Area2D" parent="." groups=[
 "armadilha",
@@ -233,20 +526,20 @@ editor/display_folded = true
 "armadilha",
 ]]
 position = Vector2( 3074.36, 517.238 )
-shape = SubResource( 13 )
+shape = SubResource( 14 )
 
 [node name="animation batalhão" type="AnimationPlayer" parent="area_batalhao_inimigo"]
 autoplay = "soldies_motion"
 playback_speed = 0.5
-anims/soldies_motion = SubResource( 14 )
+anims/soldies_motion = SubResource( 15 )
 
-[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 10 )]
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 25 )]
 position = Vector2( 2031.95, 521.146 )
 
-[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 10 )]
+[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 25 )]
 position = Vector2( 190.123, 524.491 )
 
-[node name="player_SD_F3" parent="." instance=ExtResource( 11 )]
+[node name="player_SD_F3" parent="." instance=ExtResource( 26 )]
 position = Vector2( 200.607, 574.951 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]
@@ -265,6 +558,32 @@ modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 1, 1, 1, 0.764706 )
 position = Vector2( 2021.2, 531.826 )
 scale = Vector2( 1.78647, 3.04056 )
-texture = ExtResource( 12 )
+texture = ExtResource( 27 )
+
+[node name="icon2" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 1, 1, 1, 0.764706 )
+position = Vector2( 23.9076, 537.405 )
+scale = Vector2( 1.78647, 3.04056 )
+texture = ExtResource( 27 )
+
+[node name="animation_cena" type="Node" parent="."]
+
+[node name="animation_action_cena" type="AnimationPlayer" parent="animation_cena"]
+autoplay = "action_cena"
+anims/action_cena = SubResource( 16 )
+
+[node name="soldado_aliado" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 217.388, 570.559 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 1 )
+animation = "run"
+frame = 2
+playing = true
+
+[node name="som_ambiente " type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = -5.0
+autoplay = true
 [connection signal="body_entered" from="area_retorno_cena_1" to="." method="_on_area_retorno_cena_1_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena3" to="." method="_on_area_entrar_cena3_body_entered"]

@@ -568,12 +568,11 @@ frame = 3
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 615.196, 302.234 )
-rotation = 1.57065
+position = Vector2( 615.304, 302.203 )
+rotation = 1.57048
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "shoot"
-frame = 1
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]
@@ -596,7 +595,7 @@ playing = true
 
 [node name="soldado_aliado5" type="AnimatedSprite" parent="animation_cena"]
 position = Vector2( 743.193, 483.703 )
-rotation = 1.57047
+rotation = 1.57021
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "shoot"
@@ -605,31 +604,30 @@ playing = true
 flip_h = true
 
 [node name="soldado_aliado6" type="AnimatedSprite" parent="animation_cena"]
-visible = false
-position = Vector2( 1003.09, 429.913 )
-rotation = 1.64109
+position = Vector2( 140.714, 259.997 )
+rotation = 0.169284
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
-animation = "death"
-frame = 4
+animation = "run"
 playing = true
 flip_h = true
 
 [node name="soldado_aliado7" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 527.042, 1052.52 )
-rotation = 1.57047
+position = Vector2( 517.953, 1053.21 )
+rotation = 1.57051
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
-animation = "shoot"
+animation = "run"
 playing = true
 flip_h = true
 
 [node name="soldado_aliado8" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 230.811, 168.395 )
-rotation = 1.2042
+position = Vector2( 662.035, 724.188 )
+rotation = 1.57043
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
-animation = "run"
+animation = "death"
+frame = 4
 playing = true
 flip_h = true
 
@@ -649,7 +647,7 @@ limit_top = 25
 limit_right = 1430
 limit_bottom = 1125
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="som_ambiente" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 695.972, 480.723 )
 stream = ExtResource( 18 )
 autoplay = true
