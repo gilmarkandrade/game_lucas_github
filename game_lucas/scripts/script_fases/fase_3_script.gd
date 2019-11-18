@@ -24,8 +24,10 @@ func _ready():
 	if novapos == 4:
 		$player_top_down_F3.position = $position_inicio_cena3.global_position
 	if novapos == 5:
-		#$player_SD_F3.position = $position_retorno_cena3.global_position
-		pass
+		$player_top_down_F3.position = $position_retorno_cena4.global_position
+	if novapos == 6 :
+		$player_top_down_F3.position = $position_inicio_cena5.global_position
+
 func _process(delta):
 	if entrou_area_1 == true :
 		if Input.is_action_just_pressed("ui_accept") and atributos_fase_singleton.in_area_perspective == true:
@@ -42,7 +44,13 @@ func _process(delta):
 	elif entrou_area_5 == true :
 		if Input.is_action_just_pressed("ui_accept")and atributos_fase_singleton.in_area_perspective == true:
 			get_tree().change_scene("res://fases/fase_3/world_3_cena_4.tscn")
-		
+	elif entrou_area_6 == true :
+		if Input.is_action_just_pressed("ui_accept")and atributos_fase_singleton.in_area_perspective == true:
+			get_tree().change_scene("res://fases/fase_3/world_3_cena_3.tscn")	
+			
+	elif entrou_area_7 == true :
+		if Input.is_action_just_pressed("ui_accept")and atributos_fase_singleton.in_area_perspective == true:
+			get_tree().change_scene("res://fases/fase_3/world_3_cena_5.tscn")	
 #=====================================================================================================
 #                                           BODY ENTERED 
 #=====================================================================================================
@@ -85,5 +93,20 @@ func _on_area_entrar_cena4_body_entered(body):
 	if body.is_in_group("player"):
 		entrou_area_5 = true
 		entrou_area_4 = false
+		novapos = 6
+		atributos_fase_singleton.setar_posicao(novapos)
+
+
+func _on_area_retorno_cena3_body_entered(body):
+	if body.is_in_group("player"):
+		entrou_area_6 = true
+		entrou_area_7 = false
 		novapos = 5
+		atributos_fase_singleton.setar_posicao(novapos)
+
+func _on_area_entrar_cena5_body_entered(body):
+	if body.is_in_group("player"):
+		entrou_area_7 = true
+		entrou_area_6 = false
+		novapos = 6
 		atributos_fase_singleton.setar_posicao(novapos)

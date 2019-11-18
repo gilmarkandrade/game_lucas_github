@@ -1,16 +1,21 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/soldado_2_guerra_SD.gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/idle_animation/idle2.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack3.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death1.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death2.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death3.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death4.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death5.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/idle_animation/idle1.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/idle_animation/soldado 1 128 idle f1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/shoot/soldado_1_128_shooting_f1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/shoot/soldado_1_128_shooting_f2.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/shoot/soldado_1_128_shooting_f3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/shoot/soldado_1_128_shooting_f4.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/death_animation/soldado 128 death f1.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/death_animation/soldado 128 death f2.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/death_animation/soldado 128 death f3.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/death_animation/soldado 128 death f4.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/death_animation/soldado 128 death f5.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/death_animation/soldado 128 death f6.png" type="Texture" id=12]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/idle_animation/soldado 1 128 idle f2.png" type="Texture" id=13]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/idle_animation/soldado 1 128 idle f3.png" type="Texture" id=14]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/idle_animation/soldado 1 128 idle f4.png" type="Texture" id=15]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/idle_animation/soldado 1 128 idle f5.png" type="Texture" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 18.8125
@@ -18,7 +23,7 @@ height = 52.9513
 
 [sub_resource type="Animation" id=2]
 resource_name = "atack_animation_left"
-length = 0.7
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("position_projetil:position")
 tracks/0/interp = 1
@@ -29,7 +34,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( -71.9999, -7.62939e-006 ) ]
+"values": [ Vector2( -49.7559, -6.35542 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_arqueiro_SD:texture")
@@ -38,10 +43,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite_arqueiro_SD:flip_h")
@@ -53,7 +58,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("animation_arqueiro_SD:playback_speed")
@@ -62,15 +67,27 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
 "values": [ 0.5, 1.0, 0.5 ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("sprite_arqueiro_SD:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4.20903, 5.04829 ) ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "atack_animation_rigth"
-length = 0.7
+length = 0.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("position_projetil:position")
 tracks/0/interp = 1
@@ -78,10 +95,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Vector2( 65.2499, -4.50001 ) ]
+"values": [ Vector2( 65.2499, -4.50001 ), Vector2( 40.2255, -7.67772 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_arqueiro_SD:texture")
@@ -90,10 +107,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
@@ -102,7 +119,7 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.2, 0.6 ),
+"times": PoolRealArray( 0, 0.1, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 0.5, 1.0, 0.5 ]
@@ -117,12 +134,12 @@ tracks/3/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ false ]
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=4]
 resource_name = "death_animation"
-length = 1.3
+length = 1.4
 tracks/0/type = "value"
 tracks/0/path = NodePath("sprite_arqueiro_SD:texture")
 tracks/0/interp = 1
@@ -130,51 +147,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("sprite_arqueiro_SD:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9, 0.9, 1.2 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( -0.274002, 14.8008 ), Vector2( -0.274002, 16.8008 ), Vector2( 36.726, 16.8008 ), Vector2( -0.274002, 20.8008 ), Vector2( 48.726, 20.8008 ), Vector2( 53.726, 23.8008 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3, 0.9, 1.2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0.75, 1.25, 1.5, 0.3 ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "idlle_animation"
-length = 0.6
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath("sprite_arqueiro_SD:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ ExtResource( 11 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_arqueiro_SD:position")
@@ -186,7 +162,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ Vector2( -3.72136, 14.3141 ) ]
+"values": [ Vector2( 1.35503, 4.21224 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
@@ -195,17 +171,178 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1.0, 0.3 ]
+"values": [ 0.75, 1.25, 1.5, 0.3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:collision_mask")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("area_atack_rigth:collision_layer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("area_atack_rigth:collision_mask")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("area_corpo:collision_mask")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("area_corpo:collision_layer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("area_atack_left:collision_mask")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("area_atack_left:collision_layer")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "idlle_animation"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("sprite_arqueiro_SD:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("sprite_arqueiro_SD:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( -0.463334, 4.54002 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision_mask")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:collision_layer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
 }
 
 [sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 458.672, 89.4893 )
+extents = Vector2( 369.651, 89.4893 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 460.922, 96.2393 )
+extents = Vector2( 403.616, 93.0508 )
 
 [sub_resource type="CapsuleShape2D" id=8]
 radius = 19.9223
@@ -225,31 +362,29 @@ position = Vector2( -3.10179, 12.7298 )
 shape = SubResource( 1 )
 
 [node name="sprite_arqueiro_SD" type="Sprite" parent="."]
-position = Vector2( -3.72136, 14.3141 )
+position = Vector2( -0.463334, 4.54002 )
 texture = ExtResource( 2 )
+flip_h = true
 
 [node name="animation_arqueiro_SD" type="AnimationPlayer" parent="."]
-playback_speed = 0.3
 anims/atack_animation_left = SubResource( 2 )
 anims/atack_animation_rigth = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
 anims/idlle_animation = SubResource( 5 )
 
 [node name="position_projetil" type="Position2D" parent="."]
-position = Vector2( -71.9999, -7.62939e-006 )
+position = Vector2( 40.2255, -7.67772 )
 
 [node name="area_atack_left" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_atack_left"]
-position = Vector2( -492.749, -56.2499 )
+position = Vector2( -389.198, -64.2668 )
 shape = SubResource( 6 )
 
 [node name="area_atack_rigth" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_atack_rigth"]
-position = Vector2( 492.749, -56.2499 )
+position = Vector2( 422.152, -58.1006 )
 shape = SubResource( 7 )
 
 [node name="area_corpo" type="Area2D" parent="." groups=[
@@ -263,7 +398,7 @@ position = Vector2( -2.65369, 11.4756 )
 shape = SubResource( 8 )
 
 [node name="delay_atack_stop" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.1
 [connection signal="animation_finished" from="animation_arqueiro_SD" to="." method="_on_animation_arqueiro_SD_animation_finished"]
 [connection signal="body_entered" from="area_atack_left" to="." method="_on_area_atack_left_body_entered"]
 [connection signal="body_exited" from="area_atack_left" to="." method="_on_area_atack_left_body_exited"]

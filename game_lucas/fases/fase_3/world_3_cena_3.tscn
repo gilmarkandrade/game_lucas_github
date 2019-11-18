@@ -112,7 +112,6 @@ animations = [ {
 script = ExtResource( 1 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
@@ -211,6 +210,16 @@ position = Vector2( 673.496, 221.679 )
 rotation = -0.0859591
 texture = ExtResource( 5 )
 
+[node name="saco_topdown_com_tiro3" type="Sprite" parent="."]
+position = Vector2( 1377.1, 439.961 )
+rotation = -0.0859591
+texture = ExtResource( 5 )
+
+[node name="saco_topdown_com_tiro4" type="Sprite" parent="."]
+position = Vector2( 1387.07, 495.363 )
+rotation = -0.0859591
+texture = ExtResource( 5 )
+
 [node name="area_retorno_cena2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="area_retorno_cena2"]
@@ -218,10 +227,9 @@ position = Vector2( 148.286, 479.016 )
 shape = SubResource( 16 )
 
 [node name="area_entrar_cena4" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="area_entrar_cena4"]
-position = Vector2( 1315.33, 455.459 )
+position = Vector2( 1375.49, 461.598 )
 shape = SubResource( 17 )
 
 [node name="area_batalhão_inimigo" type="Area2D" parent="." groups=[
@@ -231,7 +239,7 @@ shape = SubResource( 17 )
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="area_batalhão_inimigo" groups=[
 "armadilha",
 ]]
-position = Vector2( 952.404, 461.343 )
+position = Vector2( 606.939, 472.262 )
 shape = SubResource( 18 )
 
 [node name="animation_batalhao" type="AnimationPlayer" parent="area_batalhão_inimigo"]
@@ -253,13 +261,13 @@ limit_bottom = 905
 position = Vector2( 128.31, 495.989 )
 
 [node name="position_retorno_cena4" type="Position2D" parent="."]
-position = Vector2( 1301.07, 458.151 )
+position = Vector2( 1236.5, 453.222 )
 
 [node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 7 )]
 position = Vector2( 135.407, 480.203 )
 
 [node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1316.73, 455.308 )
+position = Vector2( 1386.71, 458.991 )
 
 [node name="animation_cena" type="Node" parent="."]
 
@@ -269,7 +277,7 @@ rotation = 1.56559
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 20 )
 animation = "shoot"
-frame = 3
+frame = 1
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
@@ -278,7 +286,6 @@ rotation = 1.56559
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 20 )
 animation = "shoot"
-frame = 2
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]

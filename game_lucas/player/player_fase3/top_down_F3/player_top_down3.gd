@@ -17,14 +17,21 @@ func _physics_process(delta):
 	if death == false :
 		# olhar na direção do mouse
 		look_at(get_global_mouse_position())
-	
+		
 		if Input.is_action_just_pressed("ui_atack"):
 			$animation_player.current_animation = "atack_animation"
 			attacking = true
 		elif Input.is_action_just_pressed("ui_fire_atack") and attacking == false:
 			$delay_weapon.start()
+			if fire_stop == false :
+				$som_metralhadora.play()
+			if fire_stop == true:
+				$delay_weapon.stop()
+				
 		elif Input.is_action_just_released("ui_fire_atack"):
 			$delay_weapon.stop()
+			$som_metralhadora.stop()
+		
 		if Input.is_action_pressed("ui_left"):
 			move.x =- speed
 			if attacking == false:
@@ -108,6 +115,7 @@ func _on_area_corpo_player_area_entered(area):
 
 
 func _on_delay_weapon_timeout():
+	
 	fire_stop = atributos_player_singleton.fire_stop
 	shoot_bullet()
 			

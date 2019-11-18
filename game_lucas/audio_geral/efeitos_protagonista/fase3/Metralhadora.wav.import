@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Metralhadora.wav-03b09d96d5362f1eeb328a60d352dbd2.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_protagonista/fase3/Metralhadora.wav"
+dest_files=[ "res://.import/Metralhadora.wav-03b09d96d5362f1eeb328a60d352dbd2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

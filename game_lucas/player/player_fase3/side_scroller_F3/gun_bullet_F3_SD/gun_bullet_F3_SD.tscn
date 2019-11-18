@@ -4,8 +4,8 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 2.12907
-height = 15.2052
+radius = 3.29145
+height = 14.7262
 
 [node name="gun_bullet_F3_SD" type="Area2D" groups=[
 "projetil_player",
@@ -26,7 +26,9 @@ scale = Vector2( 0.254595, 0.0613998 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 0.500702, 0.250337 )
-scale = Vector2( 1.30041, 0.574415 )
+position = Vector2( -0.547722, -0.0548844 )
+scale = Vector2( 0.413096, 0.319865 )
 [connection signal="area_entered" from="." to="." method="_on_orb__de_fogo_SD_area_entered"]
+[connection signal="area_shape_entered" from="." to="." method="_on_gun_bullet_F3_SD_area_shape_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_gun_bullet_F3_SD_body_shape_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

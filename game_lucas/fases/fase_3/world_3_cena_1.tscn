@@ -564,15 +564,15 @@ rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "shoot"
-frame = 3
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 615.304, 302.203 )
-rotation = 1.57048
+position = Vector2( 618.701, 301.224 )
+rotation = 1.1325
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
-animation = "shoot"
+animation = "run"
+frame = 1
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]
@@ -581,7 +581,7 @@ rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "shoot"
-frame = 1
+frame = 2
 playing = true
 
 [node name="soldado_aliado4" type="AnimatedSprite" parent="animation_cena"]
@@ -590,44 +590,45 @@ rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "shoot"
-frame = 1
+frame = 2
 playing = true
 
 [node name="soldado_aliado5" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 743.193, 483.703 )
-rotation = 1.57021
+position = Vector2( 583.047, 503.357 )
+rotation = 1.56087
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
-animation = "shoot"
-frame = 3
+animation = "run"
 playing = true
 flip_h = true
 
 [node name="soldado_aliado6" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 140.714, 259.997 )
-rotation = 0.169284
+position = Vector2( 634.588, 424.729 )
+rotation = 1.79917
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "run"
+frame = 1
 playing = true
 flip_h = true
 
 [node name="soldado_aliado7" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 517.953, 1053.21 )
-rotation = 1.57051
+position = Vector2( 360.943, 265.307 )
+rotation = 3.15158
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "run"
+frame = 1
 playing = true
 flip_h = true
 
 [node name="soldado_aliado8" type="AnimatedSprite" parent="animation_cena"]
 position = Vector2( 662.035, 724.188 )
-rotation = 1.57043
+rotation = 1.56885
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "death"
-frame = 4
+frame = 1
 playing = true
 flip_h = true
 

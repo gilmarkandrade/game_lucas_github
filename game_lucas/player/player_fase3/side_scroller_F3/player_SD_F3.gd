@@ -12,7 +12,7 @@ const gravity = 9
 const UP = Vector2(0,-1)
 var get_weapon_away = atributos_fase_singleton.get_weapom_away
 var fire_stop = atributos_player_singleton.fire_stop
-var orb_fire = preload( "res://player/player_fase3/side_scroller_F3/gun_bullet_F3_SD/gun_bullet_F3_SD.tscn")
+var orb_fire = preload("res://player/player_fase3/side_scroller_F3/gun_bullet_F3_SD/gun_bullet_F3_SD.tscn")
 
 
 #========================================================
@@ -34,10 +34,13 @@ func _physics_process(delta):
 			
 		elif Input.is_action_just_pressed("ui_fire_atack"):
 			$delay_weapon.start()
-			
+			if fire_stop == false :
+				$som_metralhadora.play()
+			elif fire_stop == true:
+				$som_metralhadora.stop()
 		elif Input.is_action_just_released("ui_fire_atack"):
 			$delay_weapon.stop()
-		
+			$som_metralhadora.stop()
 		if Input.is_action_pressed("ui_right"):
 			if attacking == false :
 				move.x =+ speed
@@ -156,4 +159,4 @@ func _on_animation_Player_animation_finished(anim_name):
 
 func _on_delay_weapon_timeout():
 	fire_atack()
-	print("foi")
+	

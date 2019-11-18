@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var move = Vector2()
 var speed = 6
-var life = 100
+var life = 70
 var attacking = false
 var death = false
 var side_current = false
@@ -12,20 +12,22 @@ var arrow = preload("res://inimigos/projeteis_inimigos/bala_arma/bala_SD.tscn")
 
 func _physics_process(delta):
 	move.y += speed
-	move_and_slide(move)
+	if death == false :
+		move_and_slide(move)
+		death()
 
 func death():
 	if life <= 0:
 		death = true
 		life = 0
-		$animation_arqueiro_SD.current_animation = "death_animation"
+		$animation_arqueiro_SD.play("death_animation")
 
 func fire_atack():
 	if side_current == false and attacking == true and death == false:
-		$animation_arqueiro_SD.current_animation = "atack_animation_left"
+		$animation_arqueiro_SD.play("atack_animation_left")
 		
 	if side_current == true and attacking == true and death == false:
-		$animation_arqueiro_SD.current_animation = "atack_animation_rigth"
+		$animation_arqueiro_SD.play("atack_animation_rigth")
 
 func create_arrow():
 	var A_R_W = arrow.instance()
@@ -49,7 +51,7 @@ func _on_area_atack_left_body_entered(body):
 
 
 func _on_area_atack_left_body_exited(body):
-	if body.is_in_group("player")and death == false:
+	if body.is_in_group("player") and death == false:
 		attacking = false
 		are_in_area = false
 		$delay_atack_stop.start()
@@ -81,10 +83,10 @@ func _on_area_corpo_area_entered(area):
 	if area.is_in_group("arma_player") and death == false:
 		life -= (atributos_player_singleton.life_enemie_update +30)
 		
-	if area.is_in_group("projetil_player"):
+	if area.is_in_group("projetil_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
+		death()
 		
-	
 
 
 func _on_delay_atack_stop_timeout():

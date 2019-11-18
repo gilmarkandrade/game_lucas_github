@@ -32,5 +32,11 @@ func _on_flecha_body_entered(body):
 		atributos_player_singleton.player_life_update(damage)
 		stop = true
 		queue_free()
-		
 	
+	
+
+
+func _on_bala_arma_body_shape_entered(body_id, body, body_shape, area_shape):
+	if body.is_in_group("bloqueio"):
+		queue_free()
+		stop = true
