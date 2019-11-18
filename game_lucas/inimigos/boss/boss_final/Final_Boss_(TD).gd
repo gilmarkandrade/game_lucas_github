@@ -11,9 +11,9 @@ var velocity = 50
 var attack_probability = RandomNumberGenerator.new()
 var attack_type = 0
 var oi = false
-var shot = preload("res://inimigos/boss/boss_final/shot.tscn")
-var missil = preload("res://inimigos/boss/boss_final/Missil(TD).tscn")
-var laser = preload("res://inimigos/boss/boss_final/laser.tscn")
+var shot = preload("res://inimigos/projeteis_inimigos/shot_final_boss/shot.tscn")
+var missil = preload("res://inimigos/projeteis_inimigos/missil_final_boss/top_down/Missil(TD).tscn")
+var laser = preload("res://inimigos/projeteis_inimigos/laser_final_boss/laser.tscn")
 var impulse = false
 var go_up = true
 
@@ -62,11 +62,9 @@ func generate_attack():
 
 func attack1():
 	var TIRO1 = shot.instance()
-	TIRO1.side = false
 	get_parent().add_child(TIRO1)
 	TIRO1.position = $cannon_fire1.global_position
 	var TIRO2 = shot.instance()
-	TIRO2.side = false
 	get_parent().add_child(TIRO2)
 	TIRO2.position = $cannon_fire2.global_position
 	$delay_attack1.start()

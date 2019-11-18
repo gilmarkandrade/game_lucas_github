@@ -34,6 +34,8 @@ texture = ExtResource( 2 )
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 editor/display_folded = true
 position = Vector2( 174.902, 429.129 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 shape = SubResource( 2 )
@@ -44,8 +46,9 @@ scale = Vector2( 2.93931, 0.422334 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 801.909, 450.034 )
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 shape = SubResource( 3 )
@@ -56,9 +59,10 @@ scale = Vector2( 4.16828, 0.494679 )
 texture = ExtResource( 2 )
 
 [node name="Final_Boss" parent="." instance=ExtResource( 3 )]
-position = Vector2( 454.915, 523.284 )
+position = Vector2( 442.327, 493.074 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 4 )]
 
@@ -67,6 +71,8 @@ position = Vector2( 454.915, 523.284 )
 [node name="player_SD_F2" parent="." instance=ExtResource( 6 )]
 editor/display_folded = true
 position = Vector2( 170.765, 352.914 )
+collision_layer = 5
+collision_mask = 5
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F2"]
 position = Vector2( 13.6558, 99.8991 )
