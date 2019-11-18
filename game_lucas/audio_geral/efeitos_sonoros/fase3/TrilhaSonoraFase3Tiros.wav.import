@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TrilhaSonoraFase3Tiros.wav-3e6e832d4985c0cdc07070cdedffcd5c.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav"
+dest_files=[ "res://.import/TrilhaSonoraFase3Tiros.wav-3e6e832d4985c0cdc07070cdedffcd5c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0
