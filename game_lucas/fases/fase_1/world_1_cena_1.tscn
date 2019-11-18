@@ -215,7 +215,6 @@ emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
 gravity = Vector3( 0, 98, 0 )
-angular_velocity = 68.0
 orbit_velocity = 0.1
 orbit_velocity_random = 0.0
 linear_accel = 100.0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Marcha.wav-e24e570e18bb26de4fe587b1c89c06e8.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/fase3/Marcha.wav"
+dest_files=[ "res://.import/Marcha.wav-e24e570e18bb26de4fe587b1c89c06e8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

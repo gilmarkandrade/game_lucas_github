@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TrilhaSonoraFase5.wav-6cfedef5f870b069e36bd16a5b9f546e.sample"
+
+[deps]
+
+source_file="res://audio_geral/trilhas/TrilhaSonoraFase5.wav"
+dest_files=[ "res://.import/TrilhaSonoraFase5.wav-6cfedef5f870b069e36bd16a5b9f546e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

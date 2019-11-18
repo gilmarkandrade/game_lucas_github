@@ -23,7 +23,6 @@ config/icon="res://icon.png"
 
 atributos_player_singleton="*res://scripts/script_GAME_SINGLETON/atributos_player_singleton.gd"
 atributos_fase_singleton="*res://scripts/script_GAME_SINGLETON/atributos_fase_singleton.gd"
-atributos_final_boss_singleton="*res://scripts/script_GAME_SINGLETON/atributos_final_boss_singleton.gd"
 
 [display]
 

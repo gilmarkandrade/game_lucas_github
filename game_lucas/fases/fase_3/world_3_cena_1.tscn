@@ -1,22 +1,23 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown.png" type="Texture" id=3]
 [ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown_com_tiro.png" type="Texture" id=4]
-[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=5]
-[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=6]
-[ext_resource path="res://assets_game/background/fase_3/cena_1/back_ground_top_down.png" type="Texture" id=7]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0012.png" type="Texture" id=8]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0013.png" type="Texture" id=9]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0014.png" type="Texture" id=10]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0015.png" type="Texture" id=11]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0016.png" type="Texture" id=12]
-[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0009.png" type="Texture" id=13]
-[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0007.png" type="Texture" id=14]
-[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0008.png" type="Texture" id=15]
-[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0002.png" type="Texture" id=16]
-[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=17]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets_game/background/fase_3/cena_1/back_ground_top_down.png" type="Texture" id=6]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0012.png" type="Texture" id=7]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0013.png" type="Texture" id=8]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0014.png" type="Texture" id=9]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0015.png" type="Texture" id=10]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0016.png" type="Texture" id=11]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0009.png" type="Texture" id=12]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0007.png" type="Texture" id=13]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0008.png" type="Texture" id=14]
+[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0002.png" type="Texture" id=15]
+[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=16]
+[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=17]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 555.395 )
@@ -39,13 +40,13 @@ extents = Vector2( 8.08069, 54.9797 )
 [sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 99.5144, 568.913 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 72.226, 10 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 19.4398, 70.5828 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 112.516, 49.042 )
 
 [sub_resource type="Animation" id=11]
@@ -203,10 +204,10 @@ tracks/12/loop_wrap = true
 tracks/12/imported = false
 tracks/12/enabled = true
 tracks/12/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 5, 5.5, 6.2, 6.8, 7.4, 7.9, 9, 9.5, 9.9, 10.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 743.193, 483.703 ) ]
+"values": [ Vector2( 743.193, 483.703 ), Vector2( 743.193, 483.703 ), Vector2( -187.161, 816.144 ), Vector2( 130.672, 732.509 ), Vector2( 131.853, 314.539 ), Vector2( 176.084, 166.642 ), Vector2( 359.701, 210.672 ), Vector2( 400.406, 518.307 ), Vector2( 440.795, 519.714 ), Vector2( 477.221, 516.344 ), Vector2( 743.193, 483.703 ) ]
 }
 tracks/13/type = "value"
 tracks/13/path = NodePath("soldado_aliado5:rotation_degrees")
@@ -215,10 +216,10 @@ tracks/13/loop_wrap = true
 tracks/13/imported = false
 tracks/13/enabled = true
 tracks/13/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 5, 6.2, 6.8, 7.4, 7.9, 9, 9.5, 9.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 89.9815 ]
+"values": [ 89.9815, 89.9815, 0.368837, 9.63911, 89.205, 180.174, 179.926, 89.2264, 89.3472 ]
 }
 tracks/14/type = "value"
 tracks/14/path = NodePath("soldado_aliado5:animation")
@@ -227,161 +228,202 @@ tracks/14/loop_wrap = true
 tracks/14/imported = false
 tracks/14/enabled = true
 tracks/14/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3.5, 6, 10.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "shoot" ]
+"values": [ "shoot", "death", "run", "shoot" ]
 }
 tracks/15/type = "value"
-tracks/15/path = NodePath("soldado_aliado6:animation")
+tracks/15/path = NodePath("soldado_aliado7:animation")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/imported = false
 tracks/15/enabled = true
 tracks/15/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 4, 7.5, 12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ "run" ]
+"values": [ "shoot", "death", "run", "shoot" ]
 }
 tracks/16/type = "value"
-tracks/16/path = NodePath("soldado_aliado6:position")
+tracks/16/path = NodePath("soldado_aliado7:position")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/imported = false
 tracks/16/enabled = true
 tracks/16/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3.9, 4, 7, 7.5, 8, 8.9, 9.5, 10.1, 11.2, 11.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( -172.078, 939.703 ) ]
+"values": [ Vector2( 527.042, 1052.52 ), Vector2( 527.042, 1052.52 ), Vector2( 470.042, 1044.52 ), Vector2( 470.042, 1044.52 ), Vector2( -188.814, 1045.62 ), Vector2( 139.833, 794.103 ), Vector2( 133.342, 250.897 ), Vector2( 191.087, 155.883 ), Vector2( 359.89, 209.082 ), Vector2( 374.64, 996.767 ), Vector2( 453.413, 1058.08 ) ]
 }
 tracks/17/type = "value"
-tracks/17/path = NodePath("soldado_aliado6:rotation_degrees")
+tracks/17/path = NodePath("soldado_aliado7:rotation_degrees")
 tracks/17/interp = 1
 tracks/17/loop_wrap = true
 tracks/17/imported = false
 tracks/17/enabled = true
 tracks/17/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 3.9, 4, 7, 7.5, 8, 8.9, 9.5, 10.1, 11.2, 11.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ 89.9815 ]
+"values": [ 89.9815, 89.9815, 0.0, 0.0, 90.0, 42.2551, -0.0727654, 89.8699, 180.644, 179.641, 90.0 ]
 }
 tracks/18/type = "value"
-tracks/18/path = NodePath("soldado_aliado7:animation")
+tracks/18/path = NodePath("soldado_aliado8:animation")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/imported = false
 tracks/18/enabled = true
 tracks/18/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "run" ]
-}
-tracks/19/type = "value"
-tracks/19/path = NodePath("soldado_aliado7:position")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( -283.121, 953.444 ) ]
-}
-tracks/20/type = "value"
-tracks/20/path = NodePath("soldado_aliado7:rotation_degrees")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ 89.9815 ]
-}
-tracks/21/type = "value"
-tracks/21/path = NodePath("soldado_aliado8:animation")
-tracks/21/interp = 1
-tracks/21/loop_wrap = true
-tracks/21/imported = false
-tracks/21/enabled = true
-tracks/21/keys = {
 "times": PoolRealArray( 0, 6.9, 10 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ "run", "shoot", "death" ]
 }
-tracks/22/type = "value"
-tracks/22/path = NodePath("soldado_aliado8:position")
-tracks/22/interp = 1
-tracks/22/loop_wrap = true
-tracks/22/imported = false
-tracks/22/enabled = true
-tracks/22/keys = {
+tracks/19/type = "value"
+tracks/19/path = NodePath("soldado_aliado8:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
 "times": PoolRealArray( 0, 0.7, 1.5, 2, 2.5, 3.2, 4, 4.9, 5.5, 6, 6.5, 6.8, 12 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Vector2( -225.717, 949.227 ), Vector2( 104.331, 870.302 ), Vector2( 144.612, 308.892 ), Vector2( 86.7085, 215.743 ), Vector2( 262.936, 157.84 ), Vector2( 356.084, 177.98 ), Vector2( 368.672, 462.462 ), Vector2( 416.505, 532.953 ), Vector2( 447.263, 532.953 ), Vector2( 508.066, 538.755 ), Vector2( 626.971, 702.76 ), Vector2( 662.035, 724.188 ), Vector2( 662.035, 724.188 ) ]
 }
-tracks/23/type = "value"
-tracks/23/path = NodePath("soldado_aliado8:rotation_degrees")
-tracks/23/interp = 1
-tracks/23/loop_wrap = true
-tracks/23/imported = false
-tracks/23/enabled = true
-tracks/23/keys = {
+tracks/20/type = "value"
+tracks/20/path = NodePath("soldado_aliado8:rotation_degrees")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
 "times": PoolRealArray( 0, 1.5, 2, 2.5, 3.2, 4, 4.9, 5.5, 6, 6.5, 6.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ 89.9815, -0.808209, -25.7491, 90.1174, 167.846, 180.088, 89.8255, 89.8255, 89.8255, 123.688, 89.7158 ]
 }
-tracks/24/type = "value"
-tracks/24/path = NodePath("soldado_aliado2:visible")
-tracks/24/interp = 1
-tracks/24/loop_wrap = true
-tracks/24/imported = false
-tracks/24/enabled = true
-tracks/24/keys = {
+tracks/21/type = "value"
+tracks/21/path = NodePath("soldado_aliado2:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
 "times": PoolRealArray( 0, 4.2, 4.6 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ true, false, true ]
 }
-tracks/25/type = "value"
-tracks/25/path = NodePath("soldado_aliado8:visible")
-tracks/25/interp = 1
-tracks/25/loop_wrap = true
-tracks/25/imported = false
-tracks/25/enabled = true
-tracks/25/keys = {
+tracks/22/type = "value"
+tracks/22/path = NodePath("soldado_aliado8:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
 "times": PoolRealArray( 0, 12 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
+tracks/23/type = "value"
+tracks/23/path = NodePath("soldado_aliado7:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 6.9, 7.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("soldado_aliado5:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 5, 6.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
 
 [sub_resource type="SpriteFrames" id=12]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ],
 "loop": false,
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 12 ) ],
 "loop": true,
 "name": "shoot",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "run",
 "speed": 3.01
 } ]
+
+[sub_resource type="Animation" id=13]
+resource_name = "soldie_runanddeath"
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("soldado_aliado6:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5, 1.9, 2.2, 2.8, 3, 3.2, 3.4, 3.8, 4.2, 4.6, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 90.1861, 0.290816, -4.00578, 91.7186, 179.826, 119.406, 89.6516, 89.6516, 112.537, 70.3649, 95.1248, 94.0273, 94.0273 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("soldado_aliado6:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.5, 1.9, 2.2, 2.8, 3, 3.2, 3.4, 3.8, 4.6, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -239.32, 810.078 ), Vector2( 125.252, 673.132 ), Vector2( 124.621, 278.53 ), Vector2( 237.026, 149.082 ), Vector2( 368.42, 256.418 ), Vector2( 401.731, 448.882 ), Vector2( 431.341, 430.376 ), Vector2( 479.457, 422.973 ), Vector2( 599.747, 435.928 ), Vector2( 755.199, 385.961 ), Vector2( 1003.09, 429.913 ), Vector2( 1003.09, 429.913 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("soldado_aliado6:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("soldado_aliado6:animation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4.6, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "run", "death", "death" ]
+}
 
 [node name="world_3_cena_1" type="Node"]
 script = ExtResource( 1 )
@@ -426,13 +468,13 @@ shape = SubResource( 7 )
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 220.966, 47.867 )
 rotation = 0.416552
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="barreiras"]
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 563.719, 1086.2 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
 
 [node name="saco_topdown" type="Sprite" parent="barreiras"]
 position = Vector2( 256.223, 1087.4 )
@@ -484,23 +526,12 @@ position = Vector2( 186.965, 2.7019 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena2"]
 position = Vector2( 402.933, 1074.95 )
-shape = SubResource( 8 )
+shape = SubResource( 10 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D2"]
-
-[node name="player_top_down_F3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 161.686, 944.79 )
-scale = Vector2( 0.6, 0.6 )
-
-[node name="Camera2D" type="Camera2D" parent="player_top_down_F3"]
-current = true
-limit_left = 50
-limit_top = 25
-limit_right = 1430
-limit_bottom = 1125
 
 [node name="position_inicio_cena1" type="Position2D" parent="."]
 position = Vector2( 110.016, 772.505 )
@@ -508,7 +539,7 @@ position = Vector2( 110.016, 772.505 )
 [node name="position_retorno_cena1" type="Position2D" parent="."]
 position = Vector2( 382.867, 1082.4 )
 
-[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 6 )]
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 5 )]
 position = Vector2( 563.591, 1096.8 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -518,7 +549,7 @@ position = Vector2( 563.591, 1096.8 )
 [node name="Trincheira_topDown" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 747.032, 575.474 )
 scale = Vector2( 2.32358, 2.7441 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="animation_cena" type="Node" parent="."]
 
@@ -537,12 +568,11 @@ frame = 3
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 615.196, 302.234 )
-rotation = 1.57074
+position = Vector2( 615.304, 302.203 )
+rotation = 1.57048
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
-animation = "death"
-frame = 4
+animation = "shoot"
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]
@@ -565,36 +595,60 @@ playing = true
 
 [node name="soldado_aliado5" type="AnimatedSprite" parent="animation_cena"]
 position = Vector2( 743.193, 483.703 )
-rotation = 1.57047
+rotation = 1.57021
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "shoot"
-frame = 2
+frame = 3
 playing = true
 flip_h = true
 
 [node name="soldado_aliado6" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( -172.078, 939.703 )
-rotation = 1.57047
-scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
-animation = "run"
-playing = true
-
-[node name="soldado_aliado7" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( -283.121, 953.444 )
-rotation = 1.57047
-scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
-animation = "run"
-playing = true
-
-[node name="soldado_aliado8" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 362.765, 328.97 )
-rotation = 3.04287
+position = Vector2( 140.714, 259.997 )
+rotation = 0.169284
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 12 )
 animation = "run"
 playing = true
 flip_h = true
+
+[node name="soldado_aliado7" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 517.953, 1053.21 )
+rotation = 1.57051
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "run"
+playing = true
+flip_h = true
+
+[node name="soldado_aliado8" type="AnimatedSprite" parent="animation_cena"]
+position = Vector2( 662.035, 724.188 )
+rotation = 1.57043
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 12 )
+animation = "death"
+frame = 4
+playing = true
+flip_h = true
+
+[node name="animation_soldado_separdo" type="AnimationPlayer" parent="animation_cena"]
+autoplay = "soldie_runanddeath"
+playback_speed = 0.7
+anims/soldie_runanddeath = SubResource( 13 )
+
+[node name="player_top_down_F3" parent="." instance=ExtResource( 17 )]
+position = Vector2( 161.686, 944.79 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="Camera2D" type="Camera2D" parent="player_top_down_F3"]
+current = true
+limit_left = 50
+limit_top = 25
+limit_right = 1430
+limit_bottom = 1125
+
+[node name="som_ambiente" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 695.972, 480.723 )
+stream = ExtResource( 18 )
+autoplay = true
 [connection signal="body_entered" from="area_entrar_cena2" to="." method="_on_area_entrar_cena2_body_entered"]

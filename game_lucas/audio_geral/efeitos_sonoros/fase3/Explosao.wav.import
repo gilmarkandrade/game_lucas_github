@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Explosao.wav-fba45b816bc99cf89403210ba958cad7.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/fase3/Explosao.wav"
+dest_files=[ "res://.import/Explosao.wav-fba45b816bc99cf89403210ba958cad7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
