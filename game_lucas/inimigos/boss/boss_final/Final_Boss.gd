@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 func walking_mech():
 	if walking == true:
-		move.x = 8
+		move.x = 20
 		$animation.current_animation = "walk_animaton"
 		$delay_attack1.paused
 	else :
@@ -54,11 +54,11 @@ func generate_attack():
 	#$delay_attack2.start()
 	#$animation.current_animation = "missil_attack"
 	#if attack_type == 2 :
-	#$delay_attack3.start()
-	#$animation.current_animation = "medium_charge"
+	$delay_attack3.start()
+	$animation.current_animation = "medium_charge"
 	#if attack_type == 3 :
-	$delay_attack4.start()
-	$animation.current_animation = "laser_down"
+	#$delay_attack4.start()
+	#$animation.current_animation = "laser_down"
 
 func attack1():
 	var TIRO = shot.instance()
