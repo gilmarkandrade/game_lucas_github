@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets_game/background/fase_5/cena_3/Cano-8.png(1).png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 540.049, 24.1351 )
+
+[node name="chao_final_boss_cena_1" type="StaticBody2D"]
+position = Vector2( 540, 615.56 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.115177, 0.16635 )
+scale = Vector2( 33.7628, 1.49726 )
+texture = ExtResource( 1 )

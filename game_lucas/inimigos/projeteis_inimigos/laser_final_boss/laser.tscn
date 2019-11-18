@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://inimigos/projeteis_inimigos/laser_final_boss/laser.gd" type="Script" id=1]
-[ext_resource path="res://inimigos/projeteis_inimigos/laser_final_boss/laser.jpg" type="Texture" id=2]
+[ext_resource path="res://inimigos/projeteis_inimigos/laser_final_boss/laser2.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 165.36, 15.5522 )

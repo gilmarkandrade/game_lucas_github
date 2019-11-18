@@ -1,14 +1,13 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://inimigos/projeteis_inimigos/missil_final_boss/side_scroll/Missil.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/projeteis_inimigos/missil_final_boss/missile.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
 [node name="missil" type="Area2D" groups=[
 "projetil_inimigo",
 ]]
-modulate = Color( 0.968627, 1, 0, 1 )
 rotation = 0.461072
 z_index = -1
 collision_layer = 4
@@ -23,9 +22,10 @@ shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 
-[node name="sprite_flecha" type="Sprite" parent="."]
-position = Vector2( 2.49926, 0.499848 )
-scale = Vector2( 0.578126, 0.234376 )
+[node name="sprite_missil" type="Sprite" parent="."]
+position = Vector2( 3.40205, 0.314882 )
+rotation = -0.660656
+scale = Vector2( 0.522737, 0.463115 )
 texture = ExtResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_flecha_body_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

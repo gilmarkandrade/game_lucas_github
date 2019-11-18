@@ -28,10 +28,10 @@ func move_projetil1():
 			up = false
 	else:
 		motion.y += 0.06
-		$sprite_flecha.rotation -= 0.015
-		if $sprite_flecha.rotation < -2:
-			$sprite_flecha.rotation = -2
-	print($sprite_flecha.rotation)
+		$".".rotation -= 0.015
+		if $".".rotation < -1:
+			$".".rotation = -1
+	print($".".rotation)
 	translate(motion)
 
 func move_projetil2():
@@ -43,10 +43,9 @@ func move_projetil2():
 			up = false
 	else:
 		motion.y += 0.06
-		$sprite_flecha.rotation -= 0.015
-		if $sprite_flecha.rotation < -2:
-			$sprite_flecha.rotation = -2
-	print($sprite_flecha.rotation)
+		$".".rotation -= 0.015
+		if $".".rotation < -1:
+			$".".rotation = -1
 	translate(motion)
 
 func move_projetil3():
@@ -58,10 +57,9 @@ func move_projetil3():
 			up = false
 	else:
 		motion.y += 0.06
-		$sprite_flecha.rotation -= 0.015
-		if $sprite_flecha.rotation < -2:
-			$sprite_flecha.rotation = -2
-	print($sprite_flecha.rotation)
+		$".".rotation -= 0.015
+		if $".".rotation < -1:
+			$".".rotation = -1
 	translate(motion)
 
 func _on_VisibilityNotifier2D_screen_exited():
@@ -73,5 +71,3 @@ func _on_flecha_body_entered(body):
 		atributos_player_singleton.player_life_update(damage)
 		stop = true
 		queue_free()
-		
-	
