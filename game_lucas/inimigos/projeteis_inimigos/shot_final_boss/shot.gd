@@ -1,7 +1,7 @@
 extends Area2D
 var motion = Vector2() 
 var speed = 1.5
-var damage = 8
+var damage = 10
 var stop = false
 
 
