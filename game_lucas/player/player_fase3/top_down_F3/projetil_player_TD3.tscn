@@ -20,6 +20,8 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="sprite_projetil" type="Sprite" parent="."]
+modulate = Color( 0.67451, 0.666667, 0, 1 )
+self_modulate = Color( 1, 1, 0.960784, 1 )
 position = Vector2( -0.175836, 0.129961 )
 scale = Vector2( 0.376986, 0.0802266 )
 texture = ExtResource( 2 )

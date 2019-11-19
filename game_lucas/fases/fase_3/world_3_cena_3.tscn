@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_3/cena_3/Trincheira_topdown_caminhos.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=17]
 [ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste pronto.png" type="Texture" id=18]
 [ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=19]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado_2_guerra_TD.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 698.983, 10 )
@@ -311,5 +312,10 @@ texture = ExtResource( 18 )
 stream = ExtResource( 19 )
 volume_db = -3.0
 autoplay = true
+
+[node name="soldado(T_D)" parent="." instance=ExtResource( 20 )]
+position = Vector2( 859.757, 296.562 )
+rotation = -1.5927
+seguir = false
 [connection signal="body_entered" from="area_retorno_cena2" to="." method="_on_area_retorno_cena2_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena4" to="." method="_on_area_entrar_cena4_body_entered"]

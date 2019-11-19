@@ -14,7 +14,7 @@ func _ready():
 func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
-	if death == false :
+	if death == false and atributos_player_singleton.stop_player == false:
 		# olhar na direção do mouse
 		look_at(get_global_mouse_position())
 		
@@ -26,7 +26,7 @@ func _physics_process(delta):
 			if fire_stop == false :
 				$som_metralhadora.play()
 			if fire_stop == true:
-				$delay_weapon.stop()
+				$som_metralhadora.stop()
 				
 		elif Input.is_action_just_released("ui_fire_atack"):
 			$delay_weapon.stop()

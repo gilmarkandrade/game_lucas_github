@@ -356,12 +356,12 @@ z_index = 1
 texture = ExtResource( 3 )
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
-position = Vector2( 139.489, 182.379 )
+position = Vector2( -1612.44, 185.839 )
 scale = Vector2( 0.7, 0.7 )
 z_index = -1
 frames = SubResource( 1 )
 animation = "run"
-frame = 4
+frame = 5
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
@@ -369,7 +369,7 @@ position = Vector2( 98.7267, 122.238 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "shoot"
-frame = 2
+frame = 1
 playing = true
 
 [node name="ParallaxLayer_soldado" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -378,22 +378,22 @@ motion_scale = Vector2( 0.6, 1 )
 motion_mirroring = Vector2( 1792.36, 0 )
 
 [node name="soldado_aliado4" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_soldado"]
-position = Vector2( -613.723, 176.95 )
+position = Vector2( -2146.95, 191.768 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 4
+frame = 5
 playing = true
 
 [node name="ParallaxLayer_trincheira" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 1799, 0 )
 
 [node name="soldado_aliado5" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
-position = Vector2( -418.432, 262.09 )
+position = Vector2( -1724.26, 254.266 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 4
+frame = 5
 playing = true
 
 [node name="soldado_aliado6" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
@@ -402,6 +402,7 @@ position = Vector2( -1893.25, 253.254 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
+frame = 3
 playing = true
 
 [node name="Trincheira_sidescroleer" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
@@ -594,11 +595,11 @@ autoplay = "action_cena"
 anims/action_cena = SubResource( 16 )
 
 [node name="soldado_aliado" type="AnimatedSprite" parent="animation_cena"]
-position = Vector2( 294.907, 571.094 )
+position = Vector2( 33.027, 569.285 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
-animation = "shoot"
-frame = 1
+animation = "run"
+frame = 5
 playing = true
 
 [node name="som_ambiente " type="AudioStreamPlayer" parent="."]
