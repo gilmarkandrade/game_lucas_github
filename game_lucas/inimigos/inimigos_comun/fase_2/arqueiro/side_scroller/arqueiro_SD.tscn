@@ -1,16 +1,17 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/arqueiro_SD.gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack1.png" type="Texture" id=2]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png" type="Texture" id=3]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack3.png" type="Texture" id=4]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death1.png" type="Texture" id=5]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death2.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death3.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death4.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death5.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/idle_animation/idle1.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/idle_animation/idle1.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack2_4.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/attack_animation/attack3.png" type="Texture" id=5]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death1.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death2.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death3.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death4.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/death_animation/death5.png" type="Texture" id=10]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/side_scroller/idle_animation/idle2.png" type="Texture" id=11]
+[ext_resource path="res://audio_geral/efeitos_sonoros/SomDeMorte2.wav" type="AudioStream" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 20.2789
@@ -41,7 +42,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("sprite_arqueiro_SD:flip_h")
@@ -93,7 +94,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 4 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("animation_arqueiro_SD:playback_speed")
@@ -133,7 +134,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3, 0.6, 0.9, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ]
+"values": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_arqueiro_SD:position")
@@ -159,6 +160,18 @@ tracks/2/keys = {
 "update": 1,
 "values": [ 0.75, 1.25, 1.5, 0.3 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("som morte:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=5]
 resource_name = "idlle_animation"
@@ -174,7 +187,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 11 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("sprite_arqueiro_SD:position")
@@ -230,7 +243,6 @@ texture = ExtResource( 2 )
 flip_h = true
 
 [node name="animation_arqueiro_SD" type="AnimationPlayer" parent="."]
-playback_speed = 0.5
 anims/atack_animation_left = SubResource( 2 )
 anims/atack_animation_rigth = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -263,6 +275,10 @@ shape = SubResource( 8 )
 
 [node name="delay_atack_stop" type="Timer" parent="."]
 wait_time = 2.0
+
+[node name="som morte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+attenuation = 1.23114
 [connection signal="animation_finished" from="animation_arqueiro_SD" to="." method="_on_animation_arqueiro_SD_animation_finished"]
 [connection signal="body_entered" from="area_atack_left" to="." method="_on_area_atack_left_body_entered"]
 [connection signal="body_exited" from="area_atack_left" to="." method="_on_area_atack_left_body_exited"]

@@ -64,7 +64,7 @@ func _physics_process(delta):
 				$animation_Player.current_animation = "idlle_animation"
 				
 		if is_on_floor():
-			if Input. is_action_just_pressed("ui_up"):
+			if Input. is_action_just_pressed("ui_jump"):
 				move.y = jump_force
 					
 		else:

@@ -1,13 +1,13 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/script_H_C/homen_das_cavernas(s_d).gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/damage_animation/damage.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death1.png" type="Texture" id=2]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack1.png" type="Texture" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack2.png" type="Texture" id=4]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack3.png" type="Texture" id=5]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack4.png" type="Texture" id=6]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/attack_animation/attack5.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death1.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/damage_animation/damage.png" type="Texture" id=8]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death2.png" type="Texture" id=9]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death3.png" type="Texture" id=10]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/death_animation/death4.png" type="Texture" id=11]
@@ -17,6 +17,7 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk2.png" type="Texture" id=15]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk3.png" type="Texture" id=16]
 [ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/side_scroller/walk_animation/walk4.png" type="Texture" id=17]
+[ext_resource path="res://audio_geral/efeitos_sonoros/DanoInimigo.wav" type="AudioStream" id=18]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 24.771
@@ -139,7 +140,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 2 ) ]
+"values": [ ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("area_arma_inimigo/CollisionShape2D:position")
@@ -166,7 +167,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1, 1.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_H_C:playback_speed")
@@ -191,6 +192,18 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ Vector2( 87.4637, -9.69803 ), Vector2( 86.849, 15.8125 ), Vector2( 88.6932, 39.479 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("som_morte:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -308,7 +321,7 @@ position = Vector2( 0, 5 )
 shape = SubResource( 1 )
 
 [node name="animation_H_C" type="AnimationPlayer" parent="."]
-playback_speed = 0.5
+playback_speed = 2.5
 anims/atack_left_animation = SubResource( 2 )
 anims/atack_rigth_animation = SubResource( 3 )
 anims/damage_animation = SubResource( 4 )
@@ -383,8 +396,12 @@ position = Vector2( -89, 8 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.168627, 0.937255, 0.2, 1 )
-position = Vector2( 88.6932, -7.85389 )
+position = Vector2( 87.4637, -9.69803 )
 shape = SubResource( 13 )
+
+[node name="som_morte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 18 )
+pitch_scale = 0.7
 [connection signal="animation_finished" from="animation_H_C" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="body_entered" from="area_lado_esquerdo_move" to="." method="_on_area_lado_esquerdo_move_body_entered"]
 [connection signal="body_entered" from="area_lado_direito_move" to="." method="_on_area_lado_direito_move_body_entered"]

@@ -25,9 +25,11 @@ func _physics_process(delta):
 			attacking = true
 		elif Input.is_action_just_pressed("ui_fire_atack") and attacking == false:
 			$delay_metralhadora.start()
+			
+			
 		elif Input.is_action_just_released("ui_fire_atack"):
 			$delay_metralhadora.stop()
-			
+			$som_arma.stop()
 		if Input.is_action_pressed("ui_left"):
 			move.x =- speed
 			if attacking == false:
@@ -68,7 +70,8 @@ func _on_animation_player_animation_finished(anim_name):
 
 
 func shoot_bullet():
-	
+	if fire_stop == false :
+				$som_arma.play()
 	if fire_stop == false :#and atributos_fase_singleton. get_weapom_away == true:
 		var B_L = bullet. instance()
 		get_parent().add_child(B_L)
