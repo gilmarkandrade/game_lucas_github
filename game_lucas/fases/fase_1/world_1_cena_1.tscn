@@ -215,6 +215,7 @@ emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
 gravity = Vector3( 0, 98, 0 )
+angular_velocity = 1.05
 orbit_velocity = 0.1
 orbit_velocity_random = 0.0
 linear_accel = 100.0
@@ -518,10 +519,10 @@ position = Vector2( 529.185, -59.775 )
 stream = ExtResource( 22 )
 volume_db = -10.0
 autoplay = true
-[connection signal="body_entered" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_entered"]
 [connection signal="body_entered" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_entered"]
-[connection signal="body_exited" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_exited"]
+[connection signal="body_entered" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_entered"]
 [connection signal="body_exited" from="area_fim_cena1" to="area_fim_cena1" method="_on_area_fim_cena1_body_exited"]
+[connection signal="body_exited" from="area_fim_cena1" to="." method="_on_area_fim_cena1_body_exited"]
 [connection signal="body_entered" from="area_fim_cena1/area_tutorial_jump" to="area_fim_cena1" method="_on_area_tutorial_jump_body_entered"]
 [connection signal="body_exited" from="area_fim_cena1/area_tutorial_jump" to="area_fim_cena1" method="_on_area_tutorial_jump_body_exited"]
 [connection signal="body_entered" from="area_fim_cena1/area_tutorial_ataque" to="area_fim_cena1" method="_on_area_tutorial_ataque_body_entered"]

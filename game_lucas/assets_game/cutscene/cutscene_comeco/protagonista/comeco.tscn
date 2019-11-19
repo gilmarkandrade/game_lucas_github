@@ -297,10 +297,10 @@ current = true
 zoom = Vector2( 0.55, 0.62 )
 
 [node name="protagonista_animated" type="AnimatedSprite" parent="."]
-position = Vector2( 412.574, 354.07 )
+position = Vector2( 610.768, 352.335 )
 frames = SubResource( 2 )
-animation = "walking"
-frame = 13
+animation = "fly"
+frame = 5
 playing = true
 
 [node name="beco_escuro_so_sombra" type="Sprite" parent="."]
@@ -309,15 +309,12 @@ position = Vector2( 427.666, 317.65 )
 texture = ExtResource( 40 )
 
 [node name="portal" type="Sprite" parent="."]
-visible = false
 position = Vector2( 668.452, 359.999 )
-scale = Vector2( 0.257149, 0.240007 )
+scale = Vector2( 0.75, 0.7 )
 texture = ExtResource( 41 )
 
 [node name="particula_portal2" parent="." instance=ExtResource( 42 )]
-visible = false
-position = Vector2( 639.203, 323.573 )
-scale = Vector2( 0.239378, 0.219382 )
+position = Vector2( 610.843, 242.254 )
 process_material = SubResource( 7 )
 
 [node name="som_passo" type="AudioStreamPlayer" parent="."]
