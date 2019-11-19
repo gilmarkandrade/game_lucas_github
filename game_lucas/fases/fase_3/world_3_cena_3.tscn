@@ -1,25 +1,29 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_3/cena_3/Trincheira_topdown_caminhos.png" type="Texture" id=2]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets_game/background/fase_3/cena_3/Carro.png" type="Texture" id=4]
 [ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown_com_tiro.png" type="Texture" id=5]
-[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=6]
-[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=7]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0012.png" type="Texture" id=8]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0013.png" type="Texture" id=9]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0014.png" type="Texture" id=10]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0015.png" type="Texture" id=11]
-[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0016.png" type="Texture" id=12]
-[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0009.png" type="Texture" id=13]
-[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0007.png" type="Texture" id=14]
-[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0008.png" type="Texture" id=15]
-[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0002.png" type="Texture" id=16]
-[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=17]
-[ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste pronto.png" type="Texture" id=18]
-[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=19]
-[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado_2_guerra_TD.tscn" type="PackedScene" id=20]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_walk/soldado walkcycle f1.png" type="Texture" id=6]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_walk/soldado walkcycle f2.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_walk/soldado walkcycle f3.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_walk/soldado walkcycle f4.png" type="Texture" id=9]
+[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=10]
+[ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=11]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0012.png" type="Texture" id=12]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0013.png" type="Texture" id=13]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0014.png" type="Texture" id=14]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0015.png" type="Texture" id=15]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0016.png" type="Texture" id=16]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0009.png" type="Texture" id=17]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0007.png" type="Texture" id=18]
+[ext_resource path="res://aliados/soldado_aliado/top_down/shoot/shoot0008.png" type="Texture" id=19]
+[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0002.png" type="Texture" id=20]
+[ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=21]
+[ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste pronto.png" type="Texture" id=22]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=23]
+[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado_2_guerra_TD.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 698.983, 10 )
@@ -75,6 +79,14 @@ extents = Vector2( 76.6389, 70.2343 )
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 167.714, 84.6363 )
 
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 7.0
+} ]
+
 [sub_resource type="Animation" id=19]
 length = 5.0
 loop = true
@@ -90,20 +102,212 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 952.404, 461.343 ), Vector2( 425.738, 473.17 ), Vector2( 937.33, 469.115 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D16/soldado_inimigo:flip_v")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionShape2D16/soldado_inimigo4:flip_v")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D16/soldado_inimigo7:flip_v")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("CollisionShape2D16/soldado_inimigo10:flip_v")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CollisionShape2D16/soldado_inimigo15:flip_v")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CollisionShape2D16/soldado_inimigo2:flip_v")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CollisionShape2D16/soldado_inimigo6:flip_h")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CollisionShape2D16/soldado_inimigo6:flip_v")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("CollisionShape2D16/soldado_inimigo9:flip_v")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("CollisionShape2D16/soldado_inimigo12:flip_v")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("CollisionShape2D16/soldado_inimigo14:flip_v")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("CollisionShape2D16/soldado_inimigo3:flip_v")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("CollisionShape2D16/soldado_inimigo5:flip_v")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("CollisionShape2D16/soldado_inimigo8:flip_v")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("CollisionShape2D16/soldado_inimigo11:flip_v")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("CollisionShape2D16/soldado_inimigo13:flip_v")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [sub_resource type="SpriteFrames" id=20]
 animations = [ {
-"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "shoot",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "run",
 "speed": 5.0
@@ -240,14 +444,116 @@ shape = SubResource( 17 )
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="area_batalhão_inimigo" groups=[
 "armadilha",
 ]]
-position = Vector2( 606.939, 472.262 )
+position = Vector2( 952.404, 461.343 )
 shape = SubResource( 18 )
+
+[node name="soldado_inimigo" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -137.18, -52.345 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 2
+playing = true
+
+[node name="soldado_inimigo4" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -73.1026, -51.4424 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 1
+playing = true
+
+[node name="soldado_inimigo7" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -5.41507, -51.4424 )
+rotation = 1.5708
+frames = SubResource( 21 )
+playing = true
+
+[node name="soldado_inimigo10" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( 57.7599, -50.5399 )
+rotation = 1.5708
+frames = SubResource( 21 )
+playing = true
+
+[node name="soldado_inimigo15" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( 122.155, -47.8324 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 3
+playing = true
+
+[node name="soldado_inimigo2" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -136.278, -3.60986 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 2
+playing = true
+
+[node name="soldado_inimigo6" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -72.2001, -2.70734 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 1
+playing = true
+
+[node name="soldado_inimigo9" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -4.51257, -2.70734 )
+rotation = 1.5708
+frames = SubResource( 21 )
+playing = true
+
+[node name="soldado_inimigo12" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( 58.6624, -1.80481 )
+rotation = 1.5708
+frames = SubResource( 21 )
+playing = true
+
+[node name="soldado_inimigo14" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( 123.057, 0.90271 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 3
+playing = true
+
+[node name="soldado_inimigo3" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -137.18, 45.1251 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 1
+playing = true
+
+[node name="soldado_inimigo5" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -73.1026, 46.0276 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 1
+playing = true
+
+[node name="soldado_inimigo8" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( -5.4151, 46.0276 )
+rotation = 1.5708
+frames = SubResource( 21 )
+playing = true
+
+[node name="soldado_inimigo11" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( 57.7599, 46.9302 )
+rotation = 1.5708
+frames = SubResource( 21 )
+playing = true
+
+[node name="soldado_inimigo13" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
+position = Vector2( 122.155, 49.6377 )
+rotation = 1.5708
+frames = SubResource( 21 )
+frame = 3
+playing = true
+
+[node name="som_tropa" type="AudioStreamPlayer2D" parent="area_batalhão_inimigo/CollisionShape2D16"]
 
 [node name="animation_batalhao" type="AnimationPlayer" parent="area_batalhão_inimigo"]
 autoplay = "soldies_motion"
+playback_speed = 0.8
 anims/soldies_motion = SubResource( 19 )
 
-[node name="player_top_down_F3" parent="." instance=ExtResource( 6 )]
+[node name="player_top_down_F3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 126.543, 488.811 )
 scale = Vector2( 0.6, 0.6 )
 
@@ -264,10 +570,10 @@ position = Vector2( 128.31, 495.989 )
 [node name="position_retorno_cena4" type="Position2D" parent="."]
 position = Vector2( 1236.5, 453.222 )
 
-[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 7 )]
+[node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 11 )]
 position = Vector2( 135.407, 480.203 )
 
-[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 7 )]
+[node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1386.71, 458.991 )
 
 [node name="animation_cena" type="Node" parent="."]
@@ -301,19 +607,19 @@ playing = true
 [node name="Madeira_teste pronto" type="Sprite" parent="."]
 position = Vector2( 382.227, 189.679 )
 scale = Vector2( 0.884532, 0.841289 )
-texture = ExtResource( 18 )
+texture = ExtResource( 22 )
 
 [node name="Madeira_teste pronto2" type="Sprite" parent="."]
 position = Vector2( 791.904, 143.154 )
 scale = Vector2( 0.884532, 0.841289 )
-texture = ExtResource( 18 )
+texture = ExtResource( 22 )
 
 [node name="som_ambiente" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 19 )
+stream = ExtResource( 23 )
 volume_db = -3.0
 autoplay = true
 
-[node name="soldado(T_D)" parent="." instance=ExtResource( 20 )]
+[node name="soldado(T_D)" parent="." instance=ExtResource( 24 )]
 position = Vector2( 859.757, 296.562 )
 rotation = -1.5927
 seguir = false

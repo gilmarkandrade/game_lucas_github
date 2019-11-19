@@ -1,19 +1,20 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
-[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets_game/background/fase_3/cena_5/campo liso guerra.png" type="Texture" id=3]
-[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown_com_tiro.png" type="Texture" id=5]
-[ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/background/fase_3/cena_5/Avião.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/background/fase_3/cena_5/Tanque.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste.png" type="Texture" id=9]
-[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=10]
-[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar_inimigo_fase3.gd" type="Script" id=11]
-[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3.wav" type="AudioStream" id=12]
-[ext_resource path="res://audio_geral/efeitos_sonoros/Portal_loop.wav" type="AudioStream" id=13]
-[ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://aliados/soldado_aliado/top_down/death/death0016.png" type="Texture" id=2]
+[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/campo liso guerra.png" type="Texture" id=4]
+[ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown_com_tiro.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/saco_topdown.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/Avião.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_3/cena_5/Tanque.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste.png" type="Texture" id=10]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=11]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar_inimigo_fase3.gd" type="Script" id=12]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3.wav" type="AudioStream" id=13]
+[ext_resource path="res://audio_geral/efeitos_sonoros/Portal_loop.wav" type="AudioStream" id=14]
+[ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.1881, 1140.96 )
@@ -293,9 +294,30 @@ hue_variation_random = 0.26
 [node name="world_3_cena_5" type="Node"]
 script = ExtResource( 1 )
 
+[node name="death0016" type="Sprite" parent="."]
+position = Vector2( 1022.17, 842.585 )
+texture = ExtResource( 2 )
+
+[node name="death0017" type="Sprite" parent="."]
+position = Vector2( 658.669, 1445.75 )
+rotation = 0.854802
+texture = ExtResource( 2 )
+
+[node name="death0018" type="Sprite" parent="."]
+position = Vector2( 2950.89, 1478.37 )
+rotation = 0.0423498
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
+[node name="death0019" type="Sprite" parent="."]
+position = Vector2( 2058.57, 889.206 )
+rotation = 0.0423498
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
+[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 editor/display_folded = true
@@ -305,33 +327,33 @@ motion_mirroring = Vector2( 1800, 800 )
 
 [node name="campo liso guerra" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 324.435, 212.281 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="campo liso guerra4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 327.636, 607.123 )
 scale = Vector2( 1.0103, 1.03091 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="campo liso guerra3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 1525.84, 212.278 )
 scale = Vector2( 1.00453, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="campo liso guerra6" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 1526.72, 612.675 )
 scale = Vector2( 1.00648, 1.00292 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="campo liso guerra2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 924.4, 212.275 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
 [node name="campo liso guerra5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 926.064, 612.241 )
 scale = Vector2( 1.00557, 1 )
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 
-[node name="player_top_down_F3" parent="." instance=ExtResource( 4 )]
+[node name="player_top_down_F3" parent="." instance=ExtResource( 5 )]
 editor/display_folded = true
 position = Vector2( 68.2366, 1531.59 )
 
@@ -376,7 +398,7 @@ shape = SubResource( 5 )
 [node name="saco_com_tiro" type="Sprite" parent="Obstaculos/CollisionShape2D"]
 position = Vector2( -1.10493, -2.19589 )
 scale = Vector2( 1.82606, 1.94015 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstaculos"]
 editor/display_folded = true
@@ -386,7 +408,7 @@ shape = SubResource( 5 )
 [node name="saco_com_tiro" type="Sprite" parent="Obstaculos/CollisionShape2D3"]
 position = Vector2( -1.10493, -2.19589 )
 scale = Vector2( 1.82606, 1.94015 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstaculos"]
 editor/display_folded = true
@@ -396,7 +418,7 @@ shape = SubResource( 5 )
 [node name="saco_com_tiro" type="Sprite" parent="Obstaculos/CollisionShape2D4"]
 position = Vector2( -1.10493, -2.19589 )
 scale = Vector2( 1.82606, 1.94015 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstaculos"]
 editor/display_folded = true
@@ -406,7 +428,7 @@ shape = SubResource( 6 )
 [node name="saco_topdown" type="Sprite" parent="Obstaculos/CollisionShape2D2"]
 position = Vector2( -4.37421, 3.16846 )
 scale = Vector2( 2.39267, 1.79551 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Obstaculos"]
 editor/display_folded = true
@@ -416,7 +438,7 @@ shape = SubResource( 6 )
 [node name="saco_topdown" type="Sprite" parent="Obstaculos/CollisionShape2D5"]
 position = Vector2( -4.37421, 3.16846 )
 scale = Vector2( 2.39267, 1.79551 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Obstaculos"]
 position = Vector2( 1053.08, 1427.01 )
@@ -425,7 +447,7 @@ shape = SubResource( 6 )
 [node name="saco_topdown" type="Sprite" parent="Obstaculos/CollisionShape2D6"]
 position = Vector2( -4.37421, 3.16846 )
 scale = Vector2( 2.39267, 1.79551 )
-texture = ExtResource( 6 )
+texture = ExtResource( 7 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Obstaculos"]
 position = Vector2( 3323.07, 209.956 )
@@ -436,7 +458,7 @@ shape = SubResource( 7 )
 position = Vector2( 61.8506, 8.17566 )
 rotation = 0.0311683
 scale = Vector2( 3.97631, 3.54595 )
-texture = ExtResource( 7 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Obstaculos"]
 position = Vector2( 3448.87, 1415.02 )
@@ -446,7 +468,7 @@ shape = SubResource( 8 )
 [node name="Tanque" type="Sprite" parent="Obstaculos/CollisionShape2D8"]
 position = Vector2( -25.8464, -42.5193 )
 scale = Vector2( 2.03688, 2.1369 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 flip_v = true
 
@@ -461,7 +483,7 @@ __meta__ = {
 position = Vector2( -23.9734, 7.77612 )
 rotation = 1.5708
 scale = Vector2( 1.6003, 1.75712 )
-texture = ExtResource( 8 )
+texture = ExtResource( 9 )
 flip_h = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Obstaculos"]
@@ -471,7 +493,7 @@ shape = SubResource( 10 )
 [node name="Madeira_teste" type="Sprite" parent="Obstaculos/CollisionShape2D10"]
 position = Vector2( -3.30974, -3.21753 )
 scale = Vector2( 1.42625, 7.42588 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Obstaculos"]
 
@@ -479,12 +501,12 @@ texture = ExtResource( 9 )
 position = Vector2( 103.212, 1461.7 )
 
 [node name="som_ambiente" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
+stream = ExtResource( 11 )
 volume_db = -5.0
 autoplay = true
 
 [node name="area_criar_inimigo_fase3" type="Area2D" parent="."]
-script = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigo_fase3"]
 position = Vector2( 2409.31, 815.719 )
@@ -510,11 +532,11 @@ position = Vector2( 2849.34, -73.563 )
 [node name="delay_spawn_enemie" type="Timer" parent="area_criar_inimigo_fase3"]
 
 [node name="som_ambiente2" type="AudioStreamPlayer" parent="area_criar_inimigo_fase3"]
-stream = ExtResource( 12 )
+stream = ExtResource( 13 )
 volume_db = -10.0
 
 [node name="som_portal" type="AudioStreamPlayer" parent="area_criar_inimigo_fase3"]
-stream = ExtResource( 13 )
+stream = ExtResource( 14 )
 volume_db = -21.5689
 pitch_scale = 1.5
 
@@ -527,7 +549,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 2880.57, 841.457 )
 shape = SubResource( 15 )
 
-[node name="particula_portal2" parent="area_criar_inimigo_fase3" instance=ExtResource( 14 )]
+[node name="particula_portal2" parent="area_criar_inimigo_fase3" instance=ExtResource( 15 )]
 visible = false
 position = Vector2( 2876.82, 835.388 )
 scale = Vector2( 1e-005, 1e-005 )

@@ -692,52 +692,54 @@ texture = ExtResource( 14 )
 position = Vector2( 975.659, 165.51 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 1
 playing = true
 
 [node name="soldado_inimigo10" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1370.58, 192.781 )
 frames = SubResource( 30 )
 animation = "shoot"
+frame = 4
 playing = true
 
 [node name="soldado_inimigo2" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 770.611, 174.763 )
 frames = SubResource( 30 )
 animation = "shoot"
+frame = 4
 playing = true
 
 [node name="soldado_inimigo9" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1300.62, 183.527 )
 frames = SubResource( 30 )
 animation = "shoot"
+frame = 4
 playing = true
 
 [node name="soldado_inimigo5" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1179.75, 189.935 )
 frames = SubResource( 30 )
 animation = "shoot"
+frame = 4
 playing = true
 
 [node name="soldado_inimigo6" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1582.07, 182.044 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 4
+frame = 3
 playing = true
 
 [node name="soldado_inimigo3" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1038.95, 235.833 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 2
+frame = 1
 playing = true
 
 [node name="soldado_inimigo7" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1444.97, 194.631 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 1
 playing = true
 
 [node name="soldado_inimigo4" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
@@ -788,7 +790,6 @@ playing = true
 position = Vector2( 214.22, 175.196 )
 frames = SubResource( 32 )
 animation = "shoot"
-frame = 1
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="soldados_aliados"]
