@@ -92,4 +92,4 @@ func _on_animation_door_animation_finished(anim_name):
 	
 	if anim_name == "close_portal":
 	
-		get_tree().change_scene("res://fases/fase_5/world_5_cena_1.tscn")
+		get_tree().change_scene("res://assets_game/cutscene/cutscene_final/Personagens/final.tscn")

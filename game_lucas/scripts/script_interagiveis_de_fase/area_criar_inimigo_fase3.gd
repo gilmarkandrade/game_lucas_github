@@ -53,7 +53,7 @@ func _on_delay_spawn_enemie_timeout():
 	
 	if limit_enemie <= 4 and stop_create == false:
 		spaw_enemie()
-		print(atributos_fase_singleton.cont_enemie)
+		
 	elif limit_enemie <= 0 and stop_create == true and portal_open == false:
 		$animation_camera.play("open_portal")
 		portal_open = true
