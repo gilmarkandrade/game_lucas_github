@@ -23,6 +23,7 @@ func _on_animation_cena5_animation_finished(anim_name):
 func _on_area_alavanca_area_entered(area):
 	if area.is_in_group("arma_player"):
 		$"../animation_cena5".play("plataform_up")
+		$som_ALAVANCA.play()
 
 
 func _on_area_lava_body_entered(body):

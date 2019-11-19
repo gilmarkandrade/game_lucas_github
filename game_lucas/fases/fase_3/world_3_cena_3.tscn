@@ -23,7 +23,7 @@
 [ext_resource path="res://aliados/soldado_aliado/top_down/run/run0003.png" type="Texture" id=21]
 [ext_resource path="res://assets_game/background/fase_3/cena_4/Madeira_teste pronto.png" type="Texture" id=22]
 [ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=23]
-[ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado_2_guerra_TD.tscn" type="PackedScene" id=24]
+[ext_resource path="res://player/Itens_player/vida/item_vida.tscn" type="PackedScene" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 698.983, 10 )
@@ -79,7 +79,7 @@ extents = Vector2( 76.6389, 70.2343 )
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 167.714, 84.6363 )
 
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=19]
 animations = [ {
 "frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
@@ -87,7 +87,7 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=20]
 length = 5.0
 loop = true
 tracks/0/type = "value"
@@ -295,7 +295,7 @@ tracks/16/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="SpriteFrames" id=21]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": false,
@@ -450,100 +450,103 @@ shape = SubResource( 18 )
 [node name="soldado_inimigo" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -137.18, -52.345 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 2
+frames = SubResource( 19 )
+frame = 3
 playing = true
 
 [node name="soldado_inimigo4" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -73.1026, -51.4424 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 1
+frames = SubResource( 19 )
+frame = 2
 playing = true
 
 [node name="soldado_inimigo7" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -5.41507, -51.4424 )
 rotation = 1.5708
-frames = SubResource( 21 )
+frames = SubResource( 19 )
+frame = 1
 playing = true
 
 [node name="soldado_inimigo10" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( 57.7599, -50.5399 )
 rotation = 1.5708
-frames = SubResource( 21 )
+frames = SubResource( 19 )
+frame = 1
 playing = true
 
 [node name="soldado_inimigo15" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( 122.155, -47.8324 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 3
+frames = SubResource( 19 )
 playing = true
 
 [node name="soldado_inimigo2" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -136.278, -3.60986 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 2
+frames = SubResource( 19 )
+frame = 3
 playing = true
 
 [node name="soldado_inimigo6" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -72.2001, -2.70734 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 1
+frames = SubResource( 19 )
+frame = 2
 playing = true
 
 [node name="soldado_inimigo9" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -4.51257, -2.70734 )
 rotation = 1.5708
-frames = SubResource( 21 )
+frames = SubResource( 19 )
+frame = 1
 playing = true
 
 [node name="soldado_inimigo12" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( 58.6624, -1.80481 )
 rotation = 1.5708
-frames = SubResource( 21 )
+frames = SubResource( 19 )
+frame = 1
 playing = true
 
 [node name="soldado_inimigo14" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( 123.057, 0.90271 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 3
+frames = SubResource( 19 )
 playing = true
 
 [node name="soldado_inimigo3" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -137.18, 45.1251 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 1
+frames = SubResource( 19 )
+frame = 2
 playing = true
 
 [node name="soldado_inimigo5" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -73.1026, 46.0276 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 1
+frames = SubResource( 19 )
+frame = 2
 playing = true
 
 [node name="soldado_inimigo8" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( -5.4151, 46.0276 )
 rotation = 1.5708
-frames = SubResource( 21 )
+frames = SubResource( 19 )
+frame = 1
 playing = true
 
 [node name="soldado_inimigo11" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( 57.7599, 46.9302 )
 rotation = 1.5708
-frames = SubResource( 21 )
+frames = SubResource( 19 )
+frame = 1
 playing = true
 
 [node name="soldado_inimigo13" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
 position = Vector2( 122.155, 49.6377 )
 rotation = 1.5708
-frames = SubResource( 21 )
-frame = 3
+frames = SubResource( 19 )
 playing = true
 
 [node name="som_tropa" type="AudioStreamPlayer2D" parent="area_batalhão_inimigo/CollisionShape2D16"]
@@ -551,7 +554,7 @@ playing = true
 [node name="animation_batalhao" type="AnimationPlayer" parent="area_batalhão_inimigo"]
 autoplay = "soldies_motion"
 playback_speed = 0.8
-anims/soldies_motion = SubResource( 19 )
+anims/soldies_motion = SubResource( 20 )
 
 [node name="player_top_down_F3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 126.543, 488.811 )
@@ -574,7 +577,7 @@ position = Vector2( 1236.5, 453.222 )
 position = Vector2( 135.407, 480.203 )
 
 [node name="icone_mudar_perspectiva2" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1386.71, 458.991 )
+position = Vector2( 1388.76, 458.991 )
 
 [node name="animation_cena" type="Node" parent="."]
 
@@ -582,24 +585,25 @@ position = Vector2( 1386.71, 458.991 )
 position = Vector2( 259.106, 267.982 )
 rotation = 1.56559
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 20 )
+frames = SubResource( 21 )
 animation = "shoot"
-frame = 1
+frame = 2
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
 position = Vector2( 620.966, 209.826 )
 rotation = 1.56559
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 20 )
+frames = SubResource( 21 )
 animation = "shoot"
+frame = 1
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]
 position = Vector2( 696.382, 278.36 )
 rotation = 0.00420237
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 20 )
+frames = SubResource( 21 )
 animation = "death"
 frame = 4
 playing = true
@@ -619,9 +623,8 @@ stream = ExtResource( 23 )
 volume_db = -3.0
 autoplay = true
 
-[node name="soldado(T_D)" parent="." instance=ExtResource( 24 )]
-position = Vector2( 859.757, 296.562 )
-rotation = -1.5927
-seguir = false
+[node name="item_vida" parent="." instance=ExtResource( 24 )]
+position = Vector2( 845.927, 244.487 )
+scale = Vector2( 0.680002, 0.64 )
 [connection signal="body_entered" from="area_retorno_cena2" to="." method="_on_area_retorno_cena2_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena4" to="." method="_on_area_entrar_cena4_body_entered"]

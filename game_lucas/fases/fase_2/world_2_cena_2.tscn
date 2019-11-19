@@ -1,17 +1,19 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/script_interagiveis_de_fase/Parede_quebrada.gd" type="Script" id=3]
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_Top_Dow_Nova.png" type="Texture" id=4]
 [ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_0.png" type="Texture" id=5]
-[ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_1.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_2.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_4.png" type="Texture" id=8]
-[ext_resource path="res://audio_geral/efeitos_sonoros/fase2/QuebrandoParede.wav" type="AudioStream" id=9]
-[ext_resource path="res://assets_game/background/fase_2/cena_2/Chão.png" type="Texture" id=10]
-[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=11]
-[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=12]
+[ext_resource path="res://assets_game/background/fase_2/cena_3/Parede_Top_Dow2.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/background/fase_2/cena_3/Porta_Pedra.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_1.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_2.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_2/cena_2/Parede_caindo/sprite_4.png" type="Texture" id=10]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase2/QuebrandoParede.wav" type="AudioStream" id=11]
+[ext_resource path="res://assets_game/background/fase_2/cena_2/Chão.png" type="Texture" id=12]
+[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 39.6204, 50.6053 )
@@ -29,7 +31,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ]
+"values": [ ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../collisão bloco/CollisionShape2D:position")
@@ -57,7 +59,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ) ]
+"values": [ ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("../collisão bloco/CollisionShape2D:position")
@@ -136,6 +138,49 @@ texture = ExtResource( 4 )
 position = Vector2( -104.776, -181.294 )
 texture = ExtResource( 5 )
 
+[node name="Parede_Top_Dow2" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( -455.784, 497.16 )
+rotation = -3.14149
+scale = Vector2( 0.561112, 0.656099 )
+texture = ExtResource( 6 )
+
+[node name="Parede_Top_Dow6" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( -258.88, -278.151 )
+rotation = -3.14149
+scale = Vector2( 0.561112, 0.656099 )
+texture = ExtResource( 6 )
+
+[node name="Parede_Top_Dow7" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( 414.463, -278.151 )
+rotation = -3.14149
+scale = Vector2( 0.561112, 0.656099 )
+texture = ExtResource( 6 )
+
+[node name="Parede_Top_Dow3" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( 370.511, 491.886 )
+rotation = -3.14149
+scale = Vector2( 0.561112, 0.656099 )
+texture = ExtResource( 6 )
+
+[node name="Parede_Top_Dow4" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( 556.867, 99.8352 )
+rotation = -1.5708
+scale = Vector2( 0.660733, 0.988534 )
+texture = ExtResource( 6 )
+
+[node name="Parede_Top_Dow5" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( -605.22, 98.0771 )
+rotation = -1.5708
+scale = Vector2( 0.660733, 0.867299 )
+texture = ExtResource( 6 )
+
+[node name="Porta_Pedra" type="Sprite" parent="Parede_quebrada/Parede_Top_Dow_Nova"]
+position = Vector2( -40.507, 473.601 )
+rotation = -3.14149
+scale = Vector2( 0.561112, 0.656099 )
+z_index = 1
+texture = ExtResource( 7 )
+
 [node name="animation_block" type="AnimationPlayer" parent="Parede_quebrada"]
 anims/destroy_block = SubResource( 2 )
 anims/destroy_block_finalized = SubResource( 3 )
@@ -153,7 +198,7 @@ process_material = SubResource( 4 )
 
 [node name="som_bloco" type="AudioStreamPlayer2D" parent="Parede_quebrada"]
 position = Vector2( -10.4971, 47.82 )
-stream = ExtResource( 9 )
+stream = ExtResource( 11 )
 volume_db = 20.0
 pitch_scale = 0.9
 attenuation = 0.965936
@@ -169,7 +214,7 @@ motion_mirroring = Vector2( 560, 380 )
 modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
 position = Vector2( 455.808, 197.896 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 10 )
+texture = ExtResource( 12 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -219,7 +264,6 @@ position = Vector2( 288.124, -97.7806 )
 shape = SubResource( 10 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 420.755, -22.0939 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
@@ -233,7 +277,7 @@ position = Vector2( 1090.02, -22.0939 )
 position = Vector2( 8.20215, -2.05054 )
 shape = SubResource( 12 )
 
-[node name="player_top_down" parent="." instance=ExtResource( 11 )]
+[node name="player_top_down" parent="." instance=ExtResource( 13 )]
 position = Vector2( 407.371, -140.151 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
@@ -259,7 +303,7 @@ position = Vector2( 0, 7.15985 )
 shape = SubResource( 13 )
 
 [node name="som_trilha" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource( 14 )
 volume_db = -10.0
 autoplay = true
 [connection signal="area_entered" from="Parede_quebrada" to="Parede_quebrada" method="_on_Parede_quebrada_area_entered"]

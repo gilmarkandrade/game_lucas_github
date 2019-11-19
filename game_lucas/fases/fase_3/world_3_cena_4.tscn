@@ -1,4 +1,4 @@
-[gd_scene load_steps=86 format=2]
+[gd_scene load_steps=87 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_3_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -51,6 +51,7 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/side_scroller/soldado_2_guerra_SD.tscn" type="PackedScene" id=49]
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=50]
 [ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=51]
+[ext_resource path="res://player/Itens_player/vida/item_vida.tscn" type="PackedScene" id=52]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1619.28, 23.6984 )
@@ -692,54 +693,55 @@ texture = ExtResource( 14 )
 position = Vector2( 975.659, 165.51 )
 frames = SubResource( 30 )
 animation = "shoot"
+frame = 4
 playing = true
 
 [node name="soldado_inimigo10" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1370.58, 192.781 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 4
+frame = 3
 playing = true
 
 [node name="soldado_inimigo2" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 770.611, 174.763 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 4
+frame = 3
 playing = true
 
 [node name="soldado_inimigo9" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1300.62, 183.527 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 4
+frame = 3
 playing = true
 
 [node name="soldado_inimigo5" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1179.75, 189.935 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 4
+frame = 3
 playing = true
 
 [node name="soldado_inimigo6" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1582.07, 182.044 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 3
+frame = 2
 playing = true
 
 [node name="soldado_inimigo3" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1038.95, 235.833 )
 frames = SubResource( 30 )
 animation = "shoot"
-frame = 1
 playing = true
 
 [node name="soldado_inimigo7" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 1444.97, 194.631 )
 frames = SubResource( 30 )
 animation = "shoot"
+frame = 4
 playing = true
 
 [node name="soldado_inimigo4" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
@@ -790,6 +792,7 @@ playing = true
 position = Vector2( 214.22, 175.196 )
 frames = SubResource( 32 )
 animation = "shoot"
+frame = 1
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="soldados_aliados"]
@@ -843,6 +846,7 @@ position = Vector2( 3637.57, -434.173 )
 scale = Vector2( 0.838475, 0.907246 )
 
 [node name="position_inicio_cena4" type="Position2D" parent="."]
+position = Vector2( 165.335, 554.669 )
 
 [node name="position_retorno_cena5" type="Position2D" parent="."]
 position = Vector2( 3638.91, -392.335 )
@@ -851,5 +855,11 @@ position = Vector2( 3638.91, -392.335 )
 stream = ExtResource( 51 )
 volume_db = -3.0
 autoplay = true
+
+[node name="item_vida" parent="." instance=ExtResource( 52 )]
+position = Vector2( 3068.6, 27.3982 )
+
+[node name="item_vida2" parent="." instance=ExtResource( 52 )]
+position = Vector2( 1054.83, 433.978 )
 [connection signal="body_entered" from="area_retorno_cena3" to="." method="_on_area_retorno_cena3_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena5" to="." method="_on_area_entrar_cena5_body_entered"]

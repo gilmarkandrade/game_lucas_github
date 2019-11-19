@@ -28,19 +28,19 @@ align = 1
 valign = 1
 
 [node name="Jogar" type="Button" parent="CanvasLayer"]
-margin_left = 320.0
-margin_top = 250.0
-margin_right = 375.0
-margin_bottom = 275.0
-rect_scale = Vector2( 3.5, 3 )
-text = "Jogar"
+margin_left = 741.0
+margin_top = 343.0
+margin_right = 801.0
+margin_bottom = 363.0
+rect_scale = Vector2( 3.42, 2.44 )
+text = "Play"
 
 [node name="Sair" type="Button" parent="CanvasLayer"]
-margin_left = 320.0
-margin_top = 350.0
-margin_right = 375.0
-margin_bottom = 375.0
-rect_scale = Vector2( 3.5, 3 )
-text = "Sair"
+margin_left = 744.484
+margin_top = 436.274
+margin_right = 800.484
+margin_bottom = 459.274
+rect_scale = Vector2( 3.5, 1.84 )
+text = "Quit"
 [connection signal="pressed" from="CanvasLayer/Jogar" to="." method="_on_Jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sair" to="." method="_on_Sair_pressed"]

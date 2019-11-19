@@ -38,7 +38,7 @@ extents = Vector2( 51.3035, 26.6242 )
 extents = Vector2( 94.0941, 72.2051 )
 
 [sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 405.379, 393.546 )
+extents = Vector2( 405.552, 393.546 )
 
 [sub_resource type="Animation" id=10]
 tracks/0/type = "value"
@@ -237,10 +237,9 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 31.993, 456.184 )
+position = Vector2( 33.5796, 373.678 )
 rotation = 1.57909
 shape = SubResource( 1 )
 
@@ -256,35 +255,36 @@ position = Vector2( -835.613, -170.381 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2( -884.233, 184.171 )
-rotation = -4.0161
+position = Vector2( -867.541, 166.351 )
+rotation = -3.62236
 shape = SubResource( 3 )
 
 [node name="Parede_Top_Dow2" type="Sprite" parent="StaticBody2D3"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
 position = Vector2( 9.51239, 119.504 )
-rotation = 1.5708
+rotation = 1.57079
 scale = Vector2( 1, 1.37215 )
 texture = ExtResource( 4 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 538.332, -4.15227 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource( 4 )
 
 [node name="Parede_Top_Dow2" type="Sprite" parent="StaticBody2D4"]
-position = Vector2( 325.453, -0.906858 )
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+position = Vector2( 258.985, -2.49352 )
 texture = ExtResource( 4 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -17.4719, 339.778 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
 shape = SubResource( 5 )
 
 [node name="Parede_Top_Dow2" type="Sprite" parent="StaticBody2D5"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
 position = Vector2( -1.00481, 43.579 )
 rotation = 1.5708
 scale = Vector2( 1, 1.25402 )
@@ -298,6 +298,7 @@ position = Vector2( -1.94812, -15.5841 )
 shape = SubResource( 6 )
 
 [node name="Parede_Top_Dow2" type="Sprite" parent="StaticBody2D6"]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
 position = Vector2( 37.643, -18.6065 )
 scale = Vector2( 1.05552, 1.4467 )
 texture = ExtResource( 4 )
@@ -308,7 +309,7 @@ scale = Vector2( 0.6, 0.6 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down"]
 current = true
-zoom = Vector2( 0.84, 0.84 )
+zoom = Vector2( 0.8, 0.8 )
 limit_left = 0
 limit_top = 0
 limit_right = 1150
@@ -325,24 +326,24 @@ position = Vector2( 147.639, 502.281 )
 position = Vector2( 712.021, 678.618 )
 
 [node name="retorno_direto_cena2" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 183.068, 11.289 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="retorno_direto_cena2"]
+position = Vector2( -44.4264, -15.8666 )
 shape = SubResource( 7 )
 
 [node name="entrar_direto_cena4" type="Area2D" parent="."]
 position = Vector2( 534.293, 782.376 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena4"]
-position = Vector2( -383.825, -324.995 )
+position = Vector2( -382.238, -407.501 )
 shape = SubResource( 8 )
 
 [node name="area_criar_inimigos" type="Area2D" parent="."]
 script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar_inimigos"]
-position = Vector2( 708.722, 378.785 )
+position = Vector2( 726.175, 370.852 )
 shape = SubResource( 9 )
 
 [node name="animation_dor" type="AnimationPlayer" parent="area_criar_inimigos"]
@@ -360,7 +361,7 @@ position = Vector2( 1119.02, 369.108 )
 wait_time = 0.5
 
 [node name="icone_mudar_perspectiva" parent="area_criar_inimigos/delay_spawn_enemie" instance=ExtResource( 7 )]
-position = Vector2( 154.109, 459.949 )
+position = Vector2( 150.936, 375.856 )
 
 [node name="som_trilha" type="AudioStreamPlayer" parent="area_criar_inimigos"]
 stream = ExtResource( 8 )
@@ -368,14 +369,21 @@ volume_db = -10.0
 autoplay = true
 
 [node name="porta" type="Sprite" parent="."]
-position = Vector2( 303.675, 624.102 )
-rotation = -4.02777
+position = Vector2( 303.224, 623.651 )
+rotation = -3.6521
 scale = Vector2( 0.0422603, 4.87911 )
 texture = ExtResource( 9 )
 offset = Vector2( 0, 14.87 )
 
 [node name="saida_inimigo_1" type="Sprite" parent="."]
 position = Vector2( 677.816, 13.9152 )
+scale = Vector2( 0.53792, 0.491455 )
+z_index = 1
+texture = ExtResource( 10 )
+offset = Vector2( 0, 30.78 )
+
+[node name="saida_inimigo_3" type="Sprite" parent="."]
+position = Vector2( 152.631, -13.058 )
 scale = Vector2( 0.53792, 0.491455 )
 z_index = 1
 texture = ExtResource( 10 )
@@ -398,18 +406,26 @@ texture = ExtResource( 10 )
 offset = Vector2( 0, 30.78 )
 
 [node name="parede" type="Sprite" parent="."]
-position = Vector2( 305.487, 331.707 )
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+position = Vector2( 305.487, 297.425 )
 rotation = 1.5708
-scale = Vector2( 0.489029, 0.903811 )
+scale = Vector2( 0.546166, 0.903811 )
+texture = ExtResource( 4 )
+
+[node name="parede2" type="Sprite" parent="."]
+modulate = Color( 0.74902, 0.74902, 0.74902, 1 )
+position = Vector2( -230.804, -7.21442 )
+rotation = 3.14159
+scale = Vector2( 0.546166, 0.903811 )
 texture = ExtResource( 4 )
 
 [node name="armario" type="Sprite" parent="."]
-position = Vector2( 32.4545, 456.521 )
+position = Vector2( 29.2812, 372.428 )
 scale = Vector2( 1.1896, 6.13185 )
 texture = ExtResource( 11 )
 
 [node name="area_entrar_cena5" type="Area2D" parent="."]
-position = Vector2( 721.188, 905.555 )
+position = Vector2( 721.052, 721.905 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_entrar_cena5"]
 position = Vector2( -3.55865, -51.5477 )

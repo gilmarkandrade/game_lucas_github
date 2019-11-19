@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_2_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -12,6 +12,8 @@
 [ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=10]
 [ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 2.wav" type="AudioStream" id=11]
 [ext_resource path="res://audio_geral/efeitos_sonoros/Portal_loop.wav" type="AudioStream" id=12]
+[ext_resource path="res://player/Itens_player/vida/item_vida.tscn" type="PackedScene" id=13]
+[ext_resource path="res://player/Itens_player/municao_mana/item_municao.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 300, 10 )
@@ -623,6 +625,12 @@ position = Vector2( 590, 960 )
 rotation = 1.5708
 scale = Vector2( 0.457921, 1.2276 )
 texture = ExtResource( 3 )
+
+[node name="item_vida" parent="." instance=ExtResource( 13 )]
+position = Vector2( 450, 380 )
+
+[node name="item_municao" parent="item_vida" instance=ExtResource( 14 )]
+position = Vector2( 60, 0 )
 [connection signal="body_entered" from="area_buraco_cena7" to="." method="_on_area_buraco_cena7_body_entered"]
 [connection signal="body_entered" from="area_criar_inimigo_fase2_cena7 " to="area_criar_inimigo_fase2_cena7 " method="_on_area_criar_inimigo_fase2_cena7__body_entered"]
 [connection signal="timeout" from="area_criar_inimigo_fase2_cena7 /delay_spawn_enemie" to="area_criar_inimigo_fase2_cena7 " method="_on_delay_spawn_enemie_timeout"]
