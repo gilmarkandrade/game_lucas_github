@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/eletricidade.wav-96f848b141746885d91c586729da5c88.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/eletricidade.wav"
+dest_files=[ "res://.import/eletricidade.wav-96f848b141746885d91c586729da5c88.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

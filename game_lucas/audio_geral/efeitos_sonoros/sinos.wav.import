@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sinos.wav-61f3fd5a3c83c1b46ec4f0d547d07a2d.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/sinos.wav"
+dest_files=[ "res://.import/sinos.wav-61f3fd5a3c83c1b46ec4f0d547d07a2d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
