@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_4_script.gd" type="Script" id=1]
 [ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Corredor_Mafia.png" type="Texture" id=2]
@@ -22,6 +22,7 @@
 [ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Poltrona.png" type="Texture" id=20]
 [ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Planta.png" type="Texture" id=21]
 [ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Toldo.png" type="Texture" id=22]
+[ext_resource path="res://audio_geral/trilhas/Trilha_Mafia.wav" type="AudioStream" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1251.87, 31.8655 )
@@ -802,5 +803,9 @@ texture = ExtResource( 10 )
 [node name="Ligação parede4" type="Sprite" parent="."]
 position = Vector2( 4.42682, 691.671 )
 texture = ExtResource( 10 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true
 [connection signal="body_entered" from="area_criar inimigos_fase4" to="area_criar inimigos_fase4" method="_on_area_criar_inimigos_fase4_body_entered"]
 [connection signal="timeout" from="area_criar inimigos_fase4/delay_spawn_enemie" to="area_criar inimigos_fase4" method="_on_delay_spawn_enemie_timeout"]

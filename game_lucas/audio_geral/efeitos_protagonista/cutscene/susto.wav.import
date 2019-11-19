@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/susto.wav-fe1471bed008c4dc5b95e626b3b5da07.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_protagonista/cutscene/susto.wav"
+dest_files=[ "res://.import/susto.wav-fe1471bed008c4dc5b95e626b3b5da07.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

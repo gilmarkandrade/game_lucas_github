@@ -1,45 +1,48 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets_game/cutscene/cutscene_comeco/fundo/beco_escuro_sem_sombra.png" type="Texture" id=1]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro1.png" type="Texture" id=2]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro2.png" type="Texture" id=3]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro3.png" type="Texture" id=4]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro4.png" type="Texture" id=5]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando1.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando2.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando3.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca1.png" type="Texture" id=9]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca2.png" type="Texture" id=10]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca3.png" type="Texture" id=11]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca4.png" type="Texture" id=12]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica1.png" type="Texture" id=13]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica2.png" type="Texture" id=14]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica3.png" type="Texture" id=15]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica4.png" type="Texture" id=16]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo1.png" type="Texture" id=17]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo2.png" type="Texture" id=18]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo3.png" type="Texture" id=19]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo4.png" type="Texture" id=20]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea1.png" type="Texture" id=21]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea2.png" type="Texture" id=22]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea3.png" type="Texture" id=23]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea4.png" type="Texture" id=24]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida1.png" type="Texture" id=25]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida2.png" type="Texture" id=26]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida3.png" type="Texture" id=27]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida4.png" type="Texture" id=28]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida5.png" type="Texture" id=29]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle1.png" type="Texture" id=30]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle2.png" type="Texture" id=31]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida1.png" type="Texture" id=2]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida2.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida3.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida4.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida5.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca1.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca2.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca3.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca4.png" type="Texture" id=10]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo1.png" type="Texture" id=11]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo2.png" type="Texture" id=12]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo3.png" type="Texture" id=13]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo4.png" type="Texture" id=14]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle1.png" type="Texture" id=15]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle2.png" type="Texture" id=16]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea1.png" type="Texture" id=17]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea2.png" type="Texture" id=18]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea3.png" type="Texture" id=19]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea4.png" type="Texture" id=20]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica1.png" type="Texture" id=21]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica2.png" type="Texture" id=22]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica3.png" type="Texture" id=23]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica4.png" type="Texture" id=24]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro1.png" type="Texture" id=25]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro2.png" type="Texture" id=26]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro3.png" type="Texture" id=27]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro4.png" type="Texture" id=28]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando1.png" type="Texture" id=29]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando2.png" type="Texture" id=30]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando3.png" type="Texture" id=31]
 [ext_resource path="res://assets_game/cutscene/cutscene_comeco/fundo/beco_escuro_so_sombra.png" type="Texture" id=32]
 [ext_resource path="res://assets_game/portal/portal.png" type="Texture" id=33]
 [ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=34]
 [ext_resource path="res://audio_geral/efeitos_protagonista/fase2/Caminhando em Sólido.wav" type="AudioStream" id=35]
 [ext_resource path="res://audio_geral/efeitos_sonoros/Portal.wav" type="AudioStream" id=36]
+[ext_resource path="res://audio_geral/efeitos_sonoros/ar_sugado.wav" type="AudioStream" id=37]
+[ext_resource path="res://audio_geral/efeitos_sonoros/zaps_eletricidade.wav" type="AudioStream" id=38]
+[ext_resource path="res://audio_geral/efeitos_sonoros/sinos.wav" type="AudioStream" id=39]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fly_animation"
-length = 6.0
+length = 6.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("AnimationSilvia:playback_speed")
 tracks/0/interp = 1
@@ -328,48 +331,108 @@ tracks/23/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/24/type = "value"
+tracks/24/path = NodePath("som_ar_sugado:volume_db")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -15.0 ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("som_ar_sugado:playing")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 3, 3.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("som_eletricidade:playing")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 4, 4.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("som_eletricidade:pitch_scale")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 4 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.7 ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("som_sinos:playing")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 5, 6.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "buraco_aberto",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "buraco_fechando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "cabeca",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "bola",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
-"loop": true,
-"name": "corpo",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
-"loop": true,
-"name": "silvia",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": false,
 "name": "protagonista",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "cabeca",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "corpo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "idle_protagonista",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "silvia",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "bola",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "buraco_aberto",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "buraco_fechando",
+"speed": 5.0
 } ]
 
 [sub_resource type="Image" id=8]
@@ -425,7 +488,7 @@ position = Vector2( 126.934, -4.76001 )
 
 [node name="AnimationSilvia" type="AnimationPlayer" parent="."]
 autoplay = "fly_animation"
-playback_speed = 0.3
+playback_speed = 0.5
 anims/fly_animation = SubResource( 1 )
 
 [node name="beco_escuro_sem_sombra" type="Sprite" parent="."]
@@ -442,21 +505,21 @@ visible = false
 position = Vector2( 463.649, 298.124 )
 scale = Vector2( 1.75232, 1.62598 )
 frames = SubResource( 2 )
-animation = "buraco_aberto"
-frame = 1
+animation = "silvia"
+frame = 3
 playing = true
 
 [node name="cabeca_animated" type="AnimatedSprite" parent="."]
 visible = false
-modulate = Color( 1, 1, 1, 0.65 )
 position = Vector2( 463.649, 298.124 )
 scale = Vector2( 1.75232, 1.62598 )
 frames = SubResource( 2 )
 animation = "cabeca"
-frame = 3
+frame = 2
 playing = true
 
 [node name="protag_animated" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 279.32, 366.638 )
 frames = SubResource( 2 )
 animation = "idle_protagonista"
@@ -471,7 +534,7 @@ texture = ExtResource( 32 )
 [node name="portal" type="Sprite" parent="."]
 visible = false
 position = Vector2( 193.522, 359.999 )
-scale = Vector2( 1e-005, 1e-005 )
+scale = Vector2( 0.75, 0.7 )
 texture = ExtResource( 33 )
 
 [node name="particula_portal2" parent="." instance=ExtResource( 34 )]
@@ -488,3 +551,17 @@ pitch_scale = 0.6
 [node name="som_portal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 36 )
 volume_db = -6.0
+
+[node name="som_ar_sugado" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 37 )
+volume_db = -15.0
+pitch_scale = 1.5
+
+[node name="som_eletricidade" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+pitch_scale = 0.7
+
+[node name="som_sinos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 39 )
+volume_db = -5.0
+pitch_scale = 0.7
