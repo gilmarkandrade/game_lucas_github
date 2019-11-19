@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ar_sugado.wav-f7fe4a7a37a4c025a3b666daf3591ba0.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/ar_sugado.wav"
+dest_files=[ "res://.import/ar_sugado.wav-f7fe4a7a37a4c025a3b666daf3591ba0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
