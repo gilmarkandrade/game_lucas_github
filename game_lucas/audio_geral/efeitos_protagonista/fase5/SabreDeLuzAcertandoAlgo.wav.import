@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SabreDeLuzAcertandoAlgo.wav-b9ca9c3b18a74091540e874c85d2e359.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_protagonista/fase5/SabreDeLuzAcertandoAlgo.wav"
+dest_files=[ "res://.import/SabreDeLuzAcertandoAlgo.wav-b9ca9c3b18a74091540e874c85d2e359.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

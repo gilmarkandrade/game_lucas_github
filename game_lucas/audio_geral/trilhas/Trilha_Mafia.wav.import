@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Trilha_Mafia.wav-fd8f0c427a051c26117b49d1788046bc.sample"
+
+[deps]
+
+source_file="res://audio_geral/trilhas/Trilha_Mafia.wav"
+dest_files=[ "res://.import/Trilha_Mafia.wav-fd8f0c427a051c26117b49d1788046bc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

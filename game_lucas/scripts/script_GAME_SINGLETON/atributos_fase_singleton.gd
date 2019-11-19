@@ -12,6 +12,7 @@ var in_area_perspective = false
 var anim_tutor_cena_1 = false
 var homen_das_cavernas_dead = false
 var finalized_plataform_quest = false
+var open_portal_init_fase = false
 func permission_altered_cena(inarea):
 	in_area_perspective = inarea
 
