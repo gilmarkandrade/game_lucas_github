@@ -144,7 +144,7 @@ texture = ExtResource( 6 )
 position = Vector2( 284.36, -215.179 )
 frames = SubResource( 6 )
 animation = "Animação Rio"
-frame = 2
+frame = 3
 playing = true
 
 [node name="player_top_down" parent="." instance=ExtResource( 11 )]
@@ -228,14 +228,6 @@ attenuation = 1.46409
 
 [node name="camera_zoom" type="AnimationPlayer" parent="area_criar_inimigo_fase1"]
 anims/camera_zoom = SubResource( 11 )
-
-[node name="StaticBody2D5" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
-polygon = PoolVector2Array( -168.887, -64.9136, -49.9193, -96.405, -26.5923, -105.736, 4.89914, -97.5714, 69.0484, -119.732, 176.353, -143.059, 204.345, -169.885, 246.333, -168.719, 280.158, -153.556, 354.804, -171.051, 394.46, -165.22, 457.443, -152.39, 481.936, -159.388, 472.605, -223.537, -163.055, -137.227 )
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D5"]
-polygon = PoolVector2Array( 584.575, -244.531, 609.068, -216.539, 647.558, -221.204, 691.879, -248.03, 730.369, -295.851, 668.552, -293.518 )
 [connection signal="body_entered" from="area_inicio_cena3" to="." method="_on_area_inicio_cena3_body_entered"]
 [connection signal="body_entered" from="area_fim_cena_3" to="." method="_on_area_fim_cena_3_body_entered"]
 [connection signal="body_entered" from="area_criar_inimigo_fase1" to="area_criar_inimigo_fase1" method="_on_area_criar_inimigo_fase1_body_entered"]
