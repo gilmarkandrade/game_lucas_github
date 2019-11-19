@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player/player_fase2/side_scorller_F2/orb_fogo_SD/orb__de_fogo_SD.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/orb_fogo_SD/bola_de_fogo.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 12.4711
@@ -19,8 +19,8 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="sprite_orb" type="Sprite" parent="."]
-position = Vector2( 0.222223, -1.03729 )
-scale = Vector2( 0.409722, 0.395833 )
+position = Vector2( 0.165767, -0.61338 )
+scale = Vector2( 1.22886, 1.1655 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
