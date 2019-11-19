@@ -80,7 +80,7 @@ func _on_AI_perception_body_exited(body):
 		
 func atack():
 	#$animation_A.current_animation = "atack_animation"
-
+	$som_revolver.play()
 	var F_L = projetil.instance()
 	get_parent().add_child(F_L)
 	F_L.pos_arrow_parameter($position_fim_flecha. global_position)

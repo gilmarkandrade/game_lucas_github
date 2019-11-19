@@ -1,7 +1,7 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/script/mafioso_armado.gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk8_10.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/idle_animation/idle0.png" type="Texture" id=2]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/attack_animation/attack1_4.png" type="Texture" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/attack_animation/attack2.png" type="Texture" id=4]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/attack_animation/attack3.png" type="Texture" id=5]
@@ -9,14 +9,16 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/death_animation/death1.png" type="Texture" id=7]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/death_animation/death2.png" type="Texture" id=8]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/death_animation/death3.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/idle_animation/idle0.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/idle_animation/idle1.png" type="Texture" id=11]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk1_5.png" type="Texture" id=12]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk2_4.png" type="Texture" id=13]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk3.png" type="Texture" id=14]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk6_12.png" type="Texture" id=15]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk7_11.png" type="Texture" id=16]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/idle_animation/idle1.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk1_5.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk2_4.png" type="Texture" id=12]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk3.png" type="Texture" id=13]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk6_12.png" type="Texture" id=14]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk7_11.png" type="Texture" id=15]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk8_10.png" type="Texture" id=16]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_armado/walk_animation/walk9.png" type="Texture" id=17]
+[ext_resource path="res://audio_geral/efeitos_sonoros/SomDeMorte2.wav" type="AudioStream" id=18]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase4/TiroRevolver.wav" type="AudioStream" id=19]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 35.177
@@ -164,6 +166,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ Vector2( -42, -1 ), Vector2( -27, -1 ), Vector2( 0, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("som_morte:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=5]
 length = 0.6
@@ -178,7 +192,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 10 ), ExtResource( 11 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 10 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _A:position")
@@ -230,7 +244,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 2 ), ExtResource( 17 ), ExtResource( 2 ), ExtResource( 16 ), ExtResource( 15 ) ]
+"values": [ ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 11 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("animation_A:playback_speed")
@@ -285,7 +299,6 @@ rotation = -1.5708
 texture = ExtResource( 2 )
 
 [node name="animation_A" type="AnimationPlayer" parent="."]
-playback_speed = 2.0
 anims/atack_animation = SubResource( 2 )
 anims/damage_animation = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -319,6 +332,7 @@ shape = SubResource( 8 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
+position = Vector2( 0, -2 )
 shape = SubResource( 9 )
 
 [node name="AI_perception" type="Area2D" parent="."]
@@ -336,6 +350,17 @@ position = Vector2( 27.7385, 29.0933 )
 
 [node name="position_fim_flecha" type="Position2D" parent="."]
 position = Vector2( 1847.88, 0 )
+
+[node name="som_morte" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 2.16144, -1.08072 )
+stream = ExtResource( 18 )
+attenuation = 2.63902
+
+[node name="som_revolver" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 2.16144, -1.08072 )
+stream = ExtResource( 19 )
+pitch_scale = 1.4
+attenuation = 1.36604
 [connection signal="animation_finished" from="animation_A" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_A_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]

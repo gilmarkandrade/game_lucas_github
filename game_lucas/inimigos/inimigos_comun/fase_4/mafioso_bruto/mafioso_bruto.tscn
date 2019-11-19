@@ -1,16 +1,16 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/script/mafioso_bruto.gd" type="Script" id=1]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack5.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/idle_animation/idle1.png" type="Texture" id=2]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack1.png" type="Texture" id=3]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack2.png" type="Texture" id=4]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack3.png" type="Texture" id=5]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack4.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/damage_animation/damage1.png" type="Texture" id=7]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death1.png" type="Texture" id=8]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death2.png" type="Texture" id=9]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death3.png" type="Texture" id=10]
-[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/idle_animation/idle1.png" type="Texture" id=11]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/attack_animation/attack5.png" type="Texture" id=7]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/damage_animation/damage1.png" type="Texture" id=8]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death1.png" type="Texture" id=9]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death2.png" type="Texture" id=10]
+[ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/death_animation/death3.png" type="Texture" id=11]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/idle_animation/idle2.png" type="Texture" id=12]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk1_5.png" type="Texture" id=13]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk2_4.png" type="Texture" id=14]
@@ -19,6 +19,8 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk7_11.png" type="Texture" id=17]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk8_10.png" type="Texture" id=18]
 [ext_resource path="res://inimigos/inimigos_comun/fase_4/mafioso_bruto/walk_animation/walk9.png" type="Texture" id=19]
+[ext_resource path="res://audio_geral/efeitos_sonoros/DanoInimigo.wav" type="AudioStream" id=20]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase2/Ataque Protagonista.wav" type="AudioStream" id=21]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 35.177
@@ -37,7 +39,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.2, 0.3, 0.4, 0.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ]
+"values": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _H_C:position")
@@ -75,6 +77,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [ Vector2( 2, 34 ), Vector2( 11, 36 ), Vector2( 35, 15 ), Vector2( 35, 15 ), Vector2( 36, 15 ), Vector2( 36, 16 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("som_soco:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "damage_animation"
@@ -89,7 +103,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ) ]
+"values": [ ExtResource( 8 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("arma_inimigo/CollisionShape2D:position")
@@ -128,7 +142,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 1 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ]
+"values": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _H_C:position")
@@ -166,6 +180,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ Vector2( -43, -3 ), Vector2( -28, -3 ), Vector2( 0, -3 ), Vector2( 4, -1 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("som_morte:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=5]
 length = 0.6
@@ -180,7 +206,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 11 ), ExtResource( 12 ) ]
+"values": [ ExtResource( 2 ), ExtResource( 12 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spriter _H_C:position")
@@ -283,7 +309,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="spriter _H_C" type="Sprite" parent="."]
-position = Vector2( 24.177, 7 )
+position = Vector2( 16.177, -3 )
 rotation = -1.5708
 texture = ExtResource( 2 )
 
@@ -320,7 +346,7 @@ shape = SubResource( 8 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( 36, 16 )
+position = Vector2( 0, -2 )
 shape = SubResource( 9 )
 
 [node name="delay_atack" type="Timer" parent="."]
@@ -332,6 +358,15 @@ editor/display_folded = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI_perception"]
 position = Vector2( 7, 0 )
 shape = SubResource( 10 )
+
+[node name="som_morte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 20 )
+pitch_scale = 0.9
+
+[node name="som_soco" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 21 )
+pitch_scale = 0.6
+attenuation = 1.1487
 [connection signal="animation_finished" from="animation_H_C" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_h_c" to="." method="_on_corpo_h_c_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]

@@ -92,4 +92,5 @@ func _on_area_portal_body_entered(body):
 func _on_animation_camera_animation_finished(anim_name):
 	if anim_name == "close_portal":
 		atributos_player_singleton.stop_movement_player(false)
+		atributos_fase_singleton.open_portal_init_fase = false
 		get_tree().change_scene("res://fases/fase_3/world_3_cena_1.tscn")

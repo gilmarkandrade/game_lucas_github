@@ -16,7 +16,7 @@ func _ready():
 func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
-	if death == false :
+	if death == false  and atributos_player_singleton.stop_player == false:
 		# olhar na direção do mouse
 		look_at(get_global_mouse_position())
 	
