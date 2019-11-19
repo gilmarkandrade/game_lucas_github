@@ -129,6 +129,9 @@ func _on_area_corpo_player_area_entered(area):
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
 		death_player()
+	if area .is_in_group("laser_boss"):
+		life = - 10
+		death_player()
 
 
 func _on_area_arma_player_area_entered(area):

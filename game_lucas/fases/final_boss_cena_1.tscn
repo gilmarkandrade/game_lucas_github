@@ -5,8 +5,8 @@
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=3]
 [ext_resource path="res://cenas_globais/hud_life_final_boss.tscn" type="PackedScene" id=4]
 [ext_resource path="res://inimigos/boss/boss_final/Final_Boss.tscn" type="PackedScene" id=5]
-[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://fases/chao_final_boss_cena_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://fases/chao_final_boss_cena_1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player/player_fase5/side_scroller_F5/player_SD_F5.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.7114, 315.99 )
@@ -41,11 +41,6 @@ position = Vector2( -758.32, -498.095 )
 anchor_mode = 0
 current = true
 
-[node name="player_SD_F2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3.09087, 540.902 )
-collision_layer = 5
-collision_mask = 5
-
 [node name="ativa_spaw" type="Area2D" parent="."]
 editor/display_folded = true
 position = Vector2( 421.64, 271.654 )
@@ -66,8 +61,11 @@ position = Vector2( 961.211, 416.389 )
 [node name="plataforma_spawn3" type="Position2D" parent="."]
 position = Vector2( 1272.81, 463.473 )
 
-[node name="chao_final_boss_cena_1" parent="." instance=ExtResource( 7 )]
+[node name="chao_final_boss_cena_1" parent="." instance=ExtResource( 6 )]
 position = Vector2( 259.187, 615.56 )
 scale = Vector2( 1.52, 1 )
+
+[node name="player_SD_F5" parent="." instance=ExtResource( 7 )]
+position = Vector2( -267.792, 546.743 )
 [connection signal="body_entered" from="ativa_spaw" to="." method="_on_ativa_spaw_body_entered"]
 [connection signal="body_exited" from="ativa_spaw" to="." method="_on_ativa_spaw_body_exited"]
