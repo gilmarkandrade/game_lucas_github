@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fases/fase_test.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://player/player_fase2/top_down_F2/player_top_down_F2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/player_SD_F2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://boss_fase/chão/chao_final_boss_1.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 219.409, 10 )
@@ -14,6 +15,12 @@ extents = Vector2( 237.532, 10 )
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 5.51888
 height = 86.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 35.6469, 81.0124 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 36.8652, 76.3448 )
 
 [node name="fase_test" type="Node"]
 script = ExtResource( 1 )
@@ -82,16 +89,39 @@ position = Vector2( 1.51888, -3 )
 scale = Vector2( 0.09375, 1.5625 )
 texture = ExtResource( 3 )
 
-[node name="player_top_down_F2" parent="." instance=ExtResource( 4 )]
-
-[node name="Camera2D" type="Camera2D" parent="player_top_down_F2"]
-current = true
-
 [node name="delay_spawn_enemie" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
 [node name="position_enemie_spawn" type="Position2D" parent="."]
 position = Vector2( 256.969, -255.141 )
+
+[node name="player_SD_F2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -148.375, 21.4276 )
+
+[node name="Camera2D" type="Camera2D" parent="player_SD_F2"]
+position = Vector2( 525.135, -40.4307 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 869.865, 197.407 )
+
+[node name="chao_final_boss_1" parent="." instance=ExtResource( 5 )]
+position = Vector2( -210.465, 186.548 )
+
+[node name="area_criar2" type="Area2D" parent="chao_final_boss_1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao_final_boss_1/area_criar2"]
+position = Vector2( 213.363, -97.3738 )
+shape = SubResource( 4 )
+
+[node name="area_destruir2" type="Area2D" parent="chao_final_boss_1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chao_final_boss_1/area_destruir2"]
+position = Vector2( 1190.84, -126.933 )
+shape = SubResource( 5 )
 [connection signal="body_entered" from="area_test_cajado" to="." method="_on_area_test_cajado_body_entered"]
 [connection signal="timeout" from="delay_spawn_enemie" to="." method="_on_delay_spawn_enemie_timeout"]
+[connection signal="body_entered" from="chao_final_boss_1/area_criar2" to="." method="_on_area_criar2_body_entered"]
+[connection signal="body_exited" from="chao_final_boss_1/area_destruir2" to="." method="_on_area_destruir2_body_exited"]
