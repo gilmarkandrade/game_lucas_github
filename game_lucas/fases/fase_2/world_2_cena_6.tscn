@@ -161,6 +161,7 @@ flip_v = true
 [node name="som_trilha" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
 volume_db = -10.0
+autoplay = true
 [connection signal="body_entered" from="area_retorno_cena_5" to="." method="_on_area_retorno_cena_5_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena7" to="." method="_on_area_entrar_cena7_body_entered"]
 [connection signal="body_exited" from="area_entrar_cena7" to="." method="_on_area_entrar_cena7_body_exited"]

@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="jogo_lucas"
-run/main_scene="res://fases/fase_1/world_1_cena_1.tscn"
+run/main_scene="res://cenas_globais/Menu_Inicial/menu_inicial.tscn"
 config/icon="res://icon.png"
 
 [autoload]

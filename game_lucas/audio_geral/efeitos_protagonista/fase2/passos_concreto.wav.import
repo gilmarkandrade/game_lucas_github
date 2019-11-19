@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/passos_concreto.wav-c76cd8a7f2bedd0c76ff9a9aca9a0f31.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_protagonista/fase2/passos_concreto.wav"
+dest_files=[ "res://.import/passos_concreto.wav-c76cd8a7f2bedd0c76ff9a9aca9a0f31.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

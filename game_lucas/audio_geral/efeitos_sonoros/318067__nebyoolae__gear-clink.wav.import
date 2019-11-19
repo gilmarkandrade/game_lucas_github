@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/318067__nebyoolae__gear-clink.wav-6bdb3d2c017d123b19ddc96e6fec0ff2.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/318067__nebyoolae__gear-clink.wav"
+dest_files=[ "res://.import/318067__nebyoolae__gear-clink.wav-6bdb3d2c017d123b19ddc96e6fec0ff2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -12,9 +12,9 @@ var enemie_selected = 0
 
 func _ready():
 	# quantidade de inimigo que sera spawnada
-	atributos_fase_singleton.cont_enemie = 20
+	atributos_fase_singleton.cont_enemie = 25
 	atributos_fase_singleton.stop_spawn_enemie = false
-
+	
 
 
 func select_ramdon_enemie():
@@ -51,7 +51,7 @@ func _on_delay_spawn_enemie_timeout():
 		spaw_enemie()
 		$som_trilha.volume_db = -1
 		$som_trilha.pitch_scale = 1.3
-	
+		print(limit_enemie ,stop_create,atributos_fase_singleton.anim_close_door_finalized,atributos_fase_singleton.cont_enemie )
 	if atributos_fase_singleton.anim_close_door_finalized == 1:
 		$animation_dor.current_animation = "close_the_door"
 		
@@ -61,6 +61,7 @@ func _on_delay_spawn_enemie_timeout():
 		atributos_fase_singleton.animation_door_finalized(1)
 		$som_trilha.volume_db = -10
 		$som_trilha.pitch_scale = 1
+		print(limit_enemie ,stop_create,atributos_fase_singleton.anim_close_door_finalized,atributos_fase_singleton.cont_enemie )
 func _on_area_criar_inimigos_body_entered(body):
 	if body.is_in_group("player"):
 		$delay_spawn_enemie.start()

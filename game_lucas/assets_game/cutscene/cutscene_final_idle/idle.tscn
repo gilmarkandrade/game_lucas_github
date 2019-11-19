@@ -5,32 +5,32 @@
 [ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro2.png" type="Texture" id=3]
 [ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro3.png" type="Texture" id=4]
 [ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro4.png" type="Texture" id=5]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando1.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando2.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando3.png" type="Texture" id=8]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca1.png" type="Texture" id=9]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca2.png" type="Texture" id=10]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca3.png" type="Texture" id=11]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca4.png" type="Texture" id=12]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica1.png" type="Texture" id=13]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica2.png" type="Texture" id=14]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica3.png" type="Texture" id=15]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica4.png" type="Texture" id=16]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo1.png" type="Texture" id=17]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo2.png" type="Texture" id=18]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo3.png" type="Texture" id=19]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo4.png" type="Texture" id=20]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea1.png" type="Texture" id=21]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea2.png" type="Texture" id=22]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea3.png" type="Texture" id=23]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea4.png" type="Texture" id=24]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida1.png" type="Texture" id=25]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida2.png" type="Texture" id=26]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida3.png" type="Texture" id=27]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida4.png" type="Texture" id=28]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida5.png" type="Texture" id=29]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle1.png" type="Texture" id=30]
-[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle2.png" type="Texture" id=31]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca1.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca2.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca3.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/cabeca4.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo1.png" type="Texture" id=10]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo2.png" type="Texture" id=11]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo3.png" type="Texture" id=12]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/corpo4.png" type="Texture" id=13]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea1.png" type="Texture" id=14]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea2.png" type="Texture" id=15]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea3.png" type="Texture" id=16]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/silvia_lactea4.png" type="Texture" id=17]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida1.png" type="Texture" id=18]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida2.png" type="Texture" id=19]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida3.png" type="Texture" id=20]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida4.png" type="Texture" id=21]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/saida/saida5.png" type="Texture" id=22]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle1.png" type="Texture" id=23]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/Protagonista/idle/idle2.png" type="Texture" id=24]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica1.png" type="Texture" id=25]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica2.png" type="Texture" id=26]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica3.png" type="Texture" id=27]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/bola_eletrica4.png" type="Texture" id=28]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando1.png" type="Texture" id=29]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando2.png" type="Texture" id=30]
+[ext_resource path="res://assets_game/cutscene/cutscene_final/Personagens/silvia_lactea/buraco_negro_fechando3.png" type="Texture" id=31]
 [ext_resource path="res://assets_game/cutscene/cutscene_comeco/fundo/beco_escuro_so_sombra.png" type="Texture" id=32]
 [ext_resource path="res://assets_game/portal/portal.png" type="Texture" id=33]
 [ext_resource path="res://cenas_globais/particula_portal.tscn" type="PackedScene" id=34]
@@ -157,40 +157,40 @@ animations = [ {
 "name": "buraco_aberto",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": false,
-"name": "buraco_fechando",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "cabeca",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "bola",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "corpo",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "silvia",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ) ],
+"frames": [ ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ],
 "loop": false,
 "name": "protagonista",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 30 ), ExtResource( 31 ) ],
+"frames": [ ExtResource( 23 ), ExtResource( 24 ) ],
 "loop": true,
 "name": "idle_protagonista",
 "speed": 2.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "bola",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": false,
+"name": "buraco_fechando",
+"speed": 5.0
 } ]
 
 [sub_resource type="Image" id=8]
@@ -232,7 +232,6 @@ emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
 gravity = Vector3( 0, 98, 0 )
-angular_velocity = 1.05
 orbit_velocity = 0.1
 orbit_velocity_random = 0.0
 linear_accel = 100.0

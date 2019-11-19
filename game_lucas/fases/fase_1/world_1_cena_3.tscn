@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar_inimigo_fase1.gd" type="Script" id=14]
 [ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 1.wav" type="AudioStream" id=15]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase1/Rio_online-audio-converter.com.wav" type="AudioStream" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.45, 355.894 )
@@ -143,7 +144,7 @@ texture = ExtResource( 6 )
 position = Vector2( 284.36, -215.179 )
 frames = SubResource( 6 )
 animation = "Animação Rio"
-frame = 1
+frame = 3
 playing = true
 
 [node name="player_top_down" parent="." instance=ExtResource( 11 )]
@@ -218,6 +219,12 @@ position = Vector2( 711.692, -126.014 )
 stream = ExtResource( 15 )
 volume_db = -10.0
 autoplay = true
+
+[node name="som_rio" type="AudioStreamPlayer2D" parent="area_criar_inimigo_fase1"]
+stream = ExtResource( 16 )
+volume_db = -10.0
+autoplay = true
+attenuation = 1.46409
 
 [node name="camera_zoom" type="AnimationPlayer" parent="area_criar_inimigo_fase1"]
 anims/camera_zoom = SubResource( 11 )
