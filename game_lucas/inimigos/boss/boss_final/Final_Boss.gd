@@ -1,6 +1,5 @@
 extends KinematicBody2D
 
-
 var death = false 
 var walking = true 
 var atacking = false
@@ -19,19 +18,19 @@ var impulse = false
 
 const gravity = 9
 
-#em desenvolvimento
 func _physics_process(delta):
 	life = atributos_final_boss_singleton.life_boss
 	move.y += gravity
+	print(life)
 	walking_mech()
 	if impulse == true:
 		impulseTop()
 
 func walking_mech():
 	if walking == true:
-		move.x = 80
+		move.x = 120
 		$animation.current_animation = "walk_animaton"
-		$delay_attack1.paused
+		$delay_attack1.paused 
 	else :
 		move.x = 0
 		$delay_attack1.start()
@@ -51,7 +50,6 @@ func generate_attack():
 		can_change = true
 	walking = false
 	print(attack_type)
-	attack_type = 8
 	if attack_type <= 4:
 		$delay_attack2.start()
 		$animation.current_animation = "missil_attack"
@@ -104,7 +102,6 @@ func attack3():
 	impulse = true
 	$impulse.start()
 
-
 func _on_delay_attack1_timeout():
 	$delay_attack1.stop()
 	attack1()
@@ -116,7 +113,7 @@ func _on_delay_attack2_timeout():
 func _on_delay_attack3_timeout():
 	$delay_attack3.stop()
 	attack3()
-
+		
 func _on_delay_attack4_timeout():
 	$delay_attack4.stop()
 	attack4()
@@ -135,11 +132,11 @@ func _on_change_attack_timeout():
 
 func _on_area_corpo_mech_area_entered(area):
 	if area.is_in_group("arma_player") and death == false:
-		life -= 50
+		life -= 10
 		$animation.current_animation = "tween"
 		#life -= atributos_player_singleton.life_enemie_update
 	if area.is_in_group("projetil_player") and death == false:
-		life -= 50
+		life -= 10
 		$animation.current_animation = "tween"
 		#life -= atributos_player_singleton.life_enemie_update
 	atributos_final_boss_singleton.life_boss = life
@@ -149,9 +146,9 @@ func _on_area_corpo_mech_area_entered(area):
 func action_life():
 	
 	if life <= 750 and life >= 500:
-		get_tree().change_scene("res://fases/TesteFinalBoss(TD).tscn")
-	elif life < 500 and life >= 250:
-		print("tooop")
+		get_tree().change_scene("res://fases/Fase_Final_Boss_Mech(TD).tscn")
+	if life <= 0:
+		queue_free()
 
 
 

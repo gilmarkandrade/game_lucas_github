@@ -10,7 +10,7 @@ var move = Vector2()
 var velocity = 50
 var attack_probability = RandomNumberGenerator.new()
 var attack_type = 0
-var oi = false
+var pode_trocar = false
 var shot = preload("res://inimigos/projeteis_inimigos/shot_final_boss/shot.tscn")
 var missil = preload("res://inimigos/projeteis_inimigos/missil_final_boss/top_down/Missil(TD).tscn")
 var laser = preload("res://inimigos/projeteis_inimigos/laser_final_boss/laser.tscn")
@@ -18,15 +18,16 @@ var impulse = false
 var go_up = true
 
 func _physics_process(delta):
+	atributos_final_boss_singleton.walking = walking
 	walking_mech()
 	life = atributos_final_boss_singleton.life_boss
-	print(global_position.y)
 	if impulse == true:
 		impulseTop()
 
 func walking_mech():
 	if walking == true:
-		move.x = 8
+		$animation.current_animation = "walking"
+		move.x = 100
 		$animation.current_animation = "walk_animaton"
 		$delay_attack1.paused
 		if global_position.y >= (450):
@@ -40,9 +41,8 @@ func walking_mech():
 	else :
 		move.x = 0
 		move.y = 0
+		$animation.current_animation = "idle"
 		$delay_attack1.start()
-		if atacking == false and walking == false and idlle_status == true:
-			$animation.play("idlle_animation")
 
 	move = move_and_slide(move)
 
@@ -51,11 +51,13 @@ func random_attack():
 	attack_type = attack_probability.randi_range(1,2)
 
 func generate_attack():
-	if oi == false:
+	if pode_trocar == false:
 		random_attack()
-		oi = true
+		pode_trocar = true
 	walking = false
 	if attack_type == 1 :
+		$animation.current_animation = "missil_attack"
+		#$animation.play("missil_attack")
 		$delay_attack2.start()
 	if attack_type == 2 :
 		$delay_attack3.start()
@@ -89,6 +91,8 @@ func attack2():
 func attack3():
 	var LAS = laser.instance()
 	LAS.side = false
+	LAS.scale.y = 4
+	LAS.scale.x = 4
 	get_parent().add_child(LAS)
 	LAS.position = $cannon_fire3.global_position
 	$reload.start()
@@ -115,17 +119,17 @@ func _on_delay_attack3_timeout():
 
 func _on_change_attack_timeout():
 	generate_attack()
-	oi = false
+	pode_trocar = false
 	$change_attack.stop()
 	
 
 
 func _on_area_corpo_mech_area_entered(area):
 	if area.is_in_group("arma_player") and death == false:
-		life -= 50
+		life -= 10
 		#life -= atributos_player_singleton.life_enemie_update
 	if area.is_in_group("projetil_player") and death == false:
-		life -= 50
+		life -= 10
 		#life -= atributos_player_singleton.life_enemie_update
 	atributos_final_boss_singleton.life_boss = life
 	action_life()
@@ -133,10 +137,8 @@ func _on_area_corpo_mech_area_entered(area):
 
 func action_life():
 	
-	if life <= 750 and life >= 500:
-		print("ok")
-	elif life < 500 and life >= 250:
-		print("tooop")
+	if life < 500 and life >= 250:
+		get_tree().change_scene("res://fases/Fase_Final_Boss_Mech(SC).tscn")
 
 
 

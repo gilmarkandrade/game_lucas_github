@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://fases/Fase_Final_Boss_Mech(TD).gd" type="Script" id=1]
+[ext_resource path="res://cenas_globais/hud_life.tscn" type="PackedScene" id=2]
+[ext_resource path="res://cenas_globais/hud_life_final_boss.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets_game/background/fase_5/cena_1/Tile Parede.png" type="Texture" id=4]
+[ext_resource path="res://inimigos/boss/boss_final/Final_Boss_(TD).tscn" type="PackedScene" id=5]
+[ext_resource path="res://player/player_fase5/top_down_F5/isso5/player_top_down_F5.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 696.269 )
+
+[node name="TesteFinalBoss(TD)" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+editor/display_folded = true
+
+[node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
+
+[node name="hud_life_final_boss" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1180, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 503.325, 322.644 )
+scale = Vector2( 5.41483, 3.02487 )
+texture = ExtResource( 4 )
+
+[node name="Final_Boss_(TD)" parent="." instance=ExtResource( 5 )]
+position = Vector2( 699.609, 296.804 )
+
+[node name="Camera2D" type="Camera2D" parent="Final_Boss_(TD)"]
+position = Vector2( -320.016, 23.34 )
+current = true
+limit_top = 0
+limit_bottom = 0
+
+[node name="Barrera_left" type="StaticBody2D" parent="Final_Boss_(TD)"]
+editor/display_folded = true
+position = Vector2( -953.06, 28.4691 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final_Boss_(TD)/Barrera_left"]
+shape = SubResource( 1 )
+
+[node name="Barrera_right" type="StaticBody2D" parent="Final_Boss_(TD)"]
+editor/display_folded = true
+position = Vector2( 97.8342, 28.4691 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Final_Boss_(TD)/Barrera_right"]
+shape = SubResource( 1 )
+
+[node name="player_top_down_F5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 105.089, 281.269 )
