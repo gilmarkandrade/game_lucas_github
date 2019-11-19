@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://player/player_fase4/top_down_F4/player_top_down4.gd" type="Script" id=1]
 [ext_resource path="res://player/player_fase4/top_down_F4/atack_animation/atack0019.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://audio_geral/efeitos_protagonista/fase2/Caminhando em Sólido.wav" type="AudioStream" id=22]
 [ext_resource path="res://audio_geral/efeitos_protagonista/fase2/Ataque Protagonista.wav" type="AudioStream" id=23]
 [ext_resource path="res://audio_geral/efeitos_protagonista/fase1/Protagonista levando dano.wav" type="AudioStream" id=24]
+[ext_resource path="res://audio_geral/efeitos_protagonista/fase4/Thompson.wav" type="AudioStream" id=25]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 37.2308
@@ -284,6 +285,10 @@ pitch_scale = 0.8
 stream = ExtResource( 24 )
 volume_db = -10.0
 pitch_scale = 1.2
+
+[node name="som_arma" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -5.0
 [connection signal="animation_finished" from="animation_player" to="." method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="arma_player" to="." method="_on_arma_player_body_entered"]
 [connection signal="area_entered" from="area_corpo_player" to="." method="_on_area_corpo_player_area_entered"]

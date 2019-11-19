@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/arqueiro(T_D).gd" type="Script" id=1]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/attack_animation/attack1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/death_animation/frame0001.png" type="Texture" id=5]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/walk_animation/walk1.png" type="Texture" id=6]
 [ext_resource path="res://inimigos/inimigos_comun/fase_2/arqueiro/top_down/walk_animation/walk2.png" type="Texture" id=7]
+[ext_resource path="res://audio_geral/efeitos_sonoros/SomDeMorte2.wav" type="AudioStream" id=8]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 26.7094
@@ -154,6 +155,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [ Vector2( 4, -1 ), Vector2( -12, 0 ) ]
 }
+tracks/4/type = "value"
+tracks/4/path = NodePath("som_morte:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=5]
 length = 0.1
@@ -285,7 +298,7 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="spriter _A" type="Sprite" parent="."]
-position = Vector2( 5.78169, -0.299728 )
+position = Vector2( 5.177, -1 )
 rotation = -1.5708
 scale = Vector2( 1.43086, 1.52815 )
 texture = ExtResource( 2 )
@@ -324,7 +337,7 @@ shape = SubResource( 8 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( -0.111053, -0.0619049 )
+position = Vector2( 0, -2 )
 shape = SubResource( 9 )
 
 [node name="AI_perception" type="Area2D" parent="."]
@@ -348,6 +361,9 @@ position = Vector2( 1855.42, 6.10352e-005 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( -0.630249, -1.26048 )
 shape = SubResource( 11 )
+
+[node name="som_morte" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
 [connection signal="animation_finished" from="animation_A" to="." method="_on_animation_H_C_animation_finished"]
 [connection signal="area_entered" from="corpo_A" to="." method="_on_corpo_A_area_entered"]
 [connection signal="body_entered" from="area_ataque" to="." method="_on_area_ataque_body_entered"]

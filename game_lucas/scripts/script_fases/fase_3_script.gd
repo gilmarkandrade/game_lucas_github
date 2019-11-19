@@ -25,7 +25,9 @@ func _ready():
 		$player_top_down_F3.position = $position_inicio_cena3.global_position
 	if novapos == 5:
 		$player_top_down_F3.position = $position_retorno_cena4.global_position
-	if novapos == 6 :
+	if novapos == 6:
+		$player_SD_F3.position= $position_inicio_cena4.global_position
+	if novapos == 7 :
 		$player_top_down_F3.position = $position_inicio_cena5.global_position
 
 func _process(delta):
@@ -108,5 +110,5 @@ func _on_area_entrar_cena5_body_entered(body):
 	if body.is_in_group("player"):
 		entrou_area_7 = true
 		entrou_area_6 = false
-		novapos = 6
+		novapos = 7
 		atributos_fase_singleton.setar_posicao(novapos)

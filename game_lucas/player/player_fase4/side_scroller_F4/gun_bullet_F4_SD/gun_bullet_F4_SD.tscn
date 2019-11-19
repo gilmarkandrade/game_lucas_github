@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player/player_fase4/side_scroller_F4/gun_bullet_F4_SD/gun_bullet_F4_SD.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/projeteis_inimigos/bala_arma/bullet1.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 12.4711
@@ -19,8 +19,14 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="sprite_orb" type="Sprite" parent="."]
-position = Vector2( 0.222223, -1.03729 )
-scale = Vector2( 0.409722, 0.395833 )
+position = Vector2( 73.6683, -7.03289 )
+scale = Vector2( 2.3, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="sprite_bala" type="Sprite" parent="."]
+visible = false
+position = Vector2( 61.2394, -5.78824 )
+scale = Vector2( 2.3, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]

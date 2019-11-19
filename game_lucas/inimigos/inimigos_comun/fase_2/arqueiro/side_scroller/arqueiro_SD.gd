@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var move = Vector2()
 var speed = 6
-var life = 100
+var life = 80
 var attacking = false
 var death = false
 var side_current = false

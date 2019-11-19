@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://player/player_fase2/top_down_F2/projetil_player_TD.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://player/player_fase2/side_scorller_F2/orb_fogo_SD/bola_de_fogo.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -18,8 +18,8 @@ rotation = 1.55455
 shape = SubResource( 1 )
 
 [node name="sprite_projetil" type="Sprite" parent="."]
-position = Vector2( -0.581804, 0.438267 )
-scale = Vector2( 0.625933, 0.152011 )
+position = Vector2( -0.975357, -1.03682 )
+scale = Vector2( 1.89146, 1.98602 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]

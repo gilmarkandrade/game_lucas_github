@@ -1,46 +1,37 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://cenas_globais/Menu_Inicial/menu_inicial.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://assets_game/interface/logo_game/Logo.jpg" type="Texture" id=2]
 
 [node name="menu_inicial" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -9.0
+margin_top = -3.0
+margin_right = 3.0
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 430.615, 300.405 )
-scale = Vector2( 15.4179, 11.0285 )
+position = Vector2( 539.554, 319.801 )
+scale = Vector2( 0.546085, 0.915695 )
 texture = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-margin_left = 104.448
-margin_top = 49.1298
-margin_right = 268.448
-margin_bottom = 84.1298
-rect_scale = Vector2( 4, 5 )
-text = "Perspective 
-Chase Across"
-align = 1
-valign = 1
-
 [node name="Jogar" type="Button" parent="CanvasLayer"]
-margin_left = 320.0
-margin_top = 250.0
-margin_right = 375.0
-margin_bottom = 275.0
-rect_scale = Vector2( 3.5, 3 )
-text = "Jogar"
+margin_left = 252.504
+margin_top = 511.134
+margin_right = 312.504
+margin_bottom = 531.134
+rect_scale = Vector2( 3.42, 2.44 )
+text = "Play"
 
 [node name="Sair" type="Button" parent="CanvasLayer"]
-margin_left = 320.0
-margin_top = 350.0
-margin_right = 375.0
-margin_bottom = 375.0
-rect_scale = Vector2( 3.5, 3 )
-text = "Sair"
+margin_left = 683.138
+margin_top = 531.701
+margin_right = 739.138
+margin_bottom = 554.701
+rect_scale = Vector2( 3.5, 1.84 )
+text = "Quit"
 [connection signal="pressed" from="CanvasLayer/Jogar" to="." method="_on_Jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sair" to="." method="_on_Sair_pressed"]

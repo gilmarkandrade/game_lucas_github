@@ -140,7 +140,7 @@ func _on_animation_portal_animation_finished(anim_name):
 	if anim_name == "portal_close":
 		atributos_fase_singleton.cont_enemie = 20
 		atributos_fase_singleton.stop_spawn_enemie = false
-		
+		atributos_fase_singleton.open_portal_init_fase = false
 		get_tree().change_scene("res://fases/fase_2/world_2_cena_1.tscn")
 
 

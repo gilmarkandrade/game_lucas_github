@@ -306,13 +306,11 @@ texture = ExtResource( 2 )
 [node name="death0018" type="Sprite" parent="."]
 position = Vector2( 2950.89, 1478.37 )
 rotation = 0.0423498
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="death0019" type="Sprite" parent="."]
 position = Vector2( 2058.57, 889.206 )
 rotation = 0.0423498
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

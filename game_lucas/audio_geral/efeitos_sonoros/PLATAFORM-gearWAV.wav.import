@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PLATAFORM-gearWAV.wav-8da7af1ca17d739aea9695c6e334d299.sample"
+
+[deps]
+
+source_file="res://audio_geral/efeitos_sonoros/PLATAFORM-gearWAV.wav"
+dest_files=[ "res://.import/PLATAFORM-gearWAV.wav-8da7af1ca17d739aea9695c6e334d299.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
