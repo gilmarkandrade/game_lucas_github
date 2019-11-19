@@ -1,28 +1,27 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_4_script.gd" type="Script" id=1]
-[ext_resource path="res://audio_geral/trilhas/mafia_revenge_proud_music_preview.wav" type="AudioStream" id=2]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Corredor_Mafia.png" type="Texture" id=3]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4_Banheiro.png" type="Texture" id=4]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_escritorio.png" type="Texture" id=5]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Calçada.png" type="Texture" id=6]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4.png" type="Texture" id=7]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Rua.jpg" type="Texture" id=8]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Parede.png" type="Texture" id=9]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Porta.png" type="Texture" id=10]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Ligação parede.png" type="Texture" id=11]
-[ext_resource path="res://player/player_fase4/top_down_F4/player_top_down_F4.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar inimigos_fase4 .gd" type="Script" id=13]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Paredes_fase4_Banheiro.png" type="Texture" id=14]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Privada.png" type="Texture" id=15]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Papel_higienico.png" type="Texture" id=16]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Lixo.png" type="Texture" id=17]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Pia.png" type="Texture" id=18]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Mesa_De_centro.png" type="Texture" id=19]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Sofa.png" type="Texture" id=20]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Poltrona.png" type="Texture" id=21]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Planta.png" type="Texture" id=22]
-[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Toldo.png" type="Texture" id=23]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Corredor_Mafia.png" type="Texture" id=2]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4_Banheiro.png" type="Texture" id=3]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_escritorio.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Calçada.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Chão_fase4.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/backgound/Rua.jpg" type="Texture" id=7]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Parede.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Porta.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Ligação parede.png" type="Texture" id=10]
+[ext_resource path="res://player/player_fase4/top_down_F4/player_top_down_F4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scripts/script_interagiveis_de_fase/area_criar inimigos_fase4 .gd" type="Script" id=12]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/paredes/Paredes_fase4_Banheiro.png" type="Texture" id=13]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Privada.png" type="Texture" id=14]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Papel_higienico.png" type="Texture" id=15]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Lixo.png" type="Texture" id=16]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Pia.png" type="Texture" id=17]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Mesa_De_centro.png" type="Texture" id=18]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Sofa.png" type="Texture" id=19]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Poltrona.png" type="Texture" id=20]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Planta.png" type="Texture" id=21]
+[ext_resource path="res://assets_game/background/fase_4/cena_1/assets_cena/Toldo.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1251.87, 31.8655 )
@@ -156,12 +155,7 @@ extents = Vector2( 42.2601, 41.9583 )
 [node name="world_4_cena_1" type="Node"]
 script = ExtResource( 1 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 2 )
-autoplay = true
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer_calçada" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 0, 1679.72 )
@@ -174,17 +168,17 @@ motion_mirroring = Vector2( 0, 563.01 )
 [node name="Corredor_Mafia" type="Sprite" parent="ParallaxBackground/ParallaxLayer_banheiro"]
 position = Vector2( 250.19, 334.791 )
 scale = Vector2( 1, 1.77973 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="Chão_fase4_Banheiro" type="Sprite" parent="ParallaxBackground/ParallaxLayer_banheiro"]
 position = Vector2( 844.621, 325.986 )
 rotation = 1.5708
 scale = Vector2( 1.55225, 1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 3 )
 
 [node name="Chão_escritorio" type="Sprite" parent="ParallaxBackground/ParallaxLayer_banheiro"]
 position = Vector2( -453.871, 273.788 )
-texture = ExtResource( 5 )
+texture = ExtResource( 4 )
 
 [node name="ParallaxLayer_salão" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 1168.95, 0 )
@@ -192,15 +186,15 @@ motion_mirroring = Vector2( 1168.95, 0 )
 [node name="Calçada" type="Sprite" parent="ParallaxBackground/ParallaxLayer_salão"]
 position = Vector2( 1679.2, 834.921 )
 z_index = -1
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Chão_fase4" type="Sprite" parent="ParallaxBackground/ParallaxLayer_salão"]
 position = Vector2( 409.556, 513.045 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="Chão_fase5" type="Sprite" parent="ParallaxBackground/ParallaxLayer_salão"]
 position = Vector2( 409.556, 1512.13 )
-texture = ExtResource( 7 )
+texture = ExtResource( 6 )
 
 [node name="ParallaxLayer_rua" type="ParallaxLayer" parent="ParallaxBackground"]
 editor/display_folded = true
@@ -208,10 +202,9 @@ motion_mirroring = Vector2( 0, 3200 )
 
 [node name="Rua" type="Sprite" parent="ParallaxBackground/ParallaxLayer_rua"]
 position = Vector2( 2948.45, 1097.29 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="Paredes" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes"]
 position = Vector2( 1126.22, -20.4481 )
@@ -221,24 +214,24 @@ shape = SubResource( 1 )
 position = Vector2( 675.736, 20.5352 )
 rotation = 1.5708
 scale = Vector2( 1, 1.03905 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Parede2" type="Sprite" parent="Paredes/CollisionShape2D"]
 position = Vector2( -595.077, 23.1853 )
 rotation = 1.5708
 scale = Vector2( 1, 0.954544 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Porta" type="Sprite" parent="Paredes/CollisionShape2D/Parede2"]
 position = Vector2( 0.150298, -640.461 )
 rotation = 1.5708
 scale = Vector2( 1.57552, 1.24067 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="Ligação parede" type="Sprite" parent="Paredes/CollisionShape2D/Parede2/Porta"]
 position = Vector2( 59.1113, 0.363547 )
 scale = Vector2( 0.756205, 0.977266 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Paredes"]
 position = Vector2( 2371.39, 1006.06 )
@@ -247,7 +240,7 @@ shape = SubResource( 2 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D2"]
 position = Vector2( 6.61128, 3.74841 )
 scale = Vector2( 1, 1.81155 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paredes"]
 position = Vector2( -22.9505, 1004.99 )
@@ -256,29 +249,29 @@ shape = SubResource( 3 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D3"]
 position = Vector2( 22.1443, -721.59 )
 scale = Vector2( 1, 0.491559 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Parede2" type="Sprite" parent="Paredes/CollisionShape2D3"]
 position = Vector2( 24.912, -40.4115 )
 scale = Vector2( 1, 0.491559 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Parede3" type="Sprite" parent="Paredes/CollisionShape2D3"]
 position = Vector2( 23.8519, 698.146 )
 scale = Vector2( 1, 0.547406 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="Porta" type="Sprite" parent="Paredes/CollisionShape2D3"]
 position = Vector2( 23.8132, -381.273 )
 rotation = 1.5708
 scale = Vector2( 1.21922, 1.42017 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="Porta2" type="Sprite" parent="Paredes/CollisionShape2D3"]
 position = Vector2( 24.4208, 313.68 )
 rotation = 1.5708
 scale = Vector2( 1.45636, 1.61872 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -289,7 +282,7 @@ shape = SubResource( 4 )
 position = Vector2( -7.96136, 1.68945 )
 rotation = 1.5708
 scale = Vector2( 1, 0.967569 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -300,7 +293,7 @@ shape = SubResource( 5 )
 position = Vector2( 63.7966, 0.506596 )
 rotation = 1.5708
 scale = Vector2( 1, 0.797708 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -310,7 +303,7 @@ shape = SubResource( 6 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D6"]
 position = Vector2( 7.49563, -28.2957 )
 scale = Vector2( 0.974026, 1.00908 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -321,7 +314,7 @@ shape = SubResource( 7 )
 position = Vector2( -4.25385, -0.376475 )
 rotation = 1.5708
 scale = Vector2( 1, 1.89051 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -331,7 +324,7 @@ shape = SubResource( 8 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D8"]
 position = Vector2( -12.1436, -8.81128 )
 scale = Vector2( 1, 1.0168 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -341,7 +334,7 @@ shape = SubResource( 9 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D9"]
 position = Vector2( 0.128601, 0.586731 )
 scale = Vector2( 1, 0.7928 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -351,7 +344,7 @@ shape = SubResource( 10 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D10"]
 position = Vector2( -0.855469, 3.66797 )
 scale = Vector2( 1, 0.361474 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -362,7 +355,7 @@ shape = SubResource( 11 )
 position = Vector2( -10.5788, 1.2539 )
 rotation = 1.5708
 scale = Vector2( 1, 0.732056 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Paredes"]
 editor/display_folded = true
@@ -372,9 +365,9 @@ shape = SubResource( 12 )
 [node name="Parede" type="Sprite" parent="Paredes/CollisionShape2D12"]
 position = Vector2( -0.726318, -0.330078 )
 scale = Vector2( 1, 0.333466 )
-texture = ExtResource( 9 )
+texture = ExtResource( 8 )
 
-[node name="player_top_down_F4" parent="." instance=ExtResource( 12 )]
+[node name="player_top_down_F4" parent="." instance=ExtResource( 11 )]
 editor/display_folded = true
 position = Vector2( 1073.39, 3013.26 )
 
@@ -386,8 +379,7 @@ limit_right = 3000
 limit_bottom = 3165
 
 [node name="area_criar inimigos_fase4" type="Area2D" parent="."]
-editor/display_folded = true
-script = ExtResource( 13 )
+script = ExtResource( 12 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_criar inimigos_fase4"]
 position = Vector2( 1171.07, 1024.98 )
@@ -421,7 +413,7 @@ shape = SubResource( 15 )
 [node name="Porta" type="Sprite" parent="area_criar inimigos_fase4/portas/CollisionShape2D"]
 position = Vector2( -0.878272, -1.87001 )
 scale = Vector2( 1.72304, 1.80682 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="area_criar inimigos_fase4/portas"]
 position = Vector2( 1259.3, 2109.67 )
@@ -431,7 +423,7 @@ shape = SubResource( 16 )
 [node name="Porta" type="Sprite" parent="area_criar inimigos_fase4/portas/CollisionShape2D2"]
 position = Vector2( 2.64367, -0.298579 )
 scale = Vector2( 1.6023, 1.66901 )
-texture = ExtResource( 10 )
+texture = ExtResource( 9 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="area_criar inimigos_fase4/portas"]
 
@@ -457,78 +449,78 @@ shape = SubResource( 17 )
 editor/display_folded = true
 position = Vector2( -62.4064, -159.152 )
 rotation = 1.5708
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 flip_v = true
 
 [node name="Privada" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro"]
 editor/display_folded = true
 position = Vector2( 234.157, -334.583 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada"]
 position = Vector2( -12.5786, 55.0623 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada"]
 position = Vector2( -10.063, -44.0498 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada2" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro"]
 editor/display_folded = true
 position = Vector2( 233.649, -46.5903 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada2"]
 position = Vector2( -12.5786, 45.7628 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada2"]
 position = Vector2( -10.063, -38.2377 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada4" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro"]
 editor/display_folded = true
 position = Vector2( 233.629, 84.9028 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada4"]
 position = Vector2( -12.104, 43.4541 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada4"]
 position = Vector2( -10.063, -38.2377 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada5" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro"]
 editor/display_folded = true
 position = Vector2( 233.89, 211.339 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada5"]
 position = Vector2( -12.1038, 38.8369 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada5"]
 position = Vector2( -10.063, -35.0055 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada3" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro"]
 editor/display_folded = true
 position = Vector2( 233.408, -185.306 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada3"]
 position = Vector2( -12.5786, 45.7628 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D/Paredes_fase4_Banheiro/Privada3"]
 position = Vector2( -10.063, -44.0498 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Banheiros"]
 editor/display_folded = true
@@ -539,7 +531,7 @@ shape = SubResource( 18 )
 editor/display_folded = true
 position = Vector2( -56.6652, 166.64 )
 rotation = 1.5708
-texture = ExtResource( 14 )
+texture = ExtResource( 13 )
 flip_h = true
 flip_v = true
 
@@ -547,76 +539,76 @@ flip_v = true
 editor/display_folded = true
 position = Vector2( -239.357, -333.292 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 flip_h = true
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada"]
 position = Vector2( 25.8152, 53.5275 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada"]
 position = Vector2( 9.39697, -38.4222 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada2" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2"]
 editor/display_folded = true
 position = Vector2( -238.77, -48.8596 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 flip_h = true
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada2"]
 position = Vector2( 18.4521, 46.7861 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada2"]
 position = Vector2( 17.8121, -39.7725 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada4" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2"]
 editor/display_folded = true
 position = Vector2( -238.82, 82.4506 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 flip_h = true
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada4"]
 position = Vector2( 17.8749, 45.5005 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada4"]
 position = Vector2( 18.8638, -36.1913 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada5" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2"]
 editor/display_folded = true
 position = Vector2( -239.207, 209.07 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 flip_h = true
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada5"]
 position = Vector2( 16.2972, 40.8834 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada5"]
 position = Vector2( 15.1824, -36.0288 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="Privada3" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2"]
 editor/display_folded = true
 position = Vector2( -239.38, -184.66 )
 scale = Vector2( 1.19834, 1.2319 )
-texture = ExtResource( 15 )
+texture = ExtResource( 14 )
 flip_h = true
 
 [node name="Papel_higienico" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada3"]
 position = Vector2( 28.9708, 44.7395 )
-texture = ExtResource( 16 )
+texture = ExtResource( 15 )
 
 [node name="Lixo" type="Sprite" parent="Banheiros/CollisionShape2D2/Paredes_fase4_Banheiro2/Privada3"]
 position = Vector2( 20.4419, -41.4917 )
-texture = ExtResource( 17 )
+texture = ExtResource( 16 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Banheiros"]
 editor/display_folded = true
@@ -625,19 +617,19 @@ shape = SubResource( 19 )
 
 [node name="Pia5" type="Sprite" parent="Banheiros/CollisionShape2D3"]
 position = Vector2( -235.873, -2.51196 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="Pia" type="Sprite" parent="Banheiros/CollisionShape2D3"]
 position = Vector2( 230.31, -1.32739 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="Pia3" type="Sprite" parent="Banheiros/CollisionShape2D3"]
 position = Vector2( -82.9298, -1.20898 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="Pia2" type="Sprite" parent="Banheiros/CollisionShape2D3"]
 position = Vector2( 73.7548, -1.16064 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Banheiros"]
 editor/display_folded = true
@@ -646,22 +638,22 @@ shape = SubResource( 19 )
 
 [node name="Pia5" type="Sprite" parent="Banheiros/CollisionShape2D4"]
 position = Vector2( -235.873, -2.51196 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 flip_v = true
 
 [node name="Pia" type="Sprite" parent="Banheiros/CollisionShape2D4"]
 position = Vector2( 230.31, -1.32739 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 flip_v = true
 
 [node name="Pia3" type="Sprite" parent="Banheiros/CollisionShape2D4"]
 position = Vector2( -82.9298, -1.20898 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 flip_v = true
 
 [node name="Pia2" type="Sprite" parent="Banheiros/CollisionShape2D4"]
 position = Vector2( 73.7548, -1.16064 )
-texture = ExtResource( 18 )
+texture = ExtResource( 17 )
 flip_v = true
 
 [node name="Escritorio" type="StaticBody2D" parent="."]
@@ -676,7 +668,7 @@ shape = SubResource( 20 )
 [node name="Mesa_De_centro" type="Sprite" parent="Escritorio/CollisionShape2D"]
 position = Vector2( 0.671815, -0.146016 )
 scale = Vector2( 2.06674, 1.92068 )
-texture = ExtResource( 19 )
+texture = ExtResource( 18 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Escritorio"]
 editor/display_folded = true
@@ -687,7 +679,7 @@ shape = SubResource( 21 )
 position = Vector2( 2.65967, 2.30469 )
 rotation = -1.5708
 scale = Vector2( 1.18277, 1.33891 )
-texture = ExtResource( 20 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Escritorio"]
 editor/display_folded = true
@@ -698,7 +690,7 @@ shape = SubResource( 21 )
 position = Vector2( -0.513794, -2.45532 )
 rotation = 1.5708
 scale = Vector2( 1.18277, 1.33891 )
-texture = ExtResource( 20 )
+texture = ExtResource( 19 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Escritorio"]
 editor/display_folded = true
@@ -709,7 +701,7 @@ shape = SubResource( 22 )
 position = Vector2( 2.03857, 6.35229 )
 rotation = 1.5708
 scale = Vector2( 1.32934, 1.35097 )
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Escritorio"]
 editor/display_folded = true
@@ -720,7 +712,7 @@ shape = SubResource( 22 )
 position = Vector2( -0.416992, 5.37915 )
 rotation = 1.5708
 scale = Vector2( 1.31418, 1.29641 )
-texture = ExtResource( 21 )
+texture = ExtResource( 20 )
 
 [node name="Plantas" type="StaticBody2D" parent="."]
 editor/display_folded = true
@@ -733,7 +725,7 @@ shape = SubResource( 23 )
 [node name="Planta" type="Sprite" parent="Plantas/CollisionShape2D6"]
 position = Vector2( 0.21268, 1.67626 )
 scale = Vector2( 1.58639, 1.62729 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Plantas"]
 editor/display_folded = true
@@ -743,7 +735,7 @@ shape = SubResource( 23 )
 [node name="Planta" type="Sprite" parent="Plantas/CollisionShape2D7"]
 position = Vector2( 0.21268, 1.67626 )
 scale = Vector2( 1.58639, 1.62729 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Plantas"]
 editor/display_folded = true
@@ -753,7 +745,7 @@ shape = SubResource( 23 )
 [node name="Planta" type="Sprite" parent="Plantas/CollisionShape2D8"]
 position = Vector2( 0.21268, 1.67626 )
 scale = Vector2( 1.58639, 1.62729 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Plantas"]
 editor/display_folded = true
@@ -763,7 +755,7 @@ shape = SubResource( 23 )
 [node name="Planta" type="Sprite" parent="Plantas/CollisionShape2D9"]
 position = Vector2( 0.21268, 1.67626 )
 scale = Vector2( 1.58639, 1.62729 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Plantas"]
 editor/display_folded = true
@@ -773,7 +765,7 @@ shape = SubResource( 23 )
 [node name="Planta" type="Sprite" parent="Plantas/CollisionShape2D10"]
 position = Vector2( 0.21268, 1.67626 )
 scale = Vector2( 1.58639, 1.62729 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Plantas"]
 editor/display_folded = true
@@ -783,32 +775,32 @@ shape = SubResource( 23 )
 [node name="Planta" type="Sprite" parent="Plantas/CollisionShape2D11"]
 position = Vector2( 0.21268, 1.67626 )
 scale = Vector2( 1.58639, 1.62729 )
-texture = ExtResource( 22 )
+texture = ExtResource( 21 )
 
 [node name="Toldo" type="Sprite" parent="."]
 position = Vector2( 2480.84, 1002.65 )
 rotation = 1.5708
 scale = Vector2( 3.12732, 3.29291 )
-texture = ExtResource( 23 )
+texture = ExtResource( 22 )
 
 [node name="Ligação parede" type="Sprite" parent="."]
 position = Vector2( 902.531, 2015.25 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="Ligação parede" type="Sprite" parent="Ligação parede"]
 position = Vector2( 390.169, 2.4856 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="Ligação parede2" type="Sprite" parent="."]
 position = Vector2( 1.83539, 2015.73 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="Ligação parede3" type="Sprite" parent="."]
 position = Vector2( 1.26886, 1396.94 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 
 [node name="Ligação parede4" type="Sprite" parent="."]
 position = Vector2( 4.42682, 691.671 )
-texture = ExtResource( 11 )
+texture = ExtResource( 10 )
 [connection signal="body_entered" from="area_criar inimigos_fase4" to="area_criar inimigos_fase4" method="_on_area_criar_inimigos_fase4_body_entered"]
 [connection signal="timeout" from="area_criar inimigos_fase4/delay_spawn_enemie" to="area_criar inimigos_fase4" method="_on_delay_spawn_enemie_timeout"]
