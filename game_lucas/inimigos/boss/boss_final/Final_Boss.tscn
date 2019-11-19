@@ -55,7 +55,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 3 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=3]
 resource_name = "laser_down"
 length = 3.5
 tracks/0/type = "value"
@@ -86,7 +86,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 2 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=5]
 resource_name = "missil_attack"
 length = 2.0
 tracks/0/type = "value"
@@ -102,7 +102,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=6]
 resource_name = "tween"
 length = 0.6
 
@@ -143,10 +143,10 @@ shape = SubResource( 1 )
 
 [node name="animation" type="AnimationPlayer" parent="."]
 anims/idlle_animation = SubResource( 2 )
-anims/laser_down = SubResource( 9 )
+anims/laser_down = SubResource( 3 )
 anims/medium_charge = SubResource( 4 )
-anims/missil_attack = SubResource( 10 )
-anims/tween = SubResource( 11 )
+anims/missil_attack = SubResource( 5 )
+anims/tween = SubResource( 6 )
 anims/walk_animaton = SubResource( 7 )
 
 [node name="delay_attack1" type="Timer" parent="."]
@@ -174,10 +174,13 @@ position = Vector2( -4.43213, -19.3768 )
 shape = SubResource( 8 )
 
 [node name="cannon_fire" type="Position2D" parent="."]
-position = Vector2( -81.6179, -36.0774 )
+position = Vector2( -44.9649, -42.5935 )
+
+[node name="cannon_fire_laser" type="Position2D" parent="."]
+position = Vector2( -82.4324, -36.8919 )
 
 [node name="cannon_fire_down" type="Position2D" parent="."]
-position = Vector2( -81.6179, 56.0685 )
+position = Vector2( -80.8034, 56.0685 )
 
 [node name="missile_launcher" type="Position2D" parent="."]
 position = Vector2( 37.8871, -173.427 )

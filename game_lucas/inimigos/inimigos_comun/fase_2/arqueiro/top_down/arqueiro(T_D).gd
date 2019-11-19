@@ -6,7 +6,8 @@ var seguir = true
 var death = false
 var attacking = false
 var damage = 5
-var life = 100
+var life = 80
+
 var move = Vector2(0,0)
 var projetil = preload("res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha_topDown.tscn")
 var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
@@ -93,7 +94,7 @@ func _on_delay_atack_timeout():
 	
 func random_item():
 	item_probability. randomize()
-	var random_item = item_probability. randi_range(1,10)
+	var random_item = item_probability. randi_range(1,6)
 	item_type = random_item
 
 func spaw_item():

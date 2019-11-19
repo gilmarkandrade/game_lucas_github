@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scripts/script_fases/fase_1_script.gd" type="Script" id=1]
 [ext_resource path="res://scripts/script_interagiveis_de_fase/interaçoes_cena2_fase1.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets_game/background/fase_1/cena_2/river_motion_animation/river_motion_animation0003.png" type="Texture" id=12]
 [ext_resource path="res://cenas_globais/cube_perspective/icone_mudar_perspectiva.tscn" type="PackedScene" id=13]
 [ext_resource path="res://audio_geral/trilhas/Trilha Sonora Fase 1.wav" type="AudioStream" id=14]
+[ext_resource path="res://audio_geral/efeitos_sonoros/fase1/Rio_online-audio-converter.com.wav" type="AudioStream" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 447.926, 11.1625 )
@@ -178,7 +179,7 @@ polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 382.81, 56.224
 position = Vector2( 189, -303.75 )
 frames = SubResource( 3 )
 animation = "river_motion"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Area2D2_Rio" type="Area2D" parent="."]
@@ -213,6 +214,13 @@ rotation = 1.57185
 stream = ExtResource( 14 )
 volume_db = -10.0
 autoplay = true
+
+[node name="som_rio" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 278.567, -305.839 )
+stream = ExtResource( 15 )
+volume_db = -12.0
+autoplay = true
+max_distance = 1200.0
 [connection signal="body_entered" from="area_iniciocena2" to="." method="_on_area_iniciocena2_body_entered"]
 [connection signal="body_exited" from="area_iniciocena2" to="." method="_on_area_iniciocena2_body_exited"]
 [connection signal="body_entered" from="area_mudar_cena3" to="." method="_on_area_mudar_cena3_body_entered"]

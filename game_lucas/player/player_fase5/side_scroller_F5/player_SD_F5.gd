@@ -62,7 +62,7 @@ func _physics_process(delta):
 				$animation_Player.current_animation = "idlle_animation"
 				
 		if is_on_floor():
-			if Input. is_action_just_pressed("ui_up"):
+			if Input. is_action_just_pressed("ui_jump"):
 				move.y = jump_force
 					
 		else:
@@ -128,6 +128,9 @@ func _on_area_corpo_player_area_entered(area):
 		death_player()
 	if area .is_in_group("projetil_inimigo"):
 		life = atributos_player_singleton.life_player
+		death_player()
+	if area .is_in_group("laser_boss"):
+		life = - 10
 		death_player()
 
 

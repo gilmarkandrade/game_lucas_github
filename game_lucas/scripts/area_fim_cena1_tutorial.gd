@@ -1,7 +1,9 @@
 extends Area2D
 var number_speech = 0
 func _ready():
-	$"../animation_cut_cine_cena1".play("animation_portal_closed")
+	if atributos_fase_singleton.open_portal_init_fase == false:
+		$"../animation_cut_cine_cena1".play("animation_portal_closed")
+		atributos_fase_singleton.open_portal_init_fase = true
 	$Panel/falas_bru. visible = false
 	$Panel.visible = false
 	$Panel/press_q.visible = false

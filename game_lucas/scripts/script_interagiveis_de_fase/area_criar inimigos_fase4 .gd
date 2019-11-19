@@ -70,12 +70,26 @@ func _on_delay_spawn_enemie_timeout():
 	if stop_create == true  and portal_create == false and limit_enemie <= 0:
 		
 		portal_create = true
+		$animation_door.play("open_portal")
 		
 func _on_area_criar_inimigos_fase4_body_entered(body):
 	if body.is_in_group("player"):
 		$delay_spawn_enemie.start()
-		
-		
+				
 
 
 
+
+
+func _on_portal_area_body_entered(body):
+	if body.is_in_group("player"):
+		atributos_fase_singleton.open_portal_init_fase = false
+		$animation_door.play_backwards("close_portal")
+	
+
+
+func _on_animation_door_animation_finished(anim_name):
+	
+	if anim_name == "close_portal":
+	
+		get_tree().change_scene("res://fases/fase_5/world_5_cena_1.tscn")

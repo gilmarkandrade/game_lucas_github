@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 func walking_mech():
 	if walking == true:
-		move.x = 20
+		move.x = 80
 		$animation.current_animation = "walk_animaton"
 		$delay_attack1.paused
 	else :
@@ -42,7 +42,7 @@ func walking_mech():
 
 func random_attack():
 	attack_probability.randomize()
-	attack_type = attack_probability.randi_range(1,2)
+	attack_type = attack_probability.randi_range(1,10)
 
 func generate_attack():
 	atacking = true
@@ -50,15 +50,17 @@ func generate_attack():
 		random_attack()
 		can_change = true
 	walking = false
-	#if attack_type == 1 :
-	#$delay_attack2.start()
-	#$animation.current_animation = "missil_attack"
-	#if attack_type == 2 :
-	$delay_attack3.start()
-	$animation.current_animation = "medium_charge"
-	#if attack_type == 3 :
-	#$delay_attack4.start()
-	#$animation.current_animation = "laser_down"
+	print(attack_type)
+	attack_type = 8
+	if attack_type <= 4:
+		$delay_attack2.start()
+		$animation.current_animation = "missil_attack"
+	if attack_type > 4 and attack_type <= 5:
+		$delay_attack3.start()
+		$animation.current_animation = "medium_charge"
+	if attack_type >= 6 :
+		$delay_attack4.start()
+		$animation.current_animation = "laser_down"
 
 func attack1():
 	var TIRO = shot.instance()
@@ -96,7 +98,8 @@ func attack2():
 func attack3():
 	var LAS = laser.instance()
 	get_parent().add_child(LAS)
-	LAS.position = $cannon_fire.global_position
+	LAS.position = $cannon_fire_laser.global_position
+	LAS.scale.y = 2.5
 	$reload.start()
 	impulse = true
 	$impulse.start()
