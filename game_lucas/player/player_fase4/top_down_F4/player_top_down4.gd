@@ -11,8 +11,8 @@ var attacking = false
 
 func _ready(): 
 #test provisorio
-	atributos_player_singleton.fire_stop= false
-	
+	atributos_player_singleton.fire_stop = false
+	Input.set_custom_mouse_cursor(load("res://assets_game/mousemira.png"))
 func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
@@ -65,14 +65,14 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "atack_animation":
 		attacking = false
 	if anim_name == "death_animation":
-		atributos_player_singleton.cont_death_player(1)
+		
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 
 
 func shoot_bullet():
 	if fire_stop == false :
 				$som_arma.play()
-	if fire_stop == false :#and atributos_fase_singleton. get_weapom_away == true:
+	if fire_stop == false and atributos_fase_singleton. get_weapom_away == true:
 		var B_L = bullet. instance()
 		get_parent().add_child(B_L)
 		B_L.pos = $position_bullet.global_position
@@ -85,7 +85,7 @@ func death_player():
 	if life <= 0:
 		death = true
 		$animation_player.current_animation ="death_animation"
-		
+		atributos_player_singleton.cont_death_player(1)
 		
 
 func _on_arma_player_body_entered(body):

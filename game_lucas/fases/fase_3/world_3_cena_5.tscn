@@ -74,7 +74,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 2.33977, 0.857489 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 2.33977, 0.857489 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("particula_portal2:visible")
@@ -162,7 +162,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 2.33977, 0.857489 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 2.33977, 0.857489 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("particula_portal2:visible")
@@ -318,18 +318,18 @@ texture = ExtResource( 2 )
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2( 1800, 800 )
+motion_mirroring = Vector2( 1797.57, 800 )
 
 [node name="campo liso guerra" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 324.435, 212.281 )
+position = Vector2( 331.817, 214.516 )
+scale = Vector2( 1.06376, 1.06602 )
 texture = ExtResource( 4 )
 
 [node name="campo liso guerra4" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 327.636, 607.123 )
-scale = Vector2( 1.0103, 1.03091 )
+position = Vector2( 330.572, 607.123 )
+scale = Vector2( 1.04945, 1.06027 )
 texture = ExtResource( 4 )
 
 [node name="campo liso guerra3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
@@ -343,16 +343,16 @@ scale = Vector2( 1.00648, 1.00292 )
 texture = ExtResource( 4 )
 
 [node name="campo liso guerra2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 924.4, 212.275 )
+position = Vector2( 928.195, 206.583 )
+scale = Vector2( 1.01265, 1.02846 )
 texture = ExtResource( 4 )
 
 [node name="campo liso guerra5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 926.064, 612.241 )
-scale = Vector2( 1.00557, 1 )
+position = Vector2( 935.551, 612.241 )
+scale = Vector2( 1.03719, 1.03795 )
 texture = ExtResource( 4 )
 
 [node name="player_top_down_F3" parent="." instance=ExtResource( 5 )]
-editor/display_folded = true
 position = Vector2( 68.2366, 1531.59 )
 
 [node name="Camera2D" type="Camera2D" parent="player_top_down_F3"]
@@ -365,7 +365,6 @@ limit_right = 3615
 limit_bottom = 1600
 
 [node name="Paredes" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes"]
 position = Vector2( 10.2663, 801.181 )
@@ -386,10 +385,8 @@ shape = SubResource( 4 )
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Paredes"]
 
 [node name="Obstaculos" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Obstaculos"]
-editor/display_folded = true
 position = Vector2( 702.267, 340.045 )
 shape = SubResource( 5 )
 
@@ -399,7 +396,6 @@ scale = Vector2( 1.82606, 1.94015 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Obstaculos"]
-editor/display_folded = true
 position = Vector2( 1924.92, 1426.85 )
 shape = SubResource( 5 )
 
@@ -409,7 +405,6 @@ scale = Vector2( 1.82606, 1.94015 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Obstaculos"]
-editor/display_folded = true
 position = Vector2( 1718.43, 562.839 )
 shape = SubResource( 5 )
 
@@ -419,7 +414,6 @@ scale = Vector2( 1.82606, 1.94015 )
 texture = ExtResource( 6 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Obstaculos"]
-editor/display_folded = true
 position = Vector2( 1123.2, 1027.25 )
 shape = SubResource( 6 )
 
@@ -429,7 +423,6 @@ scale = Vector2( 2.39267, 1.79551 )
 texture = ExtResource( 7 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Obstaculos"]
-editor/display_folded = true
 position = Vector2( 305.232, 796.729 )
 shape = SubResource( 6 )
 
@@ -550,7 +543,7 @@ shape = SubResource( 15 )
 [node name="particula_portal2" parent="area_criar_inimigo_fase3" instance=ExtResource( 15 )]
 visible = false
 position = Vector2( 2876.82, 835.388 )
-scale = Vector2( 1e-005, 1e-005 )
+scale = Vector2( 1e-05, 1e-05 )
 process_material = SubResource( 20 )
 [connection signal="body_entered" from="area_criar_inimigo_fase3" to="area_criar_inimigo_fase3" method="_on_area_criar_inimigo_fase3_body_entered"]
 [connection signal="animation_finished" from="area_criar_inimigo_fase3/animation_camera" to="area_criar_inimigo_fase3" method="_on_animation_camera_animation_finished"]

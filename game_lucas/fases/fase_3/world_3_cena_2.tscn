@@ -797,7 +797,7 @@ scale = Vector2( 0.7, 0.7 )
 z_index = -1
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_fundo"]
@@ -805,7 +805,6 @@ position = Vector2( 98.7267, 122.238 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "shoot"
-frame = 3
 playing = true
 
 [node name="ParallaxLayer_soldado" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -818,7 +817,7 @@ position = Vector2( -2146.95, 191.768 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="ParallaxLayer_trincheira" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -829,7 +828,7 @@ position = Vector2( -1724.26, 254.266 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="soldado_aliado6" type="AnimatedSprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
@@ -838,7 +837,6 @@ position = Vector2( -1893.25, 253.254 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 5
 playing = true
 
 [node name="Trincheira_sidescroleer" type="Sprite" parent="ParallaxBackground/ParallaxLayer_trincheira"]
@@ -867,7 +865,6 @@ position = Vector2( 1533.68, 653.655 )
 texture = ExtResource( 21 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 22 )]
 
@@ -960,14 +957,12 @@ texture = ExtResource( 3 )
 position = Vector2( -11.9583, 0 )
 
 [node name="area_retorno_cena_1" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_retorno_cena_1"]
 position = Vector2( 192.898, 542.752 )
 shape = SubResource( 12 )
 
 [node name="area_entrar_cena3" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 115.841, 43.9396 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena3"]
@@ -988,11 +983,15 @@ shape = SubResource( 14 )
 position = Vector2( -535.673, 12.8887 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa2" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -476.75, 8.39752 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa3" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -412.814, 9.38971 )
@@ -1003,36 +1002,50 @@ animation = "run"
 position = Vector2( -352.726, 7.40552 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa5" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -277.823, 8.57184 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa6" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -207.585, 7.57965 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa7" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -131.865, 8.92029 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa8" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -69.6169, 7.4054 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa9" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( -4.5144, 6.41345 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa10" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 position = Vector2( 62.5723, 4.08063 )
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa11" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1040,6 +1053,8 @@ position = Vector2( -504.553, 3.09711 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa12" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1047,6 +1062,8 @@ position = Vector2( -434.572, 3.09711 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa13" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1054,6 +1071,8 @@ position = Vector2( -376.002, 4.49384 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa14" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1061,6 +1080,8 @@ position = Vector2( -310.902, 5.66016 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa15" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1068,6 +1089,8 @@ position = Vector2( -241.612, 7.76251 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa16" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1075,6 +1098,8 @@ position = Vector2( -163.013, 12.1976 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa17" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1082,6 +1107,8 @@ position = Vector2( -94.8672, 11.2689 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
+frame = 5
+playing = true
 
 [node name="inimigo_tropa18" type="AnimatedSprite" parent="area_batalhao_inimigo/CollisionShape2D9"]
 modulate = Color( 0.152941, 0.12549, 0.12549, 1 )
@@ -1089,7 +1116,8 @@ position = Vector2( -28.8311, 9.16663 )
 z_index = -1
 frames = SubResource( 15 )
 animation = "run"
-frame = 1
+frame = 6
+playing = true
 
 [node name="som_tropa" type="AudioStreamPlayer2D" parent="area_batalhao_inimigo/CollisionShape2D9"]
 stream = ExtResource( 34 )
@@ -1110,8 +1138,10 @@ position = Vector2( 190.123, 524.491 )
 
 [node name="player_SD_F3" parent="." instance=ExtResource( 36 )]
 position = Vector2( 249.843, 578.238 )
+scale = Vector2( 1.1, 1.1 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]
+position = Vector2( -1.1376, -0.568787 )
 current = true
 limit_left = 44
 limit_bottom = 650
@@ -1125,8 +1155,9 @@ position = Vector2( 1821.49, 567.094 )
 [node name="icon" type="Sprite" parent="."]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 1, 1, 1, 0.764706 )
-position = Vector2( 2178.72, 540.418 )
+position = Vector2( 2253.06, 538.613 )
 scale = Vector2( 1.78647, 3.04056 )
+z_index = -1
 texture = ExtResource( 37 )
 
 [node name="icon2" type="Sprite" parent="."]
@@ -1147,7 +1178,7 @@ position = Vector2( 33.027, 569.285 )
 scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 1 )
 animation = "run"
-frame = 1
+frame = 2
 playing = true
 
 [node name="som_ambiente " type="AudioStreamPlayer" parent="."]

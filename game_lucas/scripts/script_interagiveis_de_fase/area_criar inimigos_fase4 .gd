@@ -11,11 +11,13 @@ var enemie_selected = 0
 var position_enemie
 var portal_create = false
 var close_the_door = false
+
 func _ready():
 	# quantidade de inimigo que sera spawnada
 	atributos_fase_singleton.cont_enemie = 50
 	atributos_fase_singleton.stop_spawn_enemie = false
-
+	limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
+	stop_create = atributos_fase_singleton.stop_spawn_enemie
 
 func select_position_ramdon():
 	RNG.randomize()
@@ -38,8 +40,10 @@ func select_ramdon_enemie():
 
 
 func spaw_enemie():
+	
 	select_position_ramdon()
 	select_ramdon_enemie()
+	
 	if enemie_selected == 1 :
 		var M_B = enemie_MB.instance()
 		get_parent().add_child(M_B)
@@ -55,12 +59,15 @@ func spaw_enemie():
 	
 
 func _on_delay_spawn_enemie_timeout():
+	
 	# o limit enemie é o maximo de inimigo que pode estar vivo na cena conforme vai morrendo ele vai permitindo spawn  de outros
 	# e sempre vai tirando um do cont enemie que esta no singleton da fase quando o valor maximo da fase for atingido o
 	#stop apawn enemie ficara true e passamos este parametro para uma variavel local dentro do script como esta abaixo no stop create
 	# desta forma bloqueando a criaçao de qualquer inimigo na cena
+	
 	stop_create = atributos_fase_singleton.stop_spawn_enemie
 	limit_enemie = atributos_fase_singleton.enemie_limit_in_game 
+	
 	if close_the_door == false  :
 		$animation_door.play("door_1_close")
 		close_the_door = true  
@@ -72,7 +79,9 @@ func _on_delay_spawn_enemie_timeout():
 		portal_create = true
 		$animation_door.play("open_portal")
 		
+		
 func _on_area_criar_inimigos_fase4_body_entered(body):
+	
 	if body.is_in_group("player"):
 		$delay_spawn_enemie.start()
 				
@@ -83,8 +92,11 @@ func _on_area_criar_inimigos_fase4_body_entered(body):
 
 func _on_portal_area_body_entered(body):
 	if body.is_in_group("player"):
+		
 		atributos_fase_singleton.open_portal_init_fase = false
 		$animation_door.play_backwards("close_portal")
+		if has_node("../player_top_down_F4"):
+			get_node("../player_top_down_F4").visible = false
 	
 
 

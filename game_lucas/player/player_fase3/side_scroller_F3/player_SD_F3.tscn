@@ -749,17 +749,16 @@ position = Vector2( 1.33333, 11.1111 )
 shape = SubResource( 1 )
 
 [node name="position_projetil" type="Position2D" parent="."]
-position = Vector2( -21.5388, 1.33151 )
+position = Vector2( 2.83433, 5.37121 )
 
 [node name="sprite_player" type="Sprite" parent="."]
-position = Vector2( -16.4703, -1.01571 )
 scale = Vector2( 0.5, 0.5 )
 z_index = 1
-texture = ExtResource( 2 )
+texture = ExtResource( 14 )
 flip_h = true
 
 [node name="animation_Player" type="AnimationPlayer" parent="."]
-playback_speed = 1.2
+playback_speed = 0.7
 anims/atack_1_animation_left = SubResource( 2 )
 anims/atack_1_animation_right = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -770,7 +769,6 @@ anims/walk_animation = SubResource( 8 )
 anims/walk_animation_left = SubResource( 9 )
 
 [node name="area_corpo_player" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
 visible = false
@@ -780,12 +778,11 @@ shape = SubResource( 10 )
 [node name="area_arma_player" type="Area2D" parent="." groups=[
 "arma_player",
 ]]
-editor/display_folded = true
 position = Vector2( -43, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_player"]
 modulate = Color( 0.490196, 0.87451, 0.141176, 1 )
-position = Vector2( 41.8889, 16 )
+position = Vector2( 44.5556, 4.44444 )
 shape = SubResource( 11 )
 
 [node name="delay_weapon" type="Timer" parent="."]

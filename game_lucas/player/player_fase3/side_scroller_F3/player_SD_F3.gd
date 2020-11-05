@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 180
+var speed = 185
 var life = 100
 var attacking= false
 var damage_hit = 10
@@ -14,7 +14,8 @@ var get_weapon_away = atributos_fase_singleton.get_weapom_away
 var fire_stop = atributos_player_singleton.fire_stop
 var orb_fire = preload("res://player/player_fase3/side_scroller_F3/gun_bullet_F3_SD/gun_bullet_F3_SD.tscn")
 
-
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets_game/mouseempty.png"))
 #========================================================
 #                MOtion player
 #========================================================
@@ -38,9 +39,11 @@ func _physics_process(delta):
 				$som_metralhadora.play()
 			elif fire_stop == true:
 				$som_metralhadora.stop()
+				
 		elif Input.is_action_just_released("ui_fire_atack"):
 			$delay_weapon.stop()
 			$som_metralhadora.stop()
+			
 		if Input.is_action_pressed("ui_right"):
 			if attacking == false :
 				move.x =+ speed
@@ -53,6 +56,7 @@ func _physics_process(delta):
 			if attacking == false :
 				move.x =- speed
 			side_current = true
+			
 			if is_on_floor() and attacking == false:
 				$animation_Player .current_animation = "walk_animation_left"
 			$sprite_player.flip_h = true
@@ -72,6 +76,7 @@ func _physics_process(delta):
 				$animation_Player.current_animation = "jump_up"
 			elif move.y > 0.1 and attacking == false :
 				$animation_Player.current_animation ="jump_down"
+				
 		move = move_and_slide(move,UP)
 	
 	
@@ -90,24 +95,28 @@ func atack_proximity():
 		
 func fire_atack():
 	#get_weapon_away recebe o vaolor do singleton atributos fase e defini se oplayer ja possui ou nao o cajado
+	
 	get_weapon_away = atributos_fase_singleton.get_weapom_away
 	fire_stop = atributos_player_singleton.fire_stop
-	if  fire_stop == false: #and get_weapon_away == true:
+	
+	if  fire_stop == false and get_weapon_away == true:
 		var O_F = orb_fire.instance()
+		O_F.position = $position_projetil.global_position
 		O_F. side = side_current
 		get_parent().add_child(O_F)
-		O_F.position = $position_projetil.global_position
+		
 		
 		
 	
 # função responsavel por travar o codigo do game e chamar 
 #a cena game over caso avida chegue a zero
+
 func death_player():
 	if life <= 0:
 		life = 0 
 		death = true
 		$animation_Player.play("death_animation")
-		
+		atributos_player_singleton.cont_death_player(1)
 		
 	
 #===========================================================
@@ -117,7 +126,9 @@ func death_player():
 
 #AREA responsavel por receber o valor de dano conforme a area inimiga 
 # que entrou no corpo do player
+
 func _on_area_corpo_player_area_entered(area):
+	
 	if area.is_in_group("weapom_enimie"):
 		life =  atributos_player_singleton.life_player
 		death_player()
@@ -147,7 +158,7 @@ func _on_area_arma_player_area_entered(area):
 #quando alguma animação finalizar execute o evento 
 func _on_animation_Player_animation_finished(anim_name):
 	if anim_name == "death_animation":
-		atributos_player_singleton.cont_death_player(1)
+		
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 	elif anim_name == "atack_1_animation_left":

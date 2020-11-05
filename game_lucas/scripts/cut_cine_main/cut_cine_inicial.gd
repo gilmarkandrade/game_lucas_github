@@ -1,6 +1,7 @@
 extends Node2D
 
-
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets_game/mouseempty.png"))
 
 func _on_AnimationPlayer_animation_finished(anim_name):
 	if anim_name == "walk_animation":

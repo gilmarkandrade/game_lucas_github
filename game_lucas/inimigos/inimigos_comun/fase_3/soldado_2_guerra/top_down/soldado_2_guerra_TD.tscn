@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado_2_guerra_TD.gd" type="Script" id=1]
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/death/soldado top desth f6.png" type="Texture" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_TD/soldado top shooting f2.png" type="Texture" id=4]
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_TD/soldado top shooting f3.png" type="Texture" id=5]
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/soldado2guerra_TD/soldado top shooting f4.png" type="Texture" id=6]
-[ext_resource path="res://inimigos/inimigos_comun/fase_1/homem_das_cavernas/top_down/damage_animation/damage1.png" type="Texture" id=7]
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/death/soldado top desth f1.png" type="Texture" id=8]
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/death/soldado top desth f2.png" type="Texture" id=9]
 [ext_resource path="res://inimigos/inimigos_comun/fase_3/soldado_2_guerra/top_down/death/soldado top desth f3.png" type="Texture" id=10]
@@ -76,42 +75,18 @@ tracks/3/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "damage_animation"
-length = 0.4
+length = 0.45
 tracks/0/type = "value"
-tracks/0/path = NodePath("spriter _A:texture")
+tracks/0/path = NodePath("spriter _A:self_modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ ExtResource( 7 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("arma_inimigo/CollisionShape2D:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("spriter _A:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 16.177, -3 ) ]
+"values": [ Color( 11.9765, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -230,7 +205,7 @@ tracks/3/keys = {
 }
 
 [sub_resource type="Animation" id=6]
-length = 2.3
+length = 0.6
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("spriter _A:texture")
@@ -270,9 +245,9 @@ tracks/2/keys = {
 }
 
 [sub_resource type="CircleShape2D" id=7]
-radius = 25.0033
+radius = 27.2991
 
-[sub_resource type="CapsuleShape2D" id=11]
+[sub_resource type="CapsuleShape2D" id=8]
 radius = 16.1649
 height = 57.207
 
@@ -294,12 +269,12 @@ position = Vector2( 0.794434, -3.17771 )
 shape = SubResource( 1 )
 
 [node name="spriter _A" type="Sprite" parent="."]
-position = Vector2( -0.11499, 3.79587 )
+position = Vector2( -0.688967, -3.53505 )
 rotation = -1.5708
-texture = ExtResource( 2 )
+scale = Vector2( 1.42566, 1.34615 )
+texture = ExtResource( 6 )
 
 [node name="animation_A" type="AnimationPlayer" parent="."]
-playback_speed = 2.5
 anims/atack_animation = SubResource( 2 )
 anims/damage_animation = SubResource( 3 )
 anims/death_animation = SubResource( 4 )
@@ -309,12 +284,12 @@ anims/walk_animation = SubResource( 6 )
 [node name="corpo_A" type="Area2D" parent="." groups=[
 "enemie",
 ]]
-position = Vector2( 6.56099, -3.79443 )
+position = Vector2( 1.19655, -0.380703 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corpo_A" groups=[
 "enemie",
 ]]
-position = Vector2( -5.561, 1.19164 )
+position = Vector2( -1.1719, -13.9263 )
 shape = SubResource( 7 )
 
 [node name="area_ataque" type="Area2D" parent="."]
@@ -322,7 +297,7 @@ position = Vector2( -3.12253, 1.38162 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_ataque"]
 position = Vector2( 41.5157, -5.67689 )
-shape = SubResource( 11 )
+shape = SubResource( 8 )
 
 [node name="arma_inimigo" type="Area2D" parent="." groups=[
 "weapom_enemie",
@@ -332,7 +307,7 @@ shape = SubResource( 11 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( -12, 0 )
+position = Vector2( -0.111053, -0.0619049 )
 shape = SubResource( 9 )
 
 [node name="AI_perception" type="Area2D" parent="."]
@@ -346,9 +321,10 @@ wait_time = 2.0
 autostart = true
 
 [node name="positon_flecha" type="Position2D" parent="."]
+position = Vector2( 23.39, 1.46405 )
 
 [node name="position_fim_flecha" type="Position2D" parent="."]
-position = Vector2( 1855.42, 6.10352e-005 )
+position = Vector2( 1855.42, 6.10352e-05 )
 
 [node name="som_morte" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 17 )

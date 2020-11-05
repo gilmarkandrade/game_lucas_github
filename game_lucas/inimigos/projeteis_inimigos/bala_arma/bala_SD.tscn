@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://inimigos/projeteis_inimigos/bala_arma/bala_SD.gd" type="Script" id=1]
-[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://inimigos/projeteis_inimigos/bala_arma/bullet1.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 3.83065
@@ -24,8 +24,8 @@ position = Vector2( 0.290566, 1.84026 )
 scale = Vector2( 0.622263, 0.680377 )
 
 [node name="projetil" type="Sprite" parent="."]
-position = Vector2( 0.217301, 0.91783 )
-scale = Vector2( 0.358545, 0.108347 )
+position = Vector2( -0.409423, 1.04317 )
+scale = Vector2( 4.85005, 0.677218 )
 texture = ExtResource( 2 )
 [connection signal="body_entered" from="." to="." method="_on_flecha_body_entered"]
 [connection signal="body_shape_entered" from="." to="." method="_on_bala_arma_body_shape_entered"]

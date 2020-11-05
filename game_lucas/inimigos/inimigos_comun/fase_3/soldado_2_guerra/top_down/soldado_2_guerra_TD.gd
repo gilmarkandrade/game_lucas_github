@@ -8,7 +8,7 @@ var attacking = false
 var damage = 5
 var life = 70
 var move = Vector2(0,0)
-var projetil = preload("res://inimigos/projeteis_inimigos/flecha_Fase_2/flecha_topDown.tscn")
+var projetil = preload("res://inimigos/projeteis_inimigos/bala_arma/bala_topDown.tscn")
 var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
 var item_mana = preload("res://player/Itens_player/municao_mana/item_municao.tscn")
 var target = atributos_player_singleton.pos_player_update
@@ -56,17 +56,23 @@ func damage_death():
 	if life <= 0:
 		death = true 
 		$animation_A. play("death_animation")
+	else:
+		$animation_A.play("damage_animation")
 		
 func _on_corpo_A_area_entered(area):
+	
 	if area.is_in_group("arma_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
+		
+		
 	if area.is_in_group("projetil_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
-
+		
 		
 func _on_arma_inimigo_body_entered(body):
+	
 	if body.is_in_group("player") and death == false:
 		atributos_player_singleton.player_life_update(damage)
 
@@ -107,7 +113,7 @@ func atack():
 
 
 func _on_delay_atack_timeout():
-      
+	  
 	if death == false:
 		atack()
 	

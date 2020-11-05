@@ -21,14 +21,14 @@ rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="sprite_orb" type="Sprite" parent="."]
-position = Vector2( 73.4332, -6.91199 )
-scale = Vector2( 2.3, 0.5 )
+visible = false
+position = Vector2( 0.189335, 0.254075 )
+scale = Vector2( 4.11446, 0.677127 )
 texture = ExtResource( 2 )
 
 [node name="sprite_bala" type="Sprite" parent="."]
-visible = false
-position = Vector2( 61.092, -5.88456 )
-scale = Vector2( 1.915, 0.421 )
+position = Vector2( -0.12083, 0.120495 )
+scale = Vector2( 4.43325, 0.599811 )
 texture = ExtResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]

@@ -82,7 +82,6 @@ position = Vector2( -26.6842, 0.726395 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 234.247, 226.557 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -90,21 +89,18 @@ position = Vector2( 0, 2.58472 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 263.64, -418.583 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
 shape = SubResource( 3 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 760.037, -103.216 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource( 4 )
 
 [node name="Area2D" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 90.4647, -188.684 )
 rotation = -0.404916
 
@@ -112,7 +108,6 @@ rotation = -0.404916
 shape = SubResource( 5 )
 
 [node name="Parallax_main_chão" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="Layerchão" type="ParallaxLayer" parent="Parallax_main_chão"]
 
@@ -121,11 +116,9 @@ position = Vector2( 284.178, -98.9371 )
 texture = ExtResource( 3 )
 
 [node name="Parallax_arvores" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 0
 
 [node name="Parallax_arvore" type="ParallaxLayer" parent="Parallax_arvores"]
-editor/display_folded = true
 motion_scale = Vector2( 0.9, 0.9 )
 
 [node name="layer_arvore1cimamapa" type="Sprite" parent="Parallax_arvores/Parallax_arvore"]
@@ -144,7 +137,6 @@ texture = ExtResource( 6 )
 position = Vector2( 284.36, -215.179 )
 frames = SubResource( 6 )
 animation = "Animação Rio"
-frame = 2
 playing = true
 
 [node name="player_top_down" parent="." instance=ExtResource( 11 )]
@@ -163,7 +155,6 @@ limit_bottom = 200
 position = Vector2( -119, 55 )
 
 [node name="area_inicio_cena3" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( -8.24998, -15.75 )
 __meta__ = {
 "_edit_group_": true
@@ -232,7 +223,8 @@ anims/camera_zoom = SubResource( 11 )
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
-polygon = PoolVector2Array( -168.887, -64.9136, -49.9193, -96.405, -26.5923, -105.736, 4.89914, -97.5714, 69.0484, -119.732, 176.353, -143.059, 204.345, -169.885, 246.333, -168.719, 280.158, -153.556, 354.804, -171.051, 394.46, -165.22, 457.443, -152.39, 481.936, -159.388, 472.605, -223.537, -163.055, -137.227 )
+position = Vector2( -1.39667, 18.1568 )
+polygon = PoolVector2Array( -168.887, -64.9136, -49.9193, -96.405, -26.5923, -105.736, 12.7456, -87.8871, 73.0231, -112.88, 176.353, -143.059, 204.345, -169.885, 244.3, -159.191, 280.158, -153.556, 354.804, -171.051, 394.46, -165.22, 457.443, -152.39, 481.936, -159.388, 488.62, -196.985, 611.225, -235.566, -163.055, -137.227 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D5"]
 polygon = PoolVector2Array( 584.575, -244.531, 609.068, -216.539, 647.558, -221.204, 691.879, -248.03, 730.369, -295.851, 668.552, -293.518 )

@@ -7,19 +7,19 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 13.3226, 637.226 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 36.6707, 1074.12 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 514.862, 498.112 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 353.398, 33.4312 )
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 224, 0, 224, 224, 0, 224 )
 
-[sub_resource type="TileSet" id=7]
+[sub_resource type="TileSet" id=6]
 0/name = "Tile Parede.png 0"
 0/texture = ExtResource( 3 )
 0/tex_offset = Vector2( 0, 0 )
@@ -32,7 +32,7 @@ points = PoolVector2Array( 0, 0, 224, 0, 224, 224, 0, 224 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -57,16 +57,16 @@ shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 3200.63, 336.909 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 2602.89, 358.645 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1885.6, 766.196 )
 rotation = -0.628319
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
 
@@ -87,12 +87,12 @@ limit_bottom = 883
 motion_scale = Vector2( 0.7, 1 )
 
 [node name="Cidade_futuro2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1253.93, 431.57 )
-scale = Vector2( 0.756834, 0.609602 )
+position = Vector2( 643.39, 629.931 )
+scale = Vector2( 0.338957, 0.27962 )
 texture = ExtResource( 2 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0.94, -20.23 )
-tile_set = SubResource( 7 )
+tile_set = SubResource( 6 )
 format = 1
 tile_data = PoolIntArray( 917504, 0, 0, 917507, 0, 0, 917510, 0, 0, 917513, 0, 0, 917516, 0, 0, 917519, 0, 0, 917522, 0, 0, 917525, 0, 0, 917528, 0, 0, 917531, 0, 0, 917534, 0, 0, 917537, 0, 0, 917540, 0, 0, 917541, 0, 0, 917544, 0, 0, 917547, 0, 0, 917550, 0, 0 )

@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="jogo_lucas"
+config/name="Perspective achase across the time"
 run/main_scene="res://cenas_globais/Menu_Inicial/menu_inicial.tscn"
 config/icon="res://icon.png"
 
@@ -106,7 +106,22 @@ ui_jump={
  ]
 }
 
+[locale]
+
+test="en"
+locale_filter=[ 0, [  ] ]
+translations=PoolStringArray( "res://sistema_idioma/idioma.csv", "res://sistema_idioma/idioma.en.translation", "res://sistema_idioma/idioma.pt_BR.translation" )
+translation_remaps={
+"res://sistema_idioma/idioma.csv": PoolStringArray(  ),
+"res://sistema_idioma/idioma.en.translation": PoolStringArray(  ),
+"res://sistema_idioma/idioma.pt_BR.translation": PoolStringArray(  )
+}
+
 [rendering]
 
+quality/intended_usage/framebuffer_allocation=1
+quality/intended_usage/framebuffer_allocation.mobile=1
+limits/buffers/canvas_polygon_buffer_size_kb=512
+limits/buffers/canvas_polygon_index_buffer_size_kb=512
 environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

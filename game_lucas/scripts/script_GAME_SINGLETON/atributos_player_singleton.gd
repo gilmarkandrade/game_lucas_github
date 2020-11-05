@@ -18,7 +18,7 @@ func player_life_update(life):
 	life_player -=  life
 
 func cont_death_player(death):
-	death_number +=death
+	death_number += death
 	
 func damage_life_enimie_update(damage):
 	life_enemie_update = damage

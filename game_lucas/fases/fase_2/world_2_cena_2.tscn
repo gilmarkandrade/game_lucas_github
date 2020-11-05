@@ -206,6 +206,7 @@ attenuation = 0.965936
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer_chão" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.627451, 0.627451, 0.627451, 1 )
 position = Vector2( 297.068, -5.03497 )
 motion_scale = Vector2( 0.8, 0.8 )
 motion_mirroring = Vector2( 560, 380 )
@@ -217,7 +218,6 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 12 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 15.7066, 56.4939 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -225,7 +225,6 @@ position = Vector2( -21.1027, -12.0587 )
 shape = SubResource( 5 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 547.275, 425.773 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -233,7 +232,6 @@ position = Vector2( 3.01465, -18.088 )
 shape = SubResource( 6 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1162.69, 29.2343 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
@@ -241,14 +239,12 @@ position = Vector2( -13.566, 0 )
 shape = SubResource( 7 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 560.762, -364.347 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
 shape = SubResource( 8 )
 
 [node name="StaticBody2D5" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 199.424, -181.135 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
@@ -256,7 +252,6 @@ position = Vector2( 289.34, 68.4237 )
 shape = SubResource( 9 )
 
 [node name="collisão bloco" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 199.424, -181.135 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collisão bloco"]
@@ -270,7 +265,6 @@ position = Vector2( 420.755, -22.0939 )
 shape = SubResource( 11 )
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1090.02, -22.0939 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
@@ -295,7 +289,6 @@ position = Vector2( 342.219, -134.689 )
 position = Vector2( 561.524, 339.003 )
 
 [node name="entrar_direto_cena3" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 562.364, 403.938 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="entrar_direto_cena3"]

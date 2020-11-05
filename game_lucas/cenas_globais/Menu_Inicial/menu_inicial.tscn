@@ -1,8 +1,64 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://cenas_globais/Menu_Inicial/menu_inicial.gd" type="Script" id=1]
-[ext_resource path="res://assets_game/interface/logo_game/Logo.jpg" type="Texture" id=2]
+[ext_resource path="res://assets_game/interface/logo_game/tela titulo.png" type="Texture" id=2]
 [ext_resource path="res://audio_geral/trilhas/TrilhaSonoraFase5.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets_game/interface/logo_game/LOGO1.png" type="Texture" id=4]
+[ext_resource path="res://assets_game/interface/botoes_menu/bt_pressed.png" type="Texture" id=5]
+[ext_resource path="res://assets_game/interface/botoes_menu/bt_n.png" type="Texture" id=6]
+[ext_resource path="res://assets_game/interface/botoes_menu/bt_focused.png" type="Texture" id=7]
+[ext_resource path="res://assets_game/interface/botoes_menu/FLAG BR PRESSED.png" type="Texture" id=8]
+[ext_resource path="res://assets_game/interface/botoes_menu/FLAG BR.png" type="Texture" id=9]
+[ext_resource path="res://assets_game/interface/botoes_menu/FLAG USA.png" type="Texture" id=10]
+[ext_resource path="res://assets_game/interface/botoes_menu/FLAG USA PRESSED.png" type="Texture" id=11]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 512, 256 )
+
+[sub_resource type="Animation" id=9]
+length = 1.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("LOGO1:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 565.51, 171.295 ), Vector2( 600.672, 183.602 ), Vector2( 562.763, 193.683 ), Vector2( 567.269, 178.328 ) ]
+}
 
 [node name="menu_inicial" type="Control"]
 anchor_right = 1.0
@@ -11,29 +67,86 @@ margin_left = -9.0
 margin_top = -3.0
 margin_right = 3.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="LOGO1" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 565.51, 171.295 )
+scale = Vector2( 1.01599, 1.00867 )
+z_index = 1
+texture = ExtResource( 4 )
+
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-position = Vector2( 539.554, 319.801 )
-scale = Vector2( 0.546085, 0.915695 )
+modulate = Color( 0.780392, 0.780392, 0.780392, 1 )
+position = Vector2( 542.165, 321.117 )
+scale = Vector2( 0.860783, 1.02146 )
+z_index = -50
 texture = ExtResource( 2 )
 
 [node name="Jogar" type="Button" parent="CanvasLayer"]
-margin_left = 255.504
-margin_top = 528.634
-margin_right = 315.504
-margin_bottom = 548.634
-rect_scale = Vector2( 3.42, 2.44 )
-text = "Play"
+margin_left = 199.183
+margin_top = 499.793
+margin_right = 326.183
+margin_bottom = 536.793
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "BTJOGAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Sair" type="Button" parent="CanvasLayer"]
-margin_left = 683.138
-margin_top = 531.701
-margin_right = 739.138
-margin_bottom = 554.701
-rect_scale = Vector2( 3.5, 1.84 )
-text = "Quit"
+margin_left = 511.746
+margin_top = 502.962
+margin_right = 635.746
+margin_bottom = 537.962
+rect_scale = Vector2( 2, 2 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+text = "BTSAIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BT_BR" type="TextureButton" parent="CanvasLayer"]
+margin_left = 414.714
+margin_top = 573.239
+margin_right = 670.714
+margin_bottom = 829.239
+rect_scale = Vector2( 0.221, 0.206 )
+action_mode = 0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 8 )
+texture_disabled = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BT_EN" type="TextureButton" parent="CanvasLayer"]
+margin_left = 494.229
+margin_top = 572.103
+margin_right = 744.229
+margin_bottom = 822.103
+rect_scale = Vector2( 0.224, 0.212 )
+action_mode = 0
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "New Anim"
+playback_speed = 0.5
+"anims/New Anim" = SubResource( 9 )
 
 [node name="audio_thema" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -41,3 +154,5 @@ volume_db = -7.0
 autoplay = true
 [connection signal="pressed" from="CanvasLayer/Jogar" to="." method="_on_Jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/Sair" to="." method="_on_Sair_pressed"]
+[connection signal="pressed" from="CanvasLayer/BT_BR" to="." method="_on_BT_BR_pressed"]
+[connection signal="pressed" from="CanvasLayer/BT_EN" to="." method="_on_BT_EN_pressed"]

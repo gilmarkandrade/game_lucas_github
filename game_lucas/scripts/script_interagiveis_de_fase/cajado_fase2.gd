@@ -49,15 +49,15 @@ func _on_animation_cajado_animation_finished(anim_name):
 	
 func bru_talking():
 	if number_speak== 0:
-		$fala_bru.text = "ola aventureiro"
+		$fala_bru.text = "DIAG31"
 	elif number_speak == 1:
-		$fala_bru.text = "deixei este cajado encantado para voce"
+		$fala_bru.text = "DIAG32"
 	elif number_speak == 2:
-		$fala_bru.text = "esta uma das minhas armas sagradas, ela consegue comutar sua forma atraves das eras"
+		$fala_bru.text = "DIAG33"
 	elif number_speak == 3 :
-		$fala_bru.text = "use a para vencer o caos e retorna ao seu tempo"
+		$fala_bru.text = "DIAG34"
 	elif number_speak == 4 :
-		$fala_bru.text = "corra viajante o tempo esta contra você"
+		$fala_bru.text = "DIAG35"
 
 func _on_area_cajado_body_entered(body):
 

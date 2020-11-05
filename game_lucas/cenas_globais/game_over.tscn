@@ -60,7 +60,7 @@ position = Vector2( 347.969, 540.985 )
 scale = Vector2( 2.90039, 2.70019 )
 frames = SubResource( 1 )
 animation = "bru_idle"
-frame = 1
+frame = 4
 playing = true
 script = ExtResource( 9 )
 
@@ -71,6 +71,30 @@ margin_right = 347.911
 margin_bottom = 33.9763
 rect_min_size = Vector2( -2.04, -1.88 )
 rect_scale = Vector2( 0.5, 0.5 )
-text = "tes"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="falas_bru2" type="Label" parent="CanvasLayer/bru_animated_sprite"]
+margin_left = 84.0452
+margin_top = -38.7172
+margin_right = 131.045
+margin_bottom = -23.7172
+rect_min_size = Vector2( -2.04, -1.88 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="falas_bru3" type="Label" parent="CanvasLayer/bru_animated_sprite"]
+margin_left = 128.27
+margin_top = -36.1275
+margin_right = 205.27
+margin_bottom = -13.1275
+rect_scale = Vector2( 0.5, 0.5 )
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/restart_game" to="." method="_on_restart_game_pressed"]

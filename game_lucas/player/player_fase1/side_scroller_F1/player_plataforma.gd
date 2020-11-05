@@ -13,7 +13,8 @@ const jump_force = -300
 const gravity = 9
 const UP = Vector2(0,-1)
 
-
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets_game/mouseempty.png"))
 #========================================================
 #                MOtion player
 #========================================================
@@ -34,6 +35,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("ui_atack"):
 			attacking = true
 			atack_proximity()
+			
 		if Input.is_action_pressed("ui_right"):
 			if attacking == false :
 				move.x =+ speed
@@ -87,7 +89,7 @@ func death_player():
 		life = 0 
 		death = true
 		$animation_Player.play("death_animation")
-		
+		atributos_player_singleton.cont_death_player(1)
 		
 	
 #===========================================================
@@ -134,12 +136,14 @@ func _on_delay_camera_zoom_timeout():
 
 #quando alguma animação finalizar execute o evento 
 func _on_animation_Player_animation_finished(anim_name):
+	
 	if anim_name == "death_animation":
-		atributos_player_singleton.cont_death_player(1)
+		
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 	elif anim_name == "atack_1_animation_left":
 		attacking = false
+		
 	elif anim_name == "atack_1_animation_right":
 		attacking = false
 

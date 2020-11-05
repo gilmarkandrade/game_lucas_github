@@ -77,7 +77,7 @@ extents = Vector2( 65.2162, 67.7622 )
 extents = Vector2( 76.6389, 70.2343 )
 
 [sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 167.714, 84.6363 )
+extents = Vector2( 147.576, 84.6363 )
 
 [sub_resource type="SpriteFrames" id=19]
 animations = [ {
@@ -302,14 +302,14 @@ animations = [ {
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "shoot",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "shoot",
 "speed": 5.0
 } ]
 
@@ -328,12 +328,10 @@ flip_h = true
 flip_v = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="barreiras" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 706.817, 912.979 )
@@ -444,107 +442,107 @@ shape = SubResource( 17 )
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="area_batalhão_inimigo" groups=[
 "armadilha",
 ]]
-position = Vector2( 952.404, 461.343 )
+position = Vector2( 956.087, 460.115 )
 shape = SubResource( 18 )
 
 [node name="soldado_inimigo" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -137.18, -52.345 )
+position = Vector2( -124.962, -52.345 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 3
 playing = true
 
 [node name="soldado_inimigo4" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -73.1026, -51.4424 )
+position = Vector2( -60.885, -51.4424 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 2
 playing = true
 
 [node name="soldado_inimigo7" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -5.41507, -51.4424 )
+position = Vector2( 6.80252, -51.4424 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 1
 playing = true
 
 [node name="soldado_inimigo10" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( 57.7599, -50.5399 )
+position = Vector2( 69.9775, -50.5399 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 1
 playing = true
 
 [node name="soldado_inimigo15" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( 122.155, -47.8324 )
+position = Vector2( 134.373, -47.8324 )
 rotation = 1.5708
 frames = SubResource( 19 )
 playing = true
 
 [node name="soldado_inimigo2" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -136.278, -3.60986 )
+position = Vector2( -124.06, -3.60986 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 3
 playing = true
 
 [node name="soldado_inimigo6" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -72.2001, -2.70734 )
+position = Vector2( -59.9825, -2.7074 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 2
 playing = true
 
 [node name="soldado_inimigo9" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -4.51257, -2.70734 )
+position = Vector2( 7.70502, -2.7074 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 1
 playing = true
 
 [node name="soldado_inimigo12" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( 58.6624, -1.80481 )
+position = Vector2( 70.88, -1.80481 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 1
 playing = true
 
 [node name="soldado_inimigo14" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( 123.057, 0.90271 )
+position = Vector2( 135.275, 0.90271 )
 rotation = 1.5708
 frames = SubResource( 19 )
 playing = true
 
 [node name="soldado_inimigo3" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -137.18, 45.1251 )
+position = Vector2( -124.962, 45.1251 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 2
 playing = true
 
 [node name="soldado_inimigo5" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -73.1026, 46.0276 )
+position = Vector2( -60.885, 46.0276 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 2
 playing = true
 
 [node name="soldado_inimigo8" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( -5.4151, 46.0276 )
+position = Vector2( 6.80249, 46.0276 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 1
 playing = true
 
 [node name="soldado_inimigo11" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( 57.7599, 46.9302 )
+position = Vector2( 69.9775, 46.9302 )
 rotation = 1.5708
 frames = SubResource( 19 )
 frame = 1
 playing = true
 
 [node name="soldado_inimigo13" type="AnimatedSprite" parent="area_batalhão_inimigo/CollisionShape2D16"]
-position = Vector2( 122.155, 49.6377 )
+position = Vector2( 134.373, 49.6377 )
 rotation = 1.5708
 frames = SubResource( 19 )
 playing = true
@@ -587,7 +585,6 @@ rotation = 1.56559
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 21 )
 animation = "shoot"
-frame = 2
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="animation_cena"]
@@ -596,7 +593,7 @@ rotation = 1.56559
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 21 )
 animation = "shoot"
-frame = 1
+frame = 3
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="animation_cena"]

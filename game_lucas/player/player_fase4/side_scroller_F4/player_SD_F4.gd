@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 180
+var speed = 185
 var life = 100
 var attacking= false
 var damage_hit = 10
@@ -14,6 +14,8 @@ var get_weapon_away = atributos_fase_singleton.get_weapom_away
 var fire_stop = atributos_player_singleton.fire_stop
 var orb_fire = preload( "res://player/player_fase2/side_scorller_F2/orb_fogo_SD/orb__de_fogo_SD.tscn")
 
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets_game/mouseempty.png"))
 
 #========================================================
 #                MOtion player
@@ -101,7 +103,7 @@ func death_player():
 		life = 0 
 		death = true
 		$animation_Player.play("death_animation")
-		
+		atributos_player_singleton.cont_death_player(1)
 		
 	
 #===========================================================

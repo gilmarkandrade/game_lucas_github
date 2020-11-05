@@ -129,6 +129,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [ Vector2( 8.177, 2 ) ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("spriter _H_C:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 9.83, 0.15, 0.15, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 length = 2.0
@@ -309,9 +321,9 @@ script = ExtResource( 1 )
 shape = SubResource( 1 )
 
 [node name="spriter _H_C" type="Sprite" parent="."]
-position = Vector2( 16.177, -3 )
+position = Vector2( 8.177, 2 )
 rotation = -1.5708
-texture = ExtResource( 2 )
+texture = ExtResource( 8 )
 
 [node name="animation_H_C" type="AnimationPlayer" parent="."]
 anims/atack_animation = SubResource( 2 )
@@ -323,7 +335,6 @@ anims/walk_animation = SubResource( 6 )
 [node name="corpo_h_c" type="Area2D" parent="." groups=[
 "enemie",
 ]]
-editor/display_folded = true
 position = Vector2( 1, -3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="corpo_h_c" groups=[
@@ -346,14 +357,12 @@ shape = SubResource( 8 )
 "weapom_enemie",
 ]]
 modulate = Color( 0.121569, 1, 0.0470588, 1 )
-position = Vector2( 0, -2 )
 shape = SubResource( 9 )
 
 [node name="delay_atack" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.4
 
 [node name="AI_perception" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AI_perception"]
 position = Vector2( 7, 0 )

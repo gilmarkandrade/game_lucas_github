@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var move = Vector2()
-var speed = 180
+var speed = 185
 var life = 100
 var attacking= false
 var damage_hit = 10
@@ -14,7 +14,8 @@ var get_weapon_away = atributos_fase_singleton.get_weapom_away
 var fire_stop = atributos_player_singleton.fire_stop
 var orb_fire = preload( "res://player/player_fase2/side_scorller_F2/orb_fogo_SD/orb__de_fogo_SD.tscn")
 
-
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets_game/mouseempty.png"))
 #========================================================
 #                MOtion player
 #========================================================
@@ -118,8 +119,9 @@ func death_player():
 			$animation_Player.play("death_animation")
 		elif side_current == true:
 			$animation_Player.play("death_animation_left")
+		atributos_player_singleton.cont_death_player(1)
 		
-		print(life)
+		
 #===========================================================
 #                  AREA\BODY ENTERED
 #===========================================================
@@ -127,6 +129,7 @@ func death_player():
 
 #AREA responsavel por receber o valor de dano conforme a area inimiga 
 # que entrou no corpo do player
+
 func _on_area_corpo_player_area_entered(area):
 	
 	if area.is_in_group("weapom_enimie"):
@@ -140,11 +143,6 @@ func _on_area_corpo_player_area_entered(area):
 			$som_dano.play()
 	if area.is_in_group("armadilha"):
 		life = -10
-		
-		
-		
-		
-		
 
 
 func _on_area_arma_player_area_entered(area):
@@ -152,21 +150,21 @@ func _on_area_arma_player_area_entered(area):
 	#entrar no corpo de inimigos este valor vai para o game singleto atributos_player_singleton
 	if area.is_in_group("enemie"):
 		atributos_player_singleton.damage_life_enimie_update(damage_hit)
-		
 
 #==========================================================
 #               animation finished
 #==========================================================
 
 #quando alguma animação finalizar execute o evento 
+
 func _on_animation_Player_animation_finished(anim_name):
 	if anim_name == "death_animation":
-		atributos_player_singleton.cont_death_player(1)
+		
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 		
 	elif anim_name == "death_animation_left":
-		atributos_player_singleton.cont_death_player(1)
+		
 		# quando terminara animacao de morte do player va para tela de gameover
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 	

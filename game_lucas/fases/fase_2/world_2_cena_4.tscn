@@ -72,6 +72,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
+tracks/2/type = "value"
+tracks/2/path = NodePath("icone_mudar_perspectiva:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -21.412, 525.559 ), Vector2( -68.9638, 529.882 ) ]
+}
 
 [sub_resource type="Animation" id=6]
 length = 0.5
@@ -225,18 +237,16 @@ scale = Vector2( 0.654575, 0.629171 )
 z_index = -1
 frames = SubResource( 4 )
 animation = "cajado_aura"
-frame = 4
 playing = true
 
 [node name="Label2" type="Label" parent="area_cajado/cajado_aura"]
-visible = false
 margin_left = 16.1259
 margin_top = -49.959
 margin_right = 108.126
 margin_bottom = -35.959
 rect_scale = Vector2( 0.6, 0.6 )
 size_flags_stretch_ratio = 0.0
-text = "press key \" Q\""
+text = "BTDIAG"
 
 [node name="animation_cajado" type="AnimationPlayer" parent="area_cajado"]
 playback_speed = 0.6
@@ -266,7 +276,7 @@ margin_right = 95.7944
 margin_bottom = 86.7665
 rect_scale = Vector2( 0.6, 0.6 )
 size_flags_stretch_ratio = 0.0
-text = "press key \" Q\""
+text = "BTDIAG"
 
 [node name="fala_bru" type="Label" parent="area_cajado"]
 visible = false
@@ -292,7 +302,7 @@ explosiveness = 0.96
 process_material = SubResource( 8 )
 
 [node name="icone_mudar_perspectiva" parent="area_cajado" instance=ExtResource( 26 )]
-position = Vector2( -70.0445, 521.236 )
+position = Vector2( -21.412, 525.559 )
 rotation = -3.14159
 scale = Vector2( 0.560001, -0.68 )
 

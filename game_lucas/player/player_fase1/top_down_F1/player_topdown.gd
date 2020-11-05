@@ -7,7 +7,8 @@ var life = atributos_player_singleton.life_player
 var attacking = false
 var death = false
 
-
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets_game/mousemira.png"))
 func _physics_process(delta):
 	var pos = $".".global_position
 	atributos_player_singleton.update_position_player(pos)
@@ -57,7 +58,8 @@ func death_player():
 	if life <= 0:
 		death = true
 		$animation_player.current_animation ="death_animation"
-
+		atributos_player_singleton.cont_death_player(1)
+		
 func _on_arma_player_body_entered(body):
 	if body.is_in_group("enemie") and death == false:
 		atributos_player_singleton.damage_life_enimie_update(damage)
@@ -67,7 +69,7 @@ func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "atack_animation":
 		attacking = false
 	if anim_name == "death_animation":
-		atributos_player_singleton.cont_death_player(1)
+		
 		get_tree().change_scene("res://cenas_globais/game_over.tscn")
 
 

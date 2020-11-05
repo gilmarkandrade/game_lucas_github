@@ -6,7 +6,7 @@ var seguir = true
 var death = false
 var attacking = false
 var damage = 5
-var life = 100
+var life = 110
 var move = Vector2(0,0)
 var target = atributos_player_singleton.pos_player_update
 var item_vida = preload("res://player/Itens_player/vida/item_vida.tscn")
@@ -56,14 +56,19 @@ func damage_death():
 	if life <= 0:
 		death = true 
 		$animation_H_C. play("death_animation")
-		
+	else:
+		$animation_H_C.play("damage_animation")
 func _on_corpo_h_c_area_entered(area):
+	
 	if area.is_in_group("arma_player") and death == false:
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
+		
+		
 	if area.is_in_group("projetil_player"):
 		life -= atributos_player_singleton.life_enemie_update
 		damage_death()
+		
 		
 func _on_arma_inimigo_body_entered(body):
 	if body.is_in_group("player") and death == false:
@@ -82,7 +87,7 @@ func atack():
 
 
 func _on_delay_atack_timeout():
-      
+	  
 	if seguir == true and death == false:
 		$delay_atack.stop()
 		attacking = false

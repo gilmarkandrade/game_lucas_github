@@ -47,7 +47,6 @@ script = ExtResource( 2 )
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 3 )]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 84.535, 185.088 )
 __meta__ = {
 "_edit_group_": true
@@ -58,7 +57,6 @@ scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 10.5, -604.5 )
 __meta__ = {
 "_edit_group_": true
@@ -69,7 +67,6 @@ scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
 [node name="Pedra" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -106.412, -206.976 )
 rotation = 1.56051
 __meta__ = {
@@ -81,7 +78,6 @@ scale = Vector2( 1.76, 1 )
 polygon = PoolVector2Array( 13.1833, 27.9582, 26.3027, 105.156, 57.4439, 130.268, 86.1327, 123.489, 120.199, 99.5584, 167.163, 61.9282, 180.537, 30.988, 176.569, 0.397217, 209.248, -44.1261, 224.892, -76.3521, 228.424, -100.173, 210.533, -134.996, 178.079, -128.949, 142.268, -64.5789, 107.371, -27.3938, 78.2156, -5.36417, 43.1851, -9.97911, 28.6441, -37.4441, 5.28259, -39.194, -7.24892, -23.4979 )
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -415.379, -216.75 )
 rotation = 1.56051
 __meta__ = {
@@ -93,7 +89,6 @@ scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 825.277, -214.755 )
 rotation = 1.56051
 __meta__ = {
@@ -105,7 +100,6 @@ scale = Vector2( 1.76, 1 )
 shape = SubResource( 1 )
 
 [node name="area_iniciocena2" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 103.749, -8.10541 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_iniciocena2"]
@@ -118,14 +112,14 @@ margin_top = -181.667
 margin_right = 43.0
 margin_bottom = -114.667
 custom_colors/font_color = Color( 0.756863, 0.054902, 0.054902, 1 )
-text = "mude a perspectiva que vc olha"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Paralax_main_arvore" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 layer = 0
 
 [node name="Layerarvoretopo" type="ParallaxLayer" parent="Paralax_main_arvore"]
-editor/display_folded = true
 z_index = 16
 z_as_relative = false
 motion_scale = Vector2( 0.9, 0.9 )
@@ -180,11 +174,9 @@ polygon = PoolVector2Array( 287.41, -0.0795898, 355.241, 52.6773, 382.81, 56.224
 position = Vector2( 189, -303.75 )
 frames = SubResource( 3 )
 animation = "river_motion"
-frame = 1
 playing = true
 
 [node name="Area2D2_Rio" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 291.677, -350.118 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2_Rio"]
@@ -226,7 +218,8 @@ max_distance = 1200.0
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
-polygon = PoolVector2Array( -411, -156.599, -291.999, -205.786, -274.546, -193.092, -203.146, -197.852, -96.8389, -234.346, -4.81195, -245.452, 111.015, -278.773, 201.455, -285.119, 276.029, -305.746, 295.069, -299.399, 323.629, -313.679, 390.269, -296.226, 514.029, -270.839, 585.429, -258.146, 650.483, -247.039, 683.803, -248.626, 720.296, -250.212, 766.31, -245.452, 783.763, -258.146, 785.35, -356.519, -407.826, -270.839 )
+position = Vector2( 6.64822, 28.8089 )
+polygon = PoolVector2Array( -411, -156.599, -291.999, -205.786, -274.546, -193.092, -203.146, -197.852, -96.8389, -234.346, -4.81195, -245.452, 111.015, -278.773, 200.618, -279.923, 268.357, -298.08, 294.195, -295.286, 323.525, -305.761, 382.884, -292.493, 488.333, -265.956, 546.295, -251.291, 590.291, -252.688, 646.157, -254.084, 696.438, -242.212, 766.31, -245.452, 783.763, -258.146, 785.35, -356.519, -407.826, -270.839 )
 [connection signal="body_entered" from="area_iniciocena2" to="." method="_on_area_iniciocena2_body_entered"]
 [connection signal="body_exited" from="area_iniciocena2" to="." method="_on_area_iniciocena2_body_exited"]
 [connection signal="body_entered" from="area_mudar_cena3" to="." method="_on_area_mudar_cena3_body_entered"]

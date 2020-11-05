@@ -55,10 +55,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1 ),
+"times": PoolRealArray( 0, 6 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 0.5, 0.3 ]
+"values": [ 0.5, 0.2 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("portal:visible")
@@ -94,7 +94,7 @@ tracks/3/keys = {
 "times": PoolRealArray( 0, 0.5, 0.9, 2, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0.75, 0.7 ), Vector2( 1e-005, 1e-005 ), Vector2( 0.75, 0.7 ), Vector2( 0.75, 0.7 ), Vector2( 1e-005, 1e-005 ) ]
+"values": [ Vector2( 0.75, 0.7 ), Vector2( 1e-05, 1e-05 ), Vector2( 0.75, 0.7 ), Vector2( 0.75, 0.7 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/4/type = "value"
 tracks/4/path = NodePath("particula_portal2:position")
@@ -130,7 +130,7 @@ tracks/6/keys = {
 "times": PoolRealArray( 0, 0.5, 0.9, 2, 2.5 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 1e-005, 1e-005 ), Vector2( 0.698166, 0.639844 ), Vector2( 0.698166, 0.639844 ), Vector2( 1e-005, 1e-005 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 0.698166, 0.639844 ), Vector2( 0.698166, 0.639844 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/7/type = "value"
 tracks/7/path = NodePath("som_portal:playing")
@@ -437,7 +437,7 @@ tracks/32/path = NodePath("label_parabens:text")
 tracks/32/interp = 1
 tracks/32/loop_wrap = true
 tracks/32/imported = false
-tracks/32/enabled = true
+tracks/32/enabled = false
 tracks/32/keys = {
 "times": PoolRealArray( 6.1 ),
 "transitions": PoolRealArray( 1 ),
@@ -615,24 +615,9 @@ tracks/46/keys = {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "corpo",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "bola",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
-"loop": true,
-"name": "idle_protagonista",
-"speed": 2.0
-}, {
-"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "silvia",
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": false,
+"name": "buraco_fechando",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ) ],
@@ -640,14 +625,14 @@ animations = [ {
 "name": "protagonista",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ) ],
-"loop": false,
-"name": "buraco_fechando",
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "buraco_aberto",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "cabeca",
+"name": "bola",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
@@ -655,9 +640,24 @@ animations = [ {
 "name": "bru",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ) ],
 "loop": true,
-"name": "buraco_aberto",
+"name": "cabeca",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "silvia",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "idle_protagonista",
+"speed": 2.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "corpo",
 "speed": 5.0
 } ]
 
@@ -731,10 +731,11 @@ zoom = Vector2( 0.55, 0.62 )
 
 [node name="silvia_animated" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 559.359, 298.124 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 463.649, 298.124 )
 scale = Vector2( 1.75232, 1.62598 )
 frames = SubResource( 2 )
-animation = "silvia"
+animation = "buraco_aberto"
 frame = 1
 playing = true
 
@@ -744,7 +745,6 @@ position = Vector2( 655.549, 386.375 )
 scale = Vector2( 1.244, 1.293 )
 frames = SubResource( 2 )
 animation = "bru"
-frame = 2
 playing = true
 flip_h = true
 
@@ -754,15 +754,15 @@ position = Vector2( 463.649, 298.124 )
 scale = Vector2( 1.75232, 1.62598 )
 frames = SubResource( 2 )
 animation = "cabeca"
-frame = 1
+frame = 3
 playing = true
 
 [node name="protag_animated" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 279.32, 366.638 )
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 123.23, 361.45 )
 frames = SubResource( 2 )
-animation = "idle_protagonista"
-playing = true
+animation = "protagonista"
 
 [node name="beco_escuro_so_sombra" type="Sprite" parent="."]
 self_modulate = Color( 0, 0, 0, 0.721569 )
@@ -778,7 +778,7 @@ texture = ExtResource( 39 )
 [node name="particula_portal2" parent="." instance=ExtResource( 40 )]
 visible = false
 position = Vector2( 180, 364.25 )
-scale = Vector2( 1e-005, 1e-005 )
+scale = Vector2( 1e-05, 1e-05 )
 process_material = SubResource( 7 )
 
 [node name="som_passo" type="AudioStreamPlayer" parent="."]
@@ -806,95 +806,101 @@ pitch_scale = 0.7
 
 [node name="label_parabens" type="Label" parent="."]
 visible = false
-margin_left = 201.201
-margin_top = 257.91
-margin_right = 736.201
-margin_bottom = 364.91
+margin_left = 201.0
+margin_top = 258.0
+margin_right = 690.0
+margin_bottom = 365.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "Maoe! Meus parabéns jovem viajante do tempo!"
+text = "DIAG21"
 align = 1
+autowrap = true
 
 [node name="label_explicacao" type="Label" parent="."]
 visible = false
-margin_left = 201.201
-margin_top = 249.91
-margin_right = 736.201
-margin_bottom = 356.91
+margin_left = 243.0
+margin_top = 250.0
+margin_right = 654.0
+margin_bottom = 342.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "Você passou por todos os meus testes
-e ainda derrotou o meu antigo protagonista!"
+text = "DIAG22"
 align = 1
+autowrap = true
 
 [node name="label_proposta" type="Label" parent="."]
 visible = false
-margin_left = 201.201
-margin_top = 249.91
-margin_right = 736.201
-margin_bottom = 356.91
+margin_left = 262.0
+margin_top = 249.0
+margin_right = 663.0
+margin_bottom = 337.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "E por isso, nada mais justo do que eu te convidar
-a ser o novo protagonista do meu programa intergalático!!!"
+text = "DIAG23"
 align = 1
+autowrap = true
 
 [node name="label_pergunta" type="Label" parent="."]
 visible = false
-margin_left = 201.201
-margin_top = 258.91
-margin_right = 736.201
-margin_bottom = 365.91
+margin_left = 227.6
+margin_top = 249.5
+margin_right = 694.6
+margin_bottom = 361.5
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "Então... O que você acha?"
+text = "DIAG24"
 align = 1
+autowrap = true
 
 [node name="label_resposta" type="Label" parent="."]
 visible = false
-margin_left = 20.9099
-margin_top = 274.385
-margin_right = 555.91
-margin_bottom = 381.385
+margin_left = 147.75
+margin_top = 264.0
+margin_right = 559.75
+margin_bottom = 356.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "Bom... Por que não?"
+text = "DIAG25"
 align = 1
+autowrap = true
 
 [node name="label_razao" type="Label" parent="."]
 visible = false
-margin_left = 228.283
-margin_top = 262.779
-margin_right = 763.283
-margin_bottom = 369.779
+margin_left = 243.2
+margin_top = 248.75
+margin_right = 660.2
+margin_bottom = 353.75
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "É, ele sobreviveu, você tinha razão..."
+text = "DIAG26"
 align = 1
+autowrap = true
+percent_visible = 0.4
 
 [node name="label_aposta" type="Label" parent="."]
 visible = false
-margin_left = 225.961
-margin_top = 249.625
-margin_right = 760.961
-margin_bottom = 356.625
+margin_left = 257.35
+margin_top = 250.95
+margin_right = 675.35
+margin_bottom = 348.95
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_as_outline = 1
-text = "Depois eu te pago as 50 navezinhas de
-dinheiro que estou te devendo!"
+text = "DIAG27"
 align = 1
+autowrap = true
+percent_visible = 0.0
 [connection signal="animation_finished" from="AnimationSilvia" to="." method="_on_AnimationSilvia_animation_finished"]

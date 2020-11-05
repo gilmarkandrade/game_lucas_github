@@ -21,7 +21,7 @@
 [ext_resource path="res://player/player_fase3/top_down_F3/player_top_down_F3.tscn" type="PackedScene" id=19]
 [ext_resource path="res://audio_geral/efeitos_sonoros/fase3/TrilhaSonoraFase3Tiros.wav" type="AudioStream" id=20]
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=1]
 resource_name = "close_portal"
 length = 2.0
 tracks/0/type = "value"
@@ -46,7 +46,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 0.956, 0.593 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.956, 0.593 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("particula_portal2:visible")
@@ -61,7 +61,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=2]
 resource_name = "open_portal"
 length = 2.0
 tracks/0/type = "value"
@@ -86,7 +86,7 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 0.956, 0.593 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.956, 0.593 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("particula_portal2:visible")
@@ -110,7 +110,7 @@ data = {
 "width": 2048
 }
 
-[sub_resource type="ImageTexture" id=16]
+[sub_resource type="ImageTexture" id=4]
 flags = 0
 flags = 0
 image = SubResource( 21 )
@@ -125,17 +125,17 @@ data = {
 "width": 2048
 }
 
-[sub_resource type="ImageTexture" id=18]
+[sub_resource type="ImageTexture" id=6]
 flags = 0
 flags = 0
 image = SubResource( 22 )
 size = Vector2( 2048, 9 )
 
-[sub_resource type="ParticlesMaterial" id=19]
+[sub_resource type="ParticlesMaterial" id=7]
 resource_local_to_scene = true
 emission_shape = 3
-emission_point_texture = SubResource( 18 )
-emission_color_texture = SubResource( 16 )
+emission_point_texture = SubResource( 6 )
+emission_color_texture = SubResource( 4 )
 emission_point_count = 18379
 flag_disable_z = true
 spread = 162.93
@@ -150,38 +150,37 @@ scale = 1.5
 hue_variation = -0.28
 hue_variation_random = 0.26
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10, 555.395 )
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 698.042, 10 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 11.5433, 582.207 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 717.563, 10 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 18.4202, 476.972 )
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 8.08069, 54.9797 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 99.5144, 568.913 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 72.226, 10 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 19.4398, 70.5828 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 112.516, 49.042 )
 
-[sub_resource type="Animation" id=11]
-resource_name = "action_cena"
+[sub_resource type="Animation" id=18]
 length = 12.0
 loop = true
 tracks/0/type = "value"
@@ -485,7 +484,7 @@ tracks/24/keys = {
 "values": [ true, false, true ]
 }
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=19]
 animations = [ {
 "frames": [ ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": false,
@@ -503,8 +502,7 @@ animations = [ {
 "speed": 3.01
 } ]
 
-[sub_resource type="Animation" id=13]
-resource_name = "soldie_runanddeath"
+[sub_resource type="Animation" id=20]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -563,62 +561,60 @@ script = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="animation_portal" type="AnimationPlayer" parent="animatio_action_portal"]
-anims/close_portal = SubResource( 20 )
-anims/open_portal = SubResource( 14 )
+anims/close_portal = SubResource( 1 )
+anims/open_portal = SubResource( 2 )
 
 [node name="particula_portal2" parent="animatio_action_portal" instance=ExtResource( 3 )]
 visible = false
 position = Vector2( 130.588, 923.681 )
-scale = Vector2( 1e-005, 1e-005 )
-process_material = SubResource( 19 )
+scale = Vector2( 1e-05, 1e-05 )
+process_material = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 4 )]
 
 [node name="barreiras" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 40.1115, 577.721 )
-shape = SubResource( 1 )
+shape = SubResource( 8 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 748.316, 16.2677 )
-shape = SubResource( 2 )
+shape = SubResource( 9 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 1438.93, 563.875 )
-shape = SubResource( 3 )
+shape = SubResource( 10 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 730.907, 1134.06 )
-shape = SubResource( 4 )
+shape = SubResource( 11 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 273.49, 699.214 )
-shape = SubResource( 5 )
+shape = SubResource( 12 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 234.919, 235.72 )
 rotation = -1.71384
-shape = SubResource( 6 )
+shape = SubResource( 13 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 536.985, 458.593 )
-shape = SubResource( 7 )
+shape = SubResource( 14 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 220.966, 47.867 )
 rotation = 0.416552
-shape = SubResource( 8 )
+shape = SubResource( 15 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="barreiras"]
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="barreiras"]
 position = Vector2( 563.719, 1086.2 )
-shape = SubResource( 9 )
+shape = SubResource( 16 )
 
 [node name="saco_topdown" type="Sprite" parent="barreiras"]
 position = Vector2( 256.223, 1087.4 )
@@ -670,10 +666,9 @@ position = Vector2( 186.965, 2.7019 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="area_entrar_cena2"]
 position = Vector2( 402.933, 1074.95 )
-shape = SubResource( 10 )
+shape = SubResource( 17 )
 
 [node name="Area2D2" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D2"]
 
@@ -700,13 +695,13 @@ texture = ExtResource( 8 )
 [node name="animation_cena" type="AnimationPlayer" parent="animation_cena"]
 autoplay = "action_cena"
 playback_speed = 0.6
-anims/action_cena = SubResource( 11 )
+anims/action_cena = SubResource( 18 )
 
 [node name="soldado_aliado" type="AnimatedSprite" parent="animation_cena"]
 position = Vector2( 624.135, 123.612 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "shoot"
 frame = 3
 playing = true
@@ -715,7 +710,7 @@ playing = true
 position = Vector2( 615.196, 302.234 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "shoot"
 frame = 2
 playing = true
@@ -724,7 +719,7 @@ playing = true
 position = Vector2( 727.713, 544.85 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "shoot"
 frame = 1
 playing = true
@@ -733,7 +728,7 @@ playing = true
 position = Vector2( 659.148, 801.53 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "shoot"
 frame = 1
 playing = true
@@ -742,7 +737,7 @@ playing = true
 position = Vector2( 743.193, 483.703 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "shoot"
 frame = 2
 playing = true
@@ -753,7 +748,7 @@ visible = false
 position = Vector2( 1003.09, 429.913 )
 rotation = 1.64109
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "death"
 frame = 4
 playing = true
@@ -763,7 +758,7 @@ flip_h = true
 position = Vector2( 527.042, 1052.52 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "shoot"
 playing = true
 flip_h = true
@@ -773,7 +768,7 @@ visible = false
 position = Vector2( 662.035, 724.188 )
 rotation = 1.57047
 scale = Vector2( 0.6, 0.6 )
-frames = SubResource( 12 )
+frames = SubResource( 19 )
 animation = "death"
 frame = 4
 playing = true
@@ -782,7 +777,7 @@ flip_h = true
 [node name="animation_soldado_separdo" type="AnimationPlayer" parent="animation_cena"]
 autoplay = "soldie_runanddeath"
 playback_speed = 0.7
-anims/soldie_runanddeath = SubResource( 13 )
+anims/soldie_runanddeath = SubResource( 20 )
 
 [node name="player_top_down_F3" parent="." instance=ExtResource( 19 )]
 position = Vector2( 161.686, 944.79 )

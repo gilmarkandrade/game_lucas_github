@@ -173,7 +173,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5, 3, 4 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1e-005, 1e-005 ), Vector2( 0.698166, 0.639844 ), Vector2( 0.698166, 0.639844 ), Vector2( 1e-005, 1e-005 ) ]
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.698166, 0.639844 ), Vector2( 0.698166, 0.639844 ), Vector2( 1e-05, 1e-05 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("particula_portal2:visible")
@@ -348,7 +348,6 @@ script = ExtResource( 1 )
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="Chão" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -63.2539, 24.6227 )
 scale = Vector2( 3.16, 1 )
 
@@ -362,7 +361,6 @@ scale = Vector2( 1.04418, 0.734804 )
 texture = ExtResource( 3 )
 
 [node name="Pedra" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -32.9999, 0.750015 )
 
 [node name="icon2" type="Sprite" parent="Pedra"]
@@ -385,7 +383,6 @@ position = Vector2( 726.557, -49.7207 )
 shape = SubResource( 2 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -317.894, -33.2238 )
 __meta__ = {
 "_edit_group_": true
@@ -402,7 +399,6 @@ scale = Vector2( 0.648438, 14.7813 )
 texture = ExtResource( 5 )
 
 [node name="Pedra2" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( -471.636, 41.4482 )
 z_index = -1
 
@@ -417,7 +413,6 @@ texture = ExtResource( 4 )
 flip_h = true
 
 [node name="arvore" type="StaticBody2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1138.87, 451.108 )
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="arvore"]
@@ -433,7 +428,7 @@ texture = ExtResource( 6 )
 position = Vector2( 1262.89, -91.7499 )
 
 [node name="player_plataforma" parent="." instance=ExtResource( 8 )]
-editor/display_folded = true
+visible = false
 position = Vector2( -117.501, -78.9338 )
 scale = Vector2( 1.2, 1.2 )
 
@@ -453,7 +448,6 @@ position = Vector2( 210.448, 27.8762 )
 script = ExtResource( 10 )
 
 [node name="area_tutorial_jump" type="Area2D" parent="area_fim_cena1"]
-editor/display_folded = true
 position = Vector2( 40.0795, -111.385 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_fim_cena1/area_tutorial_jump"]
@@ -463,18 +457,18 @@ shape = SubResource( 5 )
 [node name="Panel" type="Panel" parent="area_fim_cena1/area_tutorial_jump"]
 visible = false
 self_modulate = Color( 1, 1, 1, 0.792157 )
-margin_left = -42.6759
-margin_top = -118.294
-margin_right = 59.3241
-margin_bottom = -71.2937
+margin_left = -43.0
+margin_top = -118.0
+margin_right = 84.0
+margin_bottom = -71.0
 
 [node name="Label" type="Label" parent="area_fim_cena1/area_tutorial_jump/Panel"]
-margin_left = 5.0
-margin_top = 5.0
-margin_right = 94.0
-margin_bottom = 38.0
-text = "       Jump
-Press \"space\" "
+margin_left = 1.0
+margin_top = 3.0
+margin_right = 125.0
+margin_bottom = 45.0
+text = "DIAG30"
+autowrap = true
 
 [node name="area_tutorial_ataque" type="Area2D" parent="area_fim_cena1"]
 position = Vector2( 621.032, -146.75 )
@@ -496,8 +490,7 @@ margin_left = 3.09747
 margin_top = 3.19499
 margin_right = 165.097
 margin_bottom = 46.195
-text = "             Atack 
-click \" left mouse buton\""
+text = "DIAG28"
 autowrap = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_fim_cena1"]
@@ -505,7 +498,6 @@ position = Vector2( 1103.82, -171.941 )
 shape = SubResource( 7 )
 
 [node name="Panel" type="Panel" parent="area_fim_cena1"]
-editor/display_folded = true
 self_modulate = Color( 1, 1, 1, 0.831373 )
 margin_left = 528.377
 margin_top = -143.038
@@ -524,22 +516,31 @@ custom_colors/font_color_shadow = Color( 0.752941, 0, 0, 1 )
 text = "text
 "
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="press_q" type="Label" parent="area_fim_cena1/Panel"]
-margin_left = 21.4818
-margin_top = 78.8923
-margin_right = 111.912
-margin_bottom = 126.892
-text = "press key \"Q\"
-"
+margin_left = 21.0
+margin_top = 79.0
+margin_right = 195.0
+margin_bottom = 100.0
+text = "BTDIAG"
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="area_fim_cena1"]
-margin_left = 1051.61
-margin_top = -228.444
-margin_right = 1135.61
-margin_bottom = -214.444
-text = "press key \"E\""
+margin_left = 1052.0
+margin_top = -228.0
+margin_right = 1151.0
+margin_bottom = -185.0
+text = "DIAG29"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Posicao_0" type="Position2D" parent="."]
 position = Vector2( -117.041, -81.3711 )
@@ -551,7 +552,6 @@ position = Vector2( 772.55, -67.9001 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="layer_montanhas" type="ParallaxLayer" parent="ParallaxBackground"]
-editor/display_folded = true
 position = Vector2( -1, 70 )
 motion_scale = Vector2( 1, 0.5 )
 motion_offset = Vector2( 1, 0 )
@@ -604,7 +604,7 @@ scale = Vector2( 1.30458, 0.952066 )
 texture = ExtResource( 13 )
 
 [node name="icone_mudar_perspectiva" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1313.21, -148.776 )
+position = Vector2( 1313.95, -164.566 )
 
 [node name="animation_cut_cine_cena1" type="AnimationPlayer" parent="."]
 "anims/animation_bru _surgindo" = SubResource( 8 )
@@ -614,7 +614,8 @@ anims/animation_portal_closed = SubResource( 11 )
 
 [node name="Bru" type="Sprite" parent="animation_cut_cine_cena1"]
 visible = false
-position = Vector2( 1036.92, -220.947 )
+position = Vector2( 323.752, -623.461 )
+scale = Vector2( 0.465019, 0.412826 )
 z_index = -1
 texture = ExtResource( 15 )
 
@@ -629,7 +630,7 @@ frame = 9
 [node name="particula_portal2" parent="." instance=ExtResource( 31 )]
 visible = false
 position = Vector2( -313.911, -234.769 )
-scale = Vector2( 1e-005, 1e-005 )
+scale = Vector2( 1e-05, 1e-05 )
 process_material = SubResource( 17 )
 
 [node name="som_portal" type="AudioStreamPlayer2D" parent="."]

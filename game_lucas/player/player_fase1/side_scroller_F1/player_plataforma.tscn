@@ -642,7 +642,6 @@ anims/jump_up = SubResource( 7 )
 anims/walk_animation = SubResource( 8 )
 
 [node name="area_corpo_player" type="Area2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_corpo_player"]
 visible = false
@@ -652,7 +651,6 @@ shape = SubResource( 9 )
 [node name="area_arma_player" type="Area2D" parent="." groups=[
 "arma_player",
 ]]
-editor/display_folded = true
 position = Vector2( -43, -6 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_arma_player"]

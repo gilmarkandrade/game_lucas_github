@@ -78,7 +78,7 @@ func atack():
 
 
 func _on_delay_atack_timeout():
-      
+	  
 	if seguir == true and death == false:
 		$delay_atack.stop()
 		attacking = false

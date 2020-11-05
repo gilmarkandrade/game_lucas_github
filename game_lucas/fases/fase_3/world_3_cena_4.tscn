@@ -108,7 +108,7 @@ extents = Vector2( 147.175, 29.8417 )
 extents = Vector2( 120.32, 31.1918 )
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 28.8416, 26.4023 )
+extents = Vector2( 44.7117, 26.4023 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 22.0251, 21.9422 )
@@ -147,15 +147,15 @@ animations = [ {
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "shoot",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ) ],
 "loop": true,
 "name": "run",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "shoot",
+"speed": 5.0
 } ]
 
 [sub_resource type="Animation" id=31]
@@ -242,14 +242,14 @@ animations = [ {
 "name": "death",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
-"loop": true,
-"name": "shoot",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 48 ) ],
 "loop": true,
 "name": "run",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "shoot",
 "speed": 5.0
 } ]
 
@@ -263,12 +263,10 @@ extents = Vector2( 83.7292, 88.0103 )
 script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-editor/display_folded = true
 
 [node name="hud_life" parent="CanvasLayer" instance=ExtResource( 2 )]
 
 [node name="chao_barrera" type="StaticBody2D" parent="."]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chao_barrera"]
 position = Vector2( 1557.86, 627.137 )
@@ -299,17 +297,18 @@ position = Vector2( 1183.82, 569.193 )
 shape = SubResource( 5 )
 
 [node name="saco_com_tiro" type="Sprite" parent="chao_barrera/CollisionShape2D5"]
-position = Vector2( 4.21094, -0.375336 )
+position = Vector2( 13.192, 0.822113 )
 scale = Vector2( 0.499193, 0.551765 )
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="chao_barrera"]
-position = Vector2( 253.327, 576.947 )
+position = Vector2( 253.327, 579.148 )
 shape = SubResource( 5 )
 
 [node name="saco_com_tiro" type="Sprite" parent="chao_barrera/CollisionShape2D31"]
-position = Vector2( 3.56476, -6.19086 )
+position = Vector2( 2.24435, -3.10999 )
 scale = Vector2( 0.41519, 0.509764 )
+z_index = 1
 texture = ExtResource( 4 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="chao_barrera"]
@@ -323,7 +322,6 @@ texture = ExtResource( 4 )
 flip_h = true
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 3042.43, -250.653 )
 shape = SubResource( 7 )
 
@@ -333,7 +331,6 @@ scale = Vector2( 0.794588, 0.814938 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2595.71, 366.566 )
 shape = SubResource( 8 )
 
@@ -343,7 +340,6 @@ scale = Vector2( 0.694742, 0.707797 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 1019.66, 481.075 )
 shape = SubResource( 9 )
 
@@ -375,7 +371,6 @@ scale = Vector2( 0.440271, 0.591778 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2147.16, 124.852 )
 shape = SubResource( 13 )
 
@@ -385,7 +380,6 @@ scale = Vector2( 1.31976, 0.433178 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2497.96, 178.306 )
 shape = SubResource( 14 )
 
@@ -414,7 +408,6 @@ texture = ExtResource( 4 )
 flip_h = true
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2387.12, -20.9108 )
 shape = SubResource( 17 )
 
@@ -432,12 +425,11 @@ scale = Vector2( 0.821306, 1.077 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
-position = Vector2( 876.746, 582.214 )
+position = Vector2( 858.163, 586.75 )
 shape = SubResource( 19 )
 
 [node name="saco_de_areia" type="Sprite" parent="chao_barrera/CollisionShape2D19"]
-position = Vector2( -9.19092, -6.41882 )
+position = Vector2( -7.09589, 2.65955 )
 scale = Vector2( 0.48962, 0.496231 )
 texture = ExtResource( 6 )
 flip_h = true
@@ -471,7 +463,6 @@ scale = Vector2( 1.61684, 0.591777 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 1885.78, 210.971 )
 shape = SubResource( 23 )
 
@@ -500,15 +491,12 @@ scale = Vector2( 1, 1.15513 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="chao_barrera"]
-editor/display_folded = true
 position = Vector2( 2916.5, -230.942 )
 shape = SubResource( 26 )
 
 [node name="Madeira_teste" type="Sprite" parent="chao_barrera/CollisionShape2D26"]
 position = Vector2( -5.92139, -0.268631 )
 texture = ExtResource( 3 )
-
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="chao_barrera"]
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="chao_barrera"]
 position = Vector2( 3374.73, -358.947 )
@@ -535,17 +523,16 @@ position = Vector2( 3726.58, -572.381 )
 shape = SubResource( 29 )
 
 [node name="player_SD_F3" parent="." instance=ExtResource( 8 )]
-editor/display_folded = true
 position = Vector2( 165.368, 555.709 )
 
 [node name="Camera2D" type="Camera2D" parent="player_SD_F3"]
 position = Vector2( 25.9086, -7.40247 )
 current = true
 limit_left = -15
+limit_right = 3725
 limit_bottom = 625
 
 [node name="MADEIRAS FUNDO" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Madeira_teste" type="Sprite" parent="MADEIRAS FUNDO"]
 position = Vector2( 3161.04, 185.383 )
@@ -598,12 +585,8 @@ scale = Vector2( 14.486, 3.72576 )
 texture = ExtResource( 3 )
 
 [node name="chao " type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 265.701, 620.084 )
-texture = ExtResource( 9 )
-
-[node name="chao 2" type="Sprite" parent="chao "]
-position = Vector2( 594.665, 0.183838 )
+position = Vector2( 1559.35, 627.422 )
+scale = Vector2( 5.31334, 1 )
 texture = ExtResource( 9 )
 
 [node name="Trincheira_sidescroleer3" type="Sprite" parent="."]
@@ -632,7 +615,6 @@ z_index = 2
 texture = ExtResource( 11 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="Parallax_ceu" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 1, 0.1 )
@@ -690,66 +672,79 @@ z_index = -18
 texture = ExtResource( 14 )
 
 [node name="soldado_inimigo" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 975.659, 165.51 )
-frames = SubResource( 30 )
-animation = "shoot"
-frame = 1
-playing = true
-
-[node name="soldado_inimigo10" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1370.58, 192.781 )
-frames = SubResource( 30 )
-animation = "shoot"
-playing = true
-
-[node name="soldado_inimigo2" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 770.611, 174.763 )
-frames = SubResource( 30 )
-animation = "shoot"
-playing = true
-
-[node name="soldado_inimigo9" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1300.62, 183.527 )
-frames = SubResource( 30 )
-animation = "shoot"
-playing = true
-
-[node name="soldado_inimigo5" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1179.75, 189.935 )
-frames = SubResource( 30 )
-animation = "shoot"
-playing = true
-
-[node name="soldado_inimigo6" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1582.07, 182.044 )
-frames = SubResource( 30 )
-animation = "shoot"
-frame = 4
-playing = true
-
-[node name="soldado_inimigo3" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1038.95, 235.833 )
+position = Vector2( 975.659, 204.973 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 30 )
 animation = "shoot"
 frame = 2
 playing = true
 
-[node name="soldado_inimigo7" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1444.97, 194.631 )
+[node name="soldado_inimigo10" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 1370.58, 203.256 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 30 )
 animation = "shoot"
 frame = 1
 playing = true
 
+[node name="soldado_inimigo2" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 771.385, 193.334 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 30 )
+animation = "shoot"
+frame = 1
+playing = true
+
+[node name="soldado_inimigo9" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 1306.9, 229.617 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 30 )
+animation = "shoot"
+frame = 1
+playing = true
+
+[node name="soldado_inimigo5" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 1179.75, 200.41 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 30 )
+animation = "shoot"
+frame = 1
+playing = true
+
+[node name="soldado_inimigo6" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 1568.23, 210.672 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 30 )
+animation = "shoot"
+playing = true
+
+[node name="soldado_inimigo3" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 1038.95, 250.535 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 30 )
+animation = "shoot"
+frame = 3
+playing = true
+
+[node name="soldado_inimigo7" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
+position = Vector2( 1432.36, 186.67 )
+scale = Vector2( 0.7, 0.7 )
+frames = SubResource( 30 )
+animation = "shoot"
+frame = 2
+playing = true
+
 [node name="soldado_inimigo4" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
 position = Vector2( 881.082, 203.551 )
+scale = Vector2( 0.8, 0.8 )
 frames = SubResource( 30 )
 animation = "death"
 frame = 5
 playing = true
 
 [node name="soldado_inimigo8" type="AnimatedSprite" parent="ParallaxBackground/Parallax_soldaos inimigos"]
-position = Vector2( 1271.89, 183.387 )
+position = Vector2( 1228.59, 244.841 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 30 )
 animation = "death"
 frame = 5
@@ -765,11 +760,11 @@ flip_h = true
 motion_mirroring = Vector2( 597.98, 0 )
 
 [node name="Trincheira_sidescroleer" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
-position = Vector2( 292.676, 424.498 )
+position = Vector2( 293.996, 426.258 )
 texture = ExtResource( 10 )
 
 [node name="Trincheira_sidescroleer2" type="Sprite" parent="ParallaxBackground/Parallax_chão_trincheira"]
-position = Vector2( 890.028, 424.485 )
+position = Vector2( 888.177, 424.485 )
 texture = ExtResource( 10 )
 
 [node name="soldados_aliados" type="Node" parent="."]
@@ -780,19 +775,23 @@ anims/animation_cena = SubResource( 31 )
 
 [node name="soldado_aliado" type="AnimatedSprite" parent="soldados_aliados"]
 position = Vector2( 439.486, 220.713 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 32 )
-animation = "death"
-frame = 5
+animation = "shoot"
+frame = 1
 playing = true
 
 [node name="soldado_aliado2" type="AnimatedSprite" parent="soldados_aliados"]
-position = Vector2( 214.22, 175.196 )
+position = Vector2( 224.878, 211.588 )
+scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 32 )
 animation = "shoot"
+frame = 2
 playing = true
 
 [node name="soldado_aliado3" type="AnimatedSprite" parent="soldados_aliados"]
-position = Vector2( 415.526, 518.295 )
+position = Vector2( 411.094, 550.428 )
+scale = Vector2( 0.7, 0.7 )
 frames = SubResource( 32 )
 animation = "death"
 frame = 5
@@ -801,25 +800,31 @@ playing = true
 [node name="SOLDADOS_INIMIGOS" type="Node" parent="."]
 
 [node name="soldado_2_guerra_SD" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
-position = Vector2( 1034.03, 539.626 )
+position = Vector2( 1036.03, 552.626 )
+scale = Vector2( 0.8, 0.8 )
 
 [node name="soldado_2_guerra_SD2" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
-position = Vector2( 2083.73, 541.898 )
+position = Vector2( 2088.02, 551.329 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="soldado_2_guerra_SD3" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
-position = Vector2( 3047.08, 541.898 )
+position = Vector2( 3041.82, 548.214 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="soldado_2_guerra_SD4" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
-position = Vector2( 2554.04, 287.427 )
+position = Vector2( 2554.04, 298.427 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="soldado_2_guerra_SD5" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
 position = Vector2( 2980.93, 21.5949 )
 
 [node name="soldado_2_guerra_SD6" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
-position = Vector2( 1822.44, 167.007 )
+position = Vector2( 1823.1, 181.196 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="soldado_2_guerra_SD7" parent="SOLDADOS_INIMIGOS" instance=ExtResource( 49 )]
-position = Vector2( 3484, -391.883 )
+position = Vector2( 3485, -384.883 )
+scale = Vector2( 0.9, 0.9 )
 
 [node name="area_retorno_cena3" type="Area2D" parent="."]
 
@@ -862,6 +867,7 @@ position = Vector2( 3088.85, 564.023 )
 position = Vector2( 3571.48, -367.477 )
 
 [node name="item_vida2" parent="." instance=ExtResource( 52 )]
-position = Vector2( 1054.83, 433.978 )
+position = Vector2( 1027.28, 451.078 )
+scale = Vector2( 0.7, 0.7 )
 [connection signal="body_entered" from="area_retorno_cena3" to="." method="_on_area_retorno_cena3_body_entered"]
 [connection signal="body_entered" from="area_entrar_cena5" to="." method="_on_area_entrar_cena5_body_entered"]

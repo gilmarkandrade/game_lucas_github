@@ -33,22 +33,22 @@ func _process(delta):
 
 func dialogue_tutor_1():
 	if number_speech == 0 :
-		$Panel/falas_bru.text = "Ola aventureiro!"
+		$Panel/falas_bru.text = "DIAG1"
 	elif number_speech == 1 :
-		$Panel/falas_bru.text = " Pode me chamar de Bru, você deve estar confuso não é ?. "
+		$Panel/falas_bru.text = "DIAG2"
 	elif number_speech == 2 :
-		$Panel/falas_bru.text = " Infelizmente você é mais uma vitima do CAOS ele é um mago com poderes capaz de atravessar a linha do tempo e espaço "
+		$Panel/falas_bru.text = "DIAG3"
 	elif number_speech == 3 :
-		$Panel/falas_bru.text = " Você deve alcançalo e derrota lo caso queira retorna ao seu tempo"
+		$Panel/falas_bru.text = "DIAG4"
 	elif number_speech == 4:
-		$Panel/falas_bru.text ="  ha! assim ja iria me esquecer HA HA HA!, você esta com um problema e nao consegue seguir adiante voce tera que fazer melhor que isso se quiser realmente vencer o Caos"
+		$Panel/falas_bru.text = "DIAG5"
 	elif number_speech == 5:
-		$Panel/falas_bru.text = "Olhe por outra perspectiva abra sua mente e conseguira sempre, achar uma saida! "
+		$Panel/falas_bru.text = "DIAG6"
 	elif number_speech == 6 :
-		$Panel/falas_bru.text = "Bem não entendeu ainda? então irei ajudalo toda vez que surgir este simbolo isto quer dizer que voce podera trocar a perspectiva que você enxerga isto abrira outros caminhos"
+		$Panel/falas_bru.text = "DIAG7"
 		$"../icone_mudar_perspectiva".visible = true
 	elif number_speech == 7 :
-		$Panel/falas_bru.text = " Corra aventureiro as areias do tempo ja estão caindo"
+		$Panel/falas_bru.text = "DIAG8"
 
 func _on_area_fim_cena1_body_exited(body):
 	if body.is_in_group("player"):
@@ -86,6 +86,7 @@ func _on_icone_mudar_perspectiva_body_exited(body):
 		$Label.visible = false
 
 #======================= area label jump =================================
+
 func _on_area_tutorial_jump_body_entered(body):
 	if body.is_in_group("player"):
 		$area_tutorial_jump/Panel.visible = true
